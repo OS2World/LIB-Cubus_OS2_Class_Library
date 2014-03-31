@@ -18,4 +18,4 @@ AUTHORS
 
 LINKS
 ===============
-* 
+* http://www.edm2.com/index.php/Cubus_OS/2_Class_Library
