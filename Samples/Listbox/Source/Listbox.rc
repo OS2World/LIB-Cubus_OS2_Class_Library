@@ -1,0 +1,20 @@
+/* Listbox.rc */
+#include <os2.h>
+#include "..\\Source\\Listbox.h"
+
+
+ICON BOX_MAIN  "..\\..\\OCL.ICO"
+
+MENU BOX_MAIN
+BEGIN
+  MENUITEM "Quit", BOX_QUIT, MIS_TEXT
+  MENUITEM "Throw Exception", BOX_EXCEPTION, MIS_TEXT
+END
+
+ACCELTABLE BOX_MAIN
+BEGIN
+  VK_F3, BOX_QUIT, VIRTUALKEY
+END
+
+/* end of source */
+

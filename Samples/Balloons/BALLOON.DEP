@@ -1,0 +1,27 @@
+.\server.res: \
+    ..\Source\server.rc \
+    ..\Source\BALLOON.ICO \
+    ..\Source\Server.h \
+    $(MAKEDEP)
+
+.\server.obj: \
+    ..\Source\server.cpp \
+    ..\Source\server.hpp \
+    ..\Source\Balloons.hpp \
+    ..\Source\Server.h \
+    $(MAKEDEP)
+
+.\client.res: \
+    ..\Source\client.rc \
+    ..\Source\BALLOON.ICO \
+    ..\Source\client.h \
+    $(MAKEDEP)
+
+.\client.obj: \
+    ..\Source\client.cpp \
+    ..\Source\client.hpp \
+    ..\Source\Balloons.hpp \
+    ..\Source\client.h \
+    $(MAKEDEP)
+
+

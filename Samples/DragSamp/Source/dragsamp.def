@@ -1,0 +1,10 @@
+; $Header: W:/Projects/OCL/Samples/DragSamp/Source/rcs/dragsamp.def 1.50 1996/08/11 23:47:58 B.STEIN Release $
+
+NAME  DRAGSAMP WINDOWAPI
+
+CODE       MOVEABLE
+DATA       MOVEABLE MULTIPLE
+
+HEAPSIZE   16184
+STACKSIZE  65536
+PROTMODE

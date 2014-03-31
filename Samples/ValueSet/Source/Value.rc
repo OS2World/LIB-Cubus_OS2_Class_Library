@@ -1,0 +1,27 @@
+#include <os2.h>
+#include "..\\Source\\Value.h"
+
+
+ICON VALUE_MAIN  "..\\..\\OCL.ICO"
+ICON VALUE_ICON  "..\\Source\\VALUE.ICO"
+BITMAP VALUE_BMP  "..\\Source\\VALUE.BMP"
+
+
+DLGTEMPLATE VALUE_DLG LOADONCALL MOVEABLE DISCARDABLE
+{
+ DIALOG  "OCL Sample OValueSet", VALUE_DLG, 74, 12, 304, 154, ,
+         FCF_SYSMENU | FCF_TITLEBAR
+ {
+  CONTROL       "", VALUE_SET, 19, 49, 265, 83, WC_VALUESET, VS_TEXT |
+                VS_BORDER | VS_ITEMBORDER |
+                WS_GROUP | WS_TABSTOP | WS_VISIBLE
+                CTLDATA 8, 0, 3, 4
+  DEFPUSHBUTTON "~QUIT", VALUE_QUIT, 18, 20, 87, 14
+  LTEXT         "Status", VALUE_STATUS, 118, 22, 173, 8
+                PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+  }
+}
+
+
+/* end of source */
+

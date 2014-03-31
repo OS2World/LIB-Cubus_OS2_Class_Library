@@ -1,0 +1,12 @@
+.\PROCSTAT.res: \
+    ..\Source\PROCSTAT.rc \
+    ..\..\OCL.ICO \
+    ..\Source\Process.ico \
+    ..\Source\PROCSTAT.h \
+    $(MAKEDEP)
+
+.\PROCSTAT.obj: \
+    ..\Source\PROCSTAT.cpp \
+    ..\Source\PROCSTAT.hpp \
+    ..\Source\PROCSTAT.h \
+    $(MAKEDEP)

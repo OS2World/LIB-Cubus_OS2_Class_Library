@@ -1,0 +1,11 @@
+.\DRAGSAMP.obj: \
+    ..\Source\DRAGSAMP.cpp \
+    ..\Source\DRAGSAMP.hpp \
+    ..\Source\DRAGSAMP.h \
+    $(MAKEDEP)
+
+.\DRAGSAMP.res: \
+    ..\Source\DRAGSAMP.rc \
+    ..\Source\DRAGSAMP.ico \
+    ..\Source\DRAGSAMP.h \
+    $(MAKEDEP)

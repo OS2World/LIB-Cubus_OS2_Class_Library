@@ -1,0 +1,3 @@
+.\COLLECT.obj: \
+    ..\Source\COLLECT.cpp \
+    $(MAKEDEP)

@@ -1,0 +1,6 @@
+All these samples are compiled using IBM VisualAge C++ 3.0,
+OCLVAI.LIB (OCLVA.DLL) and the Warp  Toolkit and compression
+mechanism. So these samples cannot be executed in OS/2 2.x 
+or without access to the actual OCL for VisualAge (OCVLA.DLL).
+In case you're using OS/2 2.x you have to recompile the samples
+using your compiler and the Developers Toolkit for OS/2 2.x.

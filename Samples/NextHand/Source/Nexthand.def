@@ -1,0 +1,12 @@
+; $Header: W:/Projects/OCL/Samples/NextHand/Source/rcs/Nexthand.def 1.50 1996/08/11 23:48:45 B.STEIN Release $
+
+NAME  NEXTHAND  WINDOWAPI
+
+DESCRIPTION  'NextHand 1.5 - (c) 1996 by Cubus'
+
+CODE       MOVEABLE
+DATA       MOVEABLE MULTIPLE
+
+HEAPSIZE   16184
+STACKSIZE  65536
+PROTMODE

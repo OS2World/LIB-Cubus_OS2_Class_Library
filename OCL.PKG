@@ -1,0 +1,5899 @@
+* $Header: W:/Projects/OCL/rcs/OCL.PKG 1.50 1996/08/11 23:47:04 B.STEIN Release $
+
+SERVICELEVEL
+   LEVEL = '0000112'
+
+PATH
+   FILE = 'C:/OCL',
+   FILELABEL = 'OCL Base Directory',
+   WORK = 'C:/OCL/SAMPLES',
+   WORKLABEL = 'OCL Samples Directory'
+
+DISK
+   NAME = 'OS/2 Class Library 1.20 Disk #1',
+   VOLUME = 'OCL1'
+
+DISK
+   NAME = 'OS/2 Class Library 1.20 Disk #2',
+   VOLUME = 'OCL2'
+
+DISK
+   NAME = 'OS/2 Class Library 1.20 Disk #3',
+   VOLUME = 'OCL3'
+
+DISK
+   NAME = 'OS/2 Class Library 1.20 Disk #4',
+   VOLUME = 'OCL4'
+
+DISK
+   NAME = 'OS/2 Class Library 1.20 Disk #5',
+   VOLUME = 'OCL5'
+
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   SOURCE = 'OCL.ICO',
+   VOLUME = 'OCL1',
+   PWS = 'BIN/OCL.ICO',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '3386'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   SOURCE = 'OCLO.ICO',
+   VOLUME = 'OCL1',
+   PWS = 'BIN/OCLO.ICO',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '3386'
+
+COMPONENT
+   NAME = 'Folder',
+   ID = 'FOLDER',
+   DISPLAY = 'NO',
+   DESCRIPTION = 'OCL Folder',
+   SIZE = '10000'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   SOURCE = 'OCL.ICO',
+   VOLUME = 'OCL1',
+   PWS = 'BIN/OCL.ICO',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '3386'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   SOURCE = 'OCLO.ICO',
+   VOLUME = 'OCL1',
+   PWS = 'BIN/OCLO.ICO',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '3386'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPFolder "OS/2^Class Library" <WP_DESKTOP> R  "OBJECTID=<OCLIFLDR>;ICONVIEW=FLOWED,NORMAL;ALWAYSSORT=YES;DEFAULTSORT=NAME;ICONFILE=%EPFIFILEDIR%//BIN//OCL.ICO;ICONNFILE=1,%EPFIFILEDIR%//BIN//OCL.ICO"'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEWPSOBJECT <OCLIFLDR>'
+
+COMPONENT
+   NAME = 'Installation Tools',
+   ID = 'INSTALL',
+   REQUIRES = 'FOLDER',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'OCL Installation Utility',
+   SIZE = '900000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:INSTALL.IN_',
+   VOLUME = 'OCL1',
+   ID = 'INSTALL'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'INSTALL',
+   PWS = 'BIN/OCLIPRCS.EXE',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '263876'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'INSTALL',
+   PWS = 'BIN/OCLIICIS.ICO',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '4752'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'INSTALL',
+   PWS = 'BIN/OCLINSTS.EXE',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '234516'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'INSTALL',
+   PWS = 'BIN/OCLIUPCK.EXE',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '69392'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   SOURCE = 'OCL.ICF',
+   VOLUME = 'OCL1',
+   PWS = 'BIN/OCL.ICF',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '696'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   SOURCE = 'OCL.PKG',
+   VOLUME = 'OCL1',
+   PWS = 'BIN/OCL.PKG',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '119634'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   SOURCE = 'OCL.DSC',
+   VOLUME = 'OCL1',
+   PWS = 'BIN/OCL.DSC',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '191'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Installation Utility" <OCLIFLDR> R   "PROGTYPE=WINDOWABLEVIO;EXENAME=CMD.EXE;OBJECTID=<OCLINSTS>;STARTUPDIR=%EPFIFILEDIR%;PARAMETERS=/C %EPFIFILEDIR%//BIN//OCLINSTS.EXE /C=%EPFIFILEDIR%//BIN//OCL.ICF /O=DRIVE;MINIMIZED=YES;ICONFILE=%EPFIFILEDIR%//BIN//OCLIICIS.ICO"'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEWPSOBJECT <OCLINSTS>'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'INSTALL',
+   PWS = 'BIN/OCLIMSG.MSG',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '12178'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'INSTALL',
+   PWS = 'BIN/OCLIHPLB.HLP',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '85833'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'INSTALL',
+   PWS = 'BIN/OCLIPII.DLL',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '60152'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'INSTALL',
+   PWS = 'BIN/OCLIEXTS.DLL',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '47828'
+
+COMPONENT
+   NAME = 'Documentation',
+   ID = 'DOC',
+   REQUIRES = 'FOLDER',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'OCL Documents',
+   SIZE = '600000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:DOC.PK_',
+   VOLUME = 'OCL1',
+   ID = 'DOC'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DOC',
+   PWS = 'BOOK/OCL.INF',
+   DATE = '960116',
+   TIME = '1029',
+   SIZE = '594860'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DOC',
+   PWS = 'BOOK/OCL.NDX',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '84'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "OCL Reference" <OCLIFLDR> R   "OBJECTID=<OCL_REFERENCE>;PROGTYPE=PM;EXENAME=VIEW.EXE;STARTUPDIR=%EPFIFILEDIR%//BOOK;PARAMETERS=%EPFIFILEDIR%//BOOK//OCL.INF"'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEWPSOBJECT <OCL_REFERENCE>'
+
+UPDATECONFIG
+   VAR = 'SET BOOKSHELF',
+   ADDSTR = '%EPFIFILEDIR%//BOOK;',
+   ADDWHEN = 'INSTALL',
+   DELETEWHEN = 'DELETE'
+
+UPDATECONFIG
+   VAR = 'SET HELPNDX',
+   ADDSTR = 'OCL.NDX',
+   ADDWHEN = 'INSTALL',
+   DELETEWHEN = 'DELETE',
+   DELIMITER = '+'
+
+COMPONENT
+   NAME = 'Common Tools',
+   ID = 'COMMTOOL',
+   DISPLAY = 'NO',
+   DESCRIPTION = 'Common Tools and Scripts for all Compilers',
+   SIZE = '290000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:CMTT.PK_',
+   VOLUME = 'OCL2',
+   ID = 'COMMTOOL'
+
+UPDATECONFIG
+   VAR = 'SET PATH',
+   ADDSTR = '%EPFIFILEDIR%//BIN;',
+   ADDWHEN = 'INSTALL',
+   DELETEWHEN = 'DELETE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COMMTOOL',
+   PWS = 'ALLOBJ.INC',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '1559'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COMMTOOL',
+   PWS = 'BIN/BUILD.EXE',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '81236'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COMMTOOL',
+   PWS = 'BIN/IPFCPREP.EXE',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '34238'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COMMTOOL',
+   PWS = 'BIN/IPFCPREP.INF',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '16612'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "IPFCPREP Reference" <OCLIFLDR> R   "OBJECTID=<IPFCPREP_REFERENCE>;PROGTYPE=PM;EXENAME=VIEW.EXE;STARTUPDIR=%EPFIFILEDIR%//BIN;PARAMETERS=%EPFIFILEDIR%//BIN//IPFCPREP.INF"'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COMMTOOL',
+   PWS = 'LCLEANUP.CMD',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '156'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COMMTOOL',
+   PWS = 'COMMON.DEP',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '6153'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COMMTOOL',
+   PWS = 'COMMON.INC',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '5118'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COMMTOOL',
+   PWS = 'BIN/DEF2EXP.EXE',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '63488'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COMMTOOL',
+   PWS = 'BIN/CPP2IPF.EXE',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '66560'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COMMTOOL',
+   PWS = 'LIBOBJ.INC',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '3147'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COMMTOOL',
+   PWS = 'OCL.BLD',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '191'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COMMTOOL',
+   PWS = 'OCLOBJ.INC',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '4823'
+
+COMPONENT
+   NAME = 'Class Definitions',
+   ID = 'CLASSDEF',
+   REQUIRES = 'COMMTOOL',
+   DISPLAY = 'NO',
+   DESCRIPTION = 'Headers and Template Implementations for all Compilers (Required)',
+   SIZE = '330000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:CLASSDEF.PK_',
+   VOLUME = 'OCL2',
+   ID = 'CLASSDEF'
+
+UPDATECONFIG
+   VAR = 'SET INCLUDE',
+   ADDSTR = '%EPFIFILEDIR%//INCLUDE;',
+   ADDWHEN = 'INSTALL',
+   DELETEWHEN = 'DELETE'
+
+UPDATECONFIG
+   VAR = 'SET IPATH',
+   ADDSTR = '%EPFIFILEDIR%//INCLUDE;',
+   ADDWHEN = 'INSTALL',
+   DELETEWHEN = 'DELETE'
+
+ADDCONFIG
+   ADDSTR = 'SET OCL=%EPFIFILEDIR%',
+   ADDWHEN = 'INSTALL',
+   DELETEWHEN = 'DELETE'
+
+UPDATECONFIG
+   VAR = 'LIBPATH',
+   ADDSTR = '%EPFIFILEDIR%//LIB;',
+   ADDWHEN = 'INSTALL',
+   DELETEWHEN = 'DELETE'
+
+UPDATECONFIG
+   VAR = 'SET LIB',
+   ADDSTR = '%EPFIFILEDIR%//LIB;',
+   ADDWHEN = 'INSTALL',
+   DELETEWHEN = 'DELETE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/lOString.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2354'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/O3State.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2629'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OApp.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3278'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OAppBase.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2463'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OAuto3State.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2663'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OAutoCheckBox.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2727'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OAutoRadioButton.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2794'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OBitmap.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2418'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OBook.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '4228'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OBookPage.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2453'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OBuffer.hpp',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '3162'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OButton.hpp',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '3162'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OButtonBar.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '5535'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OCheckBox.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2611'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OCircSlider.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '5027'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OCL.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '10269'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OCLObject.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2117'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OCollection.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3803'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OCommand.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2259'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OConstIterator.inl',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '1854'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OConstIterator.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2068'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OContainer.inl',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3364'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OContainer.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '4776'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OContainerBase.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '6079'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OCreate.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2330'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OCriticalSec.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2520'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/ODialog.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2607'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/ODragEntryField.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3662'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/ODynamicLib.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3129'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OEditor.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2700'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OEntryField.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3555'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OException.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2907'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OFcl.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '4535'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OFillButton.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2095'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OFrame.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2662'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OGraphicsButton.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '5480'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OHelp.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2639'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OHelpPopup.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2720'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OIcon.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2167'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OIndicator.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2761'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OIterator.inl',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '1817'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OIterator.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2035'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OList.inl',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '5057'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OList.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3301'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OListBox.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '4189'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OLogo.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2687'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OMemu.h',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '14187'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OMemu.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2682'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OMenu.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '5349'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OMenuItem.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2387'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OMLE.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '4243'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OMsgs.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3004'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OMuxSem.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3133'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OMuxWaitSem.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '4190'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/ONPipe.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3244'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/ONSem.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3367'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OOrderedCollection.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2498'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OPipe.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3927'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OPipeCli.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3026'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OPipeSvr.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2987'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OPipeTool.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2826'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OPMException.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3512'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OPMinit.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '1894'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OPMPipeTool.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3067'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OProfile.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2604'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OPushButton.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2663'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OQueue.inl',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2237'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OQueue.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2116'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OProcStat.h',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '7295'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OProcStat.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2411'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/ORadioButton.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2758'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OSlider.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '5788'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OSortedList.inl',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '5456'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OSortedList.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3437'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OSpinBtn.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3582'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OStack.inl',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2242'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OStack.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2112'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OStatusLine.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2982'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OString.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3489'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OSysInfo.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3277'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OSysLevel.h',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '8483'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OSysLevel.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2293'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OThread.inl',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3544'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OUserButton.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2747'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OThread.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3746'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OThreadBase.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2789'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OValueSet.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '4489'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OVioApp.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2148'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OVioException.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2565'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OVioHlp.h',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '4371'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OWindow.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3466'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OXApp.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2098'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OXcptBase.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '3079'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OXcptPM.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2099'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/OXcptVio.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2106'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/slOProcRecord.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2989'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CLASSDEF',
+   PWS = 'Include/slOString.hpp',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2132'
+
+COMPONENT
+   NAME = 'Libraries (IBM)',
+   ID = 'OCLI',
+   REQUIRES = 'CLASSDEF',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'OS/2 Class Library for CSet++ 2.1 and Visual Age C++ 3.0 (DLL, LIB, I-LIB).  Compiled with CSet++ 2.1. Recompile when using another release level.',
+   SIZE = '1410000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:OCLI.PK_',
+   VOLUME = 'OCL2',
+   ID = 'OCLI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLI',
+   PWS = 'LIB/OCLI.LIB',
+   DATE = '960116',
+   TIME = '1013',
+   SIZE = '524288'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLI',
+   PWS = 'LIB/OCLII.LIB',
+   DATE = '960116',
+   TIME = '1013',
+   SIZE = '115712'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLI',
+   PWS = 'LIB/OCLI.DLL',
+   DATE = '960116',
+   TIME = '1013',
+   SIZE = '166576'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:OCLVA.PK_',
+   VOLUME = 'OCL2',
+   ID = 'OCLVA'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLVA',
+   PWS = 'LIB/OCLVA.LIB',
+   DATE = '960116',
+   TIME = '1014',
+   SIZE = '298318'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLVA',
+   PWS = 'LIB/OCLVAI.LIB',
+   DATE = '960116',
+   TIME = '1014',
+   SIZE = '117760'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLVA',
+   PWS = 'LIB/OCLVA.DLL',
+   DATE = '960116',
+   TIME = '1014',
+   SIZE = '184402'
+
+COMPONENT
+   NAME = 'Libraries (Watcom)',
+   ID = 'OCLW',
+   REQUIRES = 'CLASSDEF',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'OS/2 Class Library for Watcom C++ 10.0 (DLL, LIB, I-LIB). Compiled with Watcom C++ 10.0a. Recompile when using another release level.',
+   SIZE = '1450000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:OCLW.PK_',
+   VOLUME = 'OCL3',
+   ID = 'OCLW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLW',
+   PWS = 'LIB/OCLW.LIB',
+   DATE = '960116',
+   TIME = '1015',
+   SIZE = '404480'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLW',
+   PWS = 'LIB/OCLWI.LIB',
+   DATE = '960116',
+   TIME = '1015',
+   SIZE = '733696'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLW',
+   PWS = 'LIB/OCLW.DLL',
+   DATE = '960116',
+   TIME = '1014',
+   SIZE = '304072'
+
+COMPONENT
+   NAME = 'Libraries (Metaware)',
+   ID = 'OCLM',
+   REQUIRES = 'CLASSDEF',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'OS/2 Class Library for Metaware HighC/C++ 3.31 (LIB). You may compile the DLL but you will not have much fun with it because of a bug in the Metware startup code for multithreaded DLLs.',
+   SIZE = '370000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:OCLM.PK_',
+   VOLUME = 'OCL3',
+   ID = 'OCLM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLM',
+   PWS = 'LIB/OCLM.LIB',
+   DATE = '960116',
+   TIME = '1014',
+   SIZE = '365568'
+
+
+COMPONENT
+   NAME = 'Libraries (Borland)',
+   ID = 'OCLB',
+   REQUIRES = 'CLASSDEF',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'OS/2 Class Library for Borland C++ 2-0 (DLL, LIB, I-LIB).  Compiled with Borland C++ 2.0. Recompile when using another release level.',
+   SIZE = '710000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:OCLB.PK_',
+   VOLUME = 'OCL3',
+   ID = 'OCLB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLB',
+   PWS = 'LIB/OCLB.LIB',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '364444'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLB',
+   PWS = 'LIB/OCLBI.LIB',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '109056'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLB',
+   PWS = 'LIB/OCLB.DLL',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '234060'
+
+COMPONENT
+   NAME = 'Libraries (GCC/EMX)',
+   ID = 'OCLEMX',
+   REQUIRES = 'CLASSDEF',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'OS/2 Class Library for GCC/EMX 2.7.0 (DLL, LIB, I-LIB).  Compiled with GCC/EMX 2.7.0 Patchlevel 6. Recompile when using a higher release level.',
+   SIZE = '980000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:OCLEMX.PK_',
+   VOLUME = 'OCL4',
+   ID = 'OCLEMX'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLEMX',
+   PWS = 'LIB/OCLEMX.LIB',
+   DATE = '960116',
+   TIME = '1013',
+   SIZE = '422400'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLEMX',
+   PWS = 'LIB/OCLEMX.DLL',
+   DATE = '960116',
+   TIME = '1013',
+   SIZE = '302067'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLEMX',
+   PWS = 'LIB/OCLEMXI.LIB',
+   DATE = '960116',
+   TIME = '1013',
+   SIZE = '253440'
+
+COMPONENT
+   NAME = 'Source',
+   ID = 'OCLSRC',
+   REQUIRES = 'CLASSDEF',
+   DISPLAY = 'NO',
+   DESCRIPTION = 'OCL Source (Common)',
+   SIZE = '360000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:SRC.PK_',
+   VOLUME = 'OCL4',
+   ID = 'OCLSRC'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/DLLEntry.cc',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2900'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/clOString.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2489'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/O3State.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2661'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OApp.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4169'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OAppBase.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2523'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OAuto3State.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2862'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OAutoCheckBox.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2970'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OAutoRadioButton.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3137'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OBitmap.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3840'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OBook.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '12266'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OBookPage.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2550'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OBuffer.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3958'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OButton.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3958'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OButtonBar.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '9785'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OCheckBox.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2909'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OCircSlider.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3333'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OCLVer.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2383'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OCollection.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '6771'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OCommand.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2017'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OContainerBase.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '10326'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OCreate.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3629'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OCriticalSec.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2419'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/ODialog.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4257'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/ODragEntryField.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '6478'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/ODynamicLib.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4387'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OEditor.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4363'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OEntryField.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '5272'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OException.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2553'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OFcl.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '8188'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OFillButton.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2312'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OFrame.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4814'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OGraphicsButton.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '9551'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OHelp.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3799'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OHelpPopup.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4527'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OIcon.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2609'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OIndicator.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2959'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OListBox.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '6001'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OLogo.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3813'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OMemu.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '6404'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OMenu.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '7497'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OMenuItem.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2946'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OMLE.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '6539'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OMsgs.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3783'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OMuxSem.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3229'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OMuxWaitSem.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4467'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/ONPipe.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2149'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/ONSem.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3604'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OOrderedCollection.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4298'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OPipeCli.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3805'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OPipeSvr.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '5523'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OPipeTool.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4028'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OPipe_istream.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2346'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OPipe_ostream.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2346'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OPipe_streamable.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2746'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OPMException.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4265'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OPMinit.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2101'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OPMPipeTool.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4403'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OPMTool.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '5379'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OProcStat.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '5776'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OProfile.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4628'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OPushButton.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3057'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/ORadioButton.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3065'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OScan.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2811'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OSlider.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '7851'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OSpinBtn.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4735'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OStatusLine.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '5410'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OString.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '6912'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OSysInfo.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2332'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OSysInfoVio.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '9845'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OSysLevel.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2628'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OThreadBase.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3300'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OUserButton.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3055'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OValueSet.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '6746'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OVioApp.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2460'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OVioException.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2631'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OWinDefDlg.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3323'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OWinDefWindow.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3666'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OWindow.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '5020'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OXApp.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3102'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OXcptBase.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '9288'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OXcptPM.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2106'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/OXcptVio.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2079'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/slOProcRecord.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2926'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLSRC',
+   PWS = 'Source/slOString.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2544'
+
+COMPONENT
+   NAME = 'Source (IBM)',
+   ID = 'OCLISRC',
+   REQUIRES = 'OCLSRC',
+   DISPLAY = 'YES',
+   SIZE = '210000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:SRCI.PK_',
+   VOLUME = 'OCL4',
+   ID = 'SRCI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCI',
+   PWS = 'IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2618'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCI',
+   PWS = 'IBM/OCLI.DEF',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '98429'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:SRCVA.PK_',
+   VOLUME = 'OCL4',
+   ID = 'SRCVA'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCVA',
+   PWS = 'VA30/VA30.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2635'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCVA',
+   PWS = 'VA30/OCLVA.DEF',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '98434'
+
+COMPONENT
+   NAME = 'Source (Watcom)',
+   ID = 'OCLWSRC',
+   REQUIRES = 'OCLSRC',
+   DISPLAY = 'YES',
+   SIZE = '70000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:SRCW.PK_',
+   VOLUME = 'OCL4',
+   ID = 'SRCW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCW',
+   PWS = 'Watcom/OCL.EXP',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '56820'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCW',
+   PWS = 'Watcom/OCL.FIL',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '1572'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCW',
+   PWS = 'Watcom/OCL.LNK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '491'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCW',
+   PWS = 'Watcom/OCLD.LNK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '499'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCW',
+   PWS = 'Watcom/Watcom.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '378'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCW',
+   PWS = 'Watcom/WCDLL.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '820'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCW',
+   PWS = 'Watcom/WCLIB.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '645'
+
+COMPONENT
+   NAME = 'Source (Metaware)',
+   ID = 'OCLMSRC',
+   REQUIRES = 'OCLSRC',
+   DISPLAY = 'YES',
+   SIZE = '80000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:SRCM.PK_',
+   VOLUME = 'OCL4',
+   ID = 'SRCM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCM',
+   PWS = 'Metaware/MDLL.MAK',
+   DATE = '960116',
+   TIME = '1015',
+   SIZE = '3250'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCM',
+   PWS = 'Metaware/Metaware.MAK',
+   DATE = '960116',
+   TIME = '1015',
+   SIZE = '353'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCM',
+   PWS = 'Metaware/MLIB.MAK',
+   DATE = '960116',
+   TIME = '1015',
+   SIZE = '2225'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCM',
+   PWS = 'Metaware/OCLM.DEF',
+   DATE = '960116',
+   TIME = '1015',
+   SIZE = '65760'
+
+COMPONENT
+   NAME = 'Source (Borland)',
+   ID = 'OCLBSRC',
+   REQUIRES = 'OCLSRC',
+   DISPLAY = 'YES',
+   SIZE = '80000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:SRCB.PK_',
+   VOLUME = 'OCL4',
+   ID = 'SRCB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCB',
+   PWS = 'Borland/Borland.MAK',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '2700'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCB',
+   PWS = 'Borland/OCLB.DEF',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '70797'
+
+COMPONENT
+   NAME = 'Source (GCC/EMX)',
+   ID = 'OCLESRC',
+   REQUIRES = 'OCLSRC',
+   DISPLAY = 'YES',
+   SIZE = '110000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:SRCE.PK_',
+   VOLUME = 'OCL4',
+   ID = 'SRCE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCE',
+   PWS = 'EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '375'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCE',
+   PWS = 'EMX/EMXDLL.MAK',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '760'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCE',
+   PWS = 'EMX/EMXLIB.MAK',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '580'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SRCE',
+   PWS = 'EMX/OCLEMX.DEF',
+   DATE = '960116',
+   TIME = '1012',
+   SIZE = '101794'
+
+
+COMPONENT
+   NAME = 'Samples Common',
+   ID = 'SCOMM',
+   REQUIRES = 'FOLDER',
+   DISPLAY = 'NO',
+   SIZE = '1320000'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPFolder "Samples" <OCLIFLDR> R "OBJECTID=<OCLSAMP>;ICONVIEW=FLOWED,NORMAL;ALWAYSSORT=YES;DEFAULTSORT=NAME;ICONFILE=%EPFIFILEDIR%//BIN//OCL.ICO"'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEWPSOBJECT <OCLSAMP>'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:OCLVA.PK_',
+   VOLUME = 'OCL2',
+   ID = 'OCLVA'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'OCLVA',
+   PWS = 'LIB/OCLVA.DLL',
+   DATE = '960116',
+   TIME = '1014',
+   SIZE = '184402'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:SCOMM.PK_',
+   VOLUME = 'OCL4',
+   ID = 'SCOMM'
+
+ADDCONFIG
+   ADDSTR = 'SET OCLSAMP=%EPFIWORKDIR%',
+   ADDWHEN = 'INSTALL',
+   DELETEWHEN = 'DELETE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SCOMM',
+   PWS = 'SCLEANUP.CMD',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '118'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SCOMM',
+   PWS = 'COMMON.INC',
+   DATE = '960116',
+   TIME = '1011',
+   SIZE = '5118'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SCOMM',
+   PWS = 'Installation',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '218'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SCOMM',
+   PWS = 'LOGO.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '3318'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SCOMM',
+   PWS = 'OCL.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '3968'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'SCOMM',
+   PWS = 'Readme!',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '373'
+
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BALLOON.PK_',
+   VOLUME = 'OCL4',
+   ID = 'BALLOON'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/BALLOON.INC',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '207'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/BALLOON.DEP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '529'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/balloon.bmp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '874'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/balloon.ico',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '3968'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/balloons.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '568'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/client.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '4708'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/client.h',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '218'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/client.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1541'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/client.rc',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '463'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/client.def',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '244'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/server.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '4541'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/server.h',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '765'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/server.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2139'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/server.rc',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1898'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/Source/server.def',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '244'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/IBM/Client.exe',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '39936'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Balloon Client" <OCLSAMP> R   "PROGTYPE=PM;EXENAME=%EPFIWORKDIR%//Balloons//IBM//Client.exe;OBJECTID=<OCLBALLCL>"'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOON',
+   PWS = 'Balloons/IBM/Server.exe',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '39936'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Balloon Server" <OCLSAMP> R   "PROGTYPE=PM;EXENAME=%EPFIWORKDIR%//Balloons//IBM//Server.exe;OBJECTID=<OCLBALLS>"'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:COLLECT.PK_',
+   VOLUME = 'OCL4',
+   ID = 'COLLECT'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COLLECT',
+   PWS = 'Collections/COLLECT.INC',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '58'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COLLECT',
+   PWS = 'Collections/COLLECT.DEP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '63'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COLLECT',
+   PWS = 'Collections/Source/Collect.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1160'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COLLECT',
+   PWS = 'Collections/Source/Collect.def',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '252'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COLLECT',
+   PWS = 'Collections/IBM/Collect.exe',
+   DATE = '960116',
+   TIME = '1009',
+   SIZE = '46080'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Stack and Queue" <OCLSAMP> R   "PROGTYPE=WINDOWABLEVIO;EXENAME=%EPFIWORKDIR%//Collections//IBM//Collect.exe;OBJECTID=<OCLCOLLECT>"'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:CRITICS.PK_',
+   VOLUME = 'OCL4',
+   ID = 'CRITICS'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CRITICS',
+   PWS = 'Critics/CRITICS.INC',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '60'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CRITICS',
+   PWS = 'Critics/CRITICS.DEP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '92'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CRITICS',
+   PWS = 'Critics/Source/Critics.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '797'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CRITICS',
+   PWS = 'Critics/Source/Critics.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1777'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CRITICS',
+   PWS = 'Critics/Source/Critics.def',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '247'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CRITICS',
+   PWS = 'Critics/IBM/Critics.exe',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '62464'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Critical Sections" <OCLSAMP> R   "PROGTYPE=WINDOWABLEVIO;EXENAME=%EPFIWORKDIR%//Critics//IBM//Critics.exe;OBJECTID=<OCLCRITICAL>"'
+
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:DRAGSAMP.PK_',
+   VOLUME = 'OCL4',
+   ID = 'DRAGSAMP'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGSAMP',
+   PWS = 'DragSamp/DRAGSAMP.INC',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '107'
+
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGSAMP',
+   PWS = 'DragSamp/DRAGSAMP.DEP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '247'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGSAMP',
+   PWS = 'DragSamp/Source/dragsamp.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1109'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGSAMP',
+   PWS = 'DragSamp/Source/dragsamp.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '616'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGSAMP',
+   PWS = 'DragSamp/Source/dragsamp.def',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '248'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGSAMP',
+   PWS = 'DragSamp/Source/dragsamp.h',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '416'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGSAMP',
+   PWS = 'DragSamp/Source/dragsamp.ico',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '874'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGSAMP',
+   PWS = 'DragSamp/Source/dragsamp.rc',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '714'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGSAMP',
+   PWS = 'DragSamp/IBM/DragSamp.exe',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '32768'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Drag and Drop" <OCLSAMP> R   "PROGTYPE=PM;EXENAME=%EPFIWORKDIR%//DragSamp//IBM//DragSamp.exe;OBJECTID=<OCLDRAGSAMP>"'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:EDITOR.PK_',
+   VOLUME = 'OCL4',
+   ID = 'EDITOR'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITOR',
+   PWS = 'Editor/EDITOR.INC',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '106'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITOR',
+   PWS = 'Editor/EDITOR.DEP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '227'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITOR',
+   PWS = 'Editor/Source/Editor.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1856'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITOR',
+   PWS = 'Editor/Source/Editor.h',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '264'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITOR',
+   PWS = 'Editor/Source/Editor.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '538'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITOR',
+   PWS = 'Editor/Source/Editor.rc',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '604'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITOR',
+   PWS = 'Editor/Source/Editor.def',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '178'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITOR',
+   PWS = 'Editor/IBM/Editor.exe',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '34816'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Editor" <OCLSAMP> R   "PROGTYPE=PM;EXENAME=%EPFIWORKDIR%//Editor//IBM//Editor.exe;OBJECTID=<OCLEDIT>"'
+
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GTAKPM.PK_',
+   VOLUME = 'OCL4',
+   ID = 'GTAKPM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/GTAKPM.INC',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '211'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/GTAKPM.DEP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1411'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/Backup.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2638'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/DrivesCnr.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '7709'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/FilesCnr.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '5431'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTakPM.def',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '295'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTakPM.h',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '315'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTakPM.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2299'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTakPM.rc',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2662'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTPMApp.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1372'
+
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTPMApp.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '921'
+
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTPMException.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1366'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTPMException.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1042'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTPMMain.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1120'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTPMMonitor.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1501'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTPMWin.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '12435'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTPMWin.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '5469'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTPMWinCommand.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1906'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/GTPMWinControl.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2403'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/HelpPanels.h',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '335'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/Menus.rc',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '674'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/Messages.h',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '324'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/Resources.h',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2136'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/Restore.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '292'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/Stringtable.h',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '846'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/Stringtable.rc',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '882'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/Tape.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2792'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/Tape.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1101'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/BACKUP.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/COMPARE.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/ERASE.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/ERASEQ.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/FORMAT.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/GTAKPM.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '68294'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/INFO.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/LOAD.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/LOCK.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/MONITOR.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/PART.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/PROCEDURES.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/QUIT.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/RESTORE.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/REWIND.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/SETTINGS.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/STOP.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/STRUCT.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/TAPE.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/TAPE0.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/UNLOAD.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/BMP/UNLOCK.BMP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/CD.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/CD_INC.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '3120'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/DONTKNOW.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/FILE.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/FILE_EXC.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/FILE_INC.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/FOLDER.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/FOLDER_EXC.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/FOLDER_INC.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/FOPEN.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/FOPEN_EXC.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/FOPEN_INC.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/GTAKPM.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '3968'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/HD.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/HD_INC.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/Source/ICO/MONITOR.ICO',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPM',
+   PWS = 'GTakPM/IBM/GTAKPM.EXE',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '181793'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "GTakPM Develop" <OCLSAMP> R   "PROGTYPE=PM;EXENAME=%EPFIWORKDIR%//GTakPM//IBM//GTAKPM.EXE;OBJECTID=<GTAKPM_DEV>"'
+
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ITERATOR.PK_',
+   VOLUME = 'OCL5',
+   ID = 'ITERATOR'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'ITERATOR',
+   PWS = 'Iterators/ITTEST.INC',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '57'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'ITERATOR',
+   PWS = 'Iterators/ITTEST.DEP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '61'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'ITERATOR',
+   PWS = 'Iterators/Source/ITTest.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1615'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'ITERATOR',
+   PWS = 'Iterators/Source/ITTest.def',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '247'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'ITERATOR',
+   PWS = 'Iterators/IBM/ITTest.exe',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '47616'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Iterators" <OCLSAMP> R   "PROGTYPE=WINDOWABLEVIO;EXENAME=%EPFIWORKDIR%//Iterators//IBM//ITTest.exe;OBJECTID=<OCLITTEST>"'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:LISTBOX.PK_',
+   VOLUME = 'OCL5',
+   ID = 'LISTBOX'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOX',
+   PWS = 'Listbox/LISTBOX.INC',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '107'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOX',
+   PWS = 'Listbox/LISTBOX.DEP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '232'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOX',
+   PWS = 'Listbox/Source/Listbox.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2355'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOX',
+   PWS = 'Listbox/Source/Listbox.h',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '166'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOX',
+   PWS = 'Listbox/Source/Listbox.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '802'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOX',
+   PWS = 'Listbox/Source/Listbox.rc',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '321'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOX',
+   PWS = 'Listbox/Source/Listbox.def',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '126'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOX',
+   PWS = 'Listbox/IBM/Listbox.exe',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '37888'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Listbox" <OCLSAMP> R   "PROGTYPE=PM;EXENAME=%EPFIWORKDIR%//Listbox//IBM//Listbox.exe;OBJECTID=<OCLLBOX>"'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:MENUS.PK_',
+   VOLUME = 'OCL5',
+   ID = 'MENUS'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUS',
+   PWS = 'Menus/MENUS.INC',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '104'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUS',
+   PWS = 'Menus/MENUS.DEP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '217'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUS',
+   PWS = 'Menus/Source/Menus.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2084'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUS',
+   PWS = 'Menus/Source/Menus.h',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '653'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUS',
+   PWS = 'Menus/Source/Menus.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '455'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUS',
+   PWS = 'Menus/Source/Menus.rc',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1081'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUS',
+   PWS = 'Menus/Source/Menus.def',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '176'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUS',
+   PWS = 'Menus/IBM/Menus.exe',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '36352'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Menus" <OCLSAMP> R   "PROGTYPE=PM;EXENAME=%EPFIWORKDIR%//Menus//IBM//Menus.exe;OBJECTID=<OCLMENUS>"'
+
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:NEXTHAND.PK_',
+   VOLUME = 'OCL5',
+   ID = 'NEXTHAND'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/NEXTHAND.DEP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '779'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/NEXTHAND.INC',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '223'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/Source/NextBarDlg.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '13681'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/Source/NextBarEvent.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '3049'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/Source/NextCommand.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '4841'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/Source/NextHand.cpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '11604'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/Source/NextHand.def',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '302'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/Source/NextHand.h',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2599'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/Source/NextHand.hpp',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '3827'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/Source/NextHand.ico',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '4856'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/Source/NextHand.ipf',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1638'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/Source/NextHand.rc',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '5574'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/Source/Raw.ico',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '874'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/IBM/NEXTHAND.EXE',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '87040'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTHAND',
+   PWS = 'NextHand/IBM/NEXTHAND.HLP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '2401'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "NextHand" <OCLSAMP> R   "PROGTYPE=PM;EXENAME=%EPFIWORKDIR%//NextHand//IBM//NEXTHAND.EXE;OBJECTID=<OCLNEXTHAND>"'
+
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PROCSTAT.PK_',
+   VOLUME = 'OCL5',
+   ID = 'PROCSTAT'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTAT',
+   PWS = 'ProcStat/PROCSTAT.INC',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '107'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTAT',
+   PWS = 'ProcStat/PROCSTAT.DEP',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '267'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTAT',
+   PWS = 'ProcStat/README',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '62'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTAT',
+   PWS = 'ProcStat/Source/Process.ico',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '874'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTAT',
+   PWS = 'ProcStat/Source/ProcStat.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4356'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTAT',
+   PWS = 'ProcStat/Source/ProcStat.def',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '245'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTAT',
+   PWS = 'ProcStat/Source/ProcStat.h',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '219'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTAT',
+   PWS = 'ProcStat/Source/ProcStat.hpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '967'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTAT',
+   PWS = 'ProcStat/Source/ProcStat.rc',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '352'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTAT',
+   PWS = 'ProcStat/IBM/ProcStat.exe',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '35878'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Process List" <OCLSAMP> R   "PROGTYPE=PM;EXENAME=%EPFIWORKDIR%//ProcStat//IBM//ProcStat.exe;OBJECTID=<OCLPROCSTAT>"'
+
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TEMPLATE.PK_',
+   VOLUME = 'OCL5',
+   ID = 'TEMPLATE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/TEMPLATE.INC',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '107'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/TEMPLATE.DEP',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '396'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/Container.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '4581'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/except.ico',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3968'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/fill.ico',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3968'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/help.ico',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '888'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/info.ico',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3498'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/quit.ico',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2448'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/Template.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '9138'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/Template.def',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '187'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/Template.h',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '1412'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/Template.hpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2967'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/Template.ico',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '888'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/Template.ipf',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '199'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/Source/Template.rc',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '2058'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/IBM/Template.exe',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '60454'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLATE',
+   PWS = 'Template/IBM/Template.hlp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '578'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Template Application" <OCLSAMP> R   "PROGTYPE=PM;EXENAME=%EPFIWORKDIR%//Template//IBM//Template.exe;OBJECTID=<OCLTEMPLATE>"'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:VALUESET.PK_',
+   VOLUME = 'OCL5',
+   ID = 'VALUESET'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUESET',
+   PWS = 'ValueSet/VALUE.INC',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '105'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUESET',
+   PWS = 'ValueSet/VALUE.DEP',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '272'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUESET',
+   PWS = 'ValueSet/Source/Value.bmp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '586'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUESET',
+   PWS = 'ValueSet/Source/Value.cpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '3000'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUESET',
+   PWS = 'ValueSet/Source/Value.h',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '257'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUESET',
+   PWS = 'ValueSet/Source/Value.hpp',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '593'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUESET',
+   PWS = 'ValueSet/Source/Value.ico',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '874'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUESET',
+   PWS = 'ValueSet/Source/Value.rc',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '752'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUESET',
+   PWS = 'ValueSet/Source/Value.def',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '177'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUESET',
+   PWS = 'ValueSet/IBM/ValueSet.exe',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '38912'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "ValueSet" <OCLSAMP> R   "PROGTYPE=PM;EXENAME=%EPFIWORKDIR%//ValueSet//IBM//ValueSet.exe;OBJECTID=<OCLVALUE>"'
+
+
+COMPONENT
+   NAME = 'Samples (IBM)',
+   ID = 'SAMPI',
+   REQUIRES = 'SCOMM',
+   DISPLAY = 'YES',
+   SIZE = '20000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BALLOON.IPK',
+   VOLUME = 'OCL5',
+   ID = 'BALLOONI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOONI',
+   PWS = 'Balloons/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '514'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOONI',
+   PWS = 'Balloons/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '505'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:EDITOR.IPK',
+   VOLUME = 'OCL5',
+   ID = 'EDITORI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITORI',
+   PWS = 'Editor/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '373'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITORI',
+   PWS = 'Editor/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '368'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:LISTBOX.IPK',
+   VOLUME = 'OCL5',
+   ID = 'LISTBOXI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOXI',
+   PWS = 'Listbox/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '377'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOXI',
+   PWS = 'Listbox/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '382'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:MENUS.IPK',
+   VOLUME = 'OCL5',
+   ID = 'MENUSI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUSI',
+   PWS = 'Menus/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '359'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUSI',
+   PWS = 'Menus/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '364'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:NEXTHAND.IPK',
+   VOLUME = 'OCL5',
+   ID = 'NEXTI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTI',
+   PWS = 'NextHand/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '829'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTI',
+   PWS = 'NextHand/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '842'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PROCSTAT.IPK',
+   VOLUME = 'OCL5',
+   ID = 'PROCSTI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTI',
+   PWS = 'ProcStat/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '422'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTI',
+   PWS = 'ProcStat/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '427'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TEMPLATE.IPK',
+   VOLUME = 'OCL5',
+   ID = 'TEMPLI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLI',
+   PWS = 'Template/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '510'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPLI',
+   PWS = 'Template/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '515'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:VALUESET.IPK',
+   VOLUME = 'OCL5',
+   ID = 'VALUEI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUEI',
+   PWS = 'ValueSet/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '368'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUEI',
+   PWS = 'ValueSet/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '373'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:COLLECT.IPK',
+   VOLUME = 'OCL5',
+   ID = 'COLLECTI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COLLECTI',
+   PWS = 'Collections/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '324'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COLLECTI',
+   PWS = 'Collections/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '329'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:CRITICS.IPK',
+   VOLUME = 'OCL5',
+   ID = 'CRITICSI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CRITICSI',
+   PWS = 'Critics/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '324'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CRITICSI',
+   PWS = 'Critics/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '327'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ITERATOR.IPK',
+   VOLUME = 'OCL5',
+   ID = 'ITERII'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'ITERII',
+   PWS = 'Iterators/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '318'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'ITERII',
+   PWS = 'Iterators/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '323'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:DRAGSAMP.IPK',
+   VOLUME = 'OCL5',
+   ID = 'DRAGI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGI',
+   PWS = 'DragSamp/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '502'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGI',
+   PWS = 'DragSamp/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '505'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GTAKPM.IPK',
+   VOLUME = 'OCL5',
+   ID = 'GTAKPMI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPMI',
+   PWS = 'GTakPM/IBM/IBM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '933'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPMI',
+   PWS = 'GTakPM/IBM/VA30.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '937'
+
+
+COMPONENT
+   NAME = 'Samples (Watcom)',
+   ID = 'SAMPW',
+   REQUIRES = 'SCOMM',
+   DISPLAY = 'YES',
+   SIZE = '10000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BALLOON.WPK',
+   VOLUME = 'OCL5',
+   ID = 'BALLOONW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOONW',
+   PWS = 'Balloons/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '515'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:EDITOR.WPK',
+   VOLUME = 'OCL5',
+   ID = 'EDITORW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITORW',
+   PWS = 'Editor/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '370'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:LISTBOX.WPK',
+   VOLUME = 'OCL5',
+   ID = 'LISTBOXW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOXW',
+   PWS = 'Listbox/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '383'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:MENUS.WPK',
+   VOLUME = 'OCL5',
+   ID = 'MENUSW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUSW',
+   PWS = 'Menus/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '365'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:NEXTHAND.WPK',
+   VOLUME = 'OCL5',
+   ID = 'NEXTW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTW',
+   PWS = 'NextHand/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '683'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PROCSTAT.WPK',
+   VOLUME = 'OCL5',
+   ID = 'PROCSTW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTW',
+   PWS = 'ProcStat/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '358'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTW',
+   PWS = 'ProcStat/Watcom/PROCSTAT.LNK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '125'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TEMPLATE.WPK',
+   VOLUME = 'OCL5',
+   ID = 'TEMPW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPW',
+   PWS = 'Template/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '457'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:VALUESET.WPK',
+   VOLUME = 'OCL5',
+   ID = 'VALUEW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUEW',
+   PWS = 'ValueSet/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '374'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:COLLECT.WPK',
+   VOLUME = 'OCL5',
+   ID = 'COLLECTW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COLLECTW',
+   PWS = 'Collections/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '370'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:CRITICS.WPK',
+   VOLUME = 'OCL5',
+   ID = 'CRITICSW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CRITICSW',
+   PWS = 'Critics/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '370'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ITERATOR.WPK',
+   VOLUME = 'OCL5',
+   ID = 'ITERATW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'ITERATW',
+   PWS = 'Iterators/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '364'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:DRAGSAMP.WPK',
+   VOLUME = 'OCL5',
+   ID = 'DRAGW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGW',
+   PWS = 'DragSamp/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '509'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GTAKPM.WPK',
+   VOLUME = 'OCL5',
+   ID = 'GTAKPMW'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPMW',
+   PWS = 'GTakPM/Watcom/WATCOM.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1087'
+
+COMPONENT
+   NAME = 'Samples (Metaware)',
+   ID = 'SAMPM',
+   REQUIRES = 'SCOMM',
+   DISPLAY = 'YES',
+   SIZE = '10000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BALLOON.MPK',
+   VOLUME = 'OCL5',
+   ID = 'BALLOONM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOONM',
+   PWS = 'Balloons/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '521'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:EDITOR.MPK',
+   VOLUME = 'OCL5',
+   ID = 'EDITORM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITORM',
+   PWS = 'Editor/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '379'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:LISTBOX.MPK',
+   VOLUME = 'OCL5',
+   ID = 'LISTBOXM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOXM',
+   PWS = 'Listbox/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '386'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:MENUS.MPK',
+   VOLUME = 'OCL5',
+   ID = 'MENUSM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUSM',
+   PWS = 'Menus/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '368'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:NEXTHAND.MPK',
+   VOLUME = 'OCL5',
+   ID = 'NEXTM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTM',
+   PWS = 'NextHand/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '880'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PROCSTAT.MPK',
+   VOLUME = 'OCL5',
+   ID = 'PROCSTM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTM',
+   PWS = 'ProcStat/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '424'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TEMPLATE.MPK',
+   VOLUME = 'OCL5',
+   ID = 'TEMPM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPM',
+   PWS = 'Template/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '459'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:VALUESET.MPK',
+   VOLUME = 'OCL5',
+   ID = 'VALUEM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUEM',
+   PWS = 'ValueSet/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '377'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:COLLECT.MPK',
+   VOLUME = 'OCL5',
+   ID = 'COLLECTM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COLLECTM',
+   PWS = 'Collections/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '337'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:CRITICS.MPK',
+   VOLUME = 'OCL5',
+   ID = 'CRITICSM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CRITICSM',
+   PWS = 'Critics/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '337'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ITERATOR.MPK',
+   VOLUME = 'OCL5',
+   ID = 'ITERATM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'ITERATM',
+   PWS = 'Iterators/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '331'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:DRAGSAMP.MPK',
+   VOLUME = 'OCL5',
+   ID = 'DRAGM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGM',
+   PWS = 'DragSamp/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '520'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GTAKPM.MPK',
+   VOLUME = 'OCL5',
+   ID = 'GTAKPMM'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPMM',
+   PWS = 'GTakPM/Metaware/METAWARE.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '1114'
+
+COMPONENT
+   NAME = 'Samples (Borland)',
+   ID = 'SAMPB',
+   REQUIRES = 'SCOMM',
+   DISPLAY = 'YES',
+   SIZE = '10000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BALLOON.BPK',
+   VOLUME = 'OCL5',
+   ID = 'BALLOONB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOONB',
+   PWS = 'Balloons/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '637'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:EDITOR.BPK',
+   VOLUME = 'OCL5',
+   ID = 'EDITORB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITORB',
+   PWS = 'Editor/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '378'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:LISTBOX.BPK',
+   VOLUME = 'OCL5',
+   ID = 'LISTBOXB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOXB',
+   PWS = 'Listbox/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '387'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:MENUS.BPK',
+   VOLUME = 'OCL5',
+   ID = 'MENUSB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUSB',
+   PWS = 'Menus/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '369'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:NEXTHAND.BPK',
+   VOLUME = 'OCL5',
+   ID = 'NEXTB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTB',
+   PWS = 'NextHand/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '683'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PROCSTAT.BPK',
+   VOLUME = 'OCL5',
+   ID = 'PROCSTB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTB',
+   PWS = 'ProcStat/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '420'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TEMPLATE.BPK',
+   VOLUME = 'OCL5',
+   ID = 'TEMPB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPB',
+   PWS = 'Template/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '591'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:VALUESET.BPK',
+   VOLUME = 'OCL5',
+   ID = 'VALUEB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUEB',
+   PWS = 'ValueSet/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '378'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:COLLECT.BPK',
+   VOLUME = 'OCL5',
+   ID = 'COLLECTB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COLLECTB',
+   PWS = 'Collections/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '334'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:CRITICS.BPK',
+   VOLUME = 'OCL5',
+   ID = 'CRITICSB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CRITICSB',
+   PWS = 'Critics/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '334'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ITERATOR.BPK',
+   VOLUME = 'OCL5',
+   ID = 'ITERATB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'ITERATB',
+   PWS = 'Iterators/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '330'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:DRAGSAMP.BPK',
+   VOLUME = 'OCL5',
+   ID = 'DRAGB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGB',
+   PWS = 'DragSamp/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '517'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GTAKPM.BPK',
+   VOLUME = 'OCL5',
+   ID = 'GTAKPMB'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPMB',
+   PWS = 'GTakPM/Borland/BORLAND.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '979'
+
+COMPONENT
+   NAME = 'Samples (GCC/EMX)',
+   ID = 'SAMPE',
+   REQUIRES = 'SCOMM',
+   DISPLAY = 'YES',
+   SIZE = '10000'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BALLOON.EPK',
+   VOLUME = 'OCL5',
+   ID = 'BALLOONE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'BALLOONE',
+   PWS = 'Balloons/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '807'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:EDITOR.EPK',
+   VOLUME = 'OCL5',
+   ID = 'EDITORE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'EDITORE',
+   PWS = 'Editor/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '446'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:LISTBOX.EPK',
+   VOLUME = 'OCL5',
+   ID = 'LISTBOXE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'LISTBOXE',
+   PWS = 'Listbox/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '453'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:MENUS.EPK',
+   VOLUME = 'OCL5',
+   ID = 'MENUSE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'MENUSE',
+   PWS = 'Menus/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '437'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:NEXTHAND.EPK',
+   VOLUME = 'OCL5',
+   ID = 'NEXTE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'NEXTE',
+   PWS = 'NextHand/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '744'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PROCSTAT.EPK',
+   VOLUME = 'OCL5',
+   ID = 'PROCSTE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'PROCSTE',
+   PWS = 'ProcStat/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '464'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TEMPLATE.EPK',
+   VOLUME = 'OCL5',
+   ID = 'TEMPE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'TEMPE',
+   PWS = 'Template/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '497'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:VALUESET.EPK',
+   VOLUME = 'OCL5',
+   ID = 'VALUEE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'VALUEE',
+   PWS = 'ValueSet/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1017',
+   SIZE = '443'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:COLLECT.EPK',
+   VOLUME = 'OCL5',
+   ID = 'COLLECTE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'COLLECTE',
+   PWS = 'Collections/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '510'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:CRITICS.EPK',
+   VOLUME = 'OCL5',
+   ID = 'CRITICSE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'CRITICSE',
+   PWS = 'Critics/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '494'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ITERATOR.EPK',
+   VOLUME = 'OCL5',
+   ID = 'ITERATE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'ITERATE',
+   PWS = 'Iterators/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '489'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:DRAGSAMP.EPK',
+   VOLUME = 'OCL5',
+   ID = 'DRAGE'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'DRAGE',
+   PWS = 'DragSamp/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '577'
+
+PACKFILE
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GTAKPM.EPK',
+   VOLUME = 'OCL5',
+   ID = 'GTAKPME'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   PWSPATH = 'WORK',
+   REPLACEINUSE = 'I U D R',
+   PACKID = 'GTAKPME',
+   PWS = 'GTakPM/EMX/EMX.MAK',
+   DATE = '960116',
+   TIME = '1016',
+   SIZE = '764'
+
+* end of package file

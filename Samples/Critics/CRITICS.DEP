@@ -1,0 +1,4 @@
+.\CRITICS.obj: \
+    ..\Source\CRITICS.cpp \
+    ..\Source\CRITICS.hpp \
+    $(MAKEDEP)

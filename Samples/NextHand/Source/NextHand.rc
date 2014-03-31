@@ -1,0 +1,134 @@
+/* NextHand.rc */
+
+/* $Header: W:/Projects/OCL/Samples/NextHand/Source/rcs/NextHand.rc 1.50 1996/08/11 23:48:45 B.STEIN Release $ */
+
+#include <os2.h>
+#include "..\Source\NextHand.h"
+
+
+ICON NHX_MAIN     "..\\Source\\NEXTHAND.ICO"
+ICON NHX_RAW_ICON "..\\Source\\RAW.ICO"
+
+
+HELPTABLE MAIN_HELP_TABLE
+BEGIN
+  HELPITEM NHX_MAIN, MAIN_HELP_SUBTABLE, PANEL_MAIN
+END
+
+
+HELPSUBTABLE MAIN_HELP_SUBTABLE
+BEGIN
+  HELPSUBITEM PANEL_CFGS,  PANEL_CFGS
+END
+
+MENU NHX_MENU
+BEGIN
+  MENUITEM "~Configure Button", NHX_CFG_BUTTON, MIS_TEXT
+  MENUITEM "~Add Button", NHX_ADD_BUTTON, MIS_TEXT
+  MENUITEM "~Delete Button", NHX_DEL_BUTTON, MIS_TEXT
+  MENUITEM "~Move Toolbar", NHX_MOVE, MIS_TEXT
+  MENUITEM SEPARATOR
+  SUBMENU "~View", NHX_VIEW
+  BEGIN
+    MENUITEM "~vertical", NHX_SENKRECHT, MIS_TEXT
+    MENUITEM "~horizontal", NHX_WAAGERECHT, MIS_TEXT
+    MENUITEM SEPARATOR
+    MENUITEM "~32 x 32 Icons", NHX_NORMICONS, MIS_TEXT
+    MENUITEM "~40 x 40 Icons", NHX_LARGEICONS, MIS_TEXT
+    MENUITEM SEPARATOR
+    MENUITEM "~Always on top", NHX_FLOAT, MIS_TEXT
+  END
+  MENUITEM SEPARATOR
+  MENUITEM "~Help", NHX_HELP, MIS_TEXT
+  MENUITEM "~Information", NHX_INFOMNU, MIS_TEXT
+  MENUITEM "~Quit", NHX_QUIT, MIS_TEXT
+END
+
+
+STRINGTABLE
+BEGIN
+   APP_TITLE "NextHand 1.5"
+   NO_HLP_AVAIL  "Help not available."
+   WORKDIR_NOT_ACC "Cannot acces working directory!"
+   WORKDIR_NOT_FOUND "Working directory does not exist!"
+   ROOT_NOT_ACC "Cannot access root directory."
+   START_EVENT_FAILED "The program could not be launched. Please check the settings."
+   NO_NEXTHAND_FILE "This is not a NextHand configuration file."
+   ERR_ACCESS_DRIVE "Cannot access the specified drive!"
+   NO_WPSO "There is no WPS-object for this ID."
+   ERR_START_IN_BACKGROUND "The program could not be started in background mode."
+END
+
+
+DLGTEMPLATE NHX_INFO_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Information", NHX_INFO_DLG, 30, 29, 225, 146, WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        GROUPBOX        "", NHX_INFO_DLG, 6, 6, 214, 136
+        ICON            NHX_MAIN, NHX_MAIN, 98, 97, 16, 13
+        CTEXT           "NextHand 1.5", INFODLG_TXT2, 21, 81, 185, 8, 
+                        DT_VCENTER
+        CTEXT           "(c) Cubus 1996", INFODLG_TXT3, 21, 73, 185, 8, 
+                        DT_VCENTER
+        CTEXT           "MultiDesk Tools", NHX_INFO_DLG, 21, 120, 185, 8, 
+                        DT_VCENTER
+        CTEXT           "All Rights Reserved", INFODLG_TXT4, 21, 65, 185, 8, 
+                        DT_VCENTER
+        DEFPUSHBUTTON   "~OK", NHX_INFO_OK, 93, 17, 40, 12
+        CTEXT           "Using Cubus OS/2 Class Library", INFODLG_TXT5, 21, 
+                        57, 185, 8
+        CTEXT           "Version", INFODLG_TXT6, 21, 35, 185, 22
+    END
+END
+
+DLGTEMPLATE NHX_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "NextHand Configuration", NHX_DLG, 12, 6, 272, 195, WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        GROUPBOX        "", NHX_RAHMEN, 10, 5, 254, 190
+        ENTRYFIELD      "", NHX_TITLE, 103, 177, 151, 8, ES_MARGIN | 
+                        WS_GROUP
+        ENTRYFIELD      "", NHX_PROG, 103, 164, 151, 8, ES_MARGIN
+        ENTRYFIELD      "", NHX_PARMS, 103, 151, 151, 8, ES_MARGIN
+        ENTRYFIELD      "", NHX_WORKDIR, 103, 138, 151, 8, ES_MARGIN
+        ENTRYFIELD      "", NHX_ICON, 103, 125, 151, 8, ES_MARGIN
+        MLE             "", NHX_SETTINGS, 101, 99, 155, 22, MLS_HSCROLL | 
+                        MLS_VSCROLL
+        AUTORADIOBUTTON "OS/2 Fullscreen", NHX_OS2_FULL, 16, 85, 91, 10, 
+                        WS_TABSTOP
+        AUTORADIOBUTTON "OS/2-Window", NHX_OS2_WIN, 16, 75, 91, 10, 
+                        WS_TABSTOP
+        AUTORADIOBUTTON "DOS-Fullscreen", NHX_DOS_FULL, 16, 65, 91, 10, 
+                        WS_TABSTOP
+        AUTORADIOBUTTON "DOS-Window", NHX_DOS_WIN, 16, 55, 91, 10, 
+                        WS_TABSTOP
+        AUTORADIOBUTTON "PM", NHX_PM, 16, 45, 91, 10, WS_TABSTOP
+        AUTORADIOBUTTON "WPS-Object", NHX_WPSO, 16, 35, 91, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Seamless Win", NHX_SEAMLESS, 169, 85, 70, 10, 
+                        WS_TABSTOP
+        AUTORADIOBUTTON "WinOS2 Standard", NHX_WINSTD, 169, 75, 86, 10, 
+                        WS_GROUP | WS_TABSTOP | WS_DISABLED
+        AUTORADIOBUTTON "WinOS2 Enhanced", NHX_WINENH, 169, 65, 86, 10, 
+                        WS_TABSTOP | WS_DISABLED
+        AUTOCHECKBOX    "Background", NHX_BACKGROUND, 169, 55, 86, 10
+        AUTOCHECKBOX    "Maximized", NHX_MAXSIZE, 169, 45, 86, 10
+        AUTOCHECKBOX    "Minimized", NHX_MINSIZE, 169, 35, 86, 10
+        PUSHBUTTON      "~Save", NHX_SAVE, 16, 14, 56, 12
+        PUSHBUTTON      "~Cancel", NHX_CANCEL, 78, 14, 56, 12
+        PUSHBUTTON      "~Load", NHX_LOAD, 140, 14, 56, 12
+        LTEXT           "Title", NHX_TITLE_TEXT, 16, 175, 75, 8
+        LTEXT           "DOS-Settings", NHX_SETTINGS_TXT, 16, 113, 75, 8, 
+                        NOT WS_VISIBLE
+        LTEXT           "Icon", NHX_ICON_TXT, 16, 125, 75, 8
+        LTEXT           "Program", NHX_PROGRAM_TXT, 16, 164, 75, 8
+        LTEXT           "Parameters", NHX_PARMS_TXT, 16, 151, 75, 8
+        LTEXT           "Working directory", NHX_WORKDIR_TXT, 16, 138, 75, 8
+        ICON            NHX_RAW_ICON, NHX_ICONFIELD, 125, 57, 20, 16
+        DEFPUSHBUTTON   "~Help", NHX_HELP, 202, 14, 56, 12, BS_HELP | 
+                        BS_NOPOINTERFOCUS
+    END
+END
+
+/* end of source */

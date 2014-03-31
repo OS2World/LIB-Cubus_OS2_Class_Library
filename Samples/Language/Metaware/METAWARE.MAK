@@ -1,0 +1,15 @@
+!include $(OCLSAMP)\COMMON.INC
+!include ..\LISTBOX.INC
+
+MAKEDEP = METAWARE.MAK
+CFLAGS = $(S_HIGHCPP_COMPILE_DEBUG)
+LFLAGS = $(S_HIGHCPP_LINK_DEBUG)
+
+{..\Source}.cpp.obj:
+   hc $(CFLAGS) %s
+
+.\LISTBOX.exe: LISTBOX.obj LISTBOX.res {$(LIB)}OCLM.lib $(MAKEDEP)
+   hc $(LFLAGS) -l$(OCL)\LIB\OCLM.LIB -o .\LISTBOX.EXE .\LISTBOX.obj
+   rc .\LISTBOX.res LISTBOX.exe
+
+!include ..\LISTBOX.DEP

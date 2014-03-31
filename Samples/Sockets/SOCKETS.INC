@@ -1,0 +1,5 @@
+.all: .\SOCKS.EXE .\SOCKC.EXE
+
+.SUFFIXES:
+
+.SUFFIXES: .cpp

@@ -1,0 +1,6 @@
+# dependencies
+
+language.obj : ..\Source\language.cpp ..\Source\language.hpp ..\Source\res.h $(MAKEDEP)
+res.obj      : ..\Source\res.cc $(MAKEDEP)
+reseng.res   : ..\Source\reseng.rc ..\Source\res.h $(MAKEDEP)
+resger.res   : ..\Source\resger.rc ..\Source\res.h $(MAKEDEP)

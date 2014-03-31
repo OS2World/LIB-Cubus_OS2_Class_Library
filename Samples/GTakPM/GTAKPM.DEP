@@ -1,0 +1,38 @@
+# $Header: W:/Projects/OCL/Samples/GTakPM/rcs/GTAKPM.DEP 1.50 1996/08/11 23:48:03 B.STEIN Release $: e:/OCL/Samples/GTakPM/rcs/GTAKPM.DEP 1.4 1995/11/28 15:12:28 b.stein Exp b.stein $
+
+COMMONDEP = ..\Source\GTakPM.h \
+..\Source\Resources.h \
+..\Source\Messages.h \
+..\Source\HelpPanels.h \
+..\Source\Stringtable.h \
+..\Source\GTPMException.hpp \
+..\Source\GTPMApp.hpp \
+..\Source\GTPMWin.hpp \
+..\Source\Tape.hpp \
+$(MAKEDEP)
+
+.\GTakPM.res: ..\Source\GTakPM.rc \
+..\Source\Stringtable.rc \
+..\Source\ICO\GTAKPM.ICO \
+..\Source\BMP\STRUCT.BMP \
+..\Source\BMP\PROCEDURES.BMP \
+..\Source\BMP\TAPE.BMP \
+..\Source\BMP\BACKUP.BMP \
+..\Source\BMP\RESTORE.BMP \
+..\Source\BMP\COMPARE.BMP \
+..\Source\BMP\INFO.BMP \
+..\Source\BMP\QUIT.BMP \
+..\Source\BMP\SETTINGS.BMP \
+$(COMMONDEP)
+
+.\GTPMException.obj: ..\Source\GTPMException.cpp $(COMMONDEP)
+.\GTPMWin.obj: ..\Source\GTPMWin.cpp $(COMMONDEP)
+.\GTPMWinCommand.obj: ..\Source\GTPMWinCommand.cpp $(COMMONDEP)
+.\GTPMWinControl.obj: ..\Source\GTPMWinControl.cpp $(COMMONDEP)
+.\GTPMApp.obj: ..\Source\GTPMApp.cpp $(COMMONDEP)
+.\GTPMMain.obj: ..\Source\GTPMMain.cpp $(COMMONDEP)
+.\FilesCnr.obj: ..\Source\FilesCnr.cpp $(COMMONDEP)
+.\DrivesCnr.obj: ..\Source\DrivesCnr.cpp $(COMMONDEP)
+.\Tape.obj: ..\Source\Tape.cpp $(COMMONDEP)
+.\Backup.obj: ..\Source\Backup.cpp $(COMMONDEP)
+.\Restore.obj: ..\Source\Restore.cpp $(COMMONDEP)

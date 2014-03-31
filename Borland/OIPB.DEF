@@ -1,0 +1,130 @@
+; $Header: E:/Projects/OCL/Borland/rcs/OCLB.DEF 1.16 1996/01/25 03:46:31 B.STEIN Exp B.STEIN $
+
+LIBRARY     OIPB INITINSTANCE TERMINSTANCE
+
+DESCRIPTION 'OIP C++ Class Library 1.50 (BC20) (c) 1996 by Cubus - All Rights reserved.'
+
+
+DATA MULTIPLE NONSHARED READWRITE LOADONCALL
+CODE LOADONCALL
+PROTMODE
+
+; This is OIP 1.50
+
+EXPORTS
+
+    @OIP@MSGFILE                   @113 ; oip::msgfile
+    @OIP@transport                 @1   ; OIP::transport
+    @OIP@Version$qv                @2   ; OIP::Version()
+    @OIP@Version$qr7OString        @3   ; OIP::Version(OString&)
+    @OIP@error$qul                 @4   ; OIP::error(unsigned long)
+    @OIP@apierror$qulul            @5   ; OIP::apierror(unsigned long,unsigned long)
+    @OIP_Address@$bctr$qv          @6   ; OIP_Address::OIP_Address()
+    @OIP_Address@$bctr$qucucucuc   @7   ; OIP_Address::OIP_Address(unsigned char,unsigned char,unsigned char,unsigned char)
+    @OIP_Address@$bctr$qul         @8   ; OIP_Address::OIP_Address(unsigned long)
+    @OIP_Address@$bdtr$qv          @9   ; OIP_Address::~OIP_Address()
+    @OIP_Address@isOfType$xqv      @10  ; OIP_Address::isOfType() const
+    @OIP_Address@Set_s_addr$qucucucuc @11  ; OIP_Address::Set_s_addr(unsigned char,unsigned char,unsigned char,unsigned char)
+    @OIP_Address@Set_s_addr$qpc    @12  ; OIP_Address::Set_s_addr(char*)
+    @OIP_Address@Set_s_addr$qul    @13  ; OIP_Address::Set_s_addr(unsigned long)
+    @OIP_Address@Get_s_addr$qv     @14  ; OIP_Address::Get_s_addr()
+    @OIP_Address@Get_inet_addr$qpc @15  ; OIP_Address::Get_inet_addr(char*)
+    @OIP_Address@$oul$qv           @16  ; OIP_Address::operator unsigned long()
+    @OIP_Address@$basg$qul         @17  ; OIP_Address::operator =(unsigned long)
+    @OIP_CliSocket@$bctr$qv        @18  ; OIP_CliSocket::OIP_CliSocket()
+    @OIP_CliSocket@$bdtr$qv        @19  ; OIP_CliSocket::~OIP_CliSocket()
+    @OIP_CliSocket@isOfType$xqv    @20  ; OIP_CliSocket::isOfType() const
+    @OIP_CliSocket@connect$qv      @21  ; OIP_CliSocket::connect()
+    @OIP_CliSocket@connect$qp10OIP_Socket @22  ; OIP_CliSocket::connect(OIP_Socket*)
+    @OIP_Host@$bctr$qv             @23  ; OIP_Host::OIP_Host()
+    @OIP_Host@$bdtr$qv             @24  ; OIP_Host::~OIP_Host()
+    @OIP_Host@isOfType$xqv         @25  ; OIP_Host::isOfType() const
+    @OIP_Host@$opc$qv              @26  ; OIP_Host::operator char*()
+    @OIP_Host@Set$qp7hostent       @27  ; OIP_Host::Set(hostent*)
+    @OIP_Host@gethostbyaddr$qpcii  @28  ; OIP_Host::gethostbyaddr(char*,int,int)
+    @OIP_Host@gethostbyname$qpc    @29  ; OIP_Host::gethostbyname(char*)
+    @OIP_SockAddress@$bctr$qv      @30  ; OIP_SockAddress::OIP_SockAddress()
+    @OIP_SockAddress@$bdtr$qv      @31  ; OIP_SockAddress::~OIP_SockAddress()
+    @OIP_SockAddress@isOfType$xqv  @32  ; OIP_SockAddress::isOfType() const
+    @OIP_SockAddress@$o11sockaddr_in$qv @33  ; OIP_SockAddress::operator sockaddr_in()
+    @OIP_SockAddress@$op11sockaddr_in$qv @34  ; OIP_SockAddress::operator sockaddr_in*()
+    @OIP_SockAddress@Setin_port$qus @35  ; OIP_SockAddress::Setin_port(unsigned short)
+    @OIP_SockAddress@Getin_port$qv @36  ; OIP_SockAddress::Getin_port()
+    @OIP_SockAddress@Set_sin_addr$qul @37  ; OIP_SockAddress::Set_sin_addr(unsigned long)
+    @OIP_SockAddress@Set_sin_addr$qpc @38  ; OIP_SockAddress::Set_sin_addr(char*)
+    @OIP_SockAddress@Get_sin_addr$qv @39  ; OIP_SockAddress::Get_sin_addr()
+    @OIP_SockAddress@Set_sin_family$qs @40  ; OIP_SockAddress::Set_sin_family(short)
+    @OIP_SockAddress@Get_sin_family$qv @41  ; OIP_SockAddress::Get_sin_family()
+    @OIP_SockAddress@Get_inet_addr$qpc @42  ; OIP_SockAddress::Get_inet_addr(char*)
+    @OIP_SockAddress@Get_sockaddr_in$qv @43  ; OIP_SockAddress::Get_sockaddr_in()
+    @OIP_Socket@$bctr$qv           @44  ; OIP_Socket::OIP_Socket()
+    @OIP_Socket@$bctr$qp7hostent   @45  ; OIP_Socket::OIP_Socket(hostent*)
+    @OIP_Socket@$bdtr$qv           @46  ; OIP_Socket::~OIP_Socket()
+    @OIP_Socket@isOfType$xqv       @47  ; OIP_Socket::isOfType() const
+    @OIP_Socket@sysinit$qus        @48  ; OIP_Socket::sysinit(unsigned short)
+    @OIP_Socket@sysfree$qv         @49  ; OIP_Socket::sysfree()
+    @OIP_Socket@Set_socket$qi      @50  ; OIP_Socket::Set_socket(int)
+    @OIP_Socket@Get_socket$qv      @51  ; OIP_Socket::Get_socket()
+    @OIP_Socket@close$qv           @52  ; OIP_Socket::close()
+    @OIP_Socket@Gethostname$qpcui  @53  ; OIP_Socket::Gethostname(char*,unsigned int)
+    @OIP_Socket@Gethostbyaddr$qpci @54  ; OIP_Socket::Gethostbyaddr(char*,int)
+    @OIP_Socket@Gethostbyname$qpc  @55  ; OIP_Socket::Gethostbyname(char*)
+    @OIP_Socket@Get_phost$qv       @56  ; OIP_Socket::Get_phost()
+    @OIP_Socket@Sethostent$qp7hostent @57  ; OIP_Socket::Sethostent(hostent*)
+    @OIP_Socket@Getservbyname$qpct1 @58  ; OIP_Socket::Getservbyname(char*,char*)
+    @OIP_Socket@Getin_port$qv      @59  ; OIP_Socket::Getin_port()
+    @OIP_Socket@Setin_port$qus     @60  ; OIP_Socket::Setin_port(unsigned short)
+    @OIP_Socket@Set_sin_addr$qv    @61  ; OIP_Socket::Set_sin_addr()
+    @OIP_Socket@Set_sin_addr$qul   @62  ; OIP_Socket::Set_sin_addr(unsigned long)
+    @OIP_Socket@Set_sin_addr$qpc   @63  ; OIP_Socket::Set_sin_addr(char*)
+    @OIP_Socket@Get_sin_addr$qv    @64  ; OIP_Socket::Get_sin_addr()
+    @OIP_Socket@Getaddr_list$qui   @65  ; OIP_Socket::Getaddr_list(unsigned int)
+    @OIP_Socket@Set_address$quspc  @66  ; OIP_Socket::Set_address(unsigned short,char*)
+    @OIP_Socket@Set_sin_family$qs  @67  ; OIP_Socket::Set_sin_family(short)
+    @OIP_Socket@Get_sin_family$qv  @68  ; OIP_Socket::Get_sin_family()
+    @OIP_Socket@socket$qiii        @69  ; OIP_Socket::socket(int,int,int)
+    @OIP_Socket@send$qpcii         @70  ; OIP_Socket::send(char*,int,int)
+    @OIP_Socket@recv$qpcii         @71  ; OIP_Socket::recv(char*,int,int)
+    @OIP_Socket@GetErrorCode$qv    @72  ; OIP_Socket::GetErrorCode()
+    @OIP_Socket@Get_inet_addr$qpc  @73  ; OIP_Socket::Get_inet_addr(char*)
+    @OIP_Socket@Get_sockaddr$qv    @74  ; OIP_Socket::Get_sockaddr()
+    @OIP_Socket@$basg$qi           @75  ; OIP_Socket::operator =(int)
+    @OIP_Socket@$oi$qv             @76  ; OIP_Socket::operator int()
+    @OIP_Socket@$o15OIP_SockAddress$qv @77  ; OIP_Socket::operator OIP_SockAddress()
+    @OIP_Socket@$op15OIP_SockAddress$qv @78  ; OIP_Socket::operator OIP_SockAddress*()
+    @OIP_SrvSocket@$bctr$qv        @79  ; OIP_SrvSocket::OIP_SrvSocket()
+    @OIP_SrvSocket@$bdtr$qv        @80  ; OIP_SrvSocket::~OIP_SrvSocket()
+    @OIP_SrvSocket@isOfType$xqv    @81  ; OIP_SrvSocket::isOfType() const
+    @OIP_SrvSocket@bind$qv         @82  ; OIP_SrvSocket::bind()
+    @OIP_SrvSocket@bind$qp13OIP_CliSocket @83  ; OIP_SrvSocket::bind(OIP_CliSocket*)
+    @OIP_SrvSocket@listen$qi       @84  ; OIP_SrvSocket::listen(int)
+    @OIP_SrvSocket@accept$qv       @85  ; OIP_SrvSocket::accept()
+    @OIP_SrvSocket@accept$qp13OIP_CliSocket @86  ; OIP_SrvSocket::accept(OIP_CliSocket*)
+    @OIP_Server@$bctr$qv           @87  ; OIP_Server::OIP_Server()
+    @OIP_Server@$bdtr$qv           @88  ; OIP_Server::~OIP_Server()
+    @OIP_Server@isOfType$xqv       @89  ; OIP_Server::isOfType() const
+    @OIP_Server@init$qus           @90  ; OIP_Server::init(unsigned short)
+    @OIP_Server@terminate$qv       @91  ; OIP_Server::terminate()
+    @OIP_Server@waitForClient$qv   @92  ; OIP_Server::waitForClient()
+    @OIP_Server@connectMsg$qv      @93  ; OIP_Server::connectMsg()
+    @OIP_Server@disconnect$qv      @94  ; OIP_Server::disconnect()
+    @OIP_Server@disconnectMsg$qv   @95  ; OIP_Server::disconnectMsg()
+    @OIP_Server@send$qpvul         @96  ; OIP_Server::send(void*,unsigned long)
+    @OIP_Server@sendSuccess$qv     @97  ; OIP_Server::sendSuccess()
+    @OIP_Server@sendEnd$qv         @98  ; OIP_Server::sendEnd()
+    @OIP_Server@recv$qpvul         @99  ; OIP_Server::recv(void*,unsigned long)
+    @OIP_Client@$bctr$qv           @100 ; OIP_Client::OIP_Client()
+    @OIP_Client@$bdtr$qv           @101 ; OIP_Client::~OIP_Client()
+    @OIP_Client@isOfType$xqv       @102 ; OIP_Client::isOfType() const
+    @OIP_Client@init$qv            @103 ; OIP_Client::init()
+    @OIP_Client@terminate$qv       @104 ; OIP_Client::terminate()
+    @OIP_Client@connect$qpcus      @105 ; OIP_Client::connect(char*,unsigned short)
+    @OIP_Client@connectMsg$qv      @106 ; OIP_Client::connectMsg()
+    @OIP_Client@disconnect$qv      @107 ; OIP_Client::disconnect()
+    @OIP_Client@disconnectMsg$qv   @108 ; OIP_Client::disconnectMsg()
+    @OIP_Client@send$qpvul         @109 ; OIP_Client::send(void*,unsigned long)
+    @OIP_Client@sendSuccess$qv     @110 ; OIP_Client::sendSuccess()
+    @OIP_Client@sendEnd$qv         @111 ; OIP_Client::sendEnd()
+    @OIP_Client@recv$qpvul         @112 ; OIP_Client::recv(void*,unsigned long)
+    __DebuggerHookData             @167 
+    __GetExceptDLLinfo             @168 

@@ -1,0 +1,13 @@
+
+.\EDITOR.res: \
+    ..\Source\EDITOR.rc \
+    ..\..\OCL.ICO \
+    ..\Source\EDITOR.h \
+    $(MAKEDEP)
+
+.\EDITOR.obj: \
+    ..\Source\EDITOR.cpp \
+    ..\Source\EDITOR.hpp \
+    ..\Source\EDITOR.h \
+    $(MAKEDEP)
+

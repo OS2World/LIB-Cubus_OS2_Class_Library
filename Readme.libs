@@ -1,0 +1,19 @@
+The libraries are compiled using the Warp Toolkit and the flag
+
+#define __TK30__
+
+So the libs cannot be used for OS/2 2.x. In case you're running
+OS/2 2.x you have to recompile the libraries using your compiler
+and the Developers Toolkit for OS/2 2.x. Please define the macro
+
+#define __TK21__
+or
+#define __OCL_OS2_2X__
+
+in your common header os2.h or prior to 
+
+#include <ocl.hpp>
+
+for compatibility with OS/2 2.x.
+
+Benjamin Stein

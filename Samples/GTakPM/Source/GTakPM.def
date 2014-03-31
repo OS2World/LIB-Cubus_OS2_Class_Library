@@ -1,0 +1,12 @@
+; $Header: W:/Projects/OCL/Samples/GTakPM/Source/rcs/GTakPM.def 1.50 1996/08/11 23:48:09 B.STEIN Release $
+
+NAME  GTAKPM  WINDOWAPI
+
+DESCRIPTION  'GTakPM Develop (c) Cubus 1995'
+
+CODE       MOVEABLE
+DATA       MOVEABLE MULTIPLE
+
+HEAPSIZE     65536
+STACKSIZE    65536
+PROTMODE

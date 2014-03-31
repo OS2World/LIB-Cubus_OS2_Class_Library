@@ -1,0 +1,60 @@
+/*
+   GTakPM
+   (c) Benjamin Stein 1994
+   All Rights Reserved
+   GTakPM.rc
+*/
+
+/* $Header: W:/Projects/OCL/Samples/GTakPM/Source/rcs/GTakPM.rc 1.50 1996/08/11 23:48:10 B.STEIN Release $ */
+
+#include <os2.h>
+#include "..\Source\GTakPM.h"
+#include "..\Source\Resources.h"
+#include "..\Source\Messages.h"
+#include "..\Source\HelpPanels.h"
+#include "..\Source\Stringtable.h"
+
+BITMAP  GTPM_LOGO               "..\\Source\\BMP\\GTAKPM.BMP"
+
+BITMAP CMD_RESCAN               "..\\Source\\BMP\\STRUCT.BMP"
+BITMAP CMD_PROCEDURES           "..\\Source\\BMP\\PROCEDURES.BMP"
+BITMAP CMD_TAPE                 "..\\Source\\BMP\\TAPE.BMP"
+BITMAP CMD_BACKUP               "..\\Source\\BMP\\BACKUP.BMP"
+BITMAP CMD_RESTORE              "..\\Source\\BMP\\RESTORE.BMP"
+BITMAP CMD_COMPARE              "..\\Source\\BMP\\COMPARE.BMP"
+BITMAP CMD_INFO                 "..\\Source\\BMP\\INFO.BMP"
+BITMAP CMD_QUIT                 "..\\Source\\BMP\\QUIT.BMP"
+BITMAP CMD_SETTINGS             "..\\Source\\BMP\\SETTINGS.BMP"
+BITMAP TAPEBAR_LOAD             "..\\Source\\BMP\\LOAD.BMP"
+BITMAP TAPEBAR_UNLOAD           "..\\Source\\BMP\\UNLOAD.BMP"
+BITMAP TAPEBAR_REWIND           "..\\Source\\BMP\\REWIND.BMP"
+BITMAP TAPEBAR_PARTITIONS       "..\\Source\\BMP\\PART.BMP"
+BITMAP TAPEBAR_FORMAT           "..\\Source\\BMP\\FORMAT.BMP"
+BITMAP TAPEBAR_ERASE            "..\\Source\\BMP\\ERASE.BMP"
+BITMAP TAPEBAR_ERASEQ           "..\\Source\\BMP\\ERASEQ.BMP"
+BITMAP TAPEBAR_LOCK             "..\\Source\\BMP\\LOCK.BMP"
+BITMAP TAPEBAR_UNLOCK           "..\\Source\\BMP\\UNLOCK.BMP"
+BITMAP TAPEBAR_STOP_ASAP        "..\\Source\\BMP\\STOP.BMP"
+BITMAP CMD_MONITOR              "..\\Source\\BMP\\MONITOR.BMP"
+
+POINTER GTPM_ICO                "..\\Source\\ICO\\GTAKPM.ICO"
+POINTER MONITOR_ICO             "..\\Source\\ICO\\MONITOR.ICO"
+POINTER FOLDER_ICO              "..\\Source\\ICO\\FOLDER.ICO"
+POINTER FOLDER_INC_ICO          "..\\Source\\ICO\\FOLDER_INC.ICO"
+POINTER FOPEN_ICO               "..\\Source\\ICO\\FOPEN.ICO"
+POINTER FOPEN_INC_ICO           "..\\Source\\ICO\\FOPEN_INC.ICO"
+POINTER FILE_ICO                "..\\Source\\ICO\\FILE.ICO"
+POINTER FILE_INC_ICO            "..\\Source\\ICO\\FILE_INC.ICO"
+POINTER HD_ICO                  "..\\Source\\ICO\\HD.ICO"
+POINTER HD_INC_ICO              "..\\Source\\ICO\\HD_INC.ICO"
+POINTER CD_ICO                  "..\\Source\\ICO\\CD.ICO"
+POINTER CD_INC_ICO              "..\\Source\\ICO\\CD_INC.ICO"
+POINTER DONTKNOW_ICO            "..\\Source\\ICO\\DONTKNOW.ICO"
+
+/* menus */
+rcinclude ..\Source\Menus.rc
+
+/* stringtable */
+rcinclude ..\Source\Stringtable.rc
+
+/* end of source */

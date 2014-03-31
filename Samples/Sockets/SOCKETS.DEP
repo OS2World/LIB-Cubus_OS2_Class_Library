@@ -1,0 +1,7 @@
+.\SOCKS.obj: \
+    ..\Source\SOCKS.cpp \
+    $(MAKEDEP)
+
+.\SOCKC.obj: \
+    ..\Source\SOCKC.cpp \
+    $(MAKEDEP)

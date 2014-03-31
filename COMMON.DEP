@@ -1,0 +1,410 @@
+# $Header: W:/Projects/OCL/rcs/COMMON.DEP 1.50 1996/08/11 23:47:03 B.STEIN Release $
+
+.\OCL_Entry.obj: \
+    $(OCL)\Source\OCL_Entry.cc \
+    $(MAKEDEP)
+
+.\ODate.obj: \
+    $(OCL)\Source\ODate.cpp \
+    $(MAKEDEP)
+
+.\ORiffPlay.obj: \
+    $(OCL)\Source\ORiffPlay.cpp \
+    $(MAKEDEP)
+
+.\OXcptBase.obj: \
+    $(OCL)\Source\OXcptBase.cpp \
+    $(MAKEDEP)
+
+.\OXcptPM.obj: \
+    $(OCL)\Source\OXcptPM.cpp \
+    $(MAKEDEP)
+
+.\OXcptVio.obj: \
+    $(OCL)\Source\OXcptVio.cpp \
+    $(MAKEDEP)
+
+.\OThreadBase.obj: \
+    $(OCL)\Source\OThreadBase.cpp \
+    $(MAKEDEP)
+
+.\OCollection.obj: \
+    $(OCL)\Source\OCollection.cpp \
+    $(MAKEDEP)
+
+.\OOrderedCollection.obj: \
+    $(OCL)\Source\OOrderedCollection.cpp \
+    $(MAKEDEP)
+
+.\OSlider.obj: \
+    $(OCL)\Source\OSlider.cpp \
+    $(MAKEDEP)
+
+.\OCircSlider.obj: \
+    $(OCL)\Source\OCircSlider.cpp \
+    $(MAKEDEP)
+
+.\OIndicator.obj: \
+    $(OCL)\Source\OIndicator.cpp \
+    $(MAKEDEP)
+
+.\OSpinBtn.obj: \
+    $(OCL)\Source\OSpinBtn.cpp \
+    $(MAKEDEP)
+
+.\OWinDefWindow.obj: \
+    $(OCL)\Source\OWinDefWindow.cpp \
+    $(MAKEDEP)
+
+.\OWinDefDlg.obj: \
+    $(OCL)\Source\OWinDefDlg.cpp \
+    $(MAKEDEP)
+
+.\OWindow.obj: \
+    $(OCL)\Source\OWindow.cpp \
+    $(MAKEDEP)
+
+.\OSysInfoVio.obj: \
+    $(OCL)\Source\OSysInfoVio.cpp \
+    $(MAKEDEP)
+
+.\OSysInfo.obj: \
+    $(OCL)\Source\OSysInfo.cpp \
+    $(MAKEDEP)
+
+.\OString.obj: \
+    $(OCL)\Source\OString.cpp \
+    $(MAKEDEP)
+
+ 
+.\slOString.obj: \
+    $(OCL)\Source\slOString.cpp \
+    $(MAKEDEP)
+
+.\OStatusLine.obj: \
+    $(OCL)\Source\OStatusLine.cpp \
+    $(MAKEDEP)
+
+.\OScan.obj: \
+    $(OCL)\Source\OScan.cpp \
+    $(MAKEDEP)
+
+.\OProfile.obj: \
+    $(OCL)\Source\OProfile.cpp \
+    $(MAKEDEP)
+
+.\OPmTool.obj: \
+    $(OCL)\Source\OPmTool.cpp \
+    $(MAKEDEP)
+
+.\OPMinit.obj: \
+    $(OCL)\Source\OPMinit.cpp \
+    $(MAKEDEP)
+
+.\ONPipe.obj: \
+    $(OCL)\Source\ONPipe.cpp \
+    $(MAKEDEP)
+
+.\OPipeSvr.obj: \
+    $(OCL)\Source\OPipeSvr.cpp \
+    $(MAKEDEP)
+
+.\OPipeCli.obj: \
+    $(OCL)\Source\OPipeCli.cpp \
+    $(MAKEDEP)
+
+.\ONSem.obj: \
+    $(OCL)\Source\ONSem.cpp \
+    $(MAKEDEP)
+
+.\OMuxSem.obj: \
+    $(OCL)\Source\OMuxSem.cpp \
+    $(MAKEDEP)
+
+.\OMuxWaitSem.obj: \
+    $(OCL)\Source\OMuxWaitSem.cpp \
+    $(MAKEDEP)
+
+.\OMsgs.obj: \
+    $(OCL)\Source\OMsgs.cpp \
+    $(MAKEDEP)
+
+.\OMLE.obj: \
+    $(OCL)\Source\OMLE.cpp \
+    $(MAKEDEP)
+
+.\OLogo.obj: \
+    $(OCL)\Source\OLogo.cpp \
+    $(MAKEDEP)
+
+.\OHelp.obj: \
+    $(OCL)\Source\OHelp.cpp \
+    $(MAKEDEP)
+
+.\OFrame.obj: \
+    $(OCL)\Source\OFrame.cpp \
+    $(MAKEDEP)
+
+.\OFcl.obj: \
+    $(OCL)\Source\OFcl.cpp \
+    $(MAKEDEP)
+
+.\OEditor.obj: \
+    $(OCL)\Source\OEditor.cpp \
+    $(MAKEDEP)
+
+.\ODialog.obj: \
+    $(OCL)\Source\ODialog.cpp \
+    $(MAKEDEP)
+
+.\OCreate.obj: \
+    $(OCL)\Source\OCreate.cpp \
+    $(MAKEDEP)
+
+.\OCommand.obj: \
+    $(OCL)\Source\OCommand.cpp \
+    $(MAKEDEP)
+
+.\OContainer.obj: \
+    $(OCL)\Source\OContainer.cpp \
+    $(MAKEDEP)
+
+.\OButtonBar.obj: \
+    $(OCL)\Source\OButtonBar.cpp \
+    $(MAKEDEP)
+
+.\OHelpPopup.obj: \
+    $(OCL)\Source\OHelpPopup.cpp \
+    $(MAKEDEP)
+
+.\OBook.obj: \
+    $(OCL)\Source\OBook.cpp \
+    $(MAKEDEP)
+
+.\OBookPage.obj: \
+    $(OCL)\Source\OBookPage.cpp \
+    $(MAKEDEP)
+
+.\OCLVer.obj: \
+    $(OCL)\Source\OCLVer.cpp \
+    $(MAKEDEP)
+
+.\OValueSet.obj: \
+    $(OCL)\Source\OValueSet.cpp \
+    $(MAKEDEP)
+
+.\OEntryField.obj: \
+    $(OCL)\Source\OEntryField.cpp \
+    $(MAKEDEP)
+
+.\clOString.obj: \
+    $(OCL)\Source\clOString.cpp \
+    $(MAKEDEP)
+
+.\OPMException.obj: \
+    $(OCL)\Source\OPMException.cpp \
+    $(MAKEDEP)
+
+.\OVioException.obj: \
+    $(OCL)\Source\OVioException.cpp \
+    $(MAKEDEP)
+
+.\OException.obj: \
+    $(OCL)\Source\OException.cpp \
+    $(MAKEDEP)
+
+.\OVioApp.obj: \
+    $(OCL)\Source\OVioApp.cpp \
+    $(MAKEDEP)
+
+.\OApp.obj: \
+    $(OCL)\Source\OApp.cpp \
+    $(MAKEDEP)
+
+.\OXApp.obj: \
+    $(OCL)\Source\OXApp.cpp \
+    $(MAKEDEP)
+
+.\OAppBase.obj: \
+    $(OCL)\Source\OAppBase.cpp \
+    $(MAKEDEP)
+
+.\OListBox.obj: \
+    $(OCL)\Source\OListBox.cpp \
+    $(MAKEDEP)
+
+.\OIcon.obj: \
+    $(OCL)\Source\OIcon.cpp \
+    $(MAKEDEP)
+
+.\OBitmap.obj: \
+    $(OCL)\Source\OBitmap.cpp \
+    $(MAKEDEP)
+
+.\ODynamicLib.obj: \
+    $(OCL)\Source\ODynamicLib.cpp \
+    $(MAKEDEP)
+
+.\OPipe_streamable.obj: \
+    $(OCL)\Source\OPipe_streamable.cpp \
+    $(MAKEDEP)
+
+.\OPipe_istream.obj: \
+    $(OCL)\Source\OPipe_istream.cpp \
+    $(MAKEDEP)
+
+.\OPipe_ostream.obj: \
+    $(OCL)\Source\OPipe_ostream.cpp \
+    $(MAKEDEP)
+
+.\OPipeTool.obj: \
+    $(OCL)\Source\OPipeTool.cpp \
+    $(MAKEDEP)
+
+.\OPMPipeTool.obj: \
+    $(OCL)\Source\OPMPipeTool.cpp \
+    $(MAKEDEP)
+
+.\OMenuItem.obj: \
+    $(OCL)\Source\OMenuItem.cpp \
+    $(MAKEDEP)
+
+.\OMenu.obj: \
+    $(OCL)\Source\OMenu.cpp \
+    $(MAKEDEP)
+
+.\OMemu.obj: \
+    $(OCL)\Source\OMemu.cpp \
+    $(MAKEDEP)
+
+.\OCLObject.obj: \
+    $(OCL)\Source\OCLObject.cpp \
+    $(MAKEDEP)
+
+.\OCriticalSec.obj: \
+    $(OCL)\Source\OCriticalSec.cpp \
+    $(MAKEDEP)
+
+.\ODragEntryField.obj: \
+    $(OCL)\Source\ODragEntryField.cpp \
+    $(MAKEDEP)
+
+.\slOProcRecord.obj: \
+    $(OCL)\Source\slOProcRecord.cpp \
+    $(MAKEDEP)
+
+.\OProcStat.obj: \
+    $(OCL)\Source\OProcStat.cpp \
+    $(MAKEDEP)
+
+.\OSysLevel.obj: \
+    $(OCL)\Source\OSysLevel.cpp \
+    $(MAKEDEP)
+
+.\O3State.obj: \
+    $(OCL)\Source\O3State.cpp \
+    $(MAKEDEP)
+
+.\OAuto3State.obj: \
+    $(OCL)\Source\OAuto3State.cpp \
+    $(MAKEDEP)
+
+.\OAutoCheckBox.obj: \
+    $(OCL)\Source\OAutoCheckBox.cpp \
+    $(MAKEDEP)
+
+.\OAutoRadioButton.obj: \
+    $(OCL)\Source\OAutoRadioButton.cpp \
+    $(MAKEDEP)
+
+.\OButton.obj: \
+    $(OCL)\Source\OButton.cpp \
+    $(MAKEDEP)
+
+.\OFillButton.obj: \
+    $(OCL)\Source\OFillButton.cpp \
+    $(MAKEDEP)
+
+.\OGraphicsButton.obj: \
+    $(OCL)\Source\OGraphicsButton.cpp \
+    $(MAKEDEP)
+
+.\OPushButton.obj: \
+    $(OCL)\Source\OPushButton.cpp \
+    $(MAKEDEP)
+
+.\ORadioButton.obj: \
+    $(OCL)\Source\ORadioButton.cpp \
+    $(MAKEDEP)
+
+.\OUserButton.obj: \
+    $(OCL)\Source\OUserButton.cpp \
+    $(MAKEDEP)
+
+.\OBuffer.obj: \
+    $(OCL)\Source\OBuffer.cpp \
+    $(MAKEDEP)
+
+.\OPicture.obj: \
+    $(OCL)\Source\OPicture.cpp \
+    $(MAKEDEP)
+
+.\OIP_Address.obj: \
+    $(OCL)\Source\OIP_Address.cpp \
+    $(MAKEDEP)
+
+.\OIP_CliSocket.obj: \
+    $(OCL)\Source\OIP_CliSocket.cpp \
+    $(MAKEDEP)
+
+.\OIP_Host.obj: \
+    $(OCL)\Source\OIP_Host.cpp \
+    $(MAKEDEP)
+
+.\OIP_SockAddress.obj: \
+    $(OCL)\Source\OIP_SockAddress.cpp \
+    $(MAKEDEP)
+
+.\OIP_Socket.obj: \
+    $(OCL)\Source\OIP_Socket.cpp \
+    $(MAKEDEP)
+
+.\OIP_SrvSocket.obj: \
+    $(OCL)\Source\OIP_SrvSocket.cpp \
+    $(MAKEDEP)
+
+.\OIP_Ver.obj: \
+    $(OCL)\Source\OIP_Ver.cpp \
+    $(MAKEDEP)
+
+.\OIP_Entry.obj: \
+    $(OCL)\Source\OIP_Entry.cc \
+    $(MAKEDEP)
+
+.\OIP.obj: \
+    $(OCL)\Source\OIP.cpp \
+    $(MAKEDEP)
+
+.\OIP_Server.obj: \
+    $(OCL)\Source\OIP_Server.cpp \
+    $(MAKEDEP)
+
+.\OIP_Client.obj: \
+    $(OCL)\Source\OIP_Client.cpp \
+    $(MAKEDEP)
+
+.\OCL.obj: \
+    $(OCL)\Source\OCL.cpp \
+    $(MAKEDEP)
+
+.\OMessage.obj: \
+    $(OCL)\Source\OMessage.cpp \
+    $(MAKEDEP)
+
+.\OTimer.obj: \
+    $(OCL)\Source\OTimer.cpp \
+    $(MAKEDEP)
+
+.\OCLObject.obj: \
+    $(OCL)\Source\OCLObject.cpp \
+    $(MAKEDEP)

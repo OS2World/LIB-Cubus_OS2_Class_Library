@@ -1,0 +1,15 @@
+!include $(OCLSAMP)\COMMON.INC
+!include ..\PROCSTAT.INC
+
+MAKEDEP = BORLAND.MAK
+CFLAGS = $(S_BORLAND_COMPILE)
+LFLAGS = $(S_BORLAND_LINK)
+
+{..\Source}.cpp.obj:
+   bcc $(CFLAGS) %s
+
+.\PROCSTAT.EXE: .\PROCSTAT.obj .\PROCSTAT.res {$(LIB)}OCLB.lib $(MAKEDEP)
+   tlink $(LFLAGS) .\PROCSTAT.obj, .\PROCSTAT.exe,, OCLB C2MT OS2, ..\Source\PROCSTAT.DEF
+   rc .\PROCSTAT.res .\PROCSTAT.EXE
+
+!include ..\PROCSTAT.DEP

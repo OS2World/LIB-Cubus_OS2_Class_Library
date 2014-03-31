@@ -1,0 +1,10 @@
+OCL Class Library - Samples
+
+Entpacken Sie das Archiv mit Unterverzeichnissen.
+Wenn Sie die Samples compilieren wollen, mÅssen Sie die Environment-
+Variable OCLSAMP setzen:
+
+z. B:
+
+SET OCLSAMP=C:\OCLSamples
+

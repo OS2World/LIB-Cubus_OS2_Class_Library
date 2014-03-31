@@ -1,0 +1,32 @@
+# $Header: W:/Projects/OCL/Samples/NextHand/rcs/NEXTHAND.DEP 1.50 1996/08/11 23:48:40 B.STEIN Release $
+
+.\NextHand.res: \
+    ..\Source\NextHand.rc \
+    ..\Source\RAW.ICO \
+    ..\Source\NEXTHAND.ICO \
+    ..\Source\NextHand.h \
+    $(MAKEDEP)
+
+.\NextCommand.obj: \
+    ..\Source\NextCommand.cpp \
+    ..\Source\NextHand.hpp \
+    ..\Source\NextHand.h \
+    $(MAKEDEP)
+
+.\NextBarEvent.obj: \
+    ..\Source\NextBarEvent.cpp \
+    ..\Source\NextHand.hpp \
+    ..\Source\NextHand.h \
+    $(MAKEDEP)
+
+.\NextBarDlg.obj: \
+    ..\Source\NextBarDlg.cpp \
+    ..\Source\NextHand.hpp \
+    ..\Source\NextHand.h \
+    $(MAKEDEP)
+
+.\NextHand.obj: \
+    ..\Source\NextHand.cpp \
+    ..\Source\NextHand.hpp \
+    ..\Source\NextHand.h \
+    $(MAKEDEP)

@@ -1,0 +1,45 @@
+/* Menus.rc */
+
+#include <os2.h>
+#include "..\\Source\\Menus.h"
+
+
+ICON MENU_MAIN  "..\\..\\OCL.ICO"
+
+MENU MENU_MENU
+{
+ SUBMENU "~File", MENU_FILE, MIS_TEXT
+  { 
+   MENUITEM "~Open",            MENU_MENU_OPEN, MIS_TEXT
+   MENUITEM "~Close",           MENU_MENU_CLOSE, MIS_TEXT
+   MENUITEM "~Save",            MENU_MENU_SAVE, MIS_TEXT
+   MENUITEM "S~ave As ...",     MENU_MENU_SAVEAS, MIS_TEXT
+   MENUITEM SEPARATOR
+   MENUITEM "~Quit",            MENU_MENU_QUIT, MIS_TEXT
+  }
+ SUBMENU "~Actions", MENU_ACTIONS, MIS_TEXT
+  {
+   MENUITEM "Check Item",       MENU_CHECK, MIS_TEXT
+   MENUITEM "Disable Item",     MENU_DISABLE, MIS_TEXT
+   MENUITEM "Insert Item",      MENU_INSERT, MIS_TEXT
+  } 
+ SUBMENU "~Help",               MENU_HELP, MIS_BUTTONSEPARATOR
+  {
+   MENUITEM "~Information",     MENU_INFO, MIS_TEXT
+  } 
+}
+
+ACCELTABLE MENU_MAIN
+{
+ VK_F3, MENU_MENU_QUIT, VIRTUALKEY
+}
+
+STRINGTABLE
+{
+ TEXT_ENABLED   "Disable Item"
+ TEXT_DISABLED  "Enable Item"
+ TEXT_CHECKED   "Uncheck Item"
+ TEXT_UNCHECKED "Check Item"
+}
+
+/* end of source */

@@ -1,0 +1,14 @@
+!include $(OCLSAMP)\COMMON.INC
+!include ..\COLLECT.INC
+
+MAKEDEP = METAWARE.MAK
+CFLAGS = $(HIGHCPP_COMPILE)
+LFLAGS = $(HIGHCPP_LINK)
+
+{..\Source}.cpp.obj:
+   hc $(CFLAGS) %s
+
+.\COLLECT.exe: COLLECT.obj {$(LIB)}OCLM.lib $(MAKEDEP)
+   hc $(LFLAGS) -l$(OCL)\LIB\OCLM.LIB -o .\COLLECT.EXE .\COLLECT.obj
+
+!include ..\COLLECT.DEP

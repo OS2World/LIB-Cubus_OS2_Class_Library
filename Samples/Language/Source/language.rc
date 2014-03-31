@@ -1,0 +1,18 @@
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+
+#include "res.h"
+
+
+DLGTEMPLATE DLG_SELECT LOADONCALL MOVEABLE DISCARDABLE
+{
+ DIALOG  "Select Language", DLG_SELECT, 117, 99, 148, 90, WS_VISIBLE, 
+         FCF_SYSMENU | FCF_TITLEBAR
+ {
+  LISTBOX         DLG_SELECT_LB, 3, 26, 140, 61
+  DEFPUSHBUTTON   "~OK", DID_OK, 53, 6, 40, 14
+ }
+}
+
+

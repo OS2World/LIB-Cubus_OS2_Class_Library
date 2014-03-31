@@ -1,0 +1,21 @@
+/* $Header: W:/Projects/OCL/Samples/DragSamp/Source/rcs/dragsamp.rc 1.50 1996/08/11 23:47:59 B.STEIN Release $ */
+
+#include <os2.h>
+#include "..\\Source\\dragsamp.h"
+ 
+ICON DRAGSAMP_MAIN "..\\Source\\DRAGSAMP.ICO"
+
+
+DLGTEMPLATE DRAGSAMP_DLG LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "ODragEntryFields", DRAGSAMP_DLG, 120, 111, 206, 78, , 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        ENTRYFIELD      "", DRAGSAMP_A, 7, 61, 191, 8, ES_MARGIN
+        ENTRYFIELD      "", DRAGSAMP_B, 7, 45, 191, 8, ES_MARGIN
+        ENTRYFIELD      "", DRAGSAMP_C, 7, 29, 191, 8, ES_MARGIN
+        DEFPUSHBUTTON   "E~xit", DRAGSAMP_EXIT, 82, 7, 40, 14
+    END
+END
+
+/* end of source */

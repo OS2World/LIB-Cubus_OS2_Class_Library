@@ -1,0 +1,26 @@
+; Message file for Cubus OS/2 Class Library (OIP)
+;
+; $Header: W:/Projects/OCL/MSG/rcs/OIP_GER.TXT 1.50 1996/08/11 23:47:40 B.STEIN Release $
+;
+; Deutsche Version
+OIP
+OIP0001I: OIP 1.50 - %1%2
+OIP0002I: Borland C++ 2.0
+OIP0003I: Watcom C++ 10.5
+OIP0004I: IBM VisualAge C++ 3.0
+OIP0005I: IBM C-Set++ 2.1
+OIP0006I: Metaware HighC/C++ 3.31
+OIP0007I: EMX 0.9b / GCC 2.7.0
+OIP0008I: (c) Cubus 1996 - Alle Rechte vorbehalten.
+OIP0009I: Unbekannte Exception. 
+OIP0010I: Socket konnte nicht erzeugt werden.
+OIP0011I: Fehler beim Warten auf Verbindung.
+OIP0012I: Socket konnte nicht gebunden werden.
+OIP0013I: Fehler beim Datenversand.
+OIP0014I: Fehler beim Datenempfang.
+OIP0015I: Die Verbindung konnte nicht hergestellt werden.
+OIP0016I: Unbekannter Hostname.
+OIP0017I: Unerwarteter Fehler beim Verbindungsaufbau.
+OIP0018I: Verbindung zu Client%0
+OIP0019I: Socket%0
+OIP0020I: Verbindung getrennt zu Client%0

@@ -1,0 +1,17 @@
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+
+#include "res.h"
+
+
+DLGTEMPLATE DLG_LANG LOADONCALL MOVEABLE DISCARDABLE
+{
+ DIALOG  "English Dialog", DLG_LANG, 117, 99, 148, 90, WS_VISIBLE, 
+         FCF_SYSMENU | FCF_TITLEBAR
+ {
+  DEFPUSHBUTTON   "~OK", DID_OK, 53, 6, 40, 14
+  CTEXT           "This dialog uses the english resources.", 
+                   DLG_LANG_TXT, 7, 38, 134, 29, DT_WORDBREAK
+ }
+}

@@ -1,0 +1,12 @@
+.\LISTBOX.res: \
+    ..\Source\LISTBOX.rc \
+    ..\..\OCL.ICO \
+    ..\Source\LISTBOX.h \
+    $(MAKEDEP)
+
+.\LISTBOX.obj: \
+    ..\Source\LISTBOX.cpp \
+    ..\Source\LISTBOX.hpp \
+    ..\Source\LISTBOX.h \
+    $(MAKEDEP)
+

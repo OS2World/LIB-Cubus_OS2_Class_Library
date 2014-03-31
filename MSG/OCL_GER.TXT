@@ -1,0 +1,258 @@
+; Message file for Cubus OS/2 Class Library
+;
+; $Header: W:/Projects/OCL/MSG/rcs/OCL_GER.TXT 1.50 1996/08/11 23:47:39 B.STEIN Release $
+;
+; English Version
+OCL
+OCL0001I: OCL 1.50 %1%2
+OCL0002I: Borland C++ 2.0
+OCL0003I: Watcom C++ 10.5
+OCL0004I: IBM VisualAge C++ 3.0
+OCL0005I: IBM C-Set++ 2.1
+OCL0006I: Metaware HighC/C++ 3.31
+OCL0007I: EMX 0.9b / GCC 2.7.0
+OCL0008I: (c) Cubus 1996 - All Rights Reserved
+OCL0009I: Unknow exception. 
+OCL0010I: Cannot select this page.
+OCL0011I: Invalid page specified.
+OCL0012I: Application Error
+OCL0013?: 
+OCL0014?: 
+OCL0015?: 
+OCL0016?: 
+OCL0017?: 
+OCL0018?: 
+OCL0019?: 
+OCL0020I: sizeInBytes to large for OBuffer::TILED.
+OCL0021I: At least OBuffer::PAGESIZE must be requested. 
+OCL0022I: DosAllocMem failed. %1
+OCL0023?: 
+OCL0024?: 
+OCL0025?: 
+OCL0026?: 
+OCL0027?: 
+OCL0028?: 
+OCL0029?: 
+OCL0030I: GpiLoadBitmap failed.
+OCL0031I: NULLHANDLE passed to OBitmap::OBitmap(const HBITMAP).
+OCL0032I: OBitmap::OBitmap(const HWND, PCSZ) failed.
+OCL0033?: 
+OCL0034?: 
+OCL0035?:  
+OCL0036?: 
+OCL0037?: 
+OCL0038I: View:
+OCL0039?: 
+OCL0040I: OCriticalSec::enter() failed.%1
+OCL0041I: OCriticalSec::exit() failed.%1
+OCL0042?: 
+OCL0043?: 
+OCL0044?: 
+OCL0045I: Registration of ODragEntryField failed. 
+OCL0046I: Creation of ODragEntryField failed. 
+OCL0047I: Control does not exist.
+OCL0048?: 
+OCL0049?: 
+OCL0050I: Cannot query function by ordinal.%1
+OCL0051I: Cannot query function by name.%1
+OCL0052I: Cannot query function type by ordinal.%1
+OCL0053I: Cannot query function type by name.%1 
+OCL0054I: Cannot query module name.%1
+OCL0055I: Cannot query application type of module.%1
+OCL0056I: Cannot get resource.%1
+OCL0057I: Cannot query resource size.%1
+OCL0058?: 
+OCL0059?: 
+OCL0060I: Registration of window class OGraphicsButton failed.
+OCL0061I: Creation of OGraphicsButton failed.
+OCL0062?: 
+OCL0063?: 
+OCL0064?: 
+OCL0065I: Creation of OHelpPopup failed. 
+OCL0066?: 
+OCL0067?: 
+OCL0068?: 
+OCL0069?: 
+OCL0070I: OIcon::OIcon(const ULONG, const HMODULE) failed.
+OCL0071I: OIcon::OIcon(const HPOINTER) failed.
+OCL0072I: OIcon::OIcon(PCSZ) failed.
+OCL0073?: 
+OCL0074?: 
+OCL0075I: Creation of OHelpPopup failed. 
+OCL0076?: 
+OCL0077I: OS20MEMU device driver not present. 
+OCL0078?: 
+OCL0079?: 
+OCL0080I: OMenu::OMenu(const ULONG, const HWND, const HWND, const pODynamicLib). %1
+OCL0081I: OMenu::OMenu(const ULONG, const HWND, const HWND, const HMODULE). %1
+OCL0082I: OMenu::OMenu(const ULONG, const OWindow&, const OWindow&, const pODynamicLib). %1
+OCL0083I: OMenu::OMenu(const ULONG, const OWindow&, const OWindow&, const HMODULE). %1
+OCL0084I: OMenu::OMenu(const ULONG, const pOWindow, const pOWindow, const pODynamicLib). %1
+OCL0085I: OMenu::OMenu(const ULONG, const pOWindow, const pOWindow, const HMODULE). %1
+OCL0086I: OMenu cannot load menu.
+OCL0087I: OMenu::enableItem failed.
+OCL0088I: OMenu::checkItem failed. 
+OCL0089I: OMenu::setItemText failed.
+OCL0090I: OMenu cannot load string.
+OCL0091?: 
+OCL0092?: 
+OCL0093?: 
+OCL0094?: 
+OCL0095?: 
+OCL0096?: 
+OCL0097?: 
+OCL0098?: 
+OCL0099I: OMenuItem::OMenuItem(const pOMenuItem). %1 
+OCL0100I: Information
+OCL0101I: Error
+OCL0102?: 
+OCL0103?: 
+OCL0104?: 
+OCL0105?: 
+OCL0106?: 
+OCL0107?: 
+OCL0108?: 
+OCL0109?: 
+OCL0110I: OMuxSem::OMuxSem(HMTX) cannot open semaphore HMTX. %1
+OCL0111I: OMuxSem::OMuxSem(PCSZ, ULONG, BOOL) cannot create the semaphore. %1
+OCL0112I: OMuxSem::OMuxSem(PCSZ, ULONG, BOOL) cannot open the semaphore. %1
+OCL0113?: 
+OCL0114?: 
+OCL0115?: 
+OCL0116?: 
+OCL0117?: 
+OCL0118?: 
+OCL0119?:
+OCL0120I: OMuxWaitSem::OMuxWaitSem(HMTX) cannot open semaphore HMTX. %1
+OCL0121I: OMuxWaitSem::OMuxWaitSem(PCSZ ...) cannot create the semaphore. %1
+OCL0122I: OMuxWaitSem::OMuxWaitSem(PCSZ ...) cannot open the semaphore. %1
+OCL0123?: 
+OCL0124?: 
+OCL0125I: ONSem::ONSem(HEV) cannot open semaphore HEV. %1
+OCL0126I: ONSem::ONSem(PCSZ ...) cannot create the semaphore. %1
+OCL0127I: ONSem::ONSem(PCSZ ...) cannot open the semaphore. %1
+OCL0128?: 
+OCL0129?:
+OCL0130I: OPMinit::OPMinit - Initialization of PM failed.
+OCL0131I: OApp::current - No instance of class OApp exists.
+OCL0132I: OFrame::OFrame - Registration of window class failed.
+OCL0133I: OFrame::OFrame - Creation of frame window failed.
+OCL0134I: OFrame::OFrame - Creation of client window failed.
+OCL0135?:
+OCL0136?:
+OCL0137I: OWindow::initReplace(...) - Control does not exist.
+OCL0138I: OWindow::inherit(...) - Control does not exist. 
+OCL0139?:
+OCL0140I: OBook could not set tab dimensions.
+OCL0141I: OBook::createBook(...) - Creation of notebook failed.
+OCL0142I: OBook::cNbk() - Creation of notebook control failed.
+OCL0143I: OBook::cNbk() - Setting notebook colors failed.
+OCL0144I: OBook::sP(...) - Invalid page.
+OCL0145I: OBook::sP(...) - Error setting page data.
+OCL0146I: OBook::sP(...) - Error setting statusline text.
+OCL0147I: OBook::sP(...) - Error setting tab text.
+OCL0148I: OBook::createBook(...) - Page list is empty.
+OCL0149I: OBook::sNBP(...) - Invalid page selected.
+OCL0150I: OButton::createButton() failed.
+OCL0151I: OButton::createButton() failed.
+OCL0152?:
+OCL0153I: OListBox::OListBox() - Creation of control failed.
+OCL0154?:
+OCL0155I: MMPM: WinRegisterCircularSlider() failed.
+OCL0156I: OCircularSlider::OCircularSlider() - Creation of control failed.
+OCL0157?:
+OCL0158I: OEntryField::OEntryField - Creation of control failed.
+OCL0159?:
+OCL0160I: ODialog::createDlg() Creation of dialog failed.
+OCL0161?:
+OCL0162?:
+OCL0163I: OValueSet::OValueSet(...) - Creation of control failed. 
+OCL0164?:
+OCL0165I: OContainerBase::createContainer() - Creation of container window failed.
+OCL0166I: OContainerBase::createContainer() - Container setup failed.
+OCL0167I: Registration of class OContainer failed.
+OCL0168?:
+OCL0169?:
+OCL0170I: OSlider::OSlider() - Creation of control failed.
+OCL0171I: OSlider::setSliderArmSize(...) failed.
+OCL0172I: OSlider::setSliderArmPos(...) failed.
+OCL0173I: OSlider::setSliderShaftPos(...) failed.
+OCL0174I: OSlider::setSliderShaftDim(...) failed.
+OCL0175I: OSlider::setSliderScaleText(...) failed. 
+OCL0176I: OSlider::setTickSize(...) failed. 
+OCL0177I: OSlider::inclSliderArm(...) failed.
+OCL0178I: OSlider::declSliderArm(...) failed.
+OCL0179?:
+OCL0180I: OHelp::initializeHelp - Creation of help instance failed.
+OCL0181I: OHelp::initializeHelp could not associate help instance to window.
+OCL0182I: No help available.
+OCL0183?:
+OCL0184?:
+OCL0185?:
+OCL0186?:
+OCL0187?:
+OCL0188?:
+OCL0189?:
+OCL0190I: An exception was thrown.
+OCL0191I: Module: %1
+OCL0192I: Line Number: %1
+OCL0193I: Type of Object: %1
+OCL0194I: Return Code: %1
+OCL0195I: Error Message:%1%2
+OCL0196I: No description available.
+OCL0197I: PM Error: %1
+OCL0198I: PM Message: %1
+OCL0199?:
+OCL0200I: Caught object is of type: %1
+OCL0201I: Fatal Exception.
+OCL0202I: Cannot continue.
+OCL0203I: Exception with unknown state thrown and not handled.
+OCL0204I: Unknown exception thrown and not handled.
+OCL0205I: Note!
+OCL0206?:
+OCL0207?:
+OCL0208?:
+OCL0209?:
+OCL0210I: Program interrupted by user request or by the operating system.
+OCL0211I: System Exception
+OCL0212?:
+OCL0213?:
+OCL0214?:
+OCL0215?:
+OCL0216?:
+OCL0217?:
+OCL0218?:
+OCL0219?:
+OCL0220I: Cannot open Syslevel-File %1!
+OCL0221I: %1 is not a Syslevel-File!
+OCL0222I: File name not set for Syslevel-File!
+OCL0223?:
+OCL0224?:
+OCL0225I: Monday
+OCL0226I: Tuesday
+OCL0227I: Wednesday
+OCL0228I: Thursday
+OCL0229I: Friday
+OCL0230I: Saturday
+OCL0231I: Sunday
+OCL0232I: January
+OCL0233I: February
+OCL0234I: March
+OCL0235I: April
+OCL0236I: May
+OCL0237I: June
+OCL0238I: July
+OCL0239I: August
+OCL0240I: September
+OCL0241I: October
+OCL0242I: Novemver
+OCL0243I: December
+OCL0244?:
+OCL0245?:
+OCL0246?:
+OCL0247?:
+OCL0248?:
+OCL0249?:
+OCL0250I: Class ORiffPlay cannot be used in VIO applications.
+OCL0251I: MMPM/2 not correctly installed. ORiffPlay suspends.
+OCL0252I: ORiffPlay can not play the sound object. %1

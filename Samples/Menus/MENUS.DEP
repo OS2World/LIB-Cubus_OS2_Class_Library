@@ -1,0 +1,11 @@
+.\MENUS.res: \
+    ..\Source\MENUS.rc \
+    ..\..\OCL.ICO \
+    ..\Source\MENUS.h \
+    $(MAKEDEP)
+
+.\MENUS.obj: \
+    ..\Source\MENUS.cpp \
+    ..\Source\MENUS.hpp \
+    ..\Source\MENUS.h \
+    $(MAKEDEP)

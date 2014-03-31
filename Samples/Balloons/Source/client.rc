@@ -1,0 +1,28 @@
+/* client.rc */
+
+#include <os2.h>
+#include "..\\Source\\Client.h"
+
+ICON ID_MAIN "..\\Source\\BALLOON.ICO"
+BITMAP ID_BITMAP "..\\Source\\BALLOON.BMP"
+
+
+MENU ID_MAIN
+BEGIN
+  MENUITEM "E~xit", ID_EXIT, MIS_TEXT
+END
+
+ACCELTABLE ID_MAIN
+{
+  VK_F3,  ID_EXIT, VIRTUALKEY
+}
+
+STRINGTABLE
+BEGIN
+  NO_SERVER "No balloon server running!"
+  PIPE_FAILED "Init of pipe client failed."
+END
+
+
+/* end of source */
+

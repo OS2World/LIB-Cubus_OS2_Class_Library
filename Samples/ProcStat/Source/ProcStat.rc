@@ -1,0 +1,21 @@
+/* Procstat.rc */
+#include <os2.h>
+#include "..\\Source\\Procstat.h"
+
+
+ICON PROCSTAT_MAIN "..\\Source\\PROCESS.ICO"
+
+MENU PROCSTAT_MAIN
+BEGIN
+  MENUITEM "Quit", PROCSTAT_QUIT, MIS_TEXT
+  MENUITEM "Refresh", PROCSTAT_REFRESH, MIS_TEXT
+END
+
+ACCELTABLE PROCSTAT_MAIN
+BEGIN
+  VK_F3, PROCSTAT_QUIT, VIRTUALKEY
+END
+
+
+/* end of source */
+

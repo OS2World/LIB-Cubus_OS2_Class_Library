@@ -1,0 +1,14 @@
+.\Value.res: \
+    ..\Source\Value.rc \
+    ..\Source\VALUE.BMP \
+    ..\Source\VALUE.ICO \
+    ..\..\OCL.ICO \
+    ..\Source\Value.h \
+    $(MAKEDEP)
+
+.\Value.obj: \
+    ..\Source\Value.cpp \
+    ..\Source\Value.hpp \
+    ..\Source\Value.h \
+    $(MAKEDEP)
+

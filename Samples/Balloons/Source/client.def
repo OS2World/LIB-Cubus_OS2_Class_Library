@@ -1,0 +1,10 @@
+; $Header: W:/Projects/OCL/Samples/Balloons/Source/rcs/client.def 1.50 1996/08/11 23:47:46 B.STEIN Release $
+
+NAME  CLIENT WINDOWAPI
+
+CODE       MOVEABLE
+DATA       MOVEABLE MULTIPLE
+
+HEAPSIZE   16184
+STACKSIZE  65536
+PROTMODE

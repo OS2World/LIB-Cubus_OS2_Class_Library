@@ -1,0 +1,14 @@
+!include $(OCLSAMP)\COMMON.INC
+!include ..\CRITICS.INC
+
+MAKEDEP = METAWARE.MAK
+CFLAGS = $(HIGHCPP_COMPILE)
+LFLAGS = $(HIGHCPP_LINK)
+
+{..\Source}.cpp.obj:
+   hc $(CFLAGS) %s
+
+.\CRITICS.exe: CRITICS.obj {$(LIB)}OCLM.lib $(MAKEDEP)
+   hc $(LFLAGS) -l$(OCL)\LIB\OCLM.LIB -o .\CRITICS.EXE .\CRITICS.obj
+
+!include ..\CRITICS.DEP

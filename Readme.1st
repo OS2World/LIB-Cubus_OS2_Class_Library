@@ -1,0 +1,15 @@
+For installation add the following statements to your environment:
+
+
+SET OCL=X:\OCL
+SET OCLSAMP=X:\OCL\SAMPLES
+
+
+LIBPATH -> X:\OCL\LIB
+LIB     -> X:\OCL\LIB 
+PATH    -> X:\OCL\BIN
+DPATH   -> X:\OCL\MSG
+INCLUDE -> X:\OCL\INCLUDE
+
+   
+ 

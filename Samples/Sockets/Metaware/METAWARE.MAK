@@ -1,0 +1,17 @@
+!include $(OCLSAMP)\COMMON.INC
+!include ..\SOCKETS.INC
+
+MAKEDEP = METAWARE.MAK
+CFLAGS = $(HIGHCPP_COMPILE)
+LFLAGS = $(HIGHCPP_LINK)
+
+{..\Source}.cpp.obj:
+   hc $(CFLAGS) %s
+
+.\SOCKS.EXE: SOCKS.obj {$(LIB)}OCLM.lib {$(LIB)}OIPM.lib $(MAKEDEP)
+   hc $(LFLAGS) -l$(OCL)\LIB\OCLM.LIB -l$(OCL)\LIB\OIPM.LIB -l$(OCL)\LIB\OTCPIP.LIB -o .\SOCKS.EXE .\SOCKS.obj
+
+.\SOCKC.EXE: SOCKC.obj {$(LIB)}OCLM.lib {$(LIB)}OIPM.lib $(MAKEDEP)
+   hc $(LFLAGS) -l$(OCL)\LIB\OCLM.LIB -l$(OCL)\LIB\OIPM.LIB -l$(OCL)\LIB\OTCPIP.LIB -o .\SOCKC.EXE .\SOCKC.obj
+
+!include ..\SOCKETS.DEP

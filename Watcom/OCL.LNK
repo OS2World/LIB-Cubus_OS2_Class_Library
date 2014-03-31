@@ -1,0 +1,14 @@
+system os2v2 dll initinstance terminstance
+option manyautodata
+option st=65536
+option c
+option maxe=25
+option q
+option de 'OIP C++ Class Library 1.50 (WATCOM 10.5a) (c) 1996 by Cubus - All Rights reserved.'
+NAME OIPW
+EXP @OIP.EXP
+SEG TY DATA READWRITE LOADONCALL NONSHARED
+SEG TY CODE LOADONCALL
+LIBR OTCPIP
+LIBR OCLW
+FIL @OIP.FIL
