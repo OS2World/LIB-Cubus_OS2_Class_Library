@@ -9,7 +9,7 @@ LFLAGS = $(S_WATCOM_LINK)
    wpp386 $(CFLAGS) %s
 
 .\MENUS.exe: MENUS.obj MENUS.res {$(LIB)}OCLW.lib $(MAKEDEP)
-   wlink $(LFLAGS) libr OCLW NAME .\MENUS.EXE FIL .\MENUS.obj
+   wlink $(LFLAGS) libr OCLWI NAME .\MENUS.EXE FIL .\MENUS.obj
    rc .\MENUS.res MENUS.exe
 
 !include ..\MENUS.DEP

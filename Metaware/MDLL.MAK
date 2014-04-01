@@ -60,6 +60,10 @@ ALL: OCL OIP
      .\OCriticalSec.obj +
      .\ODate.obj +
      .\ODialog.obj +
+     .\OStdDialog.obj +
+     .\OFontDialog.obj +
+     .\OFileDialog.obj +
+     .\OColorDialog.obj +
      .\ODragEntryField.obj +
      .\ODynamicLib.obj +
      .\OEditor.obj +
@@ -68,6 +72,7 @@ ALL: OCL OIP
      .\OFcl.obj +
      .\OFillButton.obj +
      .\OFrame.obj +
+     .\OFuzzSearch.obj + 
      .\OGraphicsButton.obj +
      .\OHelp.obj +
      .\OHelpPopup.obj +

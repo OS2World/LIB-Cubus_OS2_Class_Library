@@ -199,7 +199,7 @@ OString ODate::asString(DateFormat dateFmt) const
          x = mm_dd_yy;
 
      OString fmt(fmts[x]);
-     fmt.getText()[3] = fmt.getText()[6] = ctryInfo.szDateSeparator[0];
+     fmt.getText()[2] = fmt.getText()[5] = ctryInfo.szDateSeparator[0];
      return(asString(fmt));  } 
   }
 
@@ -209,7 +209,8 @@ OString ODate::asString(DateFormat dateFmt) const
 
 OString ODate::asString(PCSZ fmt) const
 {
- OString   result(((fmt != NULL) ? strlen(fmt) : 0) + 3);
+ INT       iLength = ((fmt != NULL) ? strlen(fmt) : 0) + 3;
+ OString   result(iLength);
  OString   tempFmt(fmt);
  tm        dummy = { 0 };
 
@@ -223,7 +224,7 @@ OString ODate::asString(PCSZ fmt) const
 
  mktime(&dummy);
 
- strftime((PSZ)result, result.length(), fmt, &dummy);
+ strftime((PSZ)result, iLength, fmt, &dummy);
 
  return(OString(result));
 }
@@ -372,7 +373,7 @@ ODate::MDY ODate::julianToMDY(ULONG julianDayNumber)
 
  if (julianDayNumber > reformJulianDayNumber)
   {
-   century          = (julianDayNumber - 1684595) / 36524.25;
+   century          = (INT) ((julianDayNumber - 1684595) / 36524.25);
    julianDayNumber += (century * 3L / 4L) - 2;
   }
 

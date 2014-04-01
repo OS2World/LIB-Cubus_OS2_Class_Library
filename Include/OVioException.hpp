@@ -66,7 +66,7 @@ class __CPP_EXPORT__ OVioException
       void viewError ();  // prints the formatted error message to cerr
 };
 
-#define OThrowVio    (a, b, c) (throw OVioException(a, b, c, __FILE__, __LINE__))
+#define OThrowVio(a, b, c) (throw OVioException(a, b, c, __FILE__, __LINE__))
 
 
 #endif // OVIOEXCEPTION_INCLUDED

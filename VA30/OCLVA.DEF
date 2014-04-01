@@ -1,0 +1,2390 @@
+LIBRARY OCLVA INITINSTANCE TERMINSTANCE
+DESCRIPTION 'OCL C++ Class Library 1.50 (VACPP30) (c) 1996 by Cubus - All Rights reserved.'
+DATA MULTIPLE NONSHARED READWRITE LOADONCALL
+CODE LOADONCALL
+PROTMODE
+IMPORTS
+DosQuerySysState = DOSCALLS.368
+EXPORTS
+;From library:  E:\ocl\va30\OCLVA.lib
+  ;From object file:  E:\OCL\Source\OCL.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OCL::error(unsigned long)
+      error__3OCLFUl    @1 NONAME
+      ;OCL::transport
+      transport__3OCL    @2 NONAME
+      ;OCL::apierror(unsigned long,unsigned long)
+      apierror__3OCLFUlT1    @3 NONAME
+      ;OCL::saveID(char*)
+      saveID__3OCLFPc    @4 NONAME
+      ;OCL::disableControls(unsigned long,unsigned long*,unsigned long)
+      disableControls__3OCLFUlPUlT1    @5 NONAME
+      ;OCL::showControls(unsigned long,unsigned long*,unsigned long)
+      showControls__3OCLFUlPUlT1    @6 NONAME
+      ;OCL::MSGFILE
+      MSGFILE__3OCL    @7 NONAME
+      ;OCL::showDialogItem(unsigned long,unsigned long*,unsigned long)
+      showDialogItem__3OCLFUlPUlT1    @8 NONAME
+      ;OCL::Version(OString&)
+      Version__3OCLFR7OString    @9 NONAME
+      ;OCL::hideDialogItem(unsigned long,unsigned long*,unsigned long)
+      hideDialogItem__3OCLFUlPUlT1    @10 NONAME
+      ;OCL::enableControls(unsigned long,unsigned long*,unsigned long)
+      enableControls__3OCLFUlPUlT1    @11 NONAME
+      ;OCL::Version()
+      Version__3OCLFv    @12 NONAME
+      ;OCL::disableDialogItem(unsigned long,unsigned long*,unsigned long,unsigned long)
+      disableDialogItem__3OCLFUlPUlN21    @13 NONAME
+      ;OCL::startSession(_STARTDATA*)
+      startSession__3OCLFP10_STARTDATA    @14 NONAME
+      ;OCL::hideControls(unsigned long,unsigned long*,unsigned long)
+      hideControls__3OCLFUlPUlT1    @15 NONAME
+  ;From object file:  E:\OCL\Source\OCLObject.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OCLObject::vtctdt()
+      vtctdt__9OCLObjectFv    @16 NONAME
+  ;From object file:  E:\OCL\Source\clOString.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;lOString::operator<<(OString*)
+      __ls__8lOStringFP7OString    @17 NONAME
+      __vft8lOString9OCLObject    @18 NONAME
+      ;lOString::lOString()
+      __ct__8lOStringFv    @19 NONAME
+      ;lOString::~lOString()
+      __dt__8lOStringFv    @20 NONAME
+      ;lOString::print()
+      print__8lOStringFv    @21 NONAME
+      ;lOString::isOfType() const
+      isOfType__8lOStringCFv    @22 NONAME
+      ;lOString::operator<<(char*)
+      __ls__8lOStringFPc    @23 NONAME
+      ;lOString::operator<<(OString&)
+      __ls__8lOStringFR7OString    @24 NONAME
+      __vftQ2_8lOString13lOStringPrint9OCLObject    @25 NONAME
+      ;lOString::lOStringPrint::applyToElement(const OString*) const
+      applyToElement__Q2_8lOString13lOStringPrintCFPC7OString    @26 NONAME
+  ;From object file:  E:\OCL\Source\O3State.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;O3State::O3State(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__7O3StateFUlP6OFrameN51    @27 NONAME
+      ;O3State::isOfType() const
+      isOfType__7O3StateCFv    @28 NONAME
+      __vft7O3State9OCLObject    @29 NONAME
+      ;O3State::~O3State()
+      __dt__7O3StateFv    @30 NONAME
+      ;O3State::O3State(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__7O3StateFUlR6OFrameN51    @31 NONAME
+      ;O3State::O3State(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__7O3StateFUlN61    @32 NONAME
+  ;From object file:  E:\OCL\Source\OApp.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OApp::~OApp()
+      __dt__4OAppFv    @33 NONAME
+      ;OApp::OApp(unsigned long)
+      __ct__4OAppFUl    @34 NONAME
+      ;OApp::currentOApp
+      currentOApp__4OApp    @35 NONAME
+      ;OApp::isOfType() const
+      isOfType__4OAppCFv    @36 NONAME
+      ;OApp::forceQuit()
+      forceQuit__4OAppFv    @37 NONAME
+      ;OApp::Shutdown()
+      Shutdown__4OAppFv    @38 NONAME
+      ;OApp::NullHandler()
+      NullHandler__4OAppFv    @39 NONAME
+      ;OApp::OApp(const unsigned long,char**,unsigned long)
+      __ct__4OAppFCUlPPcUl    @40 NONAME
+      ;OApp::current()
+      current__4OAppFv    @41 NONAME
+      ;OApp::TasklistKill()
+      TasklistKill__4OAppFv    @42 NONAME
+      ;OApp::Reboot()
+      Reboot__4OAppFv    @43 NONAME
+      ;OApp::OCMDTrace(const unsigned long,const unsigned long,void* const,void* const)
+      OCMDTrace__4OAppFCUlT1CPvT3    @44 NONAME
+      ;OApp::anchor()
+      anchor__4OAppFv    @45 NONAME
+      ;OApp::mqueue()
+      mqueue__4OAppFv    @46 NONAME
+      ;OApp::ShutdownPosted()
+      ShutdownPosted__4OAppFv    @47 NONAME
+      __vft4OApp9OCLObject    @48 NONAME
+      ;OApp::QuitPosted()
+      QuitPosted__4OAppFv    @49 NONAME
+      ;OApp::run()
+      run__4OAppFv    @50 NONAME
+  ;From object file:  E:\OCL\Source\OAppBase.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OAppBase::OAppBase()
+      __ct__8OAppBaseFv    @51 NONAME
+      ;OAppBase::OAppBase(const unsigned long,char**)
+      __ct__8OAppBaseFCUlPPc    @52 NONAME
+      __vft8OAppBase9OCLObject    @53 NONAME
+      ;OAppBase::~OAppBase()
+      __dt__8OAppBaseFv    @54 NONAME
+      ;OAppBase::isOfType() const
+      isOfType__8OAppBaseCFv    @55 NONAME
+      ;OAppBase::saveArgs(const unsigned long,char**)
+      saveArgs__8OAppBaseFCUlPPc    @56 NONAME
+      ;OAppBase::SyncDisks()
+      SyncDisks__8OAppBaseFv    @57 NONAME
+      ;OAppBase::initArgs(const char*)
+      initArgs__8OAppBaseFPCc    @58 NONAME
+  ;From object file:  E:\OCL\Source\OAuto3State.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OAuto3State::~OAuto3State()
+      __dt__11OAuto3StateFv    @59 NONAME
+      __vft11OAuto3State9OCLObject    @60 NONAME
+      ;OAuto3State::OAuto3State(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__11OAuto3StateFUlN61    @61 NONAME
+      ;OAuto3State::OAuto3State(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__11OAuto3StateFUlR6OFrameN51    @62 NONAME
+      ;OAuto3State::isOfType() const
+      isOfType__11OAuto3StateCFv    @63 NONAME
+      ;OAuto3State::OAuto3State(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__11OAuto3StateFUlP6OFrameN51    @64 NONAME
+  ;From object file:  E:\OCL\Source\OAutoCheckBox.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OAutoCheckBox::OAutoCheckBox(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__13OAutoCheckBoxFUlR6OFrameN51    @65 NONAME
+      __vft13OAutoCheckBox9OCLObject    @66 NONAME
+      ;OAutoCheckBox::OAutoCheckBox(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__13OAutoCheckBoxFUlP6OFrameN51    @67 NONAME
+      ;OAutoCheckBox::isOfType() const
+      isOfType__13OAutoCheckBoxCFv    @68 NONAME
+      ;OAutoCheckBox::OAutoCheckBox(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__13OAutoCheckBoxFUlN61    @69 NONAME
+      ;OAutoCheckBox::~OAutoCheckBox()
+      __dt__13OAutoCheckBoxFv    @70 NONAME
+  ;From object file:  E:\OCL\Source\OAutoRadioButton.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft16OAutoRadioButton9OCLObject    @71 NONAME
+      ;OAutoRadioButton::~OAutoRadioButton()
+      __dt__16OAutoRadioButtonFv    @72 NONAME
+      ;OAutoRadioButton::OAutoRadioButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__16OAutoRadioButtonFUlR6OFrameN51    @73 NONAME
+      ;OAutoRadioButton::OAutoRadioButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__16OAutoRadioButtonFUlN61    @74 NONAME
+      ;OAutoRadioButton::isOfType() const
+      isOfType__16OAutoRadioButtonCFv    @75 NONAME
+      ;OAutoRadioButton::OAutoRadioButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__16OAutoRadioButtonFUlP6OFrameN51    @76 NONAME
+  ;From object file:  E:\OCL\Source\OBitmap.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OBitmap::OBitmap()
+      __ct__7OBitmapFv    @77 NONAME
+      ;OBitmap::isOfType() const
+      isOfType__7OBitmapCFv    @78 NONAME
+      ;OBitmap::~OBitmap()
+      __dt__7OBitmapFv    @79 NONAME
+      ;OBitmap::OBitmap(const unsigned long,const char*)
+      __ct__7OBitmapFCUlPCc    @80 NONAME
+      ;OBitmap::OBitmap(const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__7OBitmapFCUlN41    @81 NONAME
+      ;OBitmap::OBitmap(const unsigned long)
+      __ct__7OBitmapFCUl    @82 NONAME
+      __vft7OBitmap9OCLObject    @83 NONAME
+  ;From object file:  E:\OCL\Source\OBuffer.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OBuffer::~OBuffer()
+      __dt__7OBufferFv    @84 NONAME
+      ;OBuffer::OBuffer(const unsigned long,const unsigned long)
+      __ct__7OBufferFCUlT1    @85 NONAME
+      ;OBuffer::freeBuffer()
+      freeBuffer__7OBufferFv    @86 NONAME
+      ;OBuffer::allocated()
+      allocated__7OBufferFv    @87 NONAME
+      ;OBuffer::decommit(const unsigned long)
+      decommit__7OBufferFCUl    @88 NONAME
+      ;OBuffer::getPtr()
+      getPtr__7OBufferFv    @89 NONAME
+      ;OBuffer::commit(const unsigned long)
+      commit__7OBufferFCUl    @90 NONAME
+      ;OBuffer::isOfType() const
+      isOfType__7OBufferCFv    @91 NONAME
+      __vft7OBuffer9OCLObject    @92 NONAME
+      ;OBuffer::committed()
+      committed__7OBufferFv    @93 NONAME
+  ;From object file:  E:\OCL\Source\OButton.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OButton::OButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__7OButtonFUlR6OFrameN51    @94 NONAME
+      ;OButton::createButton()
+      createButton__7OButtonFv    @95 NONAME
+      ;OButton::isChecked()
+      isChecked__7OButtonFv    @96 NONAME
+      ;OButton::check()
+      check__7OButtonFv    @97 NONAME
+      ;OButton::~OButton()
+      __dt__7OButtonFv    @98 NONAME
+      ;OButton::isHilited()
+      isHilited__7OButtonFv    @99 NONAME
+      ;OButton::setState(unsigned long)
+      setState__7OButtonFUl    @100 NONAME
+      __vft7OButton9OCLObject    @101 NONAME
+      ;OButton::queryState()
+      queryState__7OButtonFv    @102 NONAME
+      ;OButton::setDefault(unsigned long)
+      setDefault__7OButtonFUl    @103 NONAME
+      ;OButton::click(unsigned long)
+      click__7OButtonFUl    @104 NONAME
+      ;OButton::OButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__7OButtonFUlN61    @105 NONAME
+      ;OButton::isOfType() const
+      isOfType__7OButtonCFv    @106 NONAME
+      ;OButton::uncheck()
+      uncheck__7OButtonFv    @107 NONAME
+      ;OButton::setHilite(unsigned long)
+      setHilite__7OButtonFUl    @108 NONAME
+      ;OButton::OButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__7OButtonFUlP6OFrameN51    @109 NONAME
+  ;From object file:  E:\OCL\Source\OButtonBar.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OButtonBar::setPicSize(const unsigned long)
+      setPicSize__10OButtonBarFCUl    @110 NONAME
+      __vftQ2_10OButtonBar7_enable9OCLObject    @111 NONAME
+      ;OButtonBar::OButtonBar(const unsigned long,OFrame* const,const unsigned long)
+      __ct__10OButtonBarFCUlCP6OFrameT1    @112 NONAME
+      ;OButtonBar::setupButtons()
+      setupButtons__10OButtonBarFv    @113 NONAME
+      ;OButtonBar::_destroy::applyToElement(OGraphicsButton*)
+      applyToElement__Q2_10OButtonBar8_destroyFP15OGraphicsButton    @114 NONAME
+      ;OButtonBar::~OButtonBar()
+      __dt__10OButtonBarFv    @115 NONAME
+      ;OButtonBar::createButtonBar()
+      createButtonBar__10OButtonBarFv    @116 NONAME
+      ;OButtonBar::OCommand(unsigned long,void*,void*)
+      OCommand__10OButtonBarFUlPvT2    @117 NONAME
+      ;OButtonBar::setDrawStyle(const unsigned long)
+      setDrawStyle__10OButtonBarFCUl    @118 NONAME
+      __vft10OButtonBar9OCLObject    @119 NONAME
+      ;OButtonBar::OButtonBar(const unsigned long,const OFrame&,const unsigned long)
+      __ct__10OButtonBarFCUlRC6OFrameT1    @120 NONAME
+      ;OButtonBar::setButtonDimensions(const unsigned long,const unsigned long)
+      setButtonDimensions__10OButtonBarFCUlT1    @121 NONAME
+      ;OButtonBar::_disable::applyToElement(OGraphicsButton*)
+      applyToElement__Q2_10OButtonBar8_disableFP15OGraphicsButton    @122 NONAME
+      __vftQ2_10OButtonBar8_destroy9OCLObject    @123 NONAME
+      ;OButtonBar::requestHelpText(const unsigned long,const unsigned long)
+      requestHelpText__10OButtonBarFCUlT1    @124 NONAME
+      ;OButtonBar::isOfType() const
+      isOfType__10OButtonBarCFv    @125 NONAME
+      ;OButtonBar::enableButtons()
+      enableButtons__10OButtonBarFv    @126 NONAME
+      ;OButtonBar::destroyButtons()
+      destroyButtons__10OButtonBarFv    @127 NONAME
+      ;OButtonBar::setOrientation(const unsigned long)
+      setOrientation__10OButtonBarFCUl    @128 NONAME
+      __vftQ2_10OButtonBar8_disable9OCLObject    @129 NONAME
+      ;OButtonBar::OButtonBar(const unsigned long,const unsigned long,const unsigned long)
+      __ct__10OButtonBarFCUlN21    @130 NONAME
+      ;OButtonBar::initButtonBarDefaults()
+      initButtonBarDefaults__10OButtonBarFv    @131 NONAME
+      ;OButtonBar::requestHelpText()
+      requestHelpText__10OButtonBarFv    @132 NONAME
+      ;OButtonBar::disableButtons()
+      disableButtons__10OButtonBarFv    @133 NONAME
+      ;OButtonBar::_enable::applyToElement(OGraphicsButton*)
+      applyToElement__Q2_10OButtonBar7_enableFP15OGraphicsButton    @134 NONAME
+  ;From object file:  E:\OCL\Source\OBook.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OBook::sP(OBookPage*)
+      sP__5OBookFP9OBookPage    @135 NONAME
+      ;OBook::Assoc(OBookPage*,_PAGESELECTNOTIFY*)
+      Assoc__5OBookFP9OBookPageP17_PAGESELECTNOTIFY    @136 NONAME
+      ;OBook::createBook(char*,const unsigned long,const unsigned long,const unsigned long)
+      createBook__5OBookFPcCUlN22    @137 NONAME
+      ;OBook::gSS(const char*)
+      gSS__5OBookFPCc    @138 NONAME
+      ;OBook::NBError(char*)
+      NBError__5OBookFPc    @139 NONAME
+      __vft5OBook9OCLObject    @140 NONAME
+      ;OBook::isOfType() const
+      isOfType__5OBookCFv    @141 NONAME
+      ;OBook::cNbk()
+      cNbk__5OBookFv    @142 NONAME
+      ;OBook::OCommand(unsigned long,void*,void*)
+      OCommand__5OBookFUlPvT2    @143 NONAME
+      ;OBook::OBook(const unsigned long,const unsigned long,const unsigned long)
+      __ct__5OBookFCUlN21    @144 NONAME
+      ;OBook::OBook(const unsigned long,const OFrame&,const unsigned long)
+      __ct__5OBookFCUlRC6OFrameT1    @145 NONAME
+      ;OBook::OBook(const unsigned long,OFrame* const,const unsigned long)
+      __ct__5OBookFCUlCP6OFrameT1    @146 NONAME
+      ;OBook::setTabDimensions()
+      setTabDimensions__5OBookFv    @147 NONAME
+      ;OBook::setFramePos()
+      setFramePos__5OBookFv    @148 NONAME
+      ;OBook::addPages(OList<OBookPage>*)
+      addPages__5OBookFP5OListXT9OBookPage_    @149 NONAME
+      ;OBook::setSizePosFrame(const unsigned long,_SWP,const unsigned long)
+      setSizePosFrame__5OBookFCUl4_SWPT1    @150 NONAME
+      ;OBook::sNBP(_PAGESELECTNOTIFY*)
+      sNBP__5OBookFP17_PAGESELECTNOTIFY    @151 NONAME
+      ;OBook::~OBook()
+      __dt__5OBookFv    @152 NONAME
+  ;From object file:  E:\OCL\Source\OBookPage.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft9OBookPage9OCLObject    @153 NONAME
+      ;OBookPage::~OBookPage()
+      __dt__9OBookPageFv    @154 NONAME
+      ;OBookPage::OCommand(unsigned long,void*,void*)
+      OCommand__9OBookPageFUlPvT2    @155 NONAME
+      ;OBookPage::isOfType() const
+      isOfType__9OBookPageCFv    @156 NONAME
+      ;OBookPage::OBookPage(char*,char*,unsigned long,unsigned long,unsigned long,unsigned short)
+      __ct__9OBookPageFPcT1UlN23Us    @157 NONAME
+  ;From object file:  E:\OCL\Source\OCheckBox.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OCheckBox::OCheckBox(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__9OCheckBoxFUlP6OFrameN51    @158 NONAME
+      ;OCheckBox::OCheckBox(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__9OCheckBoxFUlR6OFrameN51    @159 NONAME
+      __vft9OCheckBox9OCLObject    @160 NONAME
+      ;OCheckBox::OCheckBox(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__9OCheckBoxFUlN61    @161 NONAME
+      ;OCheckBox::~OCheckBox()
+      __dt__9OCheckBoxFv    @162 NONAME
+      ;OCheckBox::isOfType() const
+      isOfType__9OCheckBoxCFv    @163 NONAME
+  ;From object file:  E:\OCL\Source\OCircSlider.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OCircSlider::~OCircSlider()
+      __dt__11OCircSliderFv    @164 NONAME
+      ;OCircSlider::OCircSlider(const unsigned long,const OFrame&,const unsigned long,const unsigned long,const unsigned long)
+      __ct__11OCircSliderFCUlRC6OFrameN31    @165 NONAME
+      ;OCircSlider::OCircSlider(const unsigned long,OFrame* const,const unsigned long,const unsigned long,const unsigned long)
+      __ct__11OCircSliderFCUlCP6OFrameN31    @166 NONAME
+      ;OCircSlider::OCircSlider(const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__11OCircSliderFCUlN41    @167 NONAME
+      ;OCircSlider::createCircSlider(const short,const short,const short,const short)
+      createCircSlider__11OCircSliderFCsN31    @168 NONAME
+      ;OCircSlider::isOfType() const
+      isOfType__11OCircSliderCFv    @169 NONAME
+      __vft11OCircSlider9OCLObject    @170 NONAME
+  ;From object file:  E:\OCL\Source\OCollection.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OCollection::numberOfElements() const
+      numberOfElements__11OCollectionCFv    @171 NONAME
+      ;OCollection::del(void*)
+      del__11OCollectionFPv    @172 NONAME
+      ;OCollection::addLast(void*)
+      addLast__11OCollectionFPv    @173 NONAME
+      ;OCollection::addFirst(void*)
+      addFirst__11OCollectionFPv    @174 NONAME
+      ;OCollection::_getPrev(void*)
+      _getPrev__11OCollectionFPv    @175 NONAME
+      ;OCollection::_getNext()
+      _getNext__11OCollectionFv    @176 NONAME
+      ;OCollection::_getNext(void*)
+      _getNext__11OCollectionFPv    @177 NONAME
+      ;OCollection::OCollection(unsigned long)
+      __ct__11OCollectionFUl    @178 NONAME
+      __vft11OCollection9OCLObject    @179 NONAME
+      ;OCollection::reset()
+      reset__11OCollectionFv    @180 NONAME
+      ;OCollection::_getPrevListItem(void*)
+      _getPrevListItem__11OCollectionFPv    @181 NONAME
+      ;OCollection::_getNextListItem(void*)
+      _getNextListItem__11OCollectionFPv    @182 NONAME
+      ;OCollection::isOfType() const
+      isOfType__11OCollectionCFv    @183 NONAME
+      ;OCollection::remove(void*)
+      remove__11OCollectionFPv    @184 NONAME
+      ;OCollection::isEmpty() const
+      isEmpty__11OCollectionCFv    @185 NONAME
+      ;OCollection::isCopyCollection() const
+      isCopyCollection__11OCollectionCFv    @186 NONAME
+      ;OCollection::addAfter(void*,void*)
+      addAfter__11OCollectionFPvT1    @187 NONAME
+      ;OCollection::init()
+      init__11OCollectionFv    @188 NONAME
+      ;OCollection::_getLast()
+      _getLast__11OCollectionFv    @189 NONAME
+      ;OCollection::_getFirst()
+      _getFirst__11OCollectionFv    @190 NONAME
+      ;OCollection::_getItem(unsigned long)
+      _getItem__11OCollectionFUl    @191 NONAME
+      ;OCollection::~OCollection()
+      __dt__11OCollectionFv    @192 NONAME
+      ;OCollection::rewind()
+      rewind__11OCollectionFv    @193 NONAME
+      ;OCollection::addAfter(OListItem<void>*,void*)
+      addAfter__11OCollectionFP9OListItemXTv_Pv    @194 NONAME
+      ;OCollection::_getPrev()
+      _getPrev__11OCollectionFv    @195 NONAME
+  ;From object file:  E:\OCL\Source\OCommand.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OCommandHandler::OCommand(unsigned long,void*,void*)
+      OCommand__15OCommandHandlerFUlPvT2    @196 NONAME
+      ;OCommandHandler::isOfType() const
+      isOfType__15OCommandHandlerCFv    @197 NONAME
+      ;OCommandHandler::OCommandHandler()
+      __ct__15OCommandHandlerFv    @198 NONAME
+      __vft15OCommandHandler9OCLObject    @199 NONAME
+      ;OCommandHandler::~OCommandHandler()
+      __dt__15OCommandHandlerFv    @200 NONAME
+  ;From object file:  E:\OCL\Source\OContainerBase.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OContainerBase::inherit(const unsigned long)
+      inherit__14OContainerBaseFCUl    @201 NONAME
+      ;OContainerBase::insertRecord(void*,_RECORDINSERT*) const
+      insertRecord__14OContainerBaseCFPvP13_RECORDINSERT    @202 NONAME
+      ;OContainerBase::~OContainerBase()
+      __dt__14OContainerBaseFv    @203 NONAME
+      ;OContainerBase::freeDetails()
+      freeDetails__14OContainerBaseFv    @204 NONAME
+      ;OContainerBase::freeContainer()
+      freeContainer__14OContainerBaseFv    @205 NONAME
+      ;OContainerBase::setTitle(char*)
+      setTitle__14OContainerBaseFPc    @206 NONAME
+      ;OContainerBase::setView(unsigned long)
+      setView__14OContainerBaseFUl    @207 NONAME
+      ;OContainerBase::queryDetailInfo(_FIELDINFO*,unsigned long) const
+      queryDetailInfo__14OContainerBaseCFP10_FIELDINFOUl    @208 NONAME
+      __vft14OContainerBase9OCLObject    @209 NONAME
+      ;OContainerBase::invalidateDetails() const
+      invalidateDetails__14OContainerBaseCFv    @210 NONAME
+      ;OContainerBase::setEmphasis(void*,unsigned long,unsigned long) const
+      setEmphasis__14OContainerBaseCFPvUlT2    @211 NONAME
+      ;OContainerBase::closeEdit() const
+      closeEdit__14OContainerBaseCFv    @212 NONAME
+      ;OContainerBase::arrangeRecords() const
+      arrangeRecords__14OContainerBaseCFv    @213 NONAME
+      ;OContainerBase::_queryRecord(void*,unsigned long,unsigned long) const
+      _queryRecord__14OContainerBaseCFPvUlT2    @214 NONAME
+      ;OContainerBase::setCnrInfo(unsigned long) const
+      setCnrInfo__14OContainerBaseCFUl    @215 NONAME
+      ;OContainerBase::_queryEmphasis(void*,unsigned long) const
+      _queryEmphasis__14OContainerBaseCFPvUl    @216 NONAME
+      ;OContainerBase::OContainerBase(const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__14OContainerBaseFCUlN31    @217 NONAME
+      ;OContainerBase::_allocRecords(unsigned long,unsigned long) const
+      _allocRecords__14OContainerBaseCFUlT1    @218 NONAME
+      ;OContainerBase::OContainerBase(const unsigned long,const OFrame&,const unsigned long,const unsigned long)
+      __ct__14OContainerBaseFCUlRC6OFrameN21    @219 NONAME
+      ;OContainerBase::isOfType() const
+      isOfType__14OContainerBaseCFv    @220 NONAME
+      ;OContainerBase::queryCnrInfo() const
+      queryCnrInfo__14OContainerBaseCFv    @221 NONAME
+      ;OContainerBase::invalidateRecord(void*,unsigned long,unsigned long) const
+      invalidateRecord__14OContainerBaseCFPvUlT2    @222 NONAME
+      ;OContainerBase::filter(int(*)(),void*) const
+      filter__14OContainerBaseCFPFv_iPv    @223 NONAME
+      ;OContainerBase::freeDetailInfo(_FIELDINFO*,unsigned long) const
+      freeDetailInfo__14OContainerBaseCFP10_FIELDINFOUl    @224 NONAME
+      ;OContainerBase::freeRecord(void*,unsigned long) const
+      freeRecord__14OContainerBaseCFPvUl    @225 NONAME
+      ;OContainerBase::OContainerBase(const unsigned long,OFrame* const,const unsigned long,const unsigned long)
+      __ct__14OContainerBaseFCUlCP6OFrameN21    @226 NONAME
+      ;OContainerBase::freeItems()
+      freeItems__14OContainerBaseFv    @227 NONAME
+      ;OContainerBase::removeRecord(void*,unsigned long,unsigned long) const
+      removeRecord__14OContainerBaseCFPvUlT2    @228 NONAME
+      ;OContainerBase::removeDetailInfo(_FIELDINFO*,unsigned long,unsigned long) const
+      removeDetailInfo__14OContainerBaseCFP10_FIELDINFOUlT2    @229 NONAME
+      ;OContainerBase::eraseRecord(void*) const
+      eraseRecord__14OContainerBaseCFPv    @230 NONAME
+      ;OContainerBase::collapseTree(void*) const
+      collapseTree__14OContainerBaseCFPv    @231 NONAME
+      ;OContainerBase::allocDetailFields(unsigned long) const
+      allocDetailFields__14OContainerBaseCFUl    @232 NONAME
+      ;OContainerBase::insertDetailInfo(_FIELDINFO*,_FIELDINFOINSERT*) const
+      insertDetailInfo__14OContainerBaseCFP10_FIELDINFOP16_FIELDINFOINSERT    @233 NONAME
+      ;OContainerBase::openEdit(_CNREDITDATA*) const
+      openEdit__14OContainerBaseCFP12_CNREDITDATA    @234 NONAME
+      ;OContainerBase::createContainer()
+      createContainer__14OContainerBaseFv    @235 NONAME
+      ;OContainerBase::expandTree(void*) const
+      expandTree__14OContainerBaseCFPv    @236 NONAME
+  ;From object file:  E:\OCL\Source\OCreate.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft7OCreate9OCLObject    @237 NONAME
+      ;OCreate::OCreate()
+      __ct__7OCreateFv    @238 NONAME
+      ;OCreate::~OCreate()
+      __dt__7OCreateFv    @239 NONAME
+      ;OCreate::Create()
+      Create__7OCreateFv    @240 NONAME
+      ;OCreate::is(const char*)
+      is__7OCreateFPCc    @241 NONAME
+      ;OCreate::isOfType() const
+      isOfType__7OCreateCFv    @242 NONAME
+      ;OCreate::CreateExe()
+      CreateExe__7OCreateFv    @243 NONAME
+      ;OCreate::CreateDoc()
+      CreateDoc__7OCreateFv    @244 NONAME
+      ;OCreate::CreateBook()
+      CreateBook__7OCreateFv    @245 NONAME
+  ;From object file:  E:\OCL\Source\OCriticalSec.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft12OCriticalSec9OCLObject    @246 NONAME
+      ;OCriticalSec::~OCriticalSec()
+      __dt__12OCriticalSecFv    @247 NONAME
+      ;OCriticalSec::exit()
+      exit__12OCriticalSecFv    @248 NONAME
+      ;OCriticalSec::OCriticalSec(unsigned long)
+      __ct__12OCriticalSecFUl    @249 NONAME
+      ;OCriticalSec::enter()
+      enter__12OCriticalSecFv    @250 NONAME
+      ;OCriticalSec::isOfType() const
+      isOfType__12OCriticalSecCFv    @251 NONAME
+  ;From object file:  E:\OCL\Source\ODate.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;ODate::DYToMDY(int,int)
+      DYToMDY__5ODateFiT1    @252 NONAME
+      ;ODate::isValid(int,int)
+      isValid__5ODateFiT1    @253 NONAME
+      ;ODate::isLeapYear(int)
+      isLeapYear__5ODateFi    @254 NONAME
+      ;ODate::daysInYear(int)
+      daysInYear__5ODateFi    @255 NONAME
+      ;ODate::daysInMonth(ODate::Month,int)
+      daysInMonth__5ODateFQ2_5ODate5Monthi    @256 NONAME
+      ;ODate::operator<(const ODate&) const
+      __lt__5ODateCFRC5ODate    @257 NONAME
+      ;operator<<(ostream&,const ODate&)
+      __ls__FR7ostreamRC5ODate    @258 NONAME
+      ;ODate::operator<=(const ODate&) const
+      __le__5ODateCFRC5ODate    @259 NONAME
+      ;ODate::ODate(const _CDATE&)
+      __ct__5ODateFRC6_CDATE    @260 NONAME
+      ;ODate::ODate(const ODate&)
+      __ct__5ODateFRC5ODate    @261 NONAME
+      ;ODate::ODate()
+      __ct__5ODateFv    @262 NONAME
+      ;ODate::now()
+      now__5ODateFv    @263 NONAME
+      ;ODate::julianDate() const
+      julianDate__5ODateCFv    @264 NONAME
+      ;ODate::isOfType() const
+      isOfType__5ODateCFv    @265 NONAME
+      ;ODate::dayOfYear() const
+      dayOfYear__5ODateCFv    @266 NONAME
+      ;ODate::dayName() const
+      dayName__5ODateCFv    @267 NONAME
+      ;ODate::calculate()
+      calculate__5ODateFv    @268 NONAME
+      ;ODate::monthName(ODate::Month)
+      monthName__5ODateFQ2_5ODate5Month    @269 NONAME
+      __vft5ODate9OCLObject    @270 NONAME
+      ;ODate::operator==(const ODate&) const
+      __eq__5ODateCFRC5ODate    @271 NONAME
+      ;ODate::operator-=(int)
+      __ami__5ODateFi    @272 NONAME
+      ;ODate::ODate(ODate::Month,int,int)
+      __ct__5ODateFQ2_5ODate5MonthiT2    @273 NONAME
+      ;ODate::julianToMDY(unsigned long)
+      julianToMDY__5ODateFUl    @274 NONAME
+      ;ODate::ODate(int,ODate::Month,int)
+      __ct__5ODateFiQ2_5ODate5MonthT1    @275 NONAME
+      ;ODate::isValid(int,ODate::Month,int)
+      isValid__5ODateFiQ2_5ODate5MonthT1    @276 NONAME
+      ;ODate::operator+(int) const
+      __pl__5ODateCFi    @277 NONAME
+      ;ODate::operator!=(const ODate&) const
+      __ne__5ODateCFRC5ODate    @278 NONAME
+      ;ODate::monthOfYear() const
+      monthOfYear__5ODateCFv    @279 NONAME
+      ;ODate::year() const
+      year__5ODateCFv    @280 NONAME
+      ;ODate::dayOfMonth() const
+      dayOfMonth__5ODateCFv    @281 NONAME
+      ;ODate::asCDATE() const
+      asCDATE__5ODateCFv    @282 NONAME
+      ;ODate::asString(const char*) const
+      asString__5ODateCFPCc    @283 NONAME
+      ;ODate::asString(ODate::DateFormat) const
+      asString__5ODateCFQ2_5ODate10DateFormat    @284 NONAME
+      ;ODate::operator>(const ODate&) const
+      __gt__5ODateCFRC5ODate    @285 NONAME
+      ;ODate::operator-(const ODate&) const
+      __mi__5ODateCFRC5ODate    @286 NONAME
+      ;ODate::dayOfWeek() const
+      dayOfWeek__5ODateCFv    @287 NONAME
+      ;ODate::monthName() const
+      monthName__5ODateCFv    @288 NONAME
+      ;ODate::dayName(ODate::DayOfWeek)
+      dayName__5ODateFQ2_5ODate9DayOfWeek    @289 NONAME
+      ;ODate::ODate(unsigned long)
+      __ct__5ODateFUl    @290 NONAME
+      ;ODate::ODate(int,int)
+      __ct__5ODateFiT1    @291 NONAME
+      ;ODate::operator-(int) const
+      __mi__5ODateCFi    @292 NONAME
+      ;ODate::operator>=(const ODate&) const
+      __ge__5ODateCFRC5ODate    @293 NONAME
+      ;ODate::operator+=(int)
+      __apl__5ODateFi    @294 NONAME
+      ;ODate::MDYToJulian(ODate::MDY)
+      MDYToJulian__5ODateFQ2_5ODate3MDY    @295 NONAME
+      ;ODate::today()
+      today__5ODateFv    @296 NONAME
+      ;ODate::isValid(ODate::Month,int,int)
+      isValid__5ODateFQ2_5ODate5MonthiT2    @297 NONAME
+      ;ODate::init(ODate::Month,int,int)
+      init__5ODateFQ2_5ODate5MonthiT2    @298 NONAME
+      ;ODate::~ODate()
+      __dt__5ODateFv    @299 NONAME
+  ;From object file:  E:\OCL\Source\ODialog.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;ODialog::centerDlg(const unsigned long)
+      centerDlg__7ODialogFCUl    @300 NONAME
+      __vft7ODialog9OCLObject    @301 NONAME
+      ;ODialog::destroyDlg()
+      destroyDlg__7ODialogFv    @302 NONAME
+      ;ODialog::showDlgModal()
+      showDlgModal__7ODialogFv    @303 NONAME
+      ;ODialog::createDlg()
+      createDlg__7ODialogFv    @304 NONAME
+      ;ODialog::ODialog(const unsigned long,const unsigned long,const unsigned long)
+      __ct__7ODialogFCUlN21    @305 NONAME
+      ;ODialog::~ODialog()
+      __dt__7ODialogFv    @306 NONAME
+      ;ODialog::ODialog(const unsigned long)
+      __ct__7ODialogFCUl    @307 NONAME
+      ;ODialog::ODialog(const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__7ODialogFCUlN31    @308 NONAME
+      ;ODialog::isOfType() const
+      isOfType__7ODialogCFv    @309 NONAME
+      ;ODialog::dismissDlg(unsigned long)
+      dismissDlg__7ODialogFUl    @310 NONAME
+      ;ODialog::showDlg()
+      showDlg__7ODialogFv    @311 NONAME
+      ;ODialog::hideDlg()
+      hideDlg__7ODialogFv    @312 NONAME
+  ;From object file:  E:\OCL\Source\OStdDialog.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft10OStdDialog9OCLObject    @313 NONAME
+      ;OStdDialog::OStdDialog(unsigned long,unsigned long)
+      __ct__10OStdDialogFUlT1    @314 NONAME
+      ;OStdDialog::~OStdDialog()
+      __dt__10OStdDialogFv    @315 NONAME
+      ;OStdDialog::isOfType() const
+      isOfType__10OStdDialogCFv    @316 NONAME
+  ;From object file:  E:\OCL\Source\OFontDialog.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft11OFontDialog9OCLObject    @317 NONAME
+      ;OFontDialog::OFontDialog(unsigned long,unsigned long)
+      __ct__11OFontDialogFUlT1    @318 NONAME
+      ;OFontDialog::getFont(char*,char*)
+      getFont__11OFontDialogFPcT1    @319 NONAME
+      ;OFontDialog::~OFontDialog()
+      __dt__11OFontDialogFv    @320 NONAME
+      ;OFontDialog::isOfType() const
+      isOfType__11OFontDialogCFv    @321 NONAME
+  ;From object file:  E:\OCL\Source\OFileDialog.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft11OFileDialog9OCLObject    @322 NONAME
+      ;OFileDialog::~OFileDialog()
+      __dt__11OFileDialogFv    @323 NONAME
+      ;OFileDialog::saveAs(char*,char*,char*,OFileDialog::styles)
+      saveAs__11OFileDialogFPcN21Q2_11OFileDialog6styles    @324 NONAME
+      ;OFileDialog::OFileDialog(unsigned long,unsigned long)
+      __ct__11OFileDialogFUlT1    @325 NONAME
+      ;OFileDialog::isOfType() const
+      isOfType__11OFileDialogCFv    @326 NONAME
+      ;OFileDialog::open(char*,char*,char*,OFileDialog::styles)
+      open__11OFileDialogFPcN21Q2_11OFileDialog6styles    @327 NONAME
+  ;From object file:  E:\OCL\Source\OColorDialog.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OColorDialog::~OColorDialog()
+      __dt__12OColorDialogFv    @328 NONAME
+      __vft12OColorDialog9OCLObject    @329 NONAME
+      ;OColorDialog::OColorDialog(unsigned long,unsigned long)
+      __ct__12OColorDialogFUlT1    @330 NONAME
+      ;OColorDialog::isOfType() const
+      isOfType__12OColorDialogCFv    @331 NONAME
+  ;From object file:  E:\OCL\Source\ODragEntryField.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft15ODragEntryField9OCLObject    @332 NONAME
+      ;ODragEntryField::ODragEntryField(const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__15ODragEntryFieldFCUlN31    @333 NONAME
+      ;ODragEntryField::createEntryField(const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      createEntryField__15ODragEntryFieldFCUlN31    @334 NONAME
+      ;ODragEntryField::isOfType() const
+      isOfType__15ODragEntryFieldCFv    @335 NONAME
+      ;ODragEntryField::inherit(const unsigned long)
+      inherit__15ODragEntryFieldFCUl    @336 NONAME
+      ;ODragEntryField::~ODragEntryField()
+      __dt__15ODragEntryFieldFv    @337 NONAME
+      ODragEntryFieldProc    @338 NONAME
+      ;ODragEntryField::OCommand(unsigned long,void*,void*)
+      OCommand__15ODragEntryFieldFUlPvT2    @339 NONAME
+      ;ODragEntryField::ODragEntryField(const unsigned long,const OFrame&,const unsigned long,const unsigned long)
+      __ct__15ODragEntryFieldFCUlRC6OFrameN21    @340 NONAME
+      ;ODragEntryField::ODragEntryField(const unsigned long,OFrame* const,const unsigned long,const unsigned long)
+      __ct__15ODragEntryFieldFCUlCP6OFrameN21    @341 NONAME
+      ;ODragEntryField::EFDefaultCall(unsigned long,void*,void*)
+      EFDefaultCall__15ODragEntryFieldFUlPvT2    @342 NONAME
+  ;From object file:  E:\OCL\Source\ODynamicLib.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;ODynamicLib::queryFn(unsigned long)
+      queryFn__11ODynamicLibFUl    @343 NONAME
+      ;ODynamicLib::getLibHandle()
+      getLibHandle__11ODynamicLibFv    @344 NONAME
+      ;ODynamicLib::queryModuleName()
+      queryModuleName__11ODynamicLibFv    @345 NONAME
+      ;ODynamicLib::freeResource(void*)
+      freeResource__11ODynamicLibFPv    @346 NONAME
+      ;ODynamicLib::ODynamicLib(const char*)
+      __ct__11ODynamicLibFPCc    @347 NONAME
+      ;ODynamicLib::queryFnType(unsigned long)
+      queryFnType__11ODynamicLibFUl    @348 NONAME
+      __vtt11ODynamicLib    @349 NONAME
+      __vft11ODynamicLib9OCLObject    @350 NONAME
+      ;ODynamicLib::queryResourceSize(unsigned long,unsigned long)
+      queryResourceSize__11ODynamicLibFUlT1    @351 NONAME
+      ;ODynamicLib::~ODynamicLib()
+      __dt__11ODynamicLibFv    @352 NONAME
+      ;ODynamicLib::queryAppType()
+      queryAppType__11ODynamicLibFv    @353 NONAME
+      ;ODynamicLib::freeModule()
+      freeModule__11ODynamicLibFv    @354 NONAME
+      ;ODynamicLib::queryFn(const char*)
+      queryFn__11ODynamicLibFPCc    @355 NONAME
+      ;ODynamicLib::queryFnType(const char*)
+      queryFnType__11ODynamicLibFPCc    @356 NONAME
+      ;ODynamicLib::getResource(unsigned long,unsigned long)
+      getResource__11ODynamicLibFUlT1    @357 NONAME
+      __vft11ODynamicLib    @358 NONAME
+      ;ODynamicLib::ODynamicLib(unsigned long)
+      __ct__11ODynamicLibFUl    @359 NONAME
+      ;ODynamicLib::setLibHandle(unsigned long)
+      setLibHandle__11ODynamicLibFUl    @360 NONAME
+      ;ODynamicLib::isOfType() const
+      isOfType__11ODynamicLibCFv    @361 NONAME
+  ;From object file:  E:\OCL\Source\OEditor.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OEditor::loadFile()
+      loadFile__7OEditorFv    @362 NONAME
+      ;OEditor::OEditor(const unsigned long,const unsigned long,const unsigned long)
+      __ct__7OEditorFCUlN21    @363 NONAME
+      ;OEditor::saveFile()
+      saveFile__7OEditorFv    @364 NONAME
+      ;OEditor::OEditor(const unsigned long,const OFrame&,const unsigned long)
+      __ct__7OEditorFCUlRC6OFrameT1    @365 NONAME
+      ;OEditor::isOfType() const
+      isOfType__7OEditorCFv    @366 NONAME
+      ;OEditor::OEditor(const unsigned long,OFrame* const,const unsigned long)
+      __ct__7OEditorFCUlCP6OFrameT1    @367 NONAME
+      ;OEditor::saveFileAs()
+      saveFileAs__7OEditorFv    @368 NONAME
+      ;OEditor::~OEditor()
+      __dt__7OEditorFv    @369 NONAME
+      __vft7OEditor9OCLObject    @370 NONAME
+  ;From object file:  E:\OCL\Source\OEntryField.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OEntryField::querySelection(unsigned short&,unsigned short&)
+      querySelection__11OEntryFieldFRUsT1    @371 NONAME
+      ;OEntryField::isOfType() const
+      isOfType__11OEntryFieldCFv    @372 NONAME
+      ;OEntryField::queryRDOnly()
+      queryRDOnly__11OEntryFieldFv    @373 NONAME
+      __vft11OEntryField9OCLObject    @374 NONAME
+      ;OEntryField::setSelection(const unsigned short,const unsigned short)
+      setSelection__11OEntryFieldFCUsT1    @375 NONAME
+      ;OEntryField::queryChanged()
+      queryChanged__11OEntryFieldFv    @376 NONAME
+      ;OEntryField::setRDOnly(const unsigned long)
+      setRDOnly__11OEntryFieldFCUl    @377 NONAME
+      ;OEntryField::OEntryField(const unsigned long,const OFrame&,const unsigned long,const unsigned long)
+      __ct__11OEntryFieldFCUlRC6OFrameN21    @378 NONAME
+      ;OEntryField::queryFirstChar()
+      queryFirstChar__11OEntryFieldFv    @379 NONAME
+      ;OEntryField::getText(OString&)
+      getText__11OEntryFieldFR7OString    @380 NONAME
+      ;OEntryField::setText(const char*)
+      setText__11OEntryFieldFPCc    @381 NONAME
+      ;OEntryField::OEntryField(const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__11OEntryFieldFCUlN31    @382 NONAME
+      ;OEntryField::createEntryField(const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      createEntryField__11OEntryFieldFCUlN31    @383 NONAME
+      ;OEntryField::OEntryField(const unsigned long,OFrame* const,const unsigned long,const unsigned long)
+      __ct__11OEntryFieldFCUlCP6OFrameN21    @384 NONAME
+      ;OEntryField::~OEntryField()
+      __dt__11OEntryFieldFv    @385 NONAME
+      ;OEntryField::pasteText()
+      pasteText__11OEntryFieldFv    @386 NONAME
+      ;OEntryField::setTextLimit(const unsigned short)
+      setTextLimit__11OEntryFieldFCUs    @387 NONAME
+      ;OEntryField::setFirstChar(const unsigned short)
+      setFirstChar__11OEntryFieldFCUs    @388 NONAME
+      ;OEntryField::inherit(const unsigned long)
+      inherit__11OEntryFieldFCUl    @389 NONAME
+      ;OEntryField::setInsertMode(const unsigned long)
+      setInsertMode__11OEntryFieldFCUl    @390 NONAME
+      ;OEntryField::cutText()
+      cutText__11OEntryFieldFv    @391 NONAME
+      ;OEntryField::copyText()
+      copyText__11OEntryFieldFv    @392 NONAME
+      ;OEntryField::clearText()
+      clearText__11OEntryFieldFv    @393 NONAME
+  ;From object file:  E:\OCL\Source\OException.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft10OException9OCLObject    @394 NONAME
+      __vtt10OException    @395 NONAME
+      ;OException::OException(const OString&,const unsigned long,const unsigned long,char* const,const unsigned long)
+      __ct__10OExceptionFRC7OStringCUlT2CPcT2    @396 NONAME
+      ;OException::isOfType() const
+      isOfType__10OExceptionCFv    @397 NONAME
+      ;OException::OException(const OException&)
+      __ct__10OExceptionFRC10OException    @398 NONAME
+      __vft10OException    @399 NONAME
+      ;OException::OException(char* const,const unsigned long,const unsigned long,char* const,const unsigned long)
+      __ct__10OExceptionFCPcCUlT2T1T2    @400 NONAME
+      ;OException::~OException()
+      __dt__10OExceptionFv    @401 NONAME
+  ;From object file:  E:\OCL\Source\OFcl.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OFcl::setCheck(unsigned long,unsigned long)
+      setCheck__4OFclFUlT1    @402 NONAME
+      ;OFcl::collect(const char*,unsigned long,unsigned long)
+      collect__4OFclFPCcUlT2    @403 NONAME
+      ;OFcl::addfiles()
+      addfiles__4OFclFv    @404 NONAME
+      ;OFcl::finddirs(char*)
+      finddirs__4OFclFPc    @405 NONAME
+      ;OFcl::~OFcl()
+      __dt__4OFclFv    @406 NONAME
+      ;OFcl::findfiles(OListItem<OString>*)
+      findfiles__4OFclFP9OListItemXT7OString_    @407 NONAME
+      ;OFcl::OFcl()
+      __ct__4OFclFv    @408 NONAME
+      ;OFcl::isOfType() const
+      isOfType__4OFclCFv    @409 NONAME
+      ;OFcl::fclstop()
+      fclstop__4OFclFv    @410 NONAME
+      ;OFcl::hasDate(_FILEFINDBUF3*)
+      hasDate__4OFclFP13_FILEFINDBUF3    @411 NONAME
+      __vft4OFcl9OCLObject    @412 NONAME
+      ;OFcl::fclinit()
+      fclinit__4OFclFv    @413 NONAME
+      ;OFcl::finddrives(const char*)
+      finddrives__4OFclFPCc    @414 NONAME
+      ;OFcl::hasTime(_FILEFINDBUF3*)
+      hasTime__4OFclFP13_FILEFINDBUF3    @415 NONAME
+      ;OFcl::setupFilebuf()
+      setupFilebuf__4OFclFv    @416 NONAME
+      ;OFcl::adddirs(const char*)
+      adddirs__4OFclFPCc    @417 NONAME
+  ;From object file:  E:\OCL\Source\OFillButton.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OFillButton::OFillButton()
+      __ct__11OFillButtonFv    @418 NONAME
+      ;OFillButton::isOfType() const
+      isOfType__11OFillButtonCFv    @419 NONAME
+      ;OFillButton::~OFillButton()
+      __dt__11OFillButtonFv    @420 NONAME
+      ;OFillButton::drawButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      drawButton__11OFillButtonFUlN41    @421 NONAME
+      __vft11OFillButton9OCLObject    @422 NONAME
+  ;From object file:  E:\OCL\Source\OFrame.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft6OFrame9OCLObject    @423 NONAME
+      ;OFrame::OFrame(const unsigned long,const unsigned long,const unsigned long)
+      __ct__6OFrameFCUlN21    @424 NONAME
+      ;OFrame::centerFrame()
+      centerFrame__6OFrameFv    @425 NONAME
+      ;OFrame::isOfType() const
+      isOfType__6OFrameCFv    @426 NONAME
+      ;OFrame::createFrame(char*)
+      createFrame__6OFrameFPc    @427 NONAME
+      ;OFrame::trackFrame()
+      trackFrame__6OFrameFv    @428 NONAME
+      ;OFrame::setWindowText(const char*)
+      setWindowText__6OFrameFPCc    @429 NONAME
+      ;OFrame::setSizePosFrame(const unsigned long,_SWP,const unsigned long)
+      setSizePosFrame__6OFrameFCUl4_SWPT1    @430 NONAME
+      ;OFrame::showFrame()
+      showFrame__6OFrameFv    @431 NONAME
+      ;OFrame::postQuit()
+      postQuit__6OFrameFv    @432 NONAME
+      ;OFrame::hideFrame()
+      hideFrame__6OFrameFv    @433 NONAME
+      ;OFrame::~OFrame()
+      __dt__6OFrameFv    @434 NONAME
+      ;OFrame::destroyFrame()
+      destroyFrame__6OFrameFv    @435 NONAME
+      ;OFrame::OCommand(unsigned long,void*,void*)
+      OCommand__6OFrameFUlPvT2    @436 NONAME
+  ;From object file:  E:\OCL\Source\OFuzzSearch.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OFuzzSearch::OFuzzSearch(const char*,const char*,float,unsigned long)
+      __ct__11OFuzzSearchFPCcT1fUl    @437 NONAME
+      ;OFuzzSearch::isOfType() const
+      isOfType__11OFuzzSearchCFv    @438 NONAME
+      ;OFuzzSearch::startSearch()
+      startSearch__11OFuzzSearchFv    @439 NONAME
+      ;OFuzzSearch::fuzzyMatching()
+      fuzzyMatching__11OFuzzSearchFv    @440 NONAME
+      ;OFuzzSearch::OFuzzMatchPrint::applyToElement(const OFuzzMatch*) const
+      applyToElement__Q2_11OFuzzSearch15OFuzzMatchPrintCFPC10OFuzzMatch    @441 NONAME
+      ;OFuzzSearch::~OFuzzSearch()
+      __dt__11OFuzzSearchFv    @442 NONAME
+      ;OFuzzSearch::printMatches()
+      printMatches__11OFuzzSearchFv    @443 NONAME
+      __vft11OFuzzSearch9OCLObject    @444 NONAME
+      __vftQ2_11OFuzzSearch15OFuzzMatchPrint9OCLObject    @445 NONAME
+      ;OFuzzSearch::prepareString(char*,char*)
+      prepareString__11OFuzzSearchFPcT1    @446 NONAME
+      ;OFuzzSearch::NGramMatch(char*,char*,int,int,int*)
+      NGramMatch__11OFuzzSearchFPcT1iT3Pi    @447 NONAME
+  ;From object file:  E:\OCL\Source\OGraphicsButton.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OGraphicsButton::OGraphicsButton(unsigned long,OFrame*,OIcon*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__15OGraphicsButtonFUlP6OFrameP5OIconPcN41    @448 NONAME
+      ;OGraphicsButton::~OGraphicsButton()
+      __dt__15OGraphicsButtonFv    @449 NONAME
+      ;OGraphicsButton::UBDefaultCall(unsigned long,void*,void*)
+      UBDefaultCall__15OGraphicsButtonFUlPvT2    @450 NONAME
+      OGraphicsButtonProc    @451 NONAME
+      ;OGraphicsButton::drawButton(unsigned long)
+      drawButton__15OGraphicsButtonFUl    @452 NONAME
+      ;OGraphicsButton::OGraphicsButton(unsigned long,unsigned long,OBitmap*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__15OGraphicsButtonFUlT1P7OBitmapPcN41    @453 NONAME
+      ;OGraphicsButton::OGraphicsButton(unsigned long,OFrame&,OBitmap*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__15OGraphicsButtonFUlR6OFrameP7OBitmapPcN41    @454 NONAME
+      ;OGraphicsButton::createButton()
+      createButton__15OGraphicsButtonFv    @455 NONAME
+      __vft15OGraphicsButton9OCLObject    @456 NONAME
+      ;OGraphicsButton::isOfType() const
+      isOfType__15OGraphicsButtonCFv    @457 NONAME
+      ;OGraphicsButton::OGraphicsButton(unsigned long,unsigned long,OIcon*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__15OGraphicsButtonFUlT1P5OIconPcN41    @458 NONAME
+      ;OGraphicsButton::OGraphicsButton(unsigned long,OFrame&,OIcon*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__15OGraphicsButtonFUlR6OFrameP5OIconPcN41    @459 NONAME
+      ;OGraphicsButton::OGraphicsButton(unsigned long,OFrame*,OBitmap*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__15OGraphicsButtonFUlP6OFrameP7OBitmapPcN41    @460 NONAME
+      ;OGraphicsButton::OCommand(unsigned long,void*,void*)
+      OCommand__15OGraphicsButtonFUlPvT2    @461 NONAME
+  ;From object file:  E:\OCL\Source\OHelp.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OHelp::initializeHelp(char*,char*,const unsigned long)
+      initializeHelp__5OHelpFPcT1CUl    @462 NONAME
+      __vft5OHelp9OCLObject    @463 NONAME
+      ;OHelp::isOfType() const
+      isOfType__5OHelpCFv    @464 NONAME
+      ;OHelp::helpRequest(const unsigned long)
+      helpRequest__5OHelpFCUl    @465 NONAME
+      ;OHelp::~OHelp()
+      __dt__5OHelpFv    @466 NONAME
+      ;OHelp::terminateHelp()
+      terminateHelp__5OHelpFv    @467 NONAME
+      ;OHelp::OHelp(const unsigned long,const unsigned long)
+      __ct__5OHelpFCUlT1    @468 NONAME
+  ;From object file:  E:\OCL\Source\OHelpPopup.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OHelpPopup::startPopupTimer()
+      startPopupTimer__10OHelpPopupFv    @469 NONAME
+      ;OHelpPopup::setPopupTimeout(unsigned long)
+      setPopupTimeout__10OHelpPopupFUl    @470 NONAME
+      __vft10OHelpPopup9OCLObject    @471 NONAME
+      ;OHelpPopup::showTimeout() const
+      showTimeout__10OHelpPopupCFv    @472 NONAME
+      ;OHelpPopup::timePopup(const char*)
+      timePopup__10OHelpPopupFPCc    @473 NONAME
+      ;OHelpPopup::OHelpPopup()
+      __ct__10OHelpPopupFv    @474 NONAME
+      ;OHelpPopup::OCommand(unsigned long,void*,void*)
+      OCommand__10OHelpPopupFUlPvT2    @475 NONAME
+      ;OHelpPopup::createStatusLine()
+      createStatusLine__10OHelpPopupFv    @476 NONAME
+      ;OHelpPopup::stopPopupTimer()
+      stopPopupTimer__10OHelpPopupFv    @477 NONAME
+      ;OHelpPopup::isOfType() const
+      isOfType__10OHelpPopupCFv    @478 NONAME
+      ;OHelpPopup::hidePopup()
+      hidePopup__10OHelpPopupFv    @479 NONAME
+      ;OHelpPopup::~OHelpPopup()
+      __dt__10OHelpPopupFv    @480 NONAME
+      ;OHelpPopup::showPopup(const char*)
+      showPopup__10OHelpPopupFPCc    @481 NONAME
+  ;From object file:  E:\OCL\Source\OIcon.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OIcon::~OIcon()
+      __dt__5OIconFv    @482 NONAME
+      ;OIcon::destroy()
+      destroy__5OIconFv    @483 NONAME
+      ;OIcon::OIcon(const unsigned long)
+      __ct__5OIconFCUl    @484 NONAME
+      __vft5OIcon9OCLObject    @485 NONAME
+      ;OIcon::OIcon(const unsigned long,const unsigned long)
+      __ct__5OIconFCUlT1    @486 NONAME
+      ;OIcon::isOfType() const
+      isOfType__5OIconCFv    @487 NONAME
+      ;OIcon::loadFromFile(char*)
+      loadFromFile__5OIconFPc    @488 NONAME
+      ;OIcon::load(const unsigned long,const unsigned long)
+      load__5OIconFCUlT1    @489 NONAME
+      ;OIcon::OIcon()
+      __ct__5OIconFv    @490 NONAME
+      ;OIcon::OIcon(const char*)
+      __ct__5OIconFPCc    @491 NONAME
+  ;From object file:  E:\OCL\Source\OIndicator.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft10OIndicator9OCLObject    @492 NONAME
+      ;OIndicator::OIndicator(const unsigned long,OFrame* const,const unsigned long)
+      __ct__10OIndicatorFCUlCP6OFrameT1    @493 NONAME
+      ;OIndicator::createIndicator(const short,const short,const short,const short)
+      createIndicator__10OIndicatorFCsN31    @494 NONAME
+      ;OIndicator::isOfType() const
+      isOfType__10OIndicatorCFv    @495 NONAME
+      ;OIndicator::inherit(const unsigned long)
+      inherit__10OIndicatorFCUl    @496 NONAME
+      ;OIndicator::OIndicator(const unsigned long,const OFrame&,const unsigned long)
+      __ct__10OIndicatorFCUlRC6OFrameT1    @497 NONAME
+      ;OIndicator::OIndicator(const unsigned long,const unsigned long,const unsigned long)
+      __ct__10OIndicatorFCUlN21    @498 NONAME
+      ;OIndicator::~OIndicator()
+      __dt__10OIndicatorFv    @499 NONAME
+  ;From object file:  E:\OCL\Source\OListBox.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OListBox::deleteItem(const unsigned long)
+      deleteItem__8OListBoxFCUl    @500 NONAME
+      ;OListBox::querySelection(const unsigned long)
+      querySelection__8OListBoxFCUl    @501 NONAME
+      __vft8OListBox9OCLObject    @502 NONAME
+      ;OListBox::OListBox(const unsigned long,OFrame* const,const unsigned long,unsigned long)
+      __ct__8OListBoxFCUlCP6OFrameT1Ul    @503 NONAME
+      ;OListBox::queryItemText(OString&,const unsigned long)
+      queryItemText__8OListBoxFR7OStringCUl    @504 NONAME
+      ;OListBox::insertItem(const char*,const unsigned long)
+      insertItem__8OListBoxFPCcCUl    @505 NONAME
+      ;OListBox::deleteAll()
+      deleteAll__8OListBoxFv    @506 NONAME
+      ;OListBox::searchString(const char*,const unsigned long,const unsigned long)
+      searchString__8OListBoxFPCcCUlT2    @507 NONAME
+      ;OListBox::auto_scroll()
+      auto_scroll__8OListBoxFv    @508 NONAME
+      ;OListBox::setItemText(const unsigned long,const char*)
+      setItemText__8OListBoxFCUlPCc    @509 NONAME
+      ;OListBox::createListBox(const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      createListBox__8OListBoxFCUlN31    @510 NONAME
+      ;OListBox::~OListBox()
+      __dt__8OListBoxFv    @511 NONAME
+      ;OListBox::OListBox(const unsigned long,const unsigned long,const unsigned long,unsigned long)
+      __ct__8OListBoxFCUlN21Ul    @512 NONAME
+      ;OListBox::setItemHeight(const unsigned long)
+      setItemHeight__8OListBoxFCUl    @513 NONAME
+      ;OListBox::queryItemTextLength(const unsigned long)
+      queryItemTextLength__8OListBoxFCUl    @514 NONAME
+      ;OListBox::queryItemCount()
+      queryItemCount__8OListBoxFv    @515 NONAME
+      ;OListBox::OListBox(const unsigned long,const OFrame&,const unsigned long,unsigned long)
+      __ct__8OListBoxFCUlRC6OFrameT1Ul    @516 NONAME
+      ;OListBox::setToTop(const unsigned long)
+      setToTop__8OListBoxFCUl    @517 NONAME
+      ;OListBox::setAutoScroll(unsigned long)
+      setAutoScroll__8OListBoxFUl    @518 NONAME
+      ;OListBox::queryItemHandle(const unsigned long)
+      queryItemHandle__8OListBoxFCUl    @519 NONAME
+      ;OListBox::selectItem(const unsigned long,const unsigned long)
+      selectItem__8OListBoxFCUlT1    @520 NONAME
+      ;OListBox::setItemHandle(const unsigned long,const unsigned long)
+      setItemHandle__8OListBoxFCUlT1    @521 NONAME
+      ;OListBox::isOfType() const
+      isOfType__8OListBoxCFv    @522 NONAME
+      ;OListBox::queryTopItem()
+      queryTopItem__8OListBoxFv    @523 NONAME
+  ;From object file:  E:\OCL\Source\OLogo.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OLogo::OLogo(const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__5OLogoFCUlN31    @524 NONAME
+      ;OLogo::isOfType() const
+      isOfType__5OLogoCFv    @525 NONAME
+      ;OLogo::OCommand(unsigned long,void*,void*)
+      OCommand__5OLogoFUlPvT2    @526 NONAME
+      __vft5OLogo9OCLObject    @527 NONAME
+      ;OLogo::OLogo(char* const,const unsigned long,const unsigned long,const unsigned long)
+      __ct__5OLogoFCPcCUlN22    @528 NONAME
+      ;OLogo::showLogo(const unsigned long)
+      showLogo__5OLogoFCUl    @529 NONAME
+      ;OLogo::~OLogo()
+      __dt__5OLogoFv    @530 NONAME
+  ;From object file:  E:\OCL\Source\OMemu.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OMemu::~OMemu()
+      __dt__5OMemuFv    @531 NONAME
+      ;OMemu::querySystem()
+      querySystem__5OMemuFv    @532 NONAME
+      ;OMemu::isOfType() const
+      isOfType__5OMemuCFv    @533 NONAME
+      ;OMemu::makeKByte(unsigned long)
+      makeKByte__5OMemuFUl    @534 NONAME
+      __vft5OMemu9OCLObject    @535 NONAME
+      ;OMemu::OMemu()
+      __ct__5OMemuFv    @536 NONAME
+      ;OMemu::queryGeneralInfo()
+      queryGeneralInfo__5OMemuFv    @537 NONAME
+  ;From object file:  E:\OCL\Source\OMenu.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OMenu::isChecked(const unsigned long)
+      isChecked__5OMenuFCUl    @538 NONAME
+      ;OMenu::enableItemList(OList<unsigned long>&,unsigned long)
+      enableItemList__5OMenuFR5OListXTUl_Ul    @539 NONAME
+      ;OMenu::checkItem(const unsigned long,unsigned long)
+      checkItem__5OMenuFCUlUl    @540 NONAME
+      ;OMenu::OMenu(const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__5OMenuFCUlN31    @541 NONAME
+      ;OMenu::OMenu(const unsigned long,const OWindow&,const OWindow&,const unsigned long)
+      __ct__5OMenuFCUlRC7OWindowT2T1    @542 NONAME
+      ;OMenu::setItemText(const unsigned long,const unsigned long)
+      setItemText__5OMenuFCUlT1    @543 NONAME
+      ;OMenu::~OMenu()
+      __dt__5OMenuFv    @544 NONAME
+      ;OMenu::isOfType() const
+      isOfType__5OMenuCFv    @545 NONAME
+      ;OMenu::setItemText(const unsigned long,const char*)
+      setItemText__5OMenuFCUlPCc    @546 NONAME
+      ;OMenu::removeItemList(const unsigned long*,const unsigned long)
+      removeItemList__5OMenuFPCUlCUl    @547 NONAME
+      __vft5OMenu9OCLObject    @548 NONAME
+      ;OMenu::OMenu(const unsigned long,const unsigned long,const unsigned long,ODynamicLib* const)
+      __ct__5OMenuFCUlN21CP11ODynamicLib    @549 NONAME
+      ;OMenu::createOMenuObject()
+      createOMenuObject__5OMenuFv    @550 NONAME
+      ;OMenu::removeItemList(OList<unsigned long>&)
+      removeItemList__5OMenuFR5OListXTUl_    @551 NONAME
+      ;OMenu::isEnabled(const unsigned long)
+      isEnabled__5OMenuFCUl    @552 NONAME
+      ;OMenu::removeItem(const unsigned long)
+      removeItem__5OMenuFCUl    @553 NONAME
+      ;OMenu::enableItem(const unsigned long,unsigned long)
+      enableItem__5OMenuFCUlUl    @554 NONAME
+      ;OMenu::checkItemList(const unsigned long*,const unsigned long,unsigned long)
+      checkItemList__5OMenuFPCUlCUlUl    @555 NONAME
+      ;OMenu::OMenu(const unsigned long,OWindow* const,OWindow* const,const unsigned long)
+      __ct__5OMenuFCUlCP7OWindowT2T1    @556 NONAME
+      ;OMenu::insertItem(const unsigned long,OMenuItem* const)
+      insertItem__5OMenuFCUlCP9OMenuItem    @557 NONAME
+      ;OMenu::enableItemList(const unsigned long*,const unsigned long,unsigned long)
+      enableItemList__5OMenuFPCUlCUlUl    @558 NONAME
+      ;OMenu::checkItemList(OList<unsigned long>&,unsigned long)
+      checkItemList__5OMenuFR5OListXTUl_Ul    @559 NONAME
+      ;OMenu::OMenu(const unsigned long,const OWindow&,const OWindow&,ODynamicLib* const)
+      __ct__5OMenuFCUlRC7OWindowT2CP11ODynamicLib    @560 NONAME
+      ;OMenu::OMenu(const unsigned long,OWindow* const,OWindow* const,ODynamicLib* const)
+      __ct__5OMenuFCUlCP7OWindowT2CP11ODynamicLib    @561 NONAME
+      ;OMenu::insertItemList(const unsigned long,OList<OMenuItem>* const)
+      insertItemList__5OMenuFCUlCP5OListXT9OMenuItem_    @562 NONAME
+      ;OMenu::setItemText(const unsigned long,OString*)
+      setItemText__5OMenuFCUlP7OString    @563 NONAME
+  ;From object file:  E:\OCL\Source\OMenuItem.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OMenuItem::~OMenuItem()
+      __dt__9OMenuItemFv    @564 NONAME
+      ;OMenuItem::OMenuItem(_MENUITEM* const)
+      __ct__9OMenuItemFCP9_MENUITEM    @565 NONAME
+      __vft9OMenuItem9OCLObject    @566 NONAME
+      ;OMenuItem::OMenuItem(const short,const unsigned short,const unsigned short,const unsigned short,const unsigned long,const unsigned long)
+      __ct__9OMenuItemFCsCUsN22CUlT5    @567 NONAME
+      ;OMenuItem::OMenuItem(const _MENUITEM&)
+      __ct__9OMenuItemFRC9_MENUITEM    @568 NONAME
+      ;OMenuItem::isOfType() const
+      isOfType__9OMenuItemCFv    @569 NONAME
+  ;From object file:  E:\OCL\Source\OMessage.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OMessage::getLen()
+      getLen__8OMessageFv    @570 NONAME
+      ;OMessage::OMessage(unsigned long,char*,char*,char*,char*,char*,char*,char*,char*,char*,char*)
+      __ct__8OMessageFUlPcN92    @571 NONAME
+      ;OMessage::getText()
+      getText__8OMessageFv    @572 NONAME
+      ;OMessage::isOfType() const
+      isOfType__8OMessageCFv    @573 NONAME
+      ;OMessage::getMessage(unsigned long,char*,char*,char*,char*,char*,char*,char*,char*,char*,char*)
+      getMessage__8OMessageFUlPcN92    @574 NONAME
+      __vft8OMessage9OCLObject    @575 NONAME
+      ;operator<<(ostream&,OMessage*)
+      __ls__FR7ostreamP8OMessage    @576 NONAME
+      ;OMessage::~OMessage()
+      __dt__8OMessageFv    @577 NONAME
+      ;OMessage::OMessage()
+      __ct__8OMessageFv    @578 NONAME
+      ;OMessage::retrieve(unsigned long,char*,char*,char*,char*,char*,char*,char*,char*,char*,char*)
+      retrieve__8OMessageFUlPcN92    @579 NONAME
+  ;From object file:  E:\OCL\Source\OMLE.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OMLE::setFormat(const unsigned long)
+      setFormat__4OMLEFCUl    @580 NONAME
+      __vft4OMLE9OCLObject    @581 NONAME
+      ;OMLE::deleteText(unsigned long,unsigned long)
+      deleteText__4OMLEFUlT1    @582 NONAME
+      ;OMLE::insertLarge()
+      insertLarge__4OMLEFv    @583 NONAME
+      ;OMLE::paste()
+      paste__4OMLEFv    @584 NONAME
+      ;OMLE::deleteAll()
+      deleteAll__4OMLEFv    @585 NONAME
+      ;OMLE::cut()
+      cut__4OMLEFv    @586 NONAME
+      ;OMLE::changed()
+      changed__4OMLEFv    @587 NONAME
+      ;OMLE::OMLE(const unsigned long,OFrame* const,const unsigned long)
+      __ct__4OMLEFCUlCP6OFrameT1    @588 NONAME
+      ;OMLE::lines()
+      lines__4OMLEFv    @589 NONAME
+      ;OMLE::getText(OString&)
+      getText__4OMLEFR7OString    @590 NONAME
+      ;OMLE::insertText(char*)
+      insertText__4OMLEFPc    @591 NONAME
+      ;OMLE::getText(void*,unsigned long)
+      getText__4OMLEFPvUl    @592 NONAME
+      ;OMLE::setText(void*,unsigned long)
+      setText__4OMLEFPvUl    @593 NONAME
+      ;OMLE::OMLE(const unsigned long,const OFrame&,const unsigned long)
+      __ct__4OMLEFCUlRC6OFrameT1    @594 NONAME
+      ;OMLE::createMLE(const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      createMLE__4OMLEFCUlN31    @595 NONAME
+      ;OMLE::isOfType() const
+      isOfType__4OMLECFv    @596 NONAME
+      ;OMLE::undo()
+      undo__4OMLEFv    @597 NONAME
+      ;OMLE::enableRefresh()
+      enableRefresh__4OMLEFv    @598 NONAME
+      ;OMLE::cut2Clip()
+      cut2Clip__4OMLEFv    @599 NONAME
+      ;OMLE::copy2Clip()
+      copy2Clip__4OMLEFv    @600 NONAME
+      ;OMLE::setText(char*)
+      setText__4OMLEFPc    @601 NONAME
+      ;OMLE::~OMLE()
+      __dt__4OMLEFv    @602 NONAME
+      ;OMLE::pasteFromClip()
+      pasteFromClip__4OMLEFv    @603 NONAME
+      ;OMLE::clear()
+      clear__4OMLEFv    @604 NONAME
+      ;OMLE::insertFile(const char*)
+      insertFile__4OMLEFPCc    @605 NONAME
+      ;OMLE::OMLE(const unsigned long,const unsigned long,const unsigned long)
+      __ct__4OMLEFCUlN21    @606 NONAME
+      ;OMLE::copy()
+      copy__4OMLEFv    @607 NONAME
+      ;OMLE::length()
+      length__4OMLEFv    @608 NONAME
+      ;OMLE::disableRefresh()
+      disableRefresh__4OMLEFv    @609 NONAME
+  ;From object file:  E:\OCL\Source\OMsgs.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OMsgs::info(const unsigned long,const unsigned long)
+      info__5OMsgsFCUlT1    @610 NONAME
+      ;OMsgs::ask(const unsigned long,const unsigned long)
+      ask__5OMsgsFCUlT1    @611 NONAME
+      ;OMsgs::message()
+      message__5OMsgsFv    @612 NONAME
+      ;OMsgs::info(const unsigned long)
+      info__5OMsgsFCUl    @613 NONAME
+      __vft5OMsgs9OCLObject    @614 NONAME
+      ;OMsgs::error(const char*,const char*)
+      error__5OMsgsFPCcT1    @615 NONAME
+      ;OMsgs::loadString(const unsigned long,const unsigned long,char*)
+      loadString__5OMsgsFCUlT1Pc    @616 NONAME
+      ;OMsgs::error(const char*)
+      error__5OMsgsFPCc    @617 NONAME
+      ;OMsgs::setResource(const unsigned long)
+      setResource__5OMsgsFCUl    @618 NONAME
+      ;OMsgs::error(const unsigned long)
+      error__5OMsgsFCUl    @619 NONAME
+      ;OMsgs::OMsgs(const unsigned long,const unsigned long,const unsigned long)
+      __ct__5OMsgsFCUlN21    @620 NONAME
+      ;OMsgs::error(const unsigned long,const unsigned long)
+      error__5OMsgsFCUlT1    @621 NONAME
+      ;OMsgs::~OMsgs()
+      __dt__5OMsgsFv    @622 NONAME
+      ;OMsgs::info(const char*)
+      info__5OMsgsFPCc    @623 NONAME
+      ;OMsgs::ask(const char*,const char*)
+      ask__5OMsgsFPCcT1    @624 NONAME
+      ;OMsgs::beeper()
+      beeper__5OMsgsFv    @625 NONAME
+      ;OMsgs::title()
+      title__5OMsgsFv    @626 NONAME
+      ;OMsgs::info(const char*,const char*)
+      info__5OMsgsFPCcT1    @627 NONAME
+      ;OMsgs::isOfType() const
+      isOfType__5OMsgsCFv    @628 NONAME
+  ;From object file:  E:\OCL\Source\OMuxSem.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OMuxSem::requestMuxSem(unsigned long)
+      requestMuxSem__7OMuxSemFUl    @629 NONAME
+      ;OMuxSem::releaseMuxSem()
+      releaseMuxSem__7OMuxSemFv    @630 NONAME
+      ;OMuxSem::openMuxSem(const char*)
+      openMuxSem__7OMuxSemFPCc    @631 NONAME
+      ;OMuxSem::openMuxSem(unsigned long)
+      openMuxSem__7OMuxSemFUl    @632 NONAME
+      ;OMuxSem::~OMuxSem()
+      __dt__7OMuxSemFv    @633 NONAME
+      ;OMuxSem::isOfType() const
+      isOfType__7OMuxSemCFv    @634 NONAME
+      __vft7OMuxSem9OCLObject    @635 NONAME
+      ;OMuxSem::closeMuxSem()
+      closeMuxSem__7OMuxSemFv    @636 NONAME
+      ;OMuxSem::getMuxSemHandle()
+      getMuxSemHandle__7OMuxSemFv    @637 NONAME
+      ;OMuxSem::OMuxSem(unsigned long)
+      __ct__7OMuxSemFUl    @638 NONAME
+      ;OMuxSem::setMuxSemHandle(unsigned long)
+      setMuxSemHandle__7OMuxSemFUl    @639 NONAME
+      ;OMuxSem::OMuxSem(const char*,unsigned long,unsigned long)
+      __ct__7OMuxSemFPCcUlT2    @640 NONAME
+  ;From object file:  E:\OCL\Source\OMuxWaitSem.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OMuxWaitSem::waitMuxWaitSem(unsigned long)
+      waitMuxWaitSem__11OMuxWaitSemFUl    @641 NONAME
+      ;OMuxWaitSem::addSemaphore(ONSem*)
+      addSemaphore__11OMuxWaitSemFP5ONSem    @642 NONAME
+      ;OMuxWaitSem::addSemaphore(OMuxSem*)
+      addSemaphore__11OMuxWaitSemFP7OMuxSem    @643 NONAME
+      ;OMuxWaitSem::closeMuxWaitSem()
+      closeMuxWaitSem__11OMuxWaitSemFv    @644 NONAME
+      ;OMuxWaitSem::delSemaphore(void*)
+      delSemaphore__11OMuxWaitSemFPv    @645 NONAME
+      ;OMuxWaitSem::OMuxWaitSem(unsigned long)
+      __ct__11OMuxWaitSemFUl    @646 NONAME
+      ;OMuxWaitSem::setMuxWaitSemHandle(unsigned long)
+      setMuxWaitSemHandle__11OMuxWaitSemFUl    @647 NONAME
+      ;OMuxWaitSem::addSemaphore(_PSEMRECORD*)
+      addSemaphore__11OMuxWaitSemFP11_PSEMRECORD    @648 NONAME
+      ;OMuxWaitSem::queryMuxWaitSem(unsigned long*,_PSEMRECORD*,unsigned long*)
+      queryMuxWaitSem__11OMuxWaitSemFPUlP11_PSEMRECORDT1    @649 NONAME
+      ;OMuxWaitSem::OMuxWaitSem(const char*,unsigned long,_PSEMRECORD*,unsigned long,unsigned long)
+      __ct__11OMuxWaitSemFPCcUlP11_PSEMRECORDN22    @650 NONAME
+      ;OMuxWaitSem::isOfType() const
+      isOfType__11OMuxWaitSemCFv    @651 NONAME
+      ;OMuxWaitSem::openMuxWaitSem(unsigned long)
+      openMuxWaitSem__11OMuxWaitSemFUl    @652 NONAME
+      ;OMuxWaitSem::getMuxWaitSemHandle()
+      getMuxWaitSemHandle__11OMuxWaitSemFv    @653 NONAME
+      __vft11OMuxWaitSem9OCLObject    @654 NONAME
+      ;OMuxWaitSem::~OMuxWaitSem()
+      __dt__11OMuxWaitSemFv    @655 NONAME
+      ;OMuxWaitSem::openMuxWaitSem(const char*)
+      openMuxWaitSem__11OMuxWaitSemFPCc    @656 NONAME
+  ;From object file:  E:\OCL\Source\ONPipe.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;ONPipe::setOpenMode(const unsigned long)
+      setOpenMode__6ONPipeFCUl    @657 NONAME
+      ;ONPipe::setPipeMode(const unsigned long)
+      setPipeMode__6ONPipeFCUl    @658 NONAME
+      ;ONPipe::setTimeOut(const unsigned long)
+      setTimeOut__6ONPipeFCUl    @659 NONAME
+      ;ONPipe::ONPipe()
+      __ct__6ONPipeFv    @660 NONAME
+      __vft6ONPipe9OCLObject    @661 NONAME
+      ;ONPipe::~ONPipe()
+      __dt__6ONPipeFv    @662 NONAME
+      ;ONPipe::isOfType() const
+      isOfType__6ONPipeCFv    @663 NONAME
+  ;From object file:  E:\OCL\Source\ONSem.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;ONSem::ONSem(const char*,unsigned long,unsigned long)
+      __ct__5ONSemFPCcUlT2    @664 NONAME
+      ;ONSem::resetSem()
+      resetSem__5ONSemFv    @665 NONAME
+      ;ONSem::postSem()
+      postSem__5ONSemFv    @666 NONAME
+      ;ONSem::getSemHandle()
+      getSemHandle__5ONSemFv    @667 NONAME
+      ;ONSem::openSem(const char*)
+      openSem__5ONSemFPCc    @668 NONAME
+      ;ONSem::ONSem(unsigned long)
+      __ct__5ONSemFUl    @669 NONAME
+      ;ONSem::setSemHandle(unsigned long)
+      setSemHandle__5ONSemFUl    @670 NONAME
+      ;ONSem::openSem(const unsigned long)
+      openSem__5ONSemFCUl    @671 NONAME
+      ;ONSem::~ONSem()
+      __dt__5ONSemFv    @672 NONAME
+      ;ONSem::closeSem()
+      closeSem__5ONSemFv    @673 NONAME
+      ;ONSem::waitSem(const unsigned long)
+      waitSem__5ONSemFCUl    @674 NONAME
+      __vft5ONSem9OCLObject    @675 NONAME
+      ;ONSem::isOfType() const
+      isOfType__5ONSemCFv    @676 NONAME
+      ;ONSem::querySem()
+      querySem__5ONSemFv    @677 NONAME
+  ;From object file:  E:\OCL\Source\OOrderedCollection.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OOrderedCollection::isOfType() const
+      isOfType__18OOrderedCollectionCFv    @678 NONAME
+      ;OOrderedCollection::addSortAscending(void*)
+      addSortAscending__18OOrderedCollectionFPv    @679 NONAME
+      ;OOrderedCollection::OOrderedCollection(unsigned long)
+      __ct__18OOrderedCollectionFUl    @680 NONAME
+      ;OOrderedCollection::setAscending(unsigned long)
+      setAscending__18OOrderedCollectionFUl    @681 NONAME
+      ;OOrderedCollection::~OOrderedCollection()
+      __dt__18OOrderedCollectionFv    @682 NONAME
+      ;OOrderedCollection::addSortDescending(void*)
+      addSortDescending__18OOrderedCollectionFPv    @683 NONAME
+      __vft18OOrderedCollection9OCLObject    @684 NONAME
+      ;OOrderedCollection::addSorted(void*)
+      addSorted__18OOrderedCollectionFPv    @685 NONAME
+  ;From object file:  E:\OCL\Source\OPicture.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OPicture::isOfType() const
+      isOfType__8OPictureCFv    @686 NONAME
+      ;OPicture::OPicture(unsigned long,unsigned long)
+      __ct__8OPictureFUlT1    @687 NONAME
+      __vft8OPicture9OCLObject    @688 NONAME
+      ;OPicture::setDimension(unsigned long,unsigned long)
+      setDimension__8OPictureFUlT1    @689 NONAME
+      ;OPicture::~OPicture()
+      __dt__8OPictureFv    @690 NONAME
+  ;From object file:  E:\OCL\Source\OPipe_istream.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OPipe_istream::~OPipe_istream()
+      __dt__13OPipe_istreamFv    @691 NONAME
+      ;OPipe_istream::isOfType() const
+      isOfType__13OPipe_istreamCFv    @692 NONAME
+      __vft13OPipe_istream9OCLObject    @693 NONAME
+      __vft8ifstream3ios_13OPipe_istream    @694 NONAME
+      ;OPipe_istream::OPipe_istream(OPipe_streamable&)
+      __ct__13OPipe_istreamFR16OPipe_streamable    @695 NONAME
+      __vft7istream3ios_13OPipe_istream8ifstream    @696 NONAME
+      OIPipe_Err    @697 NONAME
+      __vft13OPipe_istream3ios    @698 NONAME
+      ;OPipe_istream::OPipe_istream(unsigned long)
+      __ct__13OPipe_istreamFUl    @699 NONAME
+      ;OPipe_istream::OPipe_istream(OPipe_streamable*)
+      __ct__13OPipe_istreamFP16OPipe_streamable    @700 NONAME
+      __vft11fstreambase3ios_13OPipe_istream8ifstream    @701 NONAME
+      __vtt13OPipe_istream    @702 NONAME
+  ;From object file:  E:\OCL\Source\OPipe_ostream.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OPipe_ostream::OPipe_ostream(OPipe_streamable&)
+      __ct__13OPipe_ostreamFR16OPipe_streamable    @703 NONAME
+      __vft13OPipe_ostream3ios    @704 NONAME
+      ;OPipe_ostream::OPipe_ostream(OPipe_streamable*)
+      __ct__13OPipe_ostreamFP16OPipe_streamable    @705 NONAME
+      ;OPipe_ostream::~OPipe_ostream()
+      __dt__13OPipe_ostreamFv    @706 NONAME
+      __vtt13OPipe_ostream    @707 NONAME
+      __vft8ofstream3ios_13OPipe_ostream    @708 NONAME
+      __vft7ostream3ios_13OPipe_ostream8ofstream    @709 NONAME
+      __vft11fstreambase3ios_13OPipe_ostream8ofstream    @710 NONAME
+      ;OPipe_ostream::isOfType() const
+      isOfType__13OPipe_ostreamCFv    @711 NONAME
+      ;OPipe_ostream::OPipe_ostream(unsigned long)
+      __ct__13OPipe_ostreamFUl    @712 NONAME
+      __vft13OPipe_ostream9OCLObject    @713 NONAME
+      OOPipe_Err    @714 NONAME
+  ;From object file:  E:\OCL\Source\OPipe_streamable.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OPipe_streamable::OPipe_streamable(OPipe_streamable&)
+      __ct__16OPipe_streamableFR16OPipe_streamable    @715 NONAME
+      ;OPipe_streamable::OPipe_streamable(unsigned long,unsigned long)
+      __ct__16OPipe_streamableFUlT1    @716 NONAME
+      ;OPipe_streamable::OPipe_streamable()
+      __ct__16OPipe_streamableFv    @717 NONAME
+      ;OPipe_streamable::isOfType() const
+      isOfType__16OPipe_streamableCFv    @718 NONAME
+      ;OPipe_streamable::OPipe_streamable(unsigned long)
+      __ct__16OPipe_streamableFUl    @719 NONAME
+      ;OPipe_streamable::OPipe_streamable(OPipe_streamable*)
+      __ct__16OPipe_streamableFP16OPipe_streamable    @720 NONAME
+      ;OPipe_streamable::~OPipe_streamable()
+      __dt__16OPipe_streamableFv    @721 NONAME
+      ;OPipe_streamable::closePipe()
+      closePipe__16OPipe_streamableFv    @722 NONAME
+      __vft16OPipe_streamable9OCLObject    @723 NONAME
+  ;From object file:  E:\OCL\Source\OPipeCli.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OPipeCli::postPipe(void*,unsigned long)
+      postPipe__8OPipeCliFPvUl    @724 NONAME
+      __vft8OPipeCli9OCLObject    @725 NONAME
+      ;OPipeCli::stopPiping()
+      stopPiping__8OPipeCliFv    @726 NONAME
+      ;OPipeCli::beginPiping(const char*)
+      beginPiping__8OPipeCliFPCc    @727 NONAME
+      ;OPipeCli::connectPipe(const char*)
+      connectPipe__8OPipeCliFPCc    @728 NONAME
+      ;OPipeCli::setSize(const unsigned long)
+      setSize__8OPipeCliFCUl    @729 NONAME
+      ;OPipeCli::Pipe_IO()
+      Pipe_IO__8OPipeCliFv    @730 NONAME
+      ;OPipeCli::isOfType() const
+      isOfType__8OPipeCliCFv    @731 NONAME
+      ;OPipeCli::OPipeCli(const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__8OPipeCliFCUlN41    @732 NONAME
+      ;OPipeCli::~OPipeCli()
+      __dt__8OPipeCliFv    @733 NONAME
+      ;OPipeCli::disconnectPipe()
+      disconnectPipe__8OPipeCliFv    @734 NONAME
+  ;From object file:  E:\OCL\Source\OPipeSvr.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OPipeSvr::setBufSizes(const unsigned long,const unsigned long,const unsigned long)
+      setBufSizes__8OPipeSvrFCUlN21    @735 NONAME
+      ;OPipeSvr::beginPiping(const char*)
+      beginPiping__8OPipeSvrFPCc    @736 NONAME
+      __vft8OPipeSvr9OCLObject    @737 NONAME
+      ;OPipeSvr::stopPiping()
+      stopPiping__8OPipeSvrFv    @738 NONAME
+      ;OPipeSvr::postPipe(void*,unsigned long)
+      postPipe__8OPipeSvrFPvUl    @739 NONAME
+      ;OPipeSvr::OPipeSvr(const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__8OPipeSvrFCUlN61    @740 NONAME
+      ;OPipeSvr::Pipe_IO()
+      Pipe_IO__8OPipeSvrFv    @741 NONAME
+      ;OPipeSvr::getPipeData()
+      getPipeData__8OPipeSvrFv    @742 NONAME
+      ;OPipeSvr::destroyPipe()
+      destroyPipe__8OPipeSvrFv    @743 NONAME
+      ;OPipeSvr::~OPipeSvr()
+      __dt__8OPipeSvrFv    @744 NONAME
+      ;OPipeSvr::createPipe(const char*)
+      createPipe__8OPipeSvrFPCc    @745 NONAME
+      ;OPipeSvr::isOfType() const
+      isOfType__8OPipeSvrCFv    @746 NONAME
+  ;From object file:  E:\OCL\Source\OPipeTool.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OPipeTool::isOfType() const
+      isOfType__9OPipeToolCFv    @747 NONAME
+      ;OPipeTool::printout()
+      printout__9OPipeToolFv    @748 NONAME
+      ;OPipeTool::~OPipeTool()
+      __dt__9OPipeToolFv    @749 NONAME
+      ;OPipeTool::stopChild()
+      stopChild__9OPipeToolFv    @750 NONAME
+      ;OPipeTool::detachChild()
+      detachChild__9OPipeToolFv    @751 NONAME
+      ;OPipeTool::OPipeTool(const char*,const char*,const unsigned long,const unsigned long)
+      __ct__9OPipeToolFPCcT1CUlT3    @752 NONAME
+      __vft9OPipeTool9OCLObject    @753 NONAME
+  ;From object file:  E:\OCL\Source\OPMException.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OPMException::OPMException(const unsigned long,const unsigned long,const unsigned long,const unsigned long,char* const,const unsigned long)
+      __ct__12OPMExceptionFCUlN31CPcT1    @754 NONAME
+      ;OPMException::OPMException(const OPMException&)
+      __ct__12OPMExceptionFRC12OPMException    @755 NONAME
+      ;OPMException::~OPMException()
+      __dt__12OPMExceptionFv    @756 NONAME
+      __vft12OPMException9OCLObject    @757 NONAME
+      ;OPMException::isOfType() const
+      isOfType__12OPMExceptionCFv    @758 NONAME
+      __vft12OPMException10OException    @759 NONAME
+      ;OPMException::OPMException(char* const,const unsigned long,const unsigned long,char* const,const unsigned long)
+      __ct__12OPMExceptionFCPcCUlT2T1T2    @760 NONAME
+      ;OPMException::viewError()
+      viewError__12OPMExceptionFv    @761 NONAME
+      __vtt12OPMException    @762 NONAME
+      __vft10OException9OCLObject_12OPMException    @763 NONAME
+  ;From object file:  E:\OCL\Source\OPMinit.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OPMinit::OPMinit(const unsigned long)
+      __ct__7OPMinitFCUl    @764 NONAME
+      ;OPMinit::~OPMinit()
+      __dt__7OPMinitFv    @765 NONAME
+      ;OPMinit::isOfType() const
+      isOfType__7OPMinitCFv    @766 NONAME
+      __vft7OPMinit9OCLObject    @767 NONAME
+      ;OPMinit::mqueue()
+      mqueue__7OPMinitFv    @768 NONAME
+      ;OPMinit::anchor()
+      anchor__7OPMinitFv    @769 NONAME
+  ;From object file:  E:\OCL\Source\OPMPipeTool.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OPMPipeTool::setNotify(unsigned long)
+      setNotify__11OPMPipeToolFUl    @770 NONAME
+      __vft11OPMPipeTool9OCLObject    @771 NONAME
+      ;OPMPipeTool::setNotify(OFrame*)
+      setNotify__11OPMPipeToolFP6OFrame    @772 NONAME
+      ;OPMPipeTool::isOfType() const
+      isOfType__11OPMPipeToolCFv    @773 NONAME
+      ;OPMPipeTool::setNotify(OFrame&)
+      setNotify__11OPMPipeToolFR6OFrame    @774 NONAME
+      ;OPMPipeTool::detachChild()
+      detachChild__11OPMPipeToolFv    @775 NONAME
+      ;OPMPipeTool::printout()
+      printout__11OPMPipeToolFv    @776 NONAME
+      ;OPMPipeTool::OPMPipeTool(const char*,const char*,unsigned long,const unsigned long,const unsigned long)
+      __ct__11OPMPipeToolFPCcT1UlCUlT4    @777 NONAME
+      ;OPMPipeTool::~OPMPipeTool()
+      __dt__11OPMPipeToolFv    @778 NONAME
+      ;OPMPipeTool::stopChild()
+      stopChild__11OPMPipeToolFv    @779 NONAME
+  ;From object file:  E:\OCL\Source\OProcStat.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft9OProcStat9OCLObject    @780 NONAME
+      ;OProcStat::getProcCount()
+      getProcCount__9OProcStatFv    @781 NONAME
+      ;OProcStat::getPPid(char*)
+      getPPid__9OProcStatFPc    @782 NONAME
+      ;OProcStat::OProcStat()
+      __ct__9OProcStatFv    @783 NONAME
+      ;OProcStat::getPid(char*)
+      getPid__9OProcStatFPc    @784 NONAME
+      ;OProcStat::getNumInfo(char*,unsigned long)
+      getNumInfo__9OProcStatFPcUl    @785 NONAME
+      ;OProcStat::~OProcStat()
+      __dt__9OProcStatFv    @786 NONAME
+      ;OProcStat::getTaskCount()
+      getTaskCount__9OProcStatFv    @787 NONAME
+      ;OProcStat::getModule(unsigned long)
+      getModule__9OProcStatFUl    @788 NONAME
+      ;OProcStat::isOfType() const
+      isOfType__9OProcStatCFv    @789 NONAME
+      ;OProcStat::getProcesses()
+      getProcesses__9OProcStatFv    @790 NONAME
+  ;From object file:  E:\OCL\Source\OProfile.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OProfile::OProfile(const unsigned long)
+      __ct__8OProfileFCUl    @791 NONAME
+      ;OProfile::~OProfile()
+      __dt__8OProfileFv    @792 NONAME
+      ;OProfile::OProfile(char*)
+      __ct__8OProfileFPc    @793 NONAME
+      ;OProfile::deleteApp(char*)
+      deleteApp__8OProfileFPc    @794 NONAME
+      ;OProfile::getData(char*,char*,void*,unsigned long*)
+      getData__8OProfileFPcT1PvPUl    @795 NONAME
+      __vft8OProfile9OCLObject    @796 NONAME
+      ;OProfile::getStr(char*,char*)
+      getStr__8OProfileFPcT1    @797 NONAME
+      ;OProfile::OProfile()
+      __ct__8OProfileFv    @798 NONAME
+      ;OProfile::isOfType() const
+      isOfType__8OProfileCFv    @799 NONAME
+      ;OProfile::setupList(unsigned char*)
+      setupList__8OProfileFPUc    @800 NONAME
+      ;OProfile::open(char*)
+      open__8OProfileFPc    @801 NONAME
+      ;OProfile::write(char*,char*,void*,unsigned long)
+      write__8OProfileFPcT1PvUl    @802 NONAME
+      ;OProfile::deleteKey(char*,char*)
+      deleteKey__8OProfileFPcT1    @803 NONAME
+      ;OProfile::insert(const unsigned long,const unsigned long)
+      insert__8OProfileFCUlT1    @804 NONAME
+      ;OProfile::close()
+      close__8OProfileFv    @805 NONAME
+      ;OProfile::getKeys(char*)
+      getKeys__8OProfileFPc    @806 NONAME
+      ;OProfile::getApps()
+      getApps__8OProfileFv    @807 NONAME
+  ;From object file:  E:\OCL\Source\OPushButton.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OPushButton::OPushButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__11OPushButtonFUlN61    @808 NONAME
+      ;OPushButton::OPushButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__11OPushButtonFUlP6OFrameN51    @809 NONAME
+      __vft11OPushButton9OCLObject    @810 NONAME
+      ;OPushButton::OPushButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__11OPushButtonFUlR6OFrameN51    @811 NONAME
+      ;OPushButton::isOfType() const
+      isOfType__11OPushButtonCFv    @812 NONAME
+      ;OPushButton::~OPushButton()
+      __dt__11OPushButtonFv    @813 NONAME
+  ;From object file:  E:\OCL\Source\ORadioButton.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;ORadioButton::ORadioButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__12ORadioButtonFUlN61    @814 NONAME
+      ;ORadioButton::~ORadioButton()
+      __dt__12ORadioButtonFv    @815 NONAME
+      ;ORadioButton::ORadioButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__12ORadioButtonFUlP6OFrameN51    @816 NONAME
+      __vft12ORadioButton9OCLObject    @817 NONAME
+      ;ORadioButton::isOfType() const
+      isOfType__12ORadioButtonCFv    @818 NONAME
+      ;ORadioButton::ORadioButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__12ORadioButtonFUlR6OFrameN51    @819 NONAME
+  ;From object file:  E:\OCL\Source\ORiffPlay.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;ORiffPlay::stop()
+      stop__9ORiffPlayFv    @820 NONAME
+      ;ORiffPlay::play(unsigned long,ORiffPlay::RiffType,ORiffPlay::PlayType)
+      play__9ORiffPlayFUlQ2_9ORiffPlay8RiffTypeQ2_9ORiffPlay8PlayType    @821 NONAME
+      ;ORiffPlay::mdmapi
+      mdmapi__9ORiffPlay    @822 NONAME
+      ;ORiffPlay::mci_pr
+      mci_pr__9ORiffPlay    @823 NONAME
+      __vft9ORiffPlay    @824 NONAME
+      ;ORiffPlay::playWave(ORiffPlay::PlayType)
+      playWave__9ORiffPlayFQ2_9ORiffPlay8PlayType    @825 NONAME
+      ;ORiffPlay::mciapi
+      mciapi__9ORiffPlay    @826 NONAME
+      ;ORiffPlay::resolve()
+      resolve__9ORiffPlayFv    @827 NONAME
+      ;ORiffPlay::~ORiffPlay()
+      __dt__9ORiffPlayFv    @828 NONAME
+      ;ORiffPlay::ORiffPlay(char*)
+      __ct__9ORiffPlayFPc    @829 NONAME
+      ;ORiffPlay::ORiffPlay()
+      __ct__9ORiffPlayFv    @830 NONAME
+      ;ORiffPlay::play(char*,ORiffPlay::PlayType)
+      play__9ORiffPlayFPcQ2_9ORiffPlay8PlayType    @831 NONAME
+      ;ORiffPlay::mci_pf
+      mci_pf__9ORiffPlay    @832 NONAME
+      ;ORiffPlay::mci_err
+      mci_err__9ORiffPlay    @833 NONAME
+      ;ORiffPlay::ORiffPlay(ODynamicLib&)
+      __ct__9ORiffPlayFR11ODynamicLib    @834 NONAME
+      ;ORiffPlay::isOfType() const
+      isOfType__9ORiffPlayCFv    @835 NONAME
+  ;From object file:  E:\OCL\Source\OScan.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft8OScanFcl9OCLObject    @836 NONAME
+      ;OScanFcl::OScanFcl()
+      __ct__8OScanFclFv    @837 NONAME
+      ;OScanFcl::~OScanFcl()
+      __dt__8OScanFclFv    @838 NONAME
+      ;OScanFcl::check(const char*)
+      check__8OScanFclFPCc    @839 NONAME
+      ;OScanFcl::isOfType() const
+      isOfType__8OScanFclCFv    @840 NONAME
+      ;OScanFcl::init(const char*)
+      init__8OScanFclFPCc    @841 NONAME
+      ;OScanFcl::checkFiles(const char*)
+      checkFiles__8OScanFclFPCc    @842 NONAME
+      ;OScanFcl::init(const char*,const char*)
+      init__8OScanFclFPCcT1    @843 NONAME
+  ;From object file:  E:\OCL\Source\OSlider.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OSlider::setSliderStyles(const unsigned long)
+      setSliderStyles__7OSliderFCUl    @844 NONAME
+      ;OSlider::getSliderShaftDim(short*,short*)
+      getSliderShaftDim__7OSliderFPsT1    @845 NONAME
+      ;OSlider::getSliderArmSize(short*,short*)
+      getSliderArmSize__7OSliderFPsT1    @846 NONAME
+      ;OSlider::~OSlider()
+      __dt__7OSliderFv    @847 NONAME
+      ;OSlider::isOfType() const
+      isOfType__7OSliderCFv    @848 NONAME
+      ;OSlider::OSlider(const unsigned long,const OFrame&,const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__7OSliderFCUlRC6OFrameN51    @849 NONAME
+      ;OSlider::setTickSize(unsigned long,unsigned long)
+      setTickSize__7OSliderFUlT1    @850 NONAME
+      ;OSlider::getSliderShaftPos(short*,short*)
+      getSliderShaftPos__7OSliderFPsT1    @851 NONAME
+      ;OSlider::setSliderShaftDim(short)
+      setSliderShaftDim__7OSliderFs    @852 NONAME
+      ;OSlider::inherit(const unsigned long)
+      inherit__7OSliderFCUl    @853 NONAME
+      ;OSlider::getDetentPos(unsigned long)
+      getDetentPos__7OSliderFUl    @854 NONAME
+      __vft7OSlider9OCLObject    @855 NONAME
+      ;OSlider::OSlider(const unsigned long,OFrame* const,const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__7OSliderFCUlCP6OFrameN51    @856 NONAME
+      ;OSlider::setSliderSize(const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      setSliderSize__7OSliderFCUlN31    @857 NONAME
+      ;OSlider::setSliderArmPos(short)
+      setSliderArmPos__7OSliderFs    @858 NONAME
+      ;OSlider::incSliderArm(short)
+      incSliderArm__7OSliderFs    @859 NONAME
+      ;OSlider::getTickSize(short)
+      getTickSize__7OSliderFs    @860 NONAME
+      ;OSlider::decSliderArm(short)
+      decSliderArm__7OSliderFs    @861 NONAME
+      ;OSlider::addDetent(short)
+      addDetent__7OSliderFs    @862 NONAME
+      ;OSlider::OSlider(const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__7OSliderFCUlN61    @863 NONAME
+      ;OSlider::createSlider(const short,const short,const short,const short)
+      createSlider__7OSliderFCsN31    @864 NONAME
+      ;OSlider::getSliderArmPos()
+      getSliderArmPos__7OSliderFv    @865 NONAME
+      ;OSlider::drawSliderElement(_OWNERITEM*,long)
+      drawSliderElement__7OSliderFP10_OWNERITEMl    @866 NONAME
+      ;OSlider::setSliderArmSize(unsigned long,unsigned long)
+      setSliderArmSize__7OSliderFUlT1    @867 NONAME
+      ;OSlider::setSliderShaftPos(short,short)
+      setSliderShaftPos__7OSliderFsT1    @868 NONAME
+      ;OSlider::getScaleText(short,char*,short)
+      getScaleText__7OSliderFsPcT1    @869 NONAME
+      ;OSlider::setSliderScaleText(const char*,unsigned short)
+      setSliderScaleText__7OSliderFPCcUs    @870 NONAME
+  ;From object file:  E:\OCL\Source\OSpinBtn.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft8OSpinBtn9OCLObject    @871 NONAME
+      ;OSpinBtn::overrideLimits(long,long)
+      overrideLimits__8OSpinBtnFlT1    @872 NONAME
+      ;OSpinBtn::getLimits(long*,long*)
+      getLimits__8OSpinBtnFPlT1    @873 NONAME
+      ;OSpinBtn::~OSpinBtn()
+      __dt__8OSpinBtnFv    @874 NONAME
+      ;OSpinBtn::getCurrent(void*,unsigned short,unsigned short)
+      getCurrent__8OSpinBtnFPvUsT2    @875 NONAME
+      ;OSpinBtn::OSpinBtn(const unsigned long,OFrame* const,const unsigned long)
+      __ct__8OSpinBtnFCUlCP6OFrameT1    @876 NONAME
+      ;OSpinBtn::createSpinBtn(const short,const short,const short,const short)
+      createSpinBtn__8OSpinBtnFCsN31    @877 NONAME
+      ;OSpinBtn::setMaster(unsigned long)
+      setMaster__8OSpinBtnFUl    @878 NONAME
+      ;OSpinBtn::OSpinBtn(const unsigned long,const OFrame&,const unsigned long)
+      __ct__8OSpinBtnFCUlRC6OFrameT1    @879 NONAME
+      ;OSpinBtn::jumptoEnd()
+      jumptoEnd__8OSpinBtnFv    @880 NONAME
+      ;OSpinBtn::setTextLimit(unsigned short)
+      setTextLimit__8OSpinBtnFUs    @881 NONAME
+      ;OSpinBtn::incSpin(unsigned long)
+      incSpin__8OSpinBtnFUl    @882 NONAME
+      ;OSpinBtn::OSpinBtn(const unsigned long,const unsigned long,const unsigned long)
+      __ct__8OSpinBtnFCUlN21    @883 NONAME
+      ;OSpinBtn::isOfType() const
+      isOfType__8OSpinBtnCFv    @884 NONAME
+      ;OSpinBtn::jumptoStart()
+      jumptoStart__8OSpinBtnFv    @885 NONAME
+      ;OSpinBtn::setArray(char*,unsigned long)
+      setArray__8OSpinBtnFPcUl    @886 NONAME
+      ;OSpinBtn::setCurrent(long)
+      setCurrent__8OSpinBtnFl    @887 NONAME
+      ;OSpinBtn::decSpin(unsigned long)
+      decSpin__8OSpinBtnFUl    @888 NONAME
+      ;OSpinBtn::setLimits(long,long)
+      setLimits__8OSpinBtnFlT1    @889 NONAME
+  ;From object file:  E:\OCL\Source\OStatusLine.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OStatusLine::refreshText()
+      refreshText__11OStatusLineFv    @890 NONAME
+      ;OStatusLine::setOrientation(const unsigned long)
+      setOrientation__11OStatusLineFCUl    @891 NONAME
+      ;OStatusLine::setRDOnly(unsigned long)
+      setRDOnly__11OStatusLineFUl    @892 NONAME
+      ;OStatusLine::setText(const char*)
+      setText__11OStatusLineFPCc    @893 NONAME
+      __vft11OStatusLine9OCLObject    @894 NONAME
+      ;OStatusLine::OStatusLine(const unsigned long,OFrame* const,const unsigned long)
+      __ct__11OStatusLineFCUlCP6OFrameT1    @895 NONAME
+      ;OStatusLine::~OStatusLine()
+      __dt__11OStatusLineFv    @896 NONAME
+      ;OStatusLine::isOfType() const
+      isOfType__11OStatusLineCFv    @897 NONAME
+      ;OStatusLine::getHeight()
+      getHeight__11OStatusLineFv    @898 NONAME
+      ;OStatusLine::createStatusLine()
+      createStatusLine__11OStatusLineFv    @899 NONAME
+      ;OStatusLine::OStatusLine(const unsigned long,const unsigned long,const unsigned long)
+      __ct__11OStatusLineFCUlN21    @900 NONAME
+      ;OStatusLine::OStatusLine(const unsigned long,const OFrame&,const unsigned long)
+      __ct__11OStatusLineFCUlRC6OFrameT1    @901 NONAME
+      ;OStatusLine::initStatlineDefaults()
+      initStatlineDefaults__11OStatusLineFv    @902 NONAME
+      ;OStatusLine::getWidth()
+      getWidth__11OStatusLineFv    @903 NONAME
+      ;OStatusLine::OCommand(unsigned long,void*,void*)
+      OCommand__11OStatusLineFUlPvT2    @904 NONAME
+  ;From object file:  E:\OCL\Source\OString.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OString::operator+(unsigned long)
+      __pl__7OStringFUl    @905 NONAME
+      ;OString::stripLeading(int)
+      stripLeading__7OStringFi    @906 NONAME
+      ;OString::replace(const char*,const char*)
+      replace__7OStringFPCcT1    @907 NONAME
+      ;OString::operator<<(int)
+      __ls__7OStringFi    @908 NONAME
+      ;OString::length() const
+      length__7OStringCFv    @909 NONAME
+      ;OString::OString(OString* const)
+      __ct__7OStringFCP7OString    @910 NONAME
+      ;operator>>(istream&,OString*)
+      __rs__FR7istreamP7OString    @911 NONAME
+      ;OString::operator+(const char*)
+      __pl__7OStringFPCc    @912 NONAME
+      ;OString::operator<=(const char*) const
+      __le__7OStringCFPCc    @913 NONAME
+      ;OString::operator<<(long)
+      __ls__7OStringFl    @914 NONAME
+      __vft7OString9OCLObject    @915 NONAME
+      ;OString::operator+(double)
+      __pl__7OStringFd    @916 NONAME
+      ;OString::compare(const OString&,const OString&) const
+      compare__7OStringCFRC7OStringT1    @917 NONAME
+      ;OString::rightCut(int)
+      rightCut__7OStringFi    @918 NONAME
+      ;OString::operator<<(unsigned int)
+      __ls__7OStringFUi    @919 NONAME
+      ;OString::OString()
+      __ct__7OStringFv    @920 NONAME
+      ;OString::operator<<(const char*)
+      __ls__7OStringFPCc    @921 NONAME
+      ;OString::operator!=(const char*) const
+      __ne__7OStringCFPCc    @922 NONAME
+      ;OString::operator<<(unsigned long)
+      __ls__7OStringFUl    @923 NONAME
+      ;OString::operator+(int)
+      __pl__7OStringFi    @924 NONAME
+      ;OString::~OString()
+      __dt__7OStringFv    @925 NONAME
+      ;OString::OString(const char*)
+      __ct__7OStringFPCc    @926 NONAME
+      ;OString::operator<(const char*) const
+      __lt__7OStringCFPCc    @927 NONAME
+      ;OString::operator>(const char*) const
+      __gt__7OStringCFPCc    @928 NONAME
+      ;OString::operator==(const char*) const
+      __eq__7OStringCFPCc    @929 NONAME
+      ;OString::operator+(long)
+      __pl__7OStringFl    @930 NONAME
+      ;OString::OString(int)
+      __ct__7OStringFi    @931 NONAME
+      ;OString::isOfType() const
+      isOfType__7OStringCFv    @932 NONAME
+      ;OString::operator+(OString* const)
+      __pl__7OStringFCP7OString    @933 NONAME
+      ;operator>>(istream&,OString&)
+      __rs__FR7istreamR7OString    @934 NONAME
+      ;OString::operator=(const char*)
+      __as__7OStringFPCc    @935 NONAME
+      ;OString::operator<<(double)
+      __ls__7OStringFd    @936 NONAME
+      ;OString::OString(unsigned long,unsigned long)
+      __ct__7OStringFUlT1    @937 NONAME
+      ;OString::stripTrailing(int)
+      stripTrailing__7OStringFi    @938 NONAME
+      ;OString::leftCut(int)
+      leftCut__7OStringFi    @939 NONAME
+      ;OString::operator+(unsigned int)
+      __pl__7OStringFUi    @940 NONAME
+      ;OString::getText() const
+      getText__7OStringCFv    @941 NONAME
+      ;OString::OString(const OString&)
+      __ct__7OStringFRC7OString    @942 NONAME
+      ;operator<<(ostream&,OString*)
+      __ls__FR7ostreamP7OString    @943 NONAME
+      ;OString::operator<<(OString* const)
+      __ls__7OStringFCP7OString    @944 NONAME
+      ;OString::operator>=(const char*) const
+      __ge__7OStringCFPCc    @945 NONAME
+  ;From object file:  E:\OCL\Source\OSysInfo.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OSysInfo::OSysInfo()
+      __ct__8OSysInfoFv    @946 NONAME
+      ;OSysInfo::getDesktop()
+      getDesktop__8OSysInfoFv    @947 NONAME
+      ;OSysInfo::~OSysInfo()
+      __dt__8OSysInfoFv    @948 NONAME
+      ;OSysInfo::isOfType() const
+      isOfType__8OSysInfoCFv    @949 NONAME
+      __vft8OSysInfo9OCLObject    @950 NONAME
+  ;From object file:  E:\OCL\Source\OSysInfoVio.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OSysInfoVIO::getAllDrives()
+      getAllDrives__11OSysInfoVIOFv    @951 NONAME
+      ;OSysInfoVIO::getEnv(const char*)
+      getEnv__11OSysInfoVIOFPCc    @952 NONAME
+      ;OSysInfoVIO::getCfgEnv(char*)
+      getCfgEnv__11OSysInfoVIOFPc    @953 NONAME
+      __vft11OSysInfoVIO9OCLObject    @954 NONAME
+      ;OSysInfoVIO::getBootDrive()
+      getBootDrive__11OSysInfoVIOFv    @955 NONAME
+      ;OSysInfoVIO::checkRemovable(const char*)
+      checkRemovable__11OSysInfoVIOFPCc    @956 NONAME
+      ;OSysInfoVIO::~OSysInfoVIO()
+      __dt__11OSysInfoVIOFv    @957 NONAME
+      ;OSysInfoVIO::isOfType() const
+      isOfType__11OSysInfoVIOCFv    @958 NONAME
+      ;OSysInfoVIO::getOSVer()
+      getOSVer__11OSysInfoVIOFv    @959 NONAME
+      ;OSysInfoVIO::getDrives()
+      getDrives__11OSysInfoVIOFv    @960 NONAME
+      ;OSysInfoVIO::clearRDOnly(const char*)
+      clearRDOnly__11OSysInfoVIOFPCc    @961 NONAME
+      ;OSysInfoVIO::OSysInfoVIO()
+      __ct__11OSysInfoVIOFv    @962 NONAME
+      ;OSysInfoVIO::getOSVer(double&)
+      getOSVer__11OSysInfoVIOFRd    @963 NONAME
+      ;OSysInfoVIO::findPathFile(const char*)
+      findPathFile__11OSysInfoVIOFPCc    @964 NONAME
+  ;From object file:  E:\OCL\Source\OSysLevel.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OSysLevel::OSysLevel(const OSysLevel&)
+      __ct__9OSysLevelFRC9OSysLevel    @965 NONAME
+      __vft9OSysLevel9OCLObject    @966 NONAME
+      ;OSysLevel::OSysLevel(_SLFHEADER&,_SYSTABLE&)
+      __ct__9OSysLevelFR10_SLFHEADERR9_SYSTABLE    @967 NONAME
+      ;OSysLevel::setSysTable(const _SYSTABLE&)
+      setSysTable__9OSysLevelFRC9_SYSTABLE    @968 NONAME
+      ;OSysLevel::JulianToDT(long,_DATETIME&) const
+      JulianToDT__9OSysLevelCFlR9_DATETIME    @969 NONAME
+      ;OSysLevel::isOfType() const
+      isOfType__9OSysLevelCFv    @970 NONAME
+      ;OSysLevel::getFileName() const
+      getFileName__9OSysLevelCFv    @971 NONAME
+      ;OSysLevel::getCompId() const
+      getCompId__9OSysLevelCFv    @972 NONAME
+      ;OSysLevel::setDate(char*)
+      setDate__9OSysLevelFPc    @973 NONAME
+      ;OSysLevel::setSysName(char*)
+      setSysName__9OSysLevelFPc    @974 NONAME
+      ;OSysLevel::setCsdLevel(char*)
+      setCsdLevel__9OSysLevelFPc    @975 NONAME
+      ;OSysLevel::setTableOffset(unsigned long)
+      setTableOffset__9OSysLevelFUl    @976 NONAME
+      ;OSysLevel::getHeader() const
+      getHeader__9OSysLevelCFv    @977 NONAME
+      ;OSysLevel::read()
+      read__9OSysLevelFv    @978 NONAME
+      ;OSysLevel::getSysName() const
+      getSysName__9OSysLevelCFv    @979 NONAME
+      ;OSysLevel::getSysEdition() const
+      getSysEdition__9OSysLevelCFv    @980 NONAME
+      ;OSysLevel::setSysModify(char)
+      setSysModify__9OSysLevelFc    @981 NONAME
+      ;OSysLevel::setSysDate(unsigned short)
+      setSysDate__9OSysLevelFUs    @982 NONAME
+      ;OSysLevel::setRefreshLevel(char)
+      setRefreshLevel__9OSysLevelFc    @983 NONAME
+      ;OSysLevel::setCompId(char*)
+      setCompId__9OSysLevelFPc    @984 NONAME
+      ;OSysLevel::OSysLevel()
+      __ct__9OSysLevelFv    @985 NONAME
+      ;OSysLevel::getSysVersion() const
+      getSysVersion__9OSysLevelCFv    @986 NONAME
+      ;OSysLevel::getSysId() const
+      getSysId__9OSysLevelCFv    @987 NONAME
+      ;OSysLevel::getSysDate() const
+      getSysDate__9OSysLevelCFv    @988 NONAME
+      ;OSysLevel::getCsdLevel() const
+      getCsdLevel__9OSysLevelCFv    @989 NONAME
+      ;OSysLevel::setSysVersion(char)
+      setSysVersion__9OSysLevelFc    @990 NONAME
+      ;OSysLevel::setType(char*)
+      setType__9OSysLevelFPc    @991 NONAME
+      ;OSysLevel::getDateAsStr(OString&) const
+      getDateAsStr__9OSysLevelCFR7OString    @992 NONAME
+      ;OSysLevel::DTToJulian(_DATETIME&) const
+      DTToJulian__9OSysLevelCFR9_DATETIME    @993 NONAME
+      ;OSysLevel::getDate(_DATETIME&) const
+      getDate__9OSysLevelCFR9_DATETIME    @994 NONAME
+      ;OSysLevel::setHeader(const _SLFHEADER&)
+      setHeader__9OSysLevelFRC10_SLFHEADER    @995 NONAME
+      ;OSysLevel::getType() const
+      getType__9OSysLevelCFv    @996 NONAME
+      ;OSysLevel::getSysTable() const
+      getSysTable__9OSysLevelCFv    @997 NONAME
+      ;OSysLevel::getRefreshLevel() const
+      getRefreshLevel__9OSysLevelCFv    @998 NONAME
+      ;OSysLevel::getCsdPrev() const
+      getCsdPrev__9OSysLevelCFv    @999 NONAME
+      ;OSysLevel::~OSysLevel()
+      __dt__9OSysLevelFv    @1000 NONAME
+      ;OSysLevel::writeToFile(const char*)
+      writeToFile__9OSysLevelFPCc    @1001 NONAME
+      ;OSysLevel::setFileName(const char*)
+      setFileName__9OSysLevelFPCc    @1002 NONAME
+      ;OSysLevel::setDate(_DATETIME&)
+      setDate__9OSysLevelFR9_DATETIME    @1003 NONAME
+      ;OSysLevel::write()
+      write__9OSysLevelFv    @1004 NONAME
+      ;OSysLevel::setDate()
+      setDate__9OSysLevelFv    @1005 NONAME
+      ;OSysLevel::getTableOffset() const
+      getTableOffset__9OSysLevelCFv    @1006 NONAME
+      ;OSysLevel::getSysModify() const
+      getSysModify__9OSysLevelCFv    @1007 NONAME
+      ;OSysLevel::OSysLevel(const char*)
+      __ct__9OSysLevelFPCc    @1008 NONAME
+      ;OSysLevel::setSysId(unsigned short)
+      setSysId__9OSysLevelFUs    @1009 NONAME
+      ;OSysLevel::setSysEdition(char)
+      setSysEdition__9OSysLevelFc    @1010 NONAME
+      ;OSysLevel::setCsdPrev(char*)
+      setCsdPrev__9OSysLevelFPc    @1011 NONAME
+      ;OSysLevel::readFromFile(const char*)
+      readFromFile__9OSysLevelFPCc    @1012 NONAME
+  ;From object file:  E:\OCL\Source\OThreadBase.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OThreadBase::~OThreadBase()
+      __dt__11OThreadBaseFv    @1013 NONAME
+      ;OThreadBase::OThreadBase(unsigned long,unsigned long)
+      __ct__11OThreadBaseFUlT1    @1014 NONAME
+      ;OThreadBase::setPrty(unsigned long,unsigned long)
+      setPrty__11OThreadBaseFUlT1    @1015 NONAME
+      __vft11OThreadBase    @1016 NONAME
+      ;OThreadBase::isOfType() const
+      isOfType__11OThreadBaseCFv    @1017 NONAME
+      ;OThreadBase::suspend()
+      suspend__11OThreadBaseFv    @1018 NONAME
+      ;OThreadBase::run()
+      run__11OThreadBaseFv    @1019 NONAME
+      ;OThreadBase::resume()
+      resume__11OThreadBaseFv    @1020 NONAME
+      __vft11OThreadBase9OCLObject    @1021 NONAME
+      __vtt11OThreadBase    @1022 NONAME
+      ;OThreadBase::isRunning()
+      isRunning__11OThreadBaseFv    @1023 NONAME
+      ;OThreadBase::OTHREADBASE_dispatch(void*)
+      OTHREADBASE_dispatch__11OThreadBaseFPv    @1024 NONAME
+      ;OThreadBase::stop()
+      stop__11OThreadBaseFv    @1025 NONAME
+      ;OThreadBase::waitFor()
+      waitFor__11OThreadBaseFv    @1026 NONAME
+  ;From object file:  E:\OCL\Source\OTimer.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OTimer::OTimer(OFrame*,unsigned long,unsigned long)
+      __ct__6OTimerFP6OFrameUlT2    @1027 NONAME
+      ;OTimer::stop()
+      stop__6OTimerFv    @1028 NONAME
+      __vft6OTimer    @1029 NONAME
+      ;OTimer::setId(unsigned long)
+      setId__6OTimerFUl    @1030 NONAME
+      ;OTimer::OTimer(unsigned long,unsigned long,unsigned long)
+      __ct__6OTimerFUlN21    @1031 NONAME
+      ;OTimer::~OTimer()
+      __dt__6OTimerFv    @1032 NONAME
+      ;OTimer::isOfType() const
+      isOfType__6OTimerCFv    @1033 NONAME
+      ;OTimer::setNotify(OFrame&)
+      setNotify__6OTimerFR6OFrame    @1034 NONAME
+      ;OTimer::setTimeout(unsigned long)
+      setTimeout__6OTimerFUl    @1035 NONAME
+      ;OTimer::setNotify(unsigned long)
+      setNotify__6OTimerFUl    @1036 NONAME
+      ;OTimer::start()
+      start__6OTimerFv    @1037 NONAME
+      ;OTimer::start(unsigned long)
+      start__6OTimerFUl    @1038 NONAME
+      ;OTimer::setNotify(OFrame*)
+      setNotify__6OTimerFP6OFrame    @1039 NONAME
+      ;OTimer::OTimer(OFrame&,unsigned long,unsigned long)
+      __ct__6OTimerFR6OFrameUlT2    @1040 NONAME
+  ;From object file:  E:\OCL\Source\OUserButton.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OUserButton::OUserButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__11OUserButtonFUlN61    @1041 NONAME
+      __vft11OUserButton9OCLObject    @1042 NONAME
+      ;OUserButton::isOfType() const
+      isOfType__11OUserButtonCFv    @1043 NONAME
+      ;OUserButton::OUserButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__11OUserButtonFUlP6OFrameN51    @1044 NONAME
+      ;OUserButton::OUserButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+      __ct__11OUserButtonFUlR6OFrameN51    @1045 NONAME
+      ;OUserButton::~OUserButton()
+      __dt__11OUserButtonFv    @1046 NONAME
+  ;From object file:  E:\OCL\Source\OValueSet.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OValueSet::OValueSet(const unsigned long,OFrame* const,const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__9OValueSetFCUlCP6OFrameN41    @1047 NONAME
+      ;OValueSet::OValueSet(const unsigned long,const OFrame&,const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__9OValueSetFCUlRC6OFrameN41    @1048 NONAME
+      ;OValueSet::queryItem(unsigned long,unsigned long)
+      queryItem__9OValueSetFUlT1    @1049 NONAME
+      ;OValueSet::querySelected()
+      querySelected__9OValueSetFv    @1050 NONAME
+      ;OValueSet::queryItemAttr(unsigned long,unsigned long)
+      queryItemAttr__9OValueSetFUlT1    @1051 NONAME
+      ;OValueSet::setMetrics(unsigned long,unsigned long)
+      setMetrics__9OValueSetFUlT1    @1052 NONAME
+      ;OValueSet::setItemAttr(unsigned long,unsigned long,unsigned long,unsigned long)
+      setItemAttr__9OValueSetFUlN31    @1053 NONAME
+      ;OValueSet::~OValueSet()
+      __dt__9OValueSetFv    @1054 NONAME
+      ;OValueSet::OValueSet(const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long,const unsigned long)
+      __ct__9OValueSetFCUlN51    @1055 NONAME
+      ;OValueSet::selectItem(unsigned long,unsigned long)
+      selectItem__9OValueSetFUlT1    @1056 NONAME
+      ;OValueSet::isOfType() const
+      isOfType__9OValueSetCFv    @1057 NONAME
+      ;OValueSet::queryMetrics(unsigned long)
+      queryMetrics__9OValueSetFUl    @1058 NONAME
+      __vft9OValueSet9OCLObject    @1059 NONAME
+      ;OValueSet::createValueSet(const short,const short,const short,const short)
+      createValueSet__9OValueSetFCsN31    @1060 NONAME
+      ;OValueSet::setItem(unsigned long,unsigned long,unsigned long)
+      setItem__9OValueSetFUlN21    @1061 NONAME
+  ;From object file:  E:\OCL\Source\OVioApp.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OVioApp::Shutdown()
+      Shutdown__7OVioAppFv    @1062 NONAME
+      ;OVioApp::Reboot()
+      Reboot__7OVioAppFv    @1063 NONAME
+      ;OVioApp::OVioApp(const unsigned long,char**)
+      __ct__7OVioAppFCUlPPc    @1064 NONAME
+      __vft7OVioApp9OCLObject    @1065 NONAME
+      ;OVioApp::OVioApp()
+      __ct__7OVioAppFv    @1066 NONAME
+      ;OVioApp::~OVioApp()
+      __dt__7OVioAppFv    @1067 NONAME
+      ;OVioApp::isOfType() const
+      isOfType__7OVioAppCFv    @1068 NONAME
+      ;OVioApp::forceQuit()
+      forceQuit__7OVioAppFv    @1069 NONAME
+  ;From object file:  E:\OCL\Source\OVioException.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OVioException::OVioException(char* const,const unsigned long,const unsigned long,char* const,const unsigned long)
+      __ct__13OVioExceptionFCPcCUlT2T1T2    @1070 NONAME
+      ;OVioException::isOfType() const
+      isOfType__13OVioExceptionCFv    @1071 NONAME
+      ;OVioException::OVioException(const OVioException&)
+      __ct__13OVioExceptionFRC13OVioException    @1072 NONAME
+      ;OVioException::~OVioException()
+      __dt__13OVioExceptionFv    @1073 NONAME
+      __vtt13OVioException    @1074 NONAME
+      __vft10OException9OCLObject_13OVioException    @1075 NONAME
+      __vft13OVioException9OCLObject    @1076 NONAME
+      ;OVioException::viewError()
+      viewError__13OVioExceptionFv    @1077 NONAME
+      __vft13OVioException10OException    @1078 NONAME
+  ;From object file:  E:\OCL\Source\OWinDefDlg.cpp
+    ;PUBDEFs (Symbols available from object file):
+      OWinDefDlgProc    @1079 NONAME
+  ;From object file:  E:\OCL\Source\OWinDefWindow.cpp
+    ;PUBDEFs (Symbols available from object file):
+      OWinDefWindowProc    @1080 NONAME
+  ;From object file:  E:\OCL\Source\OWindow.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OWindow::initReplace(const unsigned long,_SWP&)
+      initReplace__7OWindowFCUlR4_SWP    @1081 NONAME
+      __vft7OWindow9OCLObject    @1082 NONAME
+      ;OWindow::show()
+      show__7OWindowFv    @1083 NONAME
+      ;OWindow::hide()
+      hide__7OWindowFv    @1084 NONAME
+      ;OWindow::cancelClose()
+      cancelClose__7OWindowFv    @1085 NONAME
+      ;OWindow::setOwner(const unsigned long)
+      setOwner__7OWindowFCUl    @1086 NONAME
+      ;OWindow::setForeColor(long)
+      setForeColor__7OWindowFl    @1087 NONAME
+      ;OWindow::setBackColor(long)
+      setBackColor__7OWindowFl    @1088 NONAME
+      ;OWindow::destroy()
+      destroy__7OWindowFv    @1089 NONAME
+      ;OWindow::getBackColor()
+      getBackColor__7OWindowFv    @1090 NONAME
+      ;OWindow::activate()
+      activate__7OWindowFv    @1091 NONAME
+      ;OWindow::isOfType() const
+      isOfType__7OWindowCFv    @1092 NONAME
+      ;OWindow::getForeColor()
+      getForeColor__7OWindowFv    @1093 NONAME
+      ;OWindow::setPresentation(_PresParms*)
+      setPresentation__7OWindowFP10_PresParms    @1094 NONAME
+      ;OWindow::inherit(const unsigned long)
+      inherit__7OWindowFCUl    @1095 NONAME
+      ;OWindow::OWindow(const unsigned long,const unsigned long,const unsigned long)
+      __ct__7OWindowFCUlN21    @1096 NONAME
+      ;OWindow::enable()
+      enable__7OWindowFv    @1097 NONAME
+      ;OWindow::getFont()
+      getFont__7OWindowFv    @1098 NONAME
+      ;OWindow::disable()
+      disable__7OWindowFv    @1099 NONAME
+      ;OWindow::setFont(char*)
+      setFont__7OWindowFPc    @1100 NONAME
+      ;OWindow::setParent(const unsigned long)
+      setParent__7OWindowFCUl    @1101 NONAME
+      ;OWindow::~OWindow()
+      __dt__7OWindowFv    @1102 NONAME
+      ;OWindow::setFocus()
+      setFocus__7OWindowFv    @1103 NONAME
+      ;OWindow::getPresentation(_PresParms*)
+      getPresentation__7OWindowFP10_PresParms    @1104 NONAME
+  ;From object file:  E:\OCL\Source\OXApp.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft5OXApp9OCLObject    @1105 NONAME
+      ;OXApp::OXApp(const unsigned long,char**,unsigned long)
+      __ct__5OXAppFCUlPPcUl    @1106 NONAME
+      ;OXApp::run()
+      run__5OXAppFv    @1107 NONAME
+      ;OXApp::OXApp(unsigned long)
+      __ct__5OXAppFUl    @1108 NONAME
+      ;OXApp::isOfType() const
+      isOfType__5OXAppCFv    @1109 NONAME
+      ;OXApp::~OXApp()
+      __dt__5OXAppFv    @1110 NONAME
+  ;From object file:  E:\OCL\Source\OXcptBase.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OXcptBase::OXcptBase(unsigned long)
+      __ct__9OXcptBaseFUl    @1111 NONAME
+      ;OXcptBase::isOfType() const
+      isOfType__9OXcptBaseCFv    @1112 NONAME
+      except_print_context    @1113 NONAME
+      __vft9OXcptBase9OCLObject    @1114 NONAME
+      __vft9OXcptBase    @1115 NONAME
+      ;OXcptBase::handler(_EXCEPTIONREPORTRECORD*,_EXCEPTIONREGISTRATIONRECORD*,_CONTEXT*,void*)
+      handler__9OXcptBaseFP22_EXCEPTIONREPORTRECORDP28_EXCEPTIONREGISTRATIONRECORDP8_CONTEXTPv    @1116 NONAME
+      ;OXcptBase::setHandler(_EXCEPTIONREGISTRATIONRECORD&)
+      setHandler__9OXcptBaseFR28_EXCEPTIONREGISTRATIONRECORD    @1117 NONAME
+      ;OXcptBase::currentHandler
+      currentHandler__9OXcptBase    @1118 NONAME
+      ;OXcptBase::OXCPT_CATCH(_EXCEPTIONREPORTRECORD*,_EXCEPTIONREGISTRATIONRECORD*,_CONTEXT*,void*)
+      OXCPT_CATCH__9OXcptBaseFP22_EXCEPTIONREPORTRECORDP28_EXCEPTIONREGISTRATIONRECORDP8_CONTEXTPv    @1119 NONAME
+      __vtt9OXcptBase    @1120 NONAME
+      ;OXcptBase::~OXcptBase()
+      __dt__9OXcptBaseFv    @1121 NONAME
+      ;OXcptBase::unsetHandler()
+      unsetHandler__9OXcptBaseFv    @1122 NONAME
+      except_printf    @1123 NONAME
+  ;From object file:  E:\OCL\Source\OXcptPM.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OXcptPM::OXcptPM(unsigned long)
+      __ct__7OXcptPMFUl    @1124 NONAME
+      __vtt7OXcptPM    @1125 NONAME
+      __vft9OXcptBase9OCLObject_7OXcptPM    @1126 NONAME
+      ;OXcptPM::~OXcptPM()
+      __dt__7OXcptPMFv    @1127 NONAME
+      ;OXcptPM::isOfType() const
+      isOfType__7OXcptPMCFv    @1128 NONAME
+      ;OXcptPM::exceptionMessage(const char*)
+      exceptionMessage__7OXcptPMFPCc    @1129 NONAME
+      __vft7OXcptPM9OCLObject    @1130 NONAME
+      ;OXcptPM::killTrace()
+      killTrace__7OXcptPMFv    @1131 NONAME
+      __vft7OXcptPM9OXcptBase    @1132 NONAME
+      ;OXcptPM::trapTrace()
+      trapTrace__7OXcptPMFv    @1133 NONAME
+  ;From object file:  E:\OCL\Source\OXcptVio.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OXcptVio::killTrace()
+      killTrace__8OXcptVioFv    @1134 NONAME
+      ;OXcptVio::exceptionMessage(const char*)
+      exceptionMessage__8OXcptVioFPCc    @1135 NONAME
+      __vft8OXcptVio9OCLObject    @1136 NONAME
+      ;OXcptVio::~OXcptVio()
+      __dt__8OXcptVioFv    @1137 NONAME
+      __vtt8OXcptVio    @1138 NONAME
+      ;OXcptVio::OXcptVio(unsigned long)
+      __ct__8OXcptVioFUl    @1139 NONAME
+      ;OXcptVio::isOfType() const
+      isOfType__8OXcptVioCFv    @1140 NONAME
+      __vft8OXcptVio9OXcptBase    @1141 NONAME
+      ;OXcptVio::trapTrace()
+      trapTrace__8OXcptVioFv    @1142 NONAME
+      __vft9OXcptBase9OCLObject_8OXcptVio    @1143 NONAME
+  ;From object file:  E:\OCL\Source\slOProcRecord.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OProcRecord::~OProcRecord()
+      __dt__11OProcRecordFv    @1144 NONAME
+      ;OProcRecord::OProcRecord(const OProcRecord&)
+      __ct__11OProcRecordFRC11OProcRecord    @1145 NONAME
+      __vft13slOProcRecord9OCLObject    @1146 NONAME
+      ;slOProcRecord::operator<<(OProcRecord&)
+      __ls__13slOProcRecordFR11OProcRecord    @1147 NONAME
+      ;OProcRecord::isOfType() const
+      isOfType__11OProcRecordCFv    @1148 NONAME
+      ;slOProcRecord::isOfType() const
+      isOfType__13slOProcRecordCFv    @1149 NONAME
+      ;OProcRecord::OProcRecord(OProcRecord* const)
+      __ct__11OProcRecordFCP11OProcRecord    @1150 NONAME
+      __vft11OProcRecord9OCLObject    @1151 NONAME
+      ;slOProcRecord::isLess(const OProcRecord*,const OProcRecord*)
+      isLess__13slOProcRecordFPC11OProcRecordT1    @1152 NONAME
+      ;slOProcRecord::slOProcRecord()
+      __ct__13slOProcRecordFv    @1153 NONAME
+      ;slOProcRecord::operator<<(OProcRecord*)
+      __ls__13slOProcRecordFP11OProcRecord    @1154 NONAME
+      ;OProcRecord::OProcRecord()
+      __ct__11OProcRecordFv    @1155 NONAME
+      ;slOProcRecord::~slOProcRecord()
+      __dt__13slOProcRecordFv    @1156 NONAME
+  ;From object file:  E:\OCL\Source\slOString.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;slOString::isLess(const OString*,const OString*)
+      isLess__9slOStringFPC7OStringT1    @1157 NONAME
+      ;slOString::~slOString()
+      __dt__9slOStringFv    @1158 NONAME
+      ;slOString::operator<<(OString&)
+      __ls__9slOStringFR7OString    @1159 NONAME
+      __vft9slOString9OCLObject    @1160 NONAME
+      ;slOString::operator<<(OString*)
+      __ls__9slOStringFP7OString    @1161 NONAME
+      ;slOString::slOString()
+      __ct__9slOStringFv    @1162 NONAME
+      ;slOString::isOfType() const
+      isOfType__9slOStringCFv    @1163 NONAME
+      ;slOString::operator<<(const char*)
+      __ls__9slOStringFPCc    @1164 NONAME

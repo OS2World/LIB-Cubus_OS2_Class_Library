@@ -2,14 +2,11 @@
 
 // Listbox.hpp
 
-#define OINCL_OSTRING
-#define OINCL_OAPP
-#define OINCL_OFRAME
-#define OINCL_OLISTBOX
-#define OINCL_OPMEXCEPTION
-
 #include <ocl.hpp>
-
+#include <OApp.hpp>
+#include <OFrame.hpp>
+#include <OListbox.hpp>
+#include <OPMException.hpp>
 
 #include "..\Source\Listbox.h"
 

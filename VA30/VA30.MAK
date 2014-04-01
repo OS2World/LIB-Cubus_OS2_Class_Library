@@ -5,14 +5,14 @@
 
 
 # when compiling the debug version use these statements
-# CFLAGS = $(ICC_COMPILE_DEBUG)
-# CDLLFLAGS = $(ICC_COMPILE_DLL_DEBUG)
+# CFLAGS = $(ICC_COMPILE_DEBUG) /Gn /Gd
+# CDLLFLAGS = $(ICC_COMPILE_DLL_DEBUG) /Gn /Gd
 # LFLAGS = $(ICC_LINK_DLL_DEBUG)
 
-CFLAGS = $(ICC_COMPILE)
-CDLLFLAGS = $(ICC_COMPILE_DLL)
-LFLAGS = $(ICC_LINK_DLL)
-
+# CRT =
+CFLAGS = $(ICC_COMPILE) /Gn /Gd
+CDLLFLAGS = $(ICC_COMPILE_DLL) /Gn /Gd
+LFLAGS = $(ICC_LINK_DLL) /Gn /Gd
 
 MAKEDEP = VA30.MAK
 
@@ -62,6 +62,10 @@ y
 .\OCriticalSec.obj &
 .\ODate.obj &
 .\ODialog.obj &
+.\OStdDialog.obj &
+.\OFontDialog.obj &
+.\OFileDialog.obj &
+.\OColorDialog.obj &
 .\ODragEntryField.obj &
 .\ODynamicLib.obj &
 .\OEditor.obj &
@@ -70,6 +74,7 @@ y
 .\OFcl.obj &
 .\OFillButton.obj &
 .\OFrame.obj &
+.\OFuzzSearch.obj &
 .\OGraphicsButton.obj &
 .\OHelp.obj &
 .\OHelpPopup.obj &
@@ -144,7 +149,7 @@ y
 .\OCLVA.DLL: OCL_Entry.obj $(ALLOBJ) .\OCLVA.DEF $(MAKEDEP)
   @echo Linking ...
   @icc @<<
-$(LFLAGS) /Fe.\OCLVA.DLL OCL_Entry.obj $(ALLOBJ) .\OCLVA.DEF
+$(LFLAGS) /Fe.\OCLVA.DLL OCL_Entry.obj $(ALLOBJ) $(CRT) .\OCLVA.DEF
 <<
   @copy OCLVA.DLL $(OCL)\LIB\OCLVA.DLL
 
@@ -173,7 +178,7 @@ $(OIPLIBOBJ) , .\OIPVA.LST;
 .\OIPVA.DLL: OIP_Entry.obj $(OIPOBJ) .\OIPVA.DEF $(MAKEDEP)
   @echo Linking ...
   @icc @<<
-$(LFLAGS) /Fe.\OIPVA.DLL OIP_Entry.obj $(OIPOBJ) OTCPIP.LIB OCLVA.LIB .\OIPVA.DEF
+$(LFLAGS) /Fe.\OIPVA.DLL OIP_Entry.obj $(OIPOBJ) OTCPIP.LIB OCLVA.LIB $(CRT) .\OIPVA.DEF
 <<
   @copy OIPVA.DLL $(OCL)\LIB\OIPVA.DLL
 

@@ -1,7 +1,7 @@
 // OCL - OS/2 Class Library
 // (c) Cubus 1995
 // All Rights Reserved
-// OIcon.hpp
+// OColorDialog.hpp
 
 /*
  * Redistribution and use in source and binary forms, with or without
@@ -27,57 +27,31 @@
  * SUCH DAMAGE.
  */
 
-// $Header: W:/Projects/OCL/Include/rcs/OIcon.hpp 1.50 1996/08/11 23:47:18 B.STEIN Release $
+// $Header: W:/Projects/OCL/Include/rcs/OStatusLine.hpp 1.50 1996/08/11 23:47:31 B.STEIN Release $
 
-#ifndef OICON_INCLUDED
-  #define OICON_INCLUDED
+#ifndef OCOLORDIALOG_INCLUDED
+  #define OCOLORDIALOG_INCLUDED
 
-#ifndef OPICTURE_INCLUDED
-  #include <OPicture.hpp>
+
+#ifndef STDDIALOG_INCLUDED
+  #include <OStdDialog.hpp>
 #endif
 
-#ifndef OPMEXCEPTION_INCLUDED
-  #include <OPMException.hpp>
-#endif
+typedef class OColorDialog *pOColorDialog;
 
-
-typedef class OIcon *pOIcon;
-
-
-class __CPP_EXPORT__ OIcon
-  : public OPicture
+class __CPP_EXPORT__ OColorDialog
+   : public OStdDialog
 {
  public:
-   HPOINTER             hptr;
 
-   OIcon                ();
+             OColorDialog (HWND hParent = HWND_DESKTOP,
+                           HWND hOwner  = HWND_DESKTOP);
 
-   OIcon                (const ULONG resID, 
-                         const HMODULE module);
+    virtual ~OColorDialog ();
 
-   OIcon                (const HPOINTER ptrHandle);
-
-   OIcon                (PCSZ fileName);  // any valid filename
-
-   virtual
-      ~OIcon            ();
-
-   virtual
-      PSZ isOfType      () const; 
-   
-   inline
-      operator HPOINTER () const { return(hptr); }
-
-   OIcon &load          (const ULONG resID, 
-                         const HMODULE module = NULLHANDLE),
-         &loadFromFile  (PSZ fileName),
-         &destroy       (); 
-
+    PSZ  isOfType() const;
+    
 };
 
 
-
-#endif // OICON_INCLUDED
-
-
-// end of source
+#endif // OCOLORDIALOG_INCLUDED

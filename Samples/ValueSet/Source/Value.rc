@@ -23,5 +23,10 @@ DLGTEMPLATE VALUE_DLG LOADONCALL MOVEABLE DISCARDABLE
 }
 
 
+STRINGTABLE
+{
+ STR_VN_SELECT "VN_SELECT for item at row "
+ STR_VN_ENTER  "VN_ENTER for item at row "
+}
+
 /* end of source */
-

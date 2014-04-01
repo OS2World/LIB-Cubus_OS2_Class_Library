@@ -408,3 +408,24 @@
 .\OCLObject.obj: \
     $(OCL)\Source\OCLObject.cpp \
     $(MAKEDEP)
+
+.\OFuzzSearch.obj: \
+    $(OCL)\Source\OFuzzSearch.cpp \
+    $(MAKEDEP)
+
+.\OColorDialog.obj: \
+    $(OCL)\Source\OColorDialog.cpp \
+    $(MAKEDEP)
+
+.\OFileDialog.obj: \
+    $(OCL)\Source\OFileDialog.cpp \
+    $(MAKEDEP)
+
+.\OFontDialog.obj: \
+    $(OCL)\Source\OFontDialog.cpp \
+    $(MAKEDEP)
+
+.\OStdDialog.obj: \
+    $(OCL)\Source\OStdDialog.cpp \
+    $(MAKEDEP)
+

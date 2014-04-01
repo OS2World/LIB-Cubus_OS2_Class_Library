@@ -1,15 +1,14 @@
 // OCL Sample OValueSet
 
 
-#define OINCL_OSTRING
-#define OINCL_OAPP
-#define OINCL_ODIALOG
-#define OINCL_OMSGS
-#define OINCL_OVALUESET
-#define OINCL_OLOGO
-#define OINCL_OPMEXCEPTION
-
 #include <ocl.hpp>
+#include <OApp.hpp>
+#include <ODialog.hpp>
+#include <OMsgs.hpp>
+#include <OValueSet.hpp>
+#include <OLogo.hpp>
+#include <OPMException.hpp>
+
 #include "..\Source\Value.h"
 
 

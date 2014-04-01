@@ -59,6 +59,7 @@ OIP_Socket::OIP_Socket(phostent p)
 OIP_Socket::~OIP_Socket()
 {
  close();
+ if (phost) delete phost;
 }
 
 

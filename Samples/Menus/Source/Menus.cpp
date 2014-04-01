@@ -13,6 +13,7 @@ void main(void)
 {
  MenuSample *sample = NULL;
 
+ 
  try
   {
    sample = new MenuSample;
@@ -27,6 +28,7 @@ void main(void)
  OApp::current().run();
 
  delete sample;
+
  _exit(0);
 }
 

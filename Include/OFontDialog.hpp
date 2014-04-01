@@ -1,7 +1,7 @@
 // OCL - OS/2 Class Library
 // (c) Cubus 1995
 // All Rights Reserved
-// OIcon.hpp
+// OFontDialog.hpp
 
 /*
  * Redistribution and use in source and binary forms, with or without
@@ -27,13 +27,14 @@
  * SUCH DAMAGE.
  */
 
-// $Header: W:/Projects/OCL/Include/rcs/OIcon.hpp 1.50 1996/08/11 23:47:18 B.STEIN Release $
+// $Header: W:/Projects/OCL/Include/rcs/OStatusLine.hpp 1.50 1996/08/11 23:47:31 B.STEIN Release $
 
-#ifndef OICON_INCLUDED
-  #define OICON_INCLUDED
+#ifndef OFONTDIALOG_INCLUDED
+  #define OFONTDIALOG_INCLUDED
 
-#ifndef OPICTURE_INCLUDED
-  #include <OPicture.hpp>
+
+#ifndef STDDIALOG_INCLUDED
+  #include <OStdDialog.hpp>
 #endif
 
 #ifndef OPMEXCEPTION_INCLUDED
@@ -41,43 +42,28 @@
 #endif
 
 
-typedef class OIcon *pOIcon;
+typedef class OFontDialog *pOFontDialog;
 
-
-class __CPP_EXPORT__ OIcon
-  : public OPicture
+class __CPP_EXPORT__ OFontDialog
+   : public OStdDialog
 {
+ protected:
+
+    OString  font;
+
  public:
-   HPOINTER             hptr;
 
-   OIcon                ();
+             OFontDialog (HWND hParent = HWND_DESKTOP,
+                          HWND hOwner  = HWND_DESKTOP);
 
-   OIcon                (const ULONG resID, 
-                         const HMODULE module);
+    virtual ~OFontDialog ();
 
-   OIcon                (const HPOINTER ptrHandle);
+    virtual PSZ  isOfType() const;
 
-   OIcon                (PCSZ fileName);  // any valid filename
-
-   virtual
-      ~OIcon            ();
-
-   virtual
-      PSZ isOfType      () const; 
-   
-   inline
-      operator HPOINTER () const { return(hptr); }
-
-   OIcon &load          (const ULONG resID, 
-                         const HMODULE module = NULLHANDLE),
-         &loadFromFile  (PSZ fileName),
-         &destroy       (); 
-
+            PSZ  getFont (PSZ title,
+                          PSZ previewText); 
+    
 };
 
 
-
-#endif // OICON_INCLUDED
-
-
-// end of source
+#endif // OFONTDIALOG_INCLUDED

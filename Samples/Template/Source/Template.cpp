@@ -215,6 +215,17 @@ BOOL OCLApp::OCommand(ULONG msg, MPARAM mp1, MPARAM mp2)
        statusline->setText((PSZ) PVOIDFROMMP(mp2));
        wasOutOfContainer = TRUE;
        break;
+
+      case SAMPLE_CNR:
+       {
+        switch(SHORT2FROMMP(mp1))
+         {
+          case CN_CONTEXTMENU:
+           cnr->setEmphasis(PVOIDFROMMP(mp2), TRUE, CRA_CURSORED);
+           break;
+         } 
+       } 
+      break;
      }
     break;
 
@@ -299,17 +310,18 @@ BOOL OCLApp::OCommand(ULONG msg, MPARAM mp1, MPARAM mp2)
     switch(item->idItem)
      {
       case SDA_RIBBONSTRIP:
-       indicator->drawSliderElement(item, CLR_RED);
-       break;
-      case SDA_SLIDERSHAFT:
        indicator->drawSliderElement(item, SYSCLR_WINDOW);
+       break;
+
+      case SDA_SLIDERSHAFT:
+       indicator->drawSliderElement(item, CLR_BLUE);
        break;
      }
     break;
    }
 
    default:
-    return(FALSE);
+    return(OFrame::OCommand(msg, mp1, mp2));
   }
  return(TRUE);
 }

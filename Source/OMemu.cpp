@@ -65,7 +65,7 @@ OMemu::OMemu()
      EP_get_general_info = (PMEMU_GGI) memu_library->queryFn("EP_get_general_info"); 
      EP_get_process_info = (PMEMU_GPI) memu_library->queryFn("EP_get_process_info"); 
     }
-   catch(OVioException ex)
+   catch(OVioException& ex)
     {
      if (memu_library)
        delete memu_library;

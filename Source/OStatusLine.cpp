@@ -132,7 +132,7 @@ ULONG OStatusLine::getHeight()
  WinDrawText(hps, 1, " ", &rcl, 0L, 0L, orientation | DT_QUERYEXTENT);
  WinFillRect(hps, &rcl, pparms.Back);
  WinReleasePS(hps);
- statlineHeight = rcl.yTop - rcl.yBottom + 6;
+ statlineHeight = rcl.yTop - rcl.yBottom + 10;
  return(statlineHeight);
 }
 
@@ -147,7 +147,7 @@ ULONG OStatusLine::getWidth()
  WinFillRect(hps, &rcl, pparms.Back);
  WinReleasePS(hps);
 
- statlineWidth = rcl.xRight - rcl.xLeft + 6;
+ statlineWidth = rcl.xRight - rcl.xLeft + 10;
  return(statlineWidth);
 }
 
@@ -174,17 +174,43 @@ BOOL OStatusLine::OCommand(ULONG msg, MPARAM mp1, MPARAM mp2)
      if (ddStyle)
       {
        ULONG   height = getHeight() - 3;
+       ULONG   width  = 0;
+       ULONG   offset = 3;
        POINTL  ptl;
 
        hps = WinBeginPaint(hwnd, 0, NULL);
        WinQueryWindowRect(hwnd, &rcl);
+       width =  rcl.xRight - rcl.xLeft;
+   
        GpiCreateLogColorTable(hps, LCOL_RESET, LCOLF_RGB, 0L, 0L, NULL);
        GpiSetColor(hps, pparms.Back);
-
-       ptl.x = rcl.xRight - rcl.xLeft;
-       ptl.y = height;
-       GpiBox(hps, DRO_FILL, &ptl, 0L, 0L);
-       WinDrawBorder(hps, &rcl, 2, 2, 0, 0, DB_PATCOPY | DB_RAISED);
+       ptl.x = width; ptl.y = height;
+       GpiBox(hps, DRO_FILL, &ptl, 0, 0);
+       GpiSetColor(hps, CLR_WHITE);
+       ptl.x = ptl.y = 0;
+       GpiMove(hps, &ptl);
+       ptl.x = 0; ptl.y = height;
+       GpiLine(hps, &ptl);
+       ptl.x = width; ptl.y = height;
+       GpiLine(hps, &ptl);
+       GpiSetColor(hps, CLR_DARKGRAY);
+       ptl.x = width; ptl.y = 0;
+       GpiLine(hps, &ptl);
+       ptl.x = ptl.y = 0;
+       GpiLine(hps, &ptl);
+       GpiSetColor(hps, CLR_WHITE);
+       ptl.x = ptl.y = offset;
+       GpiMove(hps, &ptl);
+       ptl.x = width - offset; ptl.y = offset;
+       GpiLine(hps, &ptl);
+       ptl.x = width - offset; ptl.y = height - offset;
+       GpiLine(hps, &ptl);
+       GpiSetColor(hps, CLR_DARKGRAY);
+       ptl.x = offset; ptl.y = height - offset;
+       GpiLine(hps, &ptl);
+       ptl.x = ptl.y = offset;
+       GpiLine(hps, &ptl);
+       rcl.xLeft = 3;
        WinDrawText(hps, strlen(statlineText), statlineText, &rcl,
                    pparms.Fore, pparms.Back, orientation);
        WinEndPaint(hps);

@@ -160,7 +160,7 @@ ULONG ODynamicLib::queryAppType()
 
  try {
    rc = DosQueryAppType(queryModuleName(), &ul); }
- catch(OVioException ex) {
+ catch(OVioException& ex) {
    rc = ex.rc; }
 
  if (rc != 0)

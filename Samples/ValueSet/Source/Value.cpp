@@ -9,7 +9,7 @@
 #define __OCL_RESOLVE_TEMPLATES__
 #include "..\Source\Value.hpp"
 
-
+#include <..\Source\OString.cpp>
 
 void main(void)
 {
@@ -93,9 +93,9 @@ BOOL ValueSample::OCommand(ULONG msg, MPARAM mp1, MPARAM mp2)
 
        VSet.querySelected();
        if ((SHORT2FROMMP(mp1)) == VN_SELECT)
-         Notification << "VN_SELECT for item at row ";
+         Notification << OString(STR_VN_SELECT, NULLHANDLE);
        else
-         Notification << "VN_ENTER for item at row ";
+         Notification << OString(STR_VN_ENTER, NULLHANDLE);
        _itoa(VSet.selected.row, pszTmp, 10);
        Notification + pszTmp;
        Notification + " Column ";

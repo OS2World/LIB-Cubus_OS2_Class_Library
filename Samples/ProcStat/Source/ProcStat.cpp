@@ -74,6 +74,12 @@ BOOL Procstat::OCommand(ULONG msg, MPARAM mp1, MPARAM mp2)
    case WM_COMMAND:
      switch(SHORT1FROMMP(mp1))
       {
+       case PROCSTAT_SETFONT: {
+        OString font(OFontDialog().getFont("Set Font", "Tree Font"));
+        if (font.getText())
+          cnr->setFont(font);
+        break; }
+
        case PROCSTAT_QUIT:
         WinSendMsg(hwnd, WM_CLOSE, NULL, NULL);
         break; 

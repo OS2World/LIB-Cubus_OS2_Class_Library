@@ -66,7 +66,7 @@ int main(int argc, char* argv[])
 
  cout << LOGO
       << endl
-      << OIP::Version().getText()
+      << OIP::Version()
       << endl;
 
 

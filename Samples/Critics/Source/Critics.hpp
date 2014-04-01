@@ -2,11 +2,11 @@
 // Critics.hpp
 
 #define INCL_VIO
-#define OINCL_OCRITICAL
-#define OINCL_LOSTRING
-#define OINCL_OTHREAD
 
 #include <ocl.hpp>
+#include <OCriticalSec.hpp>
+#include <OThread.hpp>
+
 
 typedef class Thread *pThread;
 

@@ -3,8 +3,8 @@
 
 ICC_COMPILE = /Tdp /Q /Fi /Si /O /G5 /Gm /C
 ICC_LINK = /Tdp /Q /O /Fi /Si /G5 /Gm /B" /noe /e:2"
-ICC_COMPILE_DEBUG = /Tdp /Fi /Si /Ti /Q /Gm /C
-ICC_LINK_DEBUG =  /Tdp /Ti /Gm /B" /noe /e:2"
+ICC_COMPILE_DEBUG = /Tdp /Fi /Si /Ti /Tm /Q /Gm /C
+ICC_LINK_DEBUG =  /Tdp /Ti /Tm /Gm /B" /noe /e:2"
 
 ICC_COMPILE_DLL = /Ge- $(ICC_COMPILE)
 ICC_LINK_DLL = /Ge- $(ICC_LINK)
@@ -65,8 +65,8 @@ EMX_LINK_DLL_DEBUG = -g $(EMX_LINK_DLL)
 
 S_ICC_COMPILE = /Tdp /Q /Gm /O /G5 /C
 S_ICC_LINK = /Tdp /Q /Gm /O /G5 /B" /do /nologo /pmtype:pm /e:2 /packd /packc"
-S_ICC_COMPILE_DEBUG = /Tdp /Q /Ti /Gm /C
-S_ICC_LINK_DEBUG = /Tdp /Q /Ti /Gm /B" /de /do /nologo /pmtype:pm /e:2 /packd /packc"
+S_ICC_COMPILE_DEBUG = /Tdp /Q /Ti /Tm /Gm /C
+S_ICC_LINK_DEBUG = /Tdp /Q /Ti /Tm /Gm /B" /de /do /nologo /pmtype:pm /e:2 /packd /packc"
 
 S_ICC_COMPILE_DLL = /Ge- $(ICC_COMPILE)
 S_ICC_LINK_DLL = /Ge- $(ICC_LINK)

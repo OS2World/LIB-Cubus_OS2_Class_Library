@@ -60,6 +60,7 @@
 #include <OQueue.hpp>
 #include <OStack.hpp>
 #include <OContainer.hpp>
+#include <OFuzzSearch.hpp>
 
 #if (defined (__IBMCPP__) && (__IBMCPP__ < 300))
   #pragma define (OList<ULONG>)

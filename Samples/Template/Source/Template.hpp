@@ -7,9 +7,6 @@
 
 #include"..\Source\Template.h"
 
-#define OINCL_LIST
-#define OINCL_SORTEDLIST
-
 #include <ocl.hpp>
 #include <OXApp.hpp>
 #include <OFrame.hpp>
@@ -23,7 +20,8 @@
 #include <OIndicator.hpp>
 #include <OThread.hpp>
 #include <OMenu.hpp>
-
+#include <OList.hpp>
+#include <OSortedList.hpp>
 
 typedef class OCLApp *pOCLApp;
 typedef class InfoDlg *pInfoDlg;

@@ -10,5 +10,8 @@
 #define VALUE_ICON       6
 #define VALUE_BMP        7
 
+#define STR_VN_SELECT    10
+#define STR_VN_ENTER     11
+
 /* end of source */
 

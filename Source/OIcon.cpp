@@ -79,8 +79,7 @@ OIcon::OIcon(PCSZ fileName)
 
 OIcon::~OIcon()
 {
- if (hptr)
-   WinDestroyPointer(hptr);
+ destroy();
 }
 
 
@@ -89,5 +88,35 @@ PSZ OIcon::isOfType() const
  return("OIcon"); 
 }
 
+
+OIcon& OIcon::load(const ULONG resID, const HMODULE module)
+{
+ destroy();
+ hptr = WinLoadPointer(HWND_DESKTOP, module, resID);
+
+ if (!hptr)
+   throw OPMException(OCL::error(70), 0, OException::recoverable);
+ 
+ return(*this);
+}
+
+OIcon& OIcon::loadFromFile(PSZ fileName)
+{
+ destroy();
+ hptr = WinLoadFileIcon(fileName, FALSE);
+
+ if (!hptr)
+   throw OPMException(OCL::error(70), 0, OException::recoverable);
+ 
+ return(*this);
+}
+
+OIcon& OIcon::destroy()
+{
+ if (hptr)
+   WinDestroyPointer(hptr);
+
+ return(*this);
+}
 
 // end of source

@@ -84,6 +84,36 @@ OString::OString(int iLength)
 }
 
 
+struct STRRES
+{
+ BYTE len;
+ PSZ  str;
+};
+
+#pragma pack()
+
+
+OString::OString(ULONG res, HMODULE mod)
+{
+ PVOID  resPtr  = NULL;
+ STRRES *str    = NULL;
+
+ if (DosGetResource(mod, RT_STRING, res / 16 + 1, &resPtr))
+   *this << "ERROR";
+ else
+   {
+    str = (STRRES*) resPtr + sizeof(USHORT);
+
+    for(ULONG i = 0; i < 15; i++)
+      {
+       str +=  atoi((PCSZ)&str->len);
+      }
+
+    DosFreeResource(resPtr);
+   }    
+}
+
+
 OString::~OString() 
 {
  delete[] text;

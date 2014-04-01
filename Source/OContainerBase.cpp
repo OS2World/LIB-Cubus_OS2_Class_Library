@@ -377,7 +377,7 @@ BOOL OContainerBase::setEmphasis(PVOID record, ULONG emphasis, BOOL set) const
  return((BOOL)WinSendMsg(hwnd, 
                          CM_SETRECORDEMPHASIS, 
                          MPFROMP(record),
-                         MPFROM2SHORT(emphasis, set)));
+                         MPFROM2SHORT(set, emphasis)));
 }
 
 

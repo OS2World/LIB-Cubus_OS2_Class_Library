@@ -11,9 +11,9 @@ LFLAGS = $(EMX_LINK)
 .\Template.EXE: \
   .\Template.obj \
   .\Container.obj \
-  $(OCL)\LIB\OCLEMXI.LIB \
+  $(OCL)\LIB\OCLEMX.LIB \
   $(MAKEDEP)
    rc -r -I E:\EMX\INCLUDE ..\Source\Template.rc 
-   gcc $(LFLAGS) .\Template.EXE .\Template.obj .\Container.obj ..\Source\Template.def ..\Source\Template.res -L$(OCL)\LIB -loclemxi -lstdcpp
+   gcc $(LFLAGS) .\Template.EXE .\Template.obj .\Container.obj ..\Source\Template.def ..\Source\Template.res -L$(OCL)\LIB -loclemx -lstdcpp
 
 !include ..\TEMPLATE.DEP

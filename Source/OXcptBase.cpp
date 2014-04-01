@@ -170,7 +170,7 @@ BOOL OXcptBase::handler(PEXCEPTIONREPORTRECORD report,
      disable = FALSE;
      break;
    case XCPT_SIGNAL:
-     msg << "Acknoledged signal: ";
+     msg << "Acknowledged signal: ";
      switch (report->ExceptionInfo[0]) 
       {
        case XCPT_SIGNAL_BREAK:

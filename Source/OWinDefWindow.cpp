@@ -89,6 +89,9 @@ MRESULT __CPP_EXPORT__ EXPENTRY OWinDefWindowProc(HWND   hwnd,
    case WM_DRAWITEM:
      return(MRESULT(OApp::OCMDTrace(hwnd, msg, mp1, mp2)));
 
+   case HM_QUERY_KEYS_HELP:
+     return(MRESULT(OApp::OCMDTrace(hwnd, msg, mp1, mp2)));
+
    case WM_CLOSE:
    case WM_DESTROY: {
      BOOL dispatched = OApp::OCMDTrace(hwnd, msg, mp1, mp2);

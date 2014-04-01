@@ -256,3 +256,22 @@ OCL0249?:
 OCL0250I: Class ORiffPlay cannot be used in VIO applications.
 OCL0251I: MMPM/2 not correctly installed. ORiffPlay suspends.
 OCL0252I: ORiffPlay can not play the sound object. %1
+OCL0253?:
+OCL0254?:
+OCL0255?:
+OCL0256?:
+OCL0257?:
+OCL0258?:
+OCL0259?:
+OCL0260I: Creation of standard file dialog failed.
+OCL0261?:
+OCL0262?:
+OCL0263?:
+OCL0264?:
+OCL0265I: Cannot open file for fuzzy search.
+OCL0266I: Paragraph too long for fuzzy search.
+OCL0267?:
+OCL0268?:
+OCL0269?:
+OCL0270?:
+

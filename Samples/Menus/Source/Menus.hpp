@@ -1,12 +1,10 @@
 // OCL Sample 
 // Menus.hpp
 
-#define OINCL_OSTRING
-#define OINCL_OXAPP
-#define OINCL_OMENU
 
 #include <ocl.hpp>
-
+#include <oxapp.hpp>
+#include <omenu.hpp>
 
 #include "..\Source\Menus.h"
 

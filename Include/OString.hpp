@@ -33,9 +33,7 @@
   #define OSTRING_INCLUDED
 
 
-#ifndef OCLOBJECT_INCLUDED
-  #include <OCLObject.hpp>
-#endif
+#include <OCLObject.hpp>
 
 
 // single text-line with unknown length
@@ -54,6 +52,7 @@ class __CPP_EXPORT__ OString
     OString           (const OString& String);
     OString           (const pOString String);
     OString           (INT iLength);
+    OString           (ULONG res, HMODULE mod);
 
     virtual
        ~OString       ();

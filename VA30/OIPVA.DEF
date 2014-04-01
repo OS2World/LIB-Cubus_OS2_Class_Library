@@ -1,0 +1,271 @@
+LIBRARY OIPVA INITINSTANCE TERMINSTANCE
+DESCRIPTION 'OIP C++ Class Library 1.50 (VACPP30) (c) 1996 by Cubus - All Rights reserved.'
+DATA MULTIPLE NONSHARED READWRITE LOADONCALL
+CODE LOADONCALL
+PROTMODE
+EXPORTS
+;From library:  E:\ocl\va30\OIPVA.lib
+  ;From object file:  E:\OCL\Source\OIP.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OIP::error(unsigned long)
+      error__3OIPFUl    @1 NONAME
+      ;OIP::MSGFILE
+      MSGFILE__3OIP    @2 NONAME
+      ;OIP::apierror(unsigned long,unsigned long)
+      apierror__3OIPFUlT1    @3 NONAME
+      ;OIP::transport
+      transport__3OIP    @4 NONAME
+      ;OIP::Version()
+      Version__3OIPFv    @5 NONAME
+      ;OIP::Version(OString&)
+      Version__3OIPFR7OString    @6 NONAME
+  ;From object file:  E:\OCL\Source\OIP_Address.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OIP_Address::OIP_Address(unsigned long)
+      __ct__11OIP_AddressFUl    @7 NONAME
+      __vft11OIP_Address9OCLObject    @8 NONAME
+      ;OIP_Address::operator=(unsigned long)
+      __as__11OIP_AddressFUl    @9 NONAME
+      ;OIP_Address::OIP_Address(unsigned char,unsigned char,unsigned char,unsigned char)
+      __ct__11OIP_AddressFUcN31    @10 NONAME
+      ;OIP_Address::Set_s_addr(unsigned char,unsigned char,unsigned char,unsigned char)
+      Set_s_addr__11OIP_AddressFUcN31    @11 NONAME
+      ;OIP_Address::Set_s_addr(char*)
+      Set_s_addr__11OIP_AddressFPc    @12 NONAME
+      ;OIP_Address::Set_s_addr(unsigned long)
+      Set_s_addr__11OIP_AddressFUl    @13 NONAME
+      ;OIP_Address::Get_s_addr()
+      Get_s_addr__11OIP_AddressFv    @14 NONAME
+      ;OIP_Address::isOfType() const
+      isOfType__11OIP_AddressCFv    @15 NONAME
+      ;OIP_Address::Get_inet_addr(char*)
+      Get_inet_addr__11OIP_AddressFPc    @16 NONAME
+      ;OIP_Address::~OIP_Address()
+      __dt__11OIP_AddressFv    @17 NONAME
+      ;OIP_Address::operator unsigned long()
+      __opUl__11OIP_AddressFv    @18 NONAME
+      ;OIP_Address::OIP_Address()
+      __ct__11OIP_AddressFv    @19 NONAME
+  ;From object file:  E:\OCL\Source\OIP_CliSocket.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OIP_CliSocket::connect(OIP_Socket*)
+      connect__13OIP_CliSocketFP10OIP_Socket    @20 NONAME
+      __vft13OIP_CliSocket9OCLObject    @21 NONAME
+      ;OIP_CliSocket::OIP_CliSocket()
+      __ct__13OIP_CliSocketFv    @22 NONAME
+      ;OIP_CliSocket::connect()
+      connect__13OIP_CliSocketFv    @23 NONAME
+      ;OIP_CliSocket::~OIP_CliSocket()
+      __dt__13OIP_CliSocketFv    @24 NONAME
+      ;OIP_CliSocket::isOfType() const
+      isOfType__13OIP_CliSocketCFv    @25 NONAME
+  ;From object file:  E:\OCL\Source\OIP_Host.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OIP_Host::Set(hostent*)
+      Set__8OIP_HostFP7hostent    @26 NONAME
+      ;OIP_Host::isOfType() const
+      isOfType__8OIP_HostCFv    @27 NONAME
+      ;OIP_Host::gethostbyaddr(char*,int,int)
+      gethostbyaddr__8OIP_HostFPciT2    @28 NONAME
+      ;OIP_Host::gethostbyname(char*)
+      gethostbyname__8OIP_HostFPc    @29 NONAME
+      __vft8OIP_Host9OCLObject    @30 NONAME
+      ;OIP_Host::~OIP_Host()
+      __dt__8OIP_HostFv    @31 NONAME
+      ;OIP_Host::operator char*()
+      __opPc__8OIP_HostFv    @32 NONAME
+      ;OIP_Host::OIP_Host()
+      __ct__8OIP_HostFv    @33 NONAME
+  ;From object file:  E:\OCL\Source\OIP_SockAddress.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft15OIP_SockAddress9OCLObject    @34 NONAME
+      ;OIP_SockAddress::operator sockaddr_in()
+      __op11sockaddr_in__15OIP_SockAddressFv    @35 NONAME
+      ;OIP_SockAddress::Getin_port()
+      Getin_port__15OIP_SockAddressFv    @36 NONAME
+      ;OIP_SockAddress::Set_sin_family(short)
+      Set_sin_family__15OIP_SockAddressFs    @37 NONAME
+      ;OIP_SockAddress::Get_sin_addr()
+      Get_sin_addr__15OIP_SockAddressFv    @38 NONAME
+      ;OIP_SockAddress::Get_inet_addr(char*)
+      Get_inet_addr__15OIP_SockAddressFPc    @39 NONAME
+      ;OIP_SockAddress::Set_sin_addr(unsigned long)
+      Set_sin_addr__15OIP_SockAddressFUl    @40 NONAME
+      ;OIP_SockAddress::~OIP_SockAddress()
+      __dt__15OIP_SockAddressFv    @41 NONAME
+      ;OIP_SockAddress::Get_sockaddr_in()
+      Get_sockaddr_in__15OIP_SockAddressFv    @42 NONAME
+      ;OIP_SockAddress::Get_sin_family()
+      Get_sin_family__15OIP_SockAddressFv    @43 NONAME
+      ;OIP_SockAddress::OIP_SockAddress()
+      __ct__15OIP_SockAddressFv    @44 NONAME
+      ;OIP_SockAddress::Set_sin_addr(char*)
+      Set_sin_addr__15OIP_SockAddressFPc    @45 NONAME
+      ;OIP_SockAddress::isOfType() const
+      isOfType__15OIP_SockAddressCFv    @46 NONAME
+      ;OIP_SockAddress::operator sockaddr_in*()
+      __opP11sockaddr_in__15OIP_SockAddressFv    @47 NONAME
+      ;OIP_SockAddress::Setin_port(unsigned short)
+      Setin_port__15OIP_SockAddressFUs    @48 NONAME
+  ;From object file:  E:\OCL\Source\OIP_Socket.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vftQ2_10OIP_Socket19OIP_SocketException9OCLObject    @49 NONAME
+      ;OIP_Socket::Gethostbyaddr(char*,int)
+      Gethostbyaddr__10OIP_SocketFPci    @50 NONAME
+      ;OIP_Socket::operator=(int)
+      __as__10OIP_SocketFi    @51 NONAME
+      ;OIP_Socket::close()
+      close__10OIP_SocketFv    @52 NONAME
+      ;OIP_Socket::OIP_SocketException::viewError()
+      viewError__Q2_10OIP_Socket19OIP_SocketExceptionFv    @53 NONAME
+      ;OIP_Socket::send(char*,int,int)
+      send__10OIP_SocketFPciT2    @54 NONAME
+      ;OIP_Socket::isOfType() const
+      isOfType__10OIP_SocketCFv    @55 NONAME
+      ;OIP_Socket::Set_sin_addr()
+      Set_sin_addr__10OIP_SocketFv    @56 NONAME
+      ;OIP_Socket::Get_sockaddr()
+      Get_sockaddr__10OIP_SocketFv    @57 NONAME
+      ;OIP_Socket::Get_sin_family()
+      Get_sin_family__10OIP_SocketFv    @58 NONAME
+      ;OIP_Socket::Get_phost()
+      Get_phost__10OIP_SocketFv    @59 NONAME
+      ;OIP_Socket::Set_sin_family(short)
+      Set_sin_family__10OIP_SocketFs    @60 NONAME
+      ;OIP_Socket::Get_inet_addr(char*)
+      Get_inet_addr__10OIP_SocketFPc    @61 NONAME
+      ;OIP_Socket::Sethostent(hostent*)
+      Sethostent__10OIP_SocketFP7hostent    @62 NONAME
+      __vft10OIP_Socket9OCLObject    @63 NONAME
+      ;OIP_Socket::Set_socket(int)
+      Set_socket__10OIP_SocketFi    @64 NONAME
+      ;OIP_Socket::OIP_SocketException::OIP_SocketException(OIP_Socket::OIP_SocketException::excepttyp,int)
+      __ct__Q2_10OIP_Socket19OIP_SocketExceptionFQ3_10OIP_Socket19OIP_SocketException9excepttypi    @65 NONAME
+      ;OIP_Socket::Getaddr_list(unsigned int)
+      Getaddr_list__10OIP_SocketFUi    @66 NONAME
+      ;OIP_Socket::sysfree()
+      sysfree__10OIP_SocketFv    @67 NONAME
+      __vttQ2_10OIP_Socket19OIP_SocketException    @68 NONAME
+      ;OIP_Socket::operator OIP_SockAddress*()
+      __opP15OIP_SockAddress__10OIP_SocketFv    @69 NONAME
+      ;OIP_Socket::operator OIP_SockAddress()
+      __op15OIP_SockAddress__10OIP_SocketFv    @70 NONAME
+      ;OIP_Socket::Getin_port()
+      Getin_port__10OIP_SocketFv    @71 NONAME
+      ;OIP_Socket::Get_socket()
+      Get_socket__10OIP_SocketFv    @72 NONAME
+      ;OIP_Socket::GetErrorCode()
+      GetErrorCode__10OIP_SocketFv    @73 NONAME
+      ;OIP_Socket::sysinit(unsigned short)
+      sysinit__10OIP_SocketFUs    @74 NONAME
+      ;OIP_Socket::Setin_port(unsigned short)
+      Setin_port__10OIP_SocketFUs    @75 NONAME
+      ;OIP_Socket::Set_address(unsigned short,char*)
+      Set_address__10OIP_SocketFUsPc    @76 NONAME
+      ;OIP_Socket::socket(int,int,int)
+      socket__10OIP_SocketFiN21    @77 NONAME
+      ;OIP_Socket::~OIP_Socket()
+      __dt__10OIP_SocketFv    @78 NONAME
+      ;OIP_Socket::Get_sin_addr()
+      Get_sin_addr__10OIP_SocketFv    @79 NONAME
+      ;OIP_Socket::OIP_Socket(hostent*)
+      __ct__10OIP_SocketFP7hostent    @80 NONAME
+      ;OIP_Socket::Gethostname(char*,unsigned int)
+      Gethostname__10OIP_SocketFPcUi    @81 NONAME
+      ;OIP_Socket::Getservbyname(char*,char*)
+      Getservbyname__10OIP_SocketFPcT1    @82 NONAME
+      ;OIP_Socket::OIP_Socket()
+      __ct__10OIP_SocketFv    @83 NONAME
+      ;OIP_Socket::recv(char*,int,int)
+      recv__10OIP_SocketFPciT2    @84 NONAME
+      ;OIP_Socket::OIP_SocketException::~OIP_SocketException()
+      __dt__Q2_10OIP_Socket19OIP_SocketExceptionFv    @85 NONAME
+      ;OIP_Socket::Gethostbyname(char*)
+      Gethostbyname__10OIP_SocketFPc    @86 NONAME
+      ;OIP_Socket::Set_sin_addr(char*)
+      Set_sin_addr__10OIP_SocketFPc    @87 NONAME
+      ;OIP_Socket::Set_sin_addr(unsigned long)
+      Set_sin_addr__10OIP_SocketFUl    @88 NONAME
+      ;OIP_Socket::operator int()
+      __opi__10OIP_SocketFv    @89 NONAME
+      ;OIP_Socket::OIP_SocketException::isOfType() const
+      isOfType__Q2_10OIP_Socket19OIP_SocketExceptionCFv    @90 NONAME
+      __vftQ2_10OIP_Socket19OIP_SocketException10OException    @91 NONAME
+      __vft10OException9OCLObject_Q2_10OIP_Socket19OIP_SocketException    @92 NONAME
+  ;From object file:  E:\OCL\Source\OIP_SrvSocket.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OIP_SrvSocket::isOfType() const
+      isOfType__13OIP_SrvSocketCFv    @93 NONAME
+      ;OIP_SrvSocket::bind()
+      bind__13OIP_SrvSocketFv    @94 NONAME
+      ;OIP_SrvSocket::accept(OIP_CliSocket*)
+      accept__13OIP_SrvSocketFP13OIP_CliSocket    @95 NONAME
+      ;OIP_SrvSocket::listen(int)
+      listen__13OIP_SrvSocketFi    @96 NONAME
+      ;OIP_SrvSocket::~OIP_SrvSocket()
+      __dt__13OIP_SrvSocketFv    @97 NONAME
+      ;OIP_SrvSocket::bind(OIP_CliSocket*)
+      bind__13OIP_SrvSocketFP13OIP_CliSocket    @98 NONAME
+      __vft13OIP_SrvSocket9OCLObject    @99 NONAME
+      ;OIP_SrvSocket::OIP_SrvSocket()
+      __ct__13OIP_SrvSocketFv    @100 NONAME
+      ;OIP_SrvSocket::accept()
+      accept__13OIP_SrvSocketFv    @101 NONAME
+  ;From object file:  E:\OCL\Source\OIP_Server.cpp
+    ;PUBDEFs (Symbols available from object file):
+      ;OIP_Server::OIP_Server()
+      __ct__10OIP_ServerFv    @102 NONAME
+      ;OIP_Server::terminate()
+      terminate__10OIP_ServerFv    @103 NONAME
+      ;OIP_Server::recv(void*,unsigned long)
+      recv__10OIP_ServerFPvUl    @104 NONAME
+      ;OIP_Server::connectMsg()
+      connectMsg__10OIP_ServerFv    @105 NONAME
+      ;OIP_Server::sendEnd()
+      sendEnd__10OIP_ServerFv    @106 NONAME
+      __vft10OIP_Server9OCLObject    @107 NONAME
+      ;OIP_Server::isOfType() const
+      isOfType__10OIP_ServerCFv    @108 NONAME
+      ;OIP_Server::disconnect()
+      disconnect__10OIP_ServerFv    @109 NONAME
+      ;OIP_Server::disconnectMsg()
+      disconnectMsg__10OIP_ServerFv    @110 NONAME
+      ;OIP_Server::send(void*,unsigned long)
+      send__10OIP_ServerFPvUl    @111 NONAME
+      ;OIP_Server::~OIP_Server()
+      __dt__10OIP_ServerFv    @112 NONAME
+      ;OIP_Server::waitForClient()
+      waitForClient__10OIP_ServerFv    @113 NONAME
+      ;OIP_Server::sendSuccess()
+      sendSuccess__10OIP_ServerFv    @114 NONAME
+      ;OIP_Server::init(unsigned short)
+      init__10OIP_ServerFUs    @115 NONAME
+  ;From object file:  E:\OCL\Source\OIP_Client.cpp
+    ;PUBDEFs (Symbols available from object file):
+      __vft10OIP_Client9OCLObject    @116 NONAME
+      ;OIP_Client::~OIP_Client()
+      __dt__10OIP_ClientFv    @117 NONAME
+      ;OIP_Client::connectMsg()
+      connectMsg__10OIP_ClientFv    @118 NONAME
+      ;OIP_Client::send(void*,unsigned long)
+      send__10OIP_ClientFPvUl    @119 NONAME
+      ;OIP_Client::OIP_Client()
+      __ct__10OIP_ClientFv    @120 NONAME
+      ;OIP_Client::recv(void*,unsigned long)
+      recv__10OIP_ClientFPvUl    @121 NONAME
+      ;OIP_Client::init()
+      init__10OIP_ClientFv    @122 NONAME
+      ;OIP_Client::terminate()
+      terminate__10OIP_ClientFv    @123 NONAME
+      ;OIP_Client::sendSuccess()
+      sendSuccess__10OIP_ClientFv    @124 NONAME
+      ;OIP_Client::sendEnd()
+      sendEnd__10OIP_ClientFv    @125 NONAME
+      ;OIP_Client::isOfType() const
+      isOfType__10OIP_ClientCFv    @126 NONAME
+      ;OIP_Client::connect(char*,unsigned short)
+      connect__10OIP_ClientFPcUs    @127 NONAME
+      ;OIP_Client::disconnect()
+      disconnect__10OIP_ClientFv    @128 NONAME
+      ;OIP_Client::disconnectMsg()
+      disconnectMsg__10OIP_ClientFv    @129 NONAME

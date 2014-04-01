@@ -25,6 +25,10 @@ ALLOBJ = \
 .\OCriticalSec.obj \
 .\ODate.obj \
 .\ODialog.obj \
+.\OStdDialog.obj \
+.\OFontDialog.obj \
+.\OFileDialog.obj \
+.\OColorDialog.obj \
 .\ODragEntryField.obj \
 .\ODynamicLib.obj \
 .\OEditor.obj \
@@ -33,6 +37,7 @@ ALLOBJ = \
 .\OFcl.obj \
 .\OFillButton.obj\
 .\OFrame.obj\
+.\OFuzzSearch.obj\
 .\OGraphicsButton.obj\
 .\OHelp.obj \
 .\OHelpPopup.obj \
@@ -138,6 +143,10 @@ LIBOBJ = \
 +.\OCriticalSec.obj \
 +.\ODate.obj \
 +.\ODialog.obj \
++.\OStdDialog.obj \
++.\OFontDialog.obj \
++.\OFileDialog.obj \
++.\OColorDialog.obj \
 +.\ODragEntryField.obj \
 +.\ODynamicLib.obj \
 +.\OEditor.obj \
@@ -146,6 +155,7 @@ LIBOBJ = \
 +.\OFcl.obj \
 +.\OFillButton.obj\
 +.\OFrame.obj\
++.\OFuzzSearch.obj \
 +.\OGraphicsButton.obj\
 +.\OHelp.obj \
 +.\OHelpPopup.obj \
@@ -229,6 +239,10 @@ METOBJ = \
 .\OCriticalSec.obj\
 .\ODate.obj\
 .\ODialog.obj\
+.\OStdDialog.obj\
+.\OFontDialog.obj\
+.\OFileDialog.obj\
+.\OColorDialog.obj\
 .\ODragEntryField.obj\
 .\ODynamicLib.obj\
 .\OEditor.obj\
@@ -237,6 +251,7 @@ METOBJ = \
 .\OFcl.obj\
 .\OFillButton.obj\
 .\OFrame.obj\
+.\OFuzzSearch.obj\
 .\OGraphicsButton.obj\
 .\OHelp.obj\
 .\OHelpPopup.obj\

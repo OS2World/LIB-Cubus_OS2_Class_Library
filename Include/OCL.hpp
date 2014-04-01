@@ -74,6 +74,8 @@
 #include <iostream.h>
 #include <fstream.h>
 
+#include <OMessage.h>
+
 #if ( defined (__BCPLUSPLUS__) || defined (__HIGHC__) )
   typedef const char *PCSZ;
 #endif

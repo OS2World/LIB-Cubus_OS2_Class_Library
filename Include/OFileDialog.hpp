@@ -1,7 +1,7 @@
 // OCL - OS/2 Class Library
 // (c) Cubus 1995
 // All Rights Reserved
-// OIcon.hpp
+// OFileDialog.hpp
 
 /*
  * Redistribution and use in source and binary forms, with or without
@@ -27,13 +27,14 @@
  * SUCH DAMAGE.
  */
 
-// $Header: W:/Projects/OCL/Include/rcs/OIcon.hpp 1.50 1996/08/11 23:47:18 B.STEIN Release $
+// $Header: W:/Projects/OCL/Include/rcs/OStatusLine.hpp 1.50 1996/08/11 23:47:31 B.STEIN Release $
 
-#ifndef OICON_INCLUDED
-  #define OICON_INCLUDED
+#ifndef OFILEDIALOG_INCLUDED
+  #define OFILEDIALOG_INCLUDED
 
-#ifndef OPICTURE_INCLUDED
-  #include <OPicture.hpp>
+
+#ifndef STDDIALOG_INCLUDED
+  #include <OStdDialog.hpp>
 #endif
 
 #ifndef OPMEXCEPTION_INCLUDED
@@ -41,43 +42,54 @@
 #endif
 
 
-typedef class OIcon *pOIcon;
+typedef class OFileDialog *pOFileDialog;
 
-
-class __CPP_EXPORT__ OIcon
-  : public OPicture
+class __CPP_EXPORT__ OFileDialog
+   : public OStdDialog
 {
- public:
-   HPOINTER             hptr;
-
-   OIcon                ();
-
-   OIcon                (const ULONG resID, 
-                         const HMODULE module);
-
-   OIcon                (const HPOINTER ptrHandle);
-
-   OIcon                (PCSZ fileName);  // any valid filename
-
-   virtual
-      ~OIcon            ();
-
-   virtual
-      PSZ isOfType      () const; 
+ protected:
+    FILEDLG  fileDialog;
+    OString  lastPath;
+    OString  lastFile;
    
-   inline
-      operator HPOINTER () const { return(hptr); }
+ public:
 
-   OIcon &load          (const ULONG resID, 
-                         const HMODULE module = NULLHANDLE),
-         &loadFromFile  (PSZ fileName),
-         &destroy       (); 
+   enum styles
+   {
+    applyButton  = FDS_APPLYBUTTON,
+    center       = FDS_CENTER,
+    custom       = FDS_CUSTOM,
+    enableFileLB = FDS_ENABLEFILELB,
+    filterUnion  = FDS_FILTERUNION,
+    helpButton   = FDS_HELPBUTTON,
+    includeEAs   = FDS_INCLUDE_EAS,
+    modeless     = FDS_MODELESS,
+    multipleSel  = FDS_MULTIPLESEL,
+    preloadVol   = FDS_PRELOAD_VOLINFO
+   };
+
+
+             OFileDialog (HWND hParent = HWND_DESKTOP,
+                          HWND hOwner  = HWND_DESKTOP);
+
+    virtual ~OFileDialog ();
+  
+    virtual PSZ
+            isOfType     () const;
+
+    
+    PSZ     open         (PSZ title,
+                          PSZ initialPath,
+                          PSZ fileMask = "*",
+                          OFileDialog::styles style = OFileDialog::center);
+
+    PSZ     saveAs      (PSZ title,
+                         PSZ initialPath,
+                         PSZ initialFileName = NULL,
+                         OFileDialog::styles style = OFileDialog::center);
+
 
 };
 
 
-
-#endif // OICON_INCLUDED
-
-
-// end of source
+#endif // OCOLORDIALOG_INCLUDED

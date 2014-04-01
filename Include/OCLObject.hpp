@@ -33,6 +33,9 @@
 #ifndef OCLOBJECT_INCLUDED
   #define OCLOBJECT_INCLUDED
 
+#ifndef OCL_HPP_INCLUDED
+  #include <ocl.hpp>
+#endif
 
 typedef class OCLObject *pOCLObject;
 

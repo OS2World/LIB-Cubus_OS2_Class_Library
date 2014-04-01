@@ -47,6 +47,10 @@
   #include <lOString.hpp>
 #endif
 
+#ifndef OFUZZSRC_INCLUDED
+  #include <OFuzzSearch.hpp>
+#endif
+
 typedef class OFcl *pOFcl;
 
 class __CPP_EXPORT__ OFcl
@@ -115,12 +119,11 @@ class __CPP_EXPORT__ OScanFcl
    : public OFcl
 {
  private:
-    PSZ             Buffer;
     OString         ToScan;
+    OString         Filename;
 
  public:
     lOString        good;
-    ifstream        file;
 
 
     OScanFcl        ();
@@ -132,7 +135,6 @@ class __CPP_EXPORT__ OScanFcl
 
     BOOL init       (PCSZ FileName, PCSZ toScan);
     void init       (PCSZ FileName);
-    void release    ();
     BOOL check      (PCSZ string);
     void checkFiles (PCSZ text);
 };

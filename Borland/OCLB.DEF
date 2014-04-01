@@ -16,1006 +16,1032 @@ IMPORTS
 ; This is OCL 1.50
 
 EXPORTS
-
-    @OCL@MSGFILE                   @987 ; ocl::msgfile
-    @ORiffPlay@$bctr$qv            @988 ; ORiffPlay::ORiffPlay()
-    @ORiffPlay@$bctr$qpc           @989 ; ORiffPlay::ORiffPlay(char*)
-    @ORiffPlay@$bctr$qr11ODynamicLib @990 ; ORiffPlay::ORiffPlay(ODynamicLib&)
-    @ORiffPlay@$bdtr$qv            @991 ; ORiffPlay::~ORiffPlay()
-    @ORiffPlay@isOfType$xqv        @992 ; ORiffPlay::isOfType() const
-    @ORiffPlay@play$qpc18ORiffPlay@PlayType @993 ; ORiffPlay::play(char*,ORiffPlay::PlayType)
-    @ORiffPlay@play$qul18ORiffPlay@RiffType18ORiffPlay@PlayType @994 ; ORiffPlay::play(unsigned long,ORiffPlay::RiffType,ORiffPla,...
-    @ORiffPlay@stop$qv             @995 ; ORiffPlay::stop()
-    @ORiffPlay@mci_pf              @996 ; ORiffPlay::mci_pf
-    @ORiffPlay@mci_pr              @997 ; ORiffPlay::mci_pr
-    @ORiffPlay@mci_err             @998 ; ORiffPlay::mci_err
-    @ORiffPlay@mciapi              @999 ; ORiffPlay::mciapi
-    @ORiffPlay@mdmapi              @1000; ORiffPlay::mdmapi
-    @ORiffPlay@resolve$qv          @1001; ORiffPlay::resolve()
-    @ORiffPlay@playWave$q18ORiffPlay@PlayType @1002; ORiffPlay::playWave(ORiffPlay::PlayType)
     @OCL@transport                 @1   ; OCL::transport
-    @OCL@Version$qv                @2   ; OCL::Version()
-    @OCL@Version$qr7OString        @3   ; OCL::Version(OString&)
-    @OCL@error$qul                 @4   ; OCL::error(unsigned long)
-    @OCL@apierror$qulul            @5   ; OCL::apierror(unsigned long,unsigned long)
-    @OCL@saveID$qpc                @6   ; OCL::saveID(char*)
-    @OCL@showDialogItem$qulpulul   @7   ; OCL::showDialogItem(unsigned long,unsigned long*,unsigned long)
-    @OCL@hideDialogItem$qulpulul   @8   ; OCL::hideDialogItem(unsigned long,unsigned long*,unsigned long)
-    @OCL@disableDialogItem$qulpululul @9   ; OCL::disableDialogItem(unsigned long,unsigned long*,unsigned long,unsigned long)
-    @OCL@disableControls$qulpulul  @10  ; OCL::disableControls(unsigned long,unsigned long*,unsigned long)
-    @OCL@enableControls$qulpulul   @11  ; OCL::enableControls(unsigned long,unsigned long*,unsigned long)
-    @OCL@hideControls$qulpulul     @12  ; OCL::hideControls(unsigned long,unsigned long*,unsigned long)
-    @OCL@showControls$qulpulul     @13  ; OCL::showControls(unsigned long,unsigned long*,unsigned long)
-    @OCL@startSession$qp10_STARTDATA @14  ; OCL::startSession(_STARTDATA*)
-    @OCLObject@vtctdt$qv           @15  ; OCLObject::vtctdt()
-    @lOString@lOStringPrint@applyToElement$xqpx7OString @16  ; lOString::lOStringPrint::applyToElement(const OString*) const
-    @lOString@$bctr$qv             @17  ; lOString::lOString()
-    @lOString@$bdtr$qv             @18  ; lOString::~lOString()
-    @lOString@isOfType$xqv         @19  ; lOString::isOfType() const
-    @lOString@$blsh$qpc            @20  ; lOString::operator <<(char*)
-    @lOString@$blsh$qr7OString     @21  ; lOString::operator <<(OString&)
-    @lOString@$blsh$qp7OString     @22  ; lOString::operator <<(OString*)
-    @lOString@print$qv             @23  ; lOString::print()
-    @O3State@$bctr$qululululululul @24  ; O3State::O3State(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @O3State@$bctr$qulr6OFrameululululul @25  ; O3State::O3State(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @O3State@$bctr$qulp6OFrameululululul @26  ; O3State::O3State(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @O3State@$bdtr$qv              @27  ; O3State::~O3State()
-    @O3State@isOfType$xqv          @28  ; O3State::isOfType() const
-    @OAuto3State@$bctr$qululululululul @29  ; OAuto3State::OAuto3State(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OAuto3State@$bctr$qulr6OFrameululululul @30  ; OAuto3State::OAuto3State(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OAuto3State@$bctr$qulp6OFrameululululul @31  ; OAuto3State::OAuto3State(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OAuto3State@$bdtr$qv          @32  ; OAuto3State::~OAuto3State()
-    @OAuto3State@isOfType$xqv      @33  ; OAuto3State::isOfType() const
-    @OAutoCheckBox@$bctr$qululululululul @34  ; OAutoCheckBox::OAutoCheckBox(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OAutoCheckBox@$bctr$qulr6OFrameululululul @35  ; OAutoCheckBox::OAutoCheckBox(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OAutoCheckBox@$bctr$qulp6OFrameululululul @36  ; OAutoCheckBox::OAutoCheckBox(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OAutoCheckBox@$bdtr$qv        @37  ; OAutoCheckBox::~OAutoCheckBox()
-    @OAutoCheckBox@isOfType$xqv    @38  ; OAutoCheckBox::isOfType() const
-    @OAutoRadioButton@$bctr$qululululululul @39  ; OAutoRadioButton::OAutoRadioButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OAutoRadioButton@$bctr$qulr6OFrameululululul @40  ; OAutoRadioButton::OAutoRadioButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OAutoRadioButton@$bctr$qulp6OFrameululululul @41  ; OAutoRadioButton::OAutoRadioButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OAutoRadioButton@$bdtr$qv     @42  ; OAutoRadioButton::~OAutoRadioButton()
-    @OAutoRadioButton@isOfType$xqv @43  ; OAutoRadioButton::isOfType() const
-    @OApp@currentOApp              @44  ; OApp::currentOApp
-    @OApp@$bctr$qul                @45  ; OApp::OApp(unsigned long)
-    @OApp@$bctr$qxulppcul          @46  ; OApp::OApp(const unsigned long,char**,unsigned long)
-    @OApp@$bdtr$qv                 @47  ; OApp::~OApp()
-    @OApp@isOfType$xqv             @48  ; OApp::isOfType() const
-    @OApp@run$qv                   @49  ; OApp::run()
-    @OApp@anchor$qv                @50  ; OApp::anchor()
-    @OApp@mqueue$qv                @51  ; OApp::mqueue()
-    @OApp@QuitPosted$qv            @52  ; OApp::QuitPosted()
-    @OApp@TasklistKill$qv          @53  ; OApp::TasklistKill()
-    @OApp@ShutdownPosted$qv        @54  ; OApp::ShutdownPosted()
-    @OApp@NullHandler$qv           @55  ; OApp::NullHandler()
-    @OApp@current$qv               @56  ; OApp::current()
-    @OApp@OCMDTrace$qxulxt1xpvxt3  @57  ; OApp::OCMDTrace(const unsigned long,const ...
-    @OApp@forceQuit$qv             @58  ; OApp::forceQuit()
-    @OApp@Shutdown$qv              @59  ; OApp::Shutdown()
-    @OApp@Reboot$qv                @60  ; OApp::Reboot()
-    @OAppBase@$bctr$qv             @61  ; OAppBase::OAppBase()
-    @OAppBase@$bctr$qxulppc        @62  ; OAppBase::OAppBase(const unsigned long,char**)
-    @OAppBase@$bdtr$qv             @63  ; OAppBase::~OAppBase()
-    @OAppBase@isOfType$xqv         @64  ; OAppBase::isOfType() const
-    @OAppBase@saveArgs$qxulppc     @65  ; OAppBase::saveArgs(const unsigned long,char**)
-    @OAppBase@initArgs$qpxc        @66  ; OAppBase::initArgs(const char*)
-    @OAppBase@SyncDisks$qv         @67  ; OAppBase::SyncDisks()
-    @OBitmap@$bctr$qv              @68  ; OBitmap::OBitmap()
-    @OBitmap@$bctr$qxulxt1xt1xt1xt1 @69  ; OBitmap::OBitmap(const unsigned long,const ...
-    @OBitmap@$bctr$qxul            @70  ; OBitmap::OBitmap(const unsigned long)
-    @OBitmap@$bctr$qxulpxc         @71  ; OBitmap::OBitmap(const unsigned long,const char*)
-    @OBitmap@$bdtr$qv              @72  ; OBitmap::~OBitmap()
-    @OBitmap@isOfType$xqv          @73  ; OBitmap::isOfType() const
-    @OBook@Assoc$qp9OBookPagep17_PAGESELECTNOTIFY @74  ; OBook::Assoc(OBookPage*,_PAGESELECTNOTIFY*)
-    @OBook@gSS$qpxc                @75  ; OBook::gSS(const char*)
-    @OBook@NBError$qpc             @76  ; OBook::NBError(char*)
-    @OBook@sNBP$qp17_PAGESELECTNOTIFY @77  ; OBook::sNBP(_PAGESELECTNOTIFY*)
-    @OBook@cNbk$qv                 @78  ; OBook::cNbk()
-    @OBook@sP$qp9OBookPage         @79  ; OBook::sP(OBookPage*)
-    @OBook@$bctr$qxulxt1xt1        @80  ; OBook::OBook(const unsigned long,const ...
-    @OBook@$bctr$qxulrx6OFramext1  @81  ; OBook::OBook(const unsigned long,const OFrame&,const ...
-    @OBook@$bctr$qxulxp6OFramext1  @82  ; OBook::OBook(const unsigned long,const OFrame*,const ...
-    @OBook@$bdtr$qv                @83  ; OBook::~OBook()
-    @OBook@isOfType$xqv            @84  ; OBook::isOfType() const
-    @OBook@createBook$qpcxulxt2xt2 @85  ; OBook::createBook(char*,const unsigned long,const ...
-    @OBook@setFramePos$qv          @86  ; OBook::setFramePos()
-    @OBook@setSizePosFrame$qxul4_SWPxt1 @87  ; OBook::setSizePosFrame(const unsigned long,_SWP,const ...
-    @OBook@addPages$qp19%OList$t9OBookPage% @88  ; OBook::addPages(OList<OBookPage>*)
-    @OBook@setTabDimensions$qv     @89  ; OBook::setTabDimensions()
-    @OBook@OCommand$qulpvt2        @90  ; OBook::OCommand(unsigned long,void*,void*)
-    @OBookPage@$bctr$qpct1ulululus @91  ; OBookPage::OBookPage(char*,char*,unsigned long,unsigned long,unsigned long,unsigned short)
-    @OBookPage@$bdtr$qv            @92  ; OBookPage::~OBookPage()
-    @OBookPage@isOfType$xqv        @93  ; OBookPage::isOfType() const
-    @OBookPage@OCommand$qulpvt2    @94  ; OBookPage::OCommand(unsigned long,void*,void*)
-    @OBuffer@$bctr$qxulxt1         @95  ; OBuffer::OBuffer(const unsigned long,const ...
-    @OBuffer@$bdtr$qv              @96  ; OBuffer::~OBuffer()
-    @OBuffer@isOfType$xqv          @97  ; OBuffer::isOfType() const
-    @OBuffer@commit$qxul           @98  ; OBuffer::commit(const unsigned long)
-    @OBuffer@decommit$qxul         @99  ; OBuffer::decommit(const unsigned long)
-    @OBuffer@freeBuffer$qv         @100 ; OBuffer::freeBuffer()
-    @OBuffer@allocated$qv          @101 ; OBuffer::allocated()
-    @OBuffer@committed$qv          @102 ; OBuffer::committed()
-    @OBuffer@getPtr$qv             @103 ; OBuffer::getPtr()
-    @OButton@$bctr$qululululululul @104 ; OButton::OButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OButton@$bctr$qulr6OFrameululululul @105 ; OButton::OButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OButton@$bctr$qulp6OFrameululululul @106 ; OButton::OButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OButton@$bdtr$qv              @107 ; OButton::~OButton()
-    @OButton@isOfType$xqv          @108 ; OButton::isOfType() const
-    @OButton@createButton$qv       @109 ; OButton::createButton()
-    @OButton@queryState$qv         @110 ; OButton::queryState()
-    @OButton@isChecked$qv          @111 ; OButton::isChecked()
-    @OButton@isHilited$qv          @112 ; OButton::isHilited()
-    @OButton@check$qv              @113 ; OButton::check()
-    @OButton@uncheck$qv            @114 ; OButton::uncheck()
-    @OButton@setState$qul          @115 ; OButton::setState(unsigned long)
-    @OButton@setDefault$qul        @116 ; OButton::setDefault(unsigned long)
-    @OButton@setHilite$qul         @117 ; OButton::setHilite(unsigned long)
-    @OButton@click$qul             @118 ; OButton::click(unsigned long)
-    @OButtonBar@initButtonBarDefaults$qv @119 ; OButtonBar::initButtonBarDefaults()
-    @OButtonBar@$bctr$qxulxt1xt1   @120 ; OButtonBar::OButtonBar(const unsigned long,const ...
-    @OButtonBar@$bctr$qxulrx6OFramext1 @121 ; OButtonBar::OButtonBar(const unsigned long,const OFrame&,const ...
-    @OButtonBar@$bctr$qxulxp6OFramext1 @122 ; OButtonBar::OButtonBar(const unsigned long,const OFrame*,const ...
-    @OButtonBar@$bdtr$qv           @123 ; OButtonBar::~OButtonBar()
-    @OButtonBar@isOfType$xqv       @124 ; OButtonBar::isOfType() const
-    @OButtonBar@createButtonBar$qv @125 ; OButtonBar::createButtonBar()
-    @OButtonBar@setButtonDimensions$qxulxt1 @126 ; OButtonBar::setButtonDimensions(const unsigned long,const ...
-    @OButtonBar@setOrientation$qxul @127 ; OButtonBar::setOrientation(const unsigned long)
-    @OButtonBar@setPicSize$qxul    @128 ; OButtonBar::setPicSize(const unsigned long)
-    @OButtonBar@setDrawStyle$qxul  @129 ; OButtonBar::setDrawStyle(const unsigned long)
-    @OButtonBar@setupButtons$qv    @130 ; OButtonBar::setupButtons()
-    @OButtonBar@destroyButtons$qv  @131 ; OButtonBar::destroyButtons()
-    @OButtonBar@enableButtons$qv   @132 ; OButtonBar::enableButtons()
-    @OButtonBar@disableButtons$qv  @133 ; OButtonBar::disableButtons()
-    @OButtonBar@requestHelpText$qxulxt1 @134 ; OButtonBar::requestHelpText(const unsigned long,const ...
-    @OButtonBar@requestHelpText$qv @135 ; OButtonBar::requestHelpText()
-    @OButtonBar@OCommand$qulpvt2   @136 ; OButtonBar::OCommand(unsigned long,void*,void*)
-    @OCheckBox@$bctr$qululululululul @137 ; OCheckBox::OCheckBox(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OCheckBox@$bctr$qulr6OFrameululululul @138 ; OCheckBox::OCheckBox(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OCheckBox@$bctr$qulp6OFrameululululul @139 ; OCheckBox::OCheckBox(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OCheckBox@$bdtr$qv            @140 ; OCheckBox::~OCheckBox()
-    @OCheckBox@isOfType$xqv        @141 ; OCheckBox::isOfType() const
-    @OCircSlider@$bctr$qxulxt1xt1xt1xt1 @142 ; OCircSlider::OCircSlider(const unsigned long,const ...
-    @OCircSlider@$bctr$qxulrx6OFramext1xt1xt1 @143 ; OCircSlider::OCircSlider(const unsigned long,const OFrame&,const ...
-    @OCircSlider@$bctr$qxulxp6OFramext1xt1xt1 @144 ; OCircSlider::OCircSlider(const unsigned long,const OFrame*,const ...
-    @OCircSlider@$bdtr$qv          @145 ; OCircSlider::~OCircSlider()
-    @OCircSlider@isOfType$xqv      @146 ; OCircSlider::isOfType() const
-    @OCircSlider@createCircSlider$qxsxt1xt1xt1 @147 ; OCircSlider::createCircSlider(const short,const ...
-    @OCollection@_getFirst$qv      @148 ; OCollection::_getFirst()
-    @OCollection@_getLast$qv       @149 ; OCollection::_getLast()
-    @OCollection@_getNext$qv       @150 ; OCollection::_getNext()
-    @OCollection@_getNext$qpv      @151 ; OCollection::_getNext(void*)
-    @OCollection@_getPrev$qv       @152 ; OCollection::_getPrev()
-    @OCollection@_getPrev$qpv      @153 ; OCollection::_getPrev(void*)
-    @OCollection@_getItem$qul      @154 ; OCollection::_getItem(unsigned long)
-    @OCollection@_getNextListItem$qpv @155 ; OCollection::_getNextListItem(void*)
-    @OCollection@_getPrevListItem$qpv @156 ; OCollection::_getPrevListItem(void*)
-    @OCollection@$bctr$qul         @157 ; OCollection::OCollection(unsigned long)
-    @OCollection@$bdtr$qv          @158 ; OCollection::~OCollection()
-    @OCollection@isOfType$xqv      @159 ; OCollection::isOfType() const
-    @OCollection@isCopyCollection$xqv @160 ; OCollection::isCopyCollection() const
-    @OCollection@isEmpty$xqv       @161 ; OCollection::isEmpty() const
-    @OCollection@numberOfElements$xqv @162 ; OCollection::numberOfElements() const
-    @OCollection@rewind$qv         @163 ; OCollection::rewind()
-    @OCollection@init$qv           @164 ; OCollection::init()
-    @OCollection@reset$qv          @165 ; OCollection::reset()
-    @OCollection@addFirst$qpv      @166 ; OCollection::addFirst(void*)
-    @OCollection@addLast$qpv       @167 ; OCollection::addLast(void*)
-    @OCollection@addAfter$qpvt1    @168 ; OCollection::addAfter(void*,void*)
-    @OCollection@addAfter$qp14%OListItem$tv%pv @169 ; OCollection::addAfter(OListItem<void>*,void*)
-    @OCollection@remove$qpv        @170 ; OCollection::remove(void*)
-    @OCollection@del$qpv           @171 ; OCollection::del(void*)
-    @OCommandHandler@$bctr$qv      @172 ; OCommandHandler::OCommandHandler()
-    @OCommandHandler@$bdtr$qv      @173 ; OCommandHandler::~OCommandHandler()
-    @OCommandHandler@isOfType$xqv  @174 ; OCommandHandler::isOfType() const
-    @OCommandHandler@OCommand$qulpvt2 @175 ; OCommandHandler::OCommand(unsigned long,void*,void*)
-    @OContainerBase@$bctr$qxulxt1xt1xt1 @176 ; OContainerBase::OContainerBase(const unsigned long,const ...
-    @OContainerBase@$bctr$qxulrx6OFramext1xt1 @177 ; OContainerBase::OContainerBase(const unsigned long,const OFrame&,const ...
-    @OContainerBase@$bctr$qxulxp6OFramext1xt1 @178 ; OContainerBase::OContainerBase(const unsigned long,const OFrame*,const ...
-    @OContainerBase@$bdtr$qv       @179 ; OContainerBase::~OContainerBase()
-    @OContainerBase@isOfType$xqv   @180 ; OContainerBase::isOfType() const
-    @OContainerBase@createContainer$qv @181 ; OContainerBase::createContainer()
-    @OContainerBase@inherit$qxul   @182 ; OContainerBase::inherit(const unsigned long)
-    @OContainerBase@insertDetailInfo$xqp10_FIELDINFOp16_FIELDINFOINSERT @183 ; OContainerBase::insertDetailInfo(_FIELDINFO*,_FIELDINFOINSERT*) const
-    @OContainerBase@insertRecord$xqpvp13_RECORDINSERT @184 ; OContainerBase::insertRecord(void*,_RECORDINSERT*) const
-    @OContainerBase@freeDetails$qv @185 ; OContainerBase::freeDetails()
-    @OContainerBase@freeItems$qv   @186 ; OContainerBase::freeItems()
-    @OContainerBase@freeContainer$qv @187 ; OContainerBase::freeContainer()
-    @OContainerBase@freeDetailInfo$xqp10_FIELDINFOul @188 ; OContainerBase::freeDetailInfo(_FIELDINFO*,unsigned long) const
-    @OContainerBase@freeRecord$xqpvul @189 ; OContainerBase::freeRecord(void*,unsigned long) const
-    @OContainerBase@eraseRecord$xqpv @190 ; OContainerBase::eraseRecord(void*) const
-    @OContainerBase@removeDetailInfo$xqp10_FIELDINFOulul @191 ; OContainerBase::removeDetailInfo(_FIELDINFO*,unsigned long,unsigned long) const
-    @OContainerBase@removeRecord$xqpvulul @192 ; OContainerBase::removeRecord(void*,unsigned long,unsigned long) const
-    @OContainerBase@queryCnrInfo$xqv @193 ; OContainerBase::queryCnrInfo() const
-    @OContainerBase@setView$qul    @194 ; OContainerBase::setView(unsigned long)
-    @OContainerBase@setTitle$qpc   @195 ; OContainerBase::setTitle(char*)
-    @OContainerBase@setCnrInfo$xqul @196 ; OContainerBase::setCnrInfo(unsigned long) const
-    @OContainerBase@setEmphasis$xqpvulul @197 ; OContainerBase::setEmphasis(void*,unsigned long,unsigned long) const
-    @OContainerBase@arrangeRecords$xqv @198 ; OContainerBase::arrangeRecords() const
-    @OContainerBase@collapseTree$xqpv @199 ; OContainerBase::collapseTree(void*) const
-    @OContainerBase@expandTree$xqpv @200 ; OContainerBase::expandTree(void*) const
-    @OContainerBase@openEdit$xqp12_CNREDITDATA @201 ; OContainerBase::openEdit(_CNREDITDATA*) const
-    @OContainerBase@closeEdit$xqv  @202 ; OContainerBase::closeEdit() const
-    @OContainerBase@invalidateDetails$xqv @203 ; OContainerBase::invalidateDetails() const
-    @OContainerBase@invalidateRecord$xqpvulul @204 ; OContainerBase::invalidateRecord(void*,unsigned long,unsigned long) const
-    @OContainerBase@filter$xqpqv$ipv @205 ; OContainerBase::filter(int(*)(),void*) const
-    @OContainerBase@_allocRecords$xqulul @206 ; OContainerBase::_allocRecords(unsigned long,unsigned long) const
-    @OContainerBase@_queryRecord$xqpvulul @207 ; OContainerBase::_queryRecord(void*,unsigned long,unsigned long) const
-    @OContainerBase@_queryEmphasis$xqpvul @208 ; OContainerBase::_queryEmphasis(void*,unsigned long) const
-    @OContainerBase@allocDetailFields$xqul @209 ; OContainerBase::allocDetailFields(unsigned long) const
-    @OContainerBase@queryDetailInfo$xqp10_FIELDINFOul @210 ; OContainerBase::queryDetailInfo(_FIELDINFO*,unsigned long) const
-    @OCreate@CreateBook$qv         @211 ; OCreate::CreateBook()
-    @OCreate@CreateExe$qv          @212 ; OCreate::CreateExe()
-    @OCreate@CreateDoc$qv          @213 ; OCreate::CreateDoc()
-    @OCreate@is$qpxc               @214 ; OCreate::is(const char*)
-    @OCreate@$bctr$qv              @215 ; OCreate::OCreate()
-    @OCreate@$bdtr$qv              @216 ; OCreate::~OCreate()
-    @OCreate@isOfType$xqv          @217 ; OCreate::isOfType() const
-    @OCreate@Create$qv             @218 ; OCreate::Create()
-    @OCriticalSec@$bctr$qul        @219 ; OCriticalSec::OCriticalSec(unsigned long)
-    @OCriticalSec@$bdtr$qv         @220 ; OCriticalSec::~OCriticalSec()
-    @OCriticalSec@isOfType$xqv     @221 ; OCriticalSec::isOfType() const
-    @OCriticalSec@enter$qv         @222 ; OCriticalSec::enter()
-    @OCriticalSec@exit$qv          @223 ; OCriticalSec::exit()
-    @ODate@init$q11ODate@Monthii   @224 ; ODate::init(ODate::Month,int)
-    @ODate@calculate$qv            @225 ; ODate::calculate()
-    @ODate@$bctr$qv                @226 ; ODate::ODate()
-    @ODate@$bctr$q11ODate@Monthii  @227 ; ODate::ODate(ODate::Month,int)
-    @ODate@$bctr$qi11ODate@Monthi  @228 ; ODate::ODate(int,ODate::Month)
-    @ODate@$bctr$qii               @229 ; ODate::ODate(int,int)
-    @ODate@$bctr$qrx5ODate         @230 ; ODate::ODate(const ODate&)
-    @ODate@$bctr$qul               @231 ; ODate::ODate(unsigned long)
-    @ODate@$bctr$qrx6_CDATE        @232 ; ODate::ODate(const _CDATE&)
-    @ODate@$bdtr$qv                @233 ; ODate::~ODate()
-    @ODate@isOfType$xqv            @234 ; ODate::isOfType() const
-    @ODate@today$qv                @235 ; ODate::today()
-    @ODate@now$qv                  @236 ; ODate::now()
-    @ODate@asString$xq16ODate@DateFormat @237 ; ODate::asString(ODate::DateFormat) const
-    @ODate@asString$xqpxc          @238 ; ODate::asString(const char*) const
-    @ODate@dayOfWeek$xqv           @239 ; ODate::dayOfWeek() const
-    @ODate@dayName$xqv             @240 ; ODate::dayName() const
-    @ODate@dayOfMonth$xqv          @241 ; ODate::dayOfMonth() const
-    @ODate@dayOfYear$xqv           @242 ; ODate::dayOfYear() const
-    @ODate@monthOfYear$xqv         @243 ; ODate::monthOfYear() const
-    @ODate@monthName$xqv           @244 ; ODate::monthName() const
-    @ODate@year$xqv                @245 ; ODate::year() const
-    @ODate@julianDate$xqv          @246 ; ODate::julianDate() const
-    @ODate@asCDATE$xqv             @247 ; ODate::asCDATE() const
-    @ODate@$beql$xqrx5ODate        @248 ; ODate::operator ==(const ODate&) const
-    @ODate@$bneq$xqrx5ODate        @249 ; ODate::operator !=(const ODate&) const
-    @ODate@$blss$xqrx5ODate        @250 ; ODate::operator <(const ODate&) const
-    @ODate@$bleq$xqrx5ODate        @251 ; ODate::operator <=(const ODate&) const
-    @ODate@$bgtr$xqrx5ODate        @252 ; ODate::operator >(const ODate&) const
-    @ODate@$bgeq$xqrx5ODate        @253 ; ODate::operator >=(const ODate&) const
-    @ODate@$badd$xqi               @254 ; ODate::operator +(int) const
-    @ODate@$bsub$xqi               @255 ; ODate::operator -(int) const
-    @ODate@$brplu$qi               @256 ; ODate::operator +=(int)
-    @ODate@$brmin$qi               @257 ; ODate::operator -=(int)
-    @ODate@$bsub$xqrx5ODate        @258 ; ODate::operator -(const ODate&) const
-    @ODate@dayName$q15ODate@DayOfWeek @259 ; ODate::dayName(ODate::DayOfWeek)
-    @ODate@monthName$q11ODate@Month @260 ; ODate::monthName(ODate::Month)
-    @ODate@daysInMonth$q11ODate@Monthi @261 ; ODate::daysInMonth(ODate::Month)
-    @ODate@daysInYear$qi           @262 ; ODate::daysInYear(int)
-    @ODate@isLeapYear$qi           @263 ; ODate::isLeapYear(int)
-    @ODate@isValid$q11ODate@Monthii @264 ; ODate::isValid(ODate::Month,int)
-    @ODate@isValid$qi11ODate@Monthi @265 ; ODate::isValid(int,ODate::Month)
-    @ODate@isValid$qii             @266 ; ODate::isValid(int,int)
-    @ODate@julianToMDY$qul         @267 ; ODate::julianToMDY(unsigned long)
-    @ODate@DYToMDY$qii             @268 ; ODate::DYToMDY(int,int)
-    @ODate@MDYToJulian$q9ODate@MDY @269 ; ODate::MDYToJulian(ODate::MDY)
-    @ODialog@$bctr$qxul            @270 ; ODialog::ODialog(const unsigned long)
-    @ODialog@$bctr$qxulxt1xt1      @271 ; ODialog::ODialog(const unsigned long,const ...
-    @ODialog@$bctr$qxulxt1xt1xt1   @272 ; ODialog::ODialog(const unsigned long,const ...
-    @ODialog@$bdtr$qv              @273 ; ODialog::~ODialog()
-    @ODialog@isOfType$xqv          @274 ; ODialog::isOfType() const
-    @ODialog@createDlg$qv          @275 ; ODialog::createDlg()
-    @ODialog@showDlg$qv            @276 ; ODialog::showDlg()
-    @ODialog@dismissDlg$qul        @277 ; ODialog::dismissDlg(unsigned long)
-    @ODialog@hideDlg$qv            @278 ; ODialog::hideDlg()
-    @ODialog@destroyDlg$qv         @279 ; ODialog::destroyDlg()
-    @ODialog@centerDlg$qxul        @280 ; ODialog::centerDlg(const unsigned long)
-    @ODialog@showDlgModal$qv       @281 ; ODialog::showDlgModal()
-    @ODragEntryField@$bctr$qxulxt1xt1xt1 @282 ; ODragEntryField::ODragEntryField(const unsigned long,const ...
-    @ODragEntryField@$bctr$qxulrx6OFramext1xt1 @283 ; ODragEntryField::ODragEntryField(const unsigned long,const OFrame&,const ...
-    @ODragEntryField@$bctr$qxulxp6OFramext1xt1 @284 ; ODragEntryField::ODragEntryField(const unsigned long,const OFrame*,const ...
-    @ODragEntryField@$bdtr$qv      @285 ; ODragEntryField::~ODragEntryField()
-    @ODragEntryField@createEntryField$qxulxt1xt1xt1 @286 ; ODragEntryField::createEntryField(const unsigned long,const ...
-    @ODragEntryField@inherit$qxul  @287 ; ODragEntryField::inherit(const unsigned long)
-    @ODragEntryField@EFDefaultCall$qulpvt2 @288 ; ODragEntryField::EFDefaultCall(unsigned long,void*,void*)
-    @ODragEntryField@isOfType$xqv  @289 ; ODragEntryField::isOfType() const
-    @ODragEntryField@OCommand$qulpvt2 @290 ; ODragEntryField::OCommand(unsigned long,void*,void*)
-    @ODynamicLib@$bctr$qul         @291 ; ODynamicLib::ODynamicLib(unsigned long)
-    @ODynamicLib@$bctr$qpxc        @292 ; ODynamicLib::ODynamicLib(const char*)
-    @ODynamicLib@$bdtr$qv          @293 ; ODynamicLib::~ODynamicLib()
-    @ODynamicLib@isOfType$xqv      @294 ; ODynamicLib::isOfType() const
-    @ODynamicLib@getLibHandle$qv   @295 ; ODynamicLib::getLibHandle()
-    @ODynamicLib@queryModuleName$qv @296 ; ODynamicLib::queryModuleName()
-    @ODynamicLib@setLibHandle$qul  @297 ; ODynamicLib::setLibHandle(unsigned long)
-    @ODynamicLib@freeModule$qv     @298 ; ODynamicLib::freeModule()
-    @ODynamicLib@freeResource$qpv  @299 ; ODynamicLib::freeResource(void*)
-    @ODynamicLib@queryFn$qul       @300 ; ODynamicLib::queryFn(unsigned long)
-    @ODynamicLib@queryFn$qpxc      @301 ; ODynamicLib::queryFn(const char*)
-    @ODynamicLib@queryFnType$qul   @302 ; ODynamicLib::queryFnType(unsigned long)
-    @ODynamicLib@queryFnType$qpxc  @303 ; ODynamicLib::queryFnType(const char*)
-    @ODynamicLib@queryAppType$qv   @304 ; ODynamicLib::queryAppType()
-    @ODynamicLib@queryResourceSize$qulul @305 ; ODynamicLib::queryResourceSize(unsigned long,unsigned long)
-    @ODynamicLib@getResource$qulul @306 ; ODynamicLib::getResource(unsigned long,unsigned long)
-    @OEditor@$bctr$qxulxt1xt1      @307 ; OEditor::OEditor(const unsigned long,const ...
-    @OEditor@$bctr$qxulxp6OFramext1 @308 ; OEditor::OEditor(const unsigned long,const OFrame*,const ...
-    @OEditor@$bctr$qxulrx6OFramext1 @309 ; OEditor::OEditor(const unsigned long,const OFrame&,const ...
-    @OEditor@$bdtr$qv              @310 ; OEditor::~OEditor()
-    @OEditor@isOfType$xqv          @311 ; OEditor::isOfType() const
-    @OEditor@loadFile$qv           @312 ; OEditor::loadFile()
-    @OEditor@saveFile$qv           @313 ; OEditor::saveFile()
-    @OEditor@saveFileAs$qv         @314 ; OEditor::saveFileAs()
-    @OEntryField@$bctr$qxulxt1xt1xt1 @315 ; OEntryField::OEntryField(const unsigned long,const ...
-    @OEntryField@$bctr$qxulrx6OFramext1xt1 @316 ; OEntryField::OEntryField(const unsigned long,const OFrame&,const ...
-    @OEntryField@$bctr$qxulxp6OFramext1xt1 @317 ; OEntryField::OEntryField(const unsigned long,const OFrame*,const ...
-    @OEntryField@$bdtr$qv          @318 ; OEntryField::~OEntryField()
-    @OEntryField@isOfType$xqv      @319 ; OEntryField::isOfType() const
-    @OEntryField@createEntryField$qxulxt1xt1xt1 @320 ; OEntryField::createEntryField(const unsigned long,const ...
-    @OEntryField@inherit$qxul      @321 ; OEntryField::inherit(const unsigned long)
-    @OEntryField@getText$qr7OString @322 ; OEntryField::getText(OString&)
-    @OEntryField@setText$qpxc      @323 ; OEntryField::setText(const char*)
-    @OEntryField@cutText$qv        @324 ; OEntryField::cutText()
-    @OEntryField@copyText$qv       @325 ; OEntryField::copyText()
-    @OEntryField@pasteText$qv      @326 ; OEntryField::pasteText()
-    @OEntryField@clearText$qv      @327 ; OEntryField::clearText()
-    @OEntryField@queryChanged$qv   @328 ; OEntryField::queryChanged()
-    @OEntryField@queryRDOnly$qv    @329 ; OEntryField::queryRDOnly()
-    @OEntryField@querySelection$qrust1 @330 ; OEntryField::querySelection(unsigned short&,unsigned short&)
-    @OEntryField@setFirstChar$qxus @331 ; OEntryField::setFirstChar(const unsigned short)
-    @OEntryField@setInsertMode$qxul @332 ; OEntryField::setInsertMode(const unsigned long)
-    @OEntryField@setRDOnly$qxul    @333 ; OEntryField::setRDOnly(const unsigned long)
-    @OEntryField@setSelection$qxusxt1 @334 ; OEntryField::setSelection(const unsigned short,const ...
-    @OEntryField@setTextLimit$qxus @335 ; OEntryField::setTextLimit(const unsigned short)
-    @OEntryField@queryFirstChar$qv @336 ; OEntryField::queryFirstChar()
-    @OException@$bctr$qxpcxulxt2xt1xt2 @337 ; OException::OException(const char*,const unsigned long,const ...
-    @OException@$bctr$qrx7OStringxulxt2xpcxt2 @338 ; OException::OException(const OString&,const unsigned long,const ...
-    @OException@$bctr$qrx10OException @339 ; OException::OException(const OException&)
-    @OException@$bdtr$qv           @340 ; OException::~OException()
-    @OException@isOfType$xqv       @341 ; OException::isOfType() const
-    @OFcl@setupFilebuf$qv          @342 ; OFcl::setupFilebuf()
-    @OFcl@finddirs$qpc             @343 ; OFcl::finddirs(char*)
-    @OFcl@finddrives$qpxc          @344 ; OFcl::finddrives(const char*)
-    @OFcl@findfiles$qp21%OListItem$t7OString% @345 ; OFcl::findfiles(OListItem<OString>*)
-    @OFcl@addfiles$qv              @346 ; OFcl::addfiles()
-    @OFcl@adddirs$qpxc             @347 ; OFcl::adddirs(const char*)
-    @OFcl@hasDate$qp13_FILEFINDBUF3 @348 ; OFcl::hasDate(_FILEFINDBUF3*)
-    @OFcl@hasTime$qp13_FILEFINDBUF3 @349 ; OFcl::hasTime(_FILEFINDBUF3*)
-    @OFcl@$bctr$qv                 @350 ; OFcl::OFcl()
-    @OFcl@$bdtr$qv                 @351 ; OFcl::~OFcl()
-    @OFcl@isOfType$xqv             @352 ; OFcl::isOfType() const
-    @OFcl@fclinit$qv               @353 ; OFcl::fclinit()
-    @OFcl@setCheck$qulul           @354 ; OFcl::setCheck(unsigned long,unsigned long)
-    @OFcl@collect$qpxculul         @355 ; OFcl::collect(const char*,unsigned long,unsigned long)
-    @OFcl@fclstop$qv               @356 ; OFcl::fclstop()
-    @OFillButton@$bctr$qv          @357 ; OFillButton::OFillButton()
-    @OFillButton@drawButton$qululululul @358 ; OFillButton::drawButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OFillButton@$bdtr$qv          @359 ; OFillButton::~OFillButton()
-    @OFillButton@isOfType$xqv      @360 ; OFillButton::isOfType() const
-    @OFrame@$bctr$qxulxt1xt1       @361 ; OFrame::OFrame(const unsigned long,const ...
-    @OFrame@$bdtr$qv               @362 ; OFrame::~OFrame()
-    @OFrame@isOfType$xqv           @363 ; OFrame::isOfType() const
-    @OFrame@createFrame$qpc        @364 ; OFrame::createFrame(char*)
-    @OFrame@setSizePosFrame$qxul4_SWPxt1 @365 ; OFrame::setSizePosFrame(const unsigned long,_SWP,const ...
-    @OFrame@trackFrame$qv          @366 ; OFrame::trackFrame()
-    @OFrame@showFrame$qv           @367 ; OFrame::showFrame()
-    @OFrame@hideFrame$qv           @368 ; OFrame::hideFrame()
-    @OFrame@centerFrame$qv         @369 ; OFrame::centerFrame()
-    @OFrame@postQuit$qv            @370 ; OFrame::postQuit()
-    @OFrame@destroyFrame$qv        @371 ; OFrame::destroyFrame()
-    @OFrame@setWindowText$qpxc     @372 ; OFrame::setWindowText(const char*)
-    @OFrame@OCommand$qulpvt2       @373 ; OFrame::OCommand(unsigned long,void*,void*)
-    @OGraphicsButton@$bctr$qululp5OIconpculululul @374 ; OGraphicsButton::OGraphicsButton(unsigned long,unsigned long,OIcon*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OGraphicsButton@$bctr$qululp7OBitmappculululul @375 ; OGraphicsButton::OGraphicsButton(unsigned long,unsigned long,OBitmap*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OGraphicsButton@$bctr$qulr6OFramep5OIconpculululul @376 ; OGraphicsButton::OGraphicsButton(unsigned long,OFrame&,OIcon*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OGraphicsButton@$bctr$qulr6OFramep7OBitmappculululul @377 ; OGraphicsButton::OGraphicsButton(unsigned long,OFrame&,OBitmap*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OGraphicsButton@$bctr$qulp6OFramep5OIconpculululul @378 ; OGraphicsButton::OGraphicsButton(unsigned long,OFrame*,OIcon*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OGraphicsButton@$bctr$qulp6OFramep7OBitmappculululul @379 ; OGraphicsButton::OGraphicsButton(unsigned long,OFrame*,OBitmap*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OGraphicsButton@$bdtr$qv      @380 ; OGraphicsButton::~OGraphicsButton()
-    @OGraphicsButton@isOfType$xqv  @381 ; OGraphicsButton::isOfType() const
-    @OGraphicsButton@UBDefaultCall$qulpvt2 @382 ; OGraphicsButton::UBDefaultCall(unsigned long,void*,void*)
-    @OGraphicsButton@createButton$qv @383 ; OGraphicsButton::createButton()
-    @OGraphicsButton@drawButton$qul @384 ; OGraphicsButton::drawButton(unsigned long)
-    @OGraphicsButton@OCommand$qulpvt2 @385 ; OGraphicsButton::OCommand(unsigned long,void*,void*)
-    @OHelp@$bctr$qxulxt1           @386 ; OHelp::OHelp(const unsigned long,const ...
-    @OHelp@$bdtr$qv                @387 ; OHelp::~OHelp()
-    @OHelp@isOfType$xqv            @388 ; OHelp::isOfType() const
-    @OHelp@initializeHelp$qpct1xul @389 ; OHelp::initializeHelp(char*,char*,const unsigned long)
-    @OHelp@terminateHelp$qv        @390 ; OHelp::terminateHelp()
-    @OHelp@helpRequest$qxul        @391 ; OHelp::helpRequest(const unsigned long)
-    @OHelpPopup@$bctr$qv           @392 ; OHelpPopup::OHelpPopup()
-    @OHelpPopup@$bdtr$qv           @393 ; OHelpPopup::~OHelpPopup()
-    @OHelpPopup@isOfType$xqv       @394 ; OHelpPopup::isOfType() const
-    @OHelpPopup@createStatusLine$qv @395 ; OHelpPopup::createStatusLine()
-    @OHelpPopup@showTimeout$xqv    @396 ; OHelpPopup::showTimeout() const
-    @OHelpPopup@setPopupTimeout$qul @397 ; OHelpPopup::setPopupTimeout(unsigned long)
-    @OHelpPopup@startPopupTimer$qv @398 ; OHelpPopup::startPopupTimer()
-    @OHelpPopup@stopPopupTimer$qv  @399 ; OHelpPopup::stopPopupTimer()
-    @OHelpPopup@timePopup$qpxc     @400 ; OHelpPopup::timePopup(const char*)
-    @OHelpPopup@showPopup$qpxc     @401 ; OHelpPopup::showPopup(const char*)
-    @OHelpPopup@hidePopup$qv       @402 ; OHelpPopup::hidePopup()
-    @OHelpPopup@OCommand$qulpvt2   @403 ; OHelpPopup::OCommand(unsigned long,void*,void*)
-    @OIcon@$bctr$qv                @404 ; OIcon::OIcon()
-    @OIcon@$bctr$qxulxt1           @405 ; OIcon::OIcon(const unsigned long,const ...
-    @OIcon@$bctr$qxul              @406 ; OIcon::OIcon(const unsigned long)
-    @OIcon@$bctr$qpxc              @407 ; OIcon::OIcon(const char*)
-    @OIcon@$bdtr$qv                @408 ; OIcon::~OIcon()
-    @OIcon@isOfType$xqv            @409 ; OIcon::isOfType() const
-    @OIndicator@$bctr$qxulxt1xt1   @410 ; OIndicator::OIndicator(const unsigned long,const ...
-    @OIndicator@$bctr$qxulrx6OFramext1 @411 ; OIndicator::OIndicator(const unsigned long,const OFrame&,const ...
-    @OIndicator@$bctr$qxulxp6OFramext1 @412 ; OIndicator::OIndicator(const unsigned long,const OFrame*,const ...
-    @OIndicator@$bdtr$qv           @413 ; OIndicator::~OIndicator()
-    @OIndicator@isOfType$xqv       @414 ; OIndicator::isOfType() const
-    @OIndicator@createIndicator$qxsxt1xt1xt1 @415 ; OIndicator::createIndicator(const short,const ...
-    @OIndicator@inherit$qxul       @416 ; OIndicator::inherit(const unsigned long)
-    @OListBox@auto_scroll$qv       @417 ; OListBox::auto_scroll()
-    @OListBox@$bctr$qxulxt1xt1ul   @418 ; OListBox::OListBox(const unsigned long,const ...
-    @OListBox@$bctr$qxulrx6OFramext1ul @419 ; OListBox::OListBox(const unsigned long,const OFrame&,const ...
-    @OListBox@$bctr$qxulxp6OFramext1ul @420 ; OListBox::OListBox(const unsigned long,const OFrame*,const ...
-    @OListBox@$bdtr$qv             @421 ; OListBox::~OListBox()
-    @OListBox@isOfType$xqv         @422 ; OListBox::isOfType() const
-    @OListBox@createListBox$qxulxt1xt1xt1 @423 ; OListBox::createListBox(const unsigned long,const ...
-    @OListBox@setAutoScroll$qul    @424 ; OListBox::setAutoScroll(unsigned long)
-    @OListBox@deleteAll$qv         @425 ; OListBox::deleteAll()
-    @OListBox@selectItem$qxulxt1   @426 ; OListBox::selectItem(const unsigned long,const ...
-    @OListBox@setItemHandle$qxulxt1 @427 ; OListBox::setItemHandle(const unsigned long,const ...
-    @OListBox@setItemHeight$qxul   @428 ; OListBox::setItemHeight(const unsigned long)
-    @OListBox@setItemText$qxulpxc  @429 ; OListBox::setItemText(const unsigned long,const char*)
-    @OListBox@setToTop$qxul        @430 ; OListBox::setToTop(const unsigned long)
-    @OListBox@deleteItem$qxul      @431 ; OListBox::deleteItem(const unsigned long)
-    @OListBox@insertItem$qpxcxul   @432 ; OListBox::insertItem(const char*,const unsigned long)
-    @OListBox@queryItemCount$qv    @433 ; OListBox::queryItemCount()
-    @OListBox@queryItemHandle$qxul @434 ; OListBox::queryItemHandle(const unsigned long)
-    @OListBox@queryItemText$qr7OStringxul @435 ; OListBox::queryItemText(OString&,const unsigned long)
-    @OListBox@queryItemTextLength$qxul @436 ; OListBox::queryItemTextLength(const unsigned long)
-    @OListBox@querySelection$qxul  @437 ; OListBox::querySelection(const unsigned long)
-    @OListBox@queryTopItem$qv      @438 ; OListBox::queryTopItem()
-    @OListBox@searchString$qpxcxulxt2 @439 ; OListBox::searchString(const char*,const unsigned long,const ...
-    @OLogo@$bctr$qxulxt1xt1xt1     @440 ; OLogo::OLogo(const unsigned long,const ...
-    @OLogo@$bctr$qxpcxulxt2xt2     @441 ; OLogo::OLogo(const char*,const unsigned long,const ...
-    @OLogo@$bdtr$qv                @442 ; OLogo::~OLogo()
-    @OLogo@isOfType$xqv            @443 ; OLogo::isOfType() const
-    @OLogo@showLogo$qxul           @444 ; OLogo::showLogo(const unsigned long)
-    @OLogo@OCommand$qulpvt2        @445 ; OLogo::OCommand(unsigned long,void*,void*)
-    @OMemu@$bctr$qv                @446 ; OMemu::OMemu()
-    @OMemu@$bdtr$qv                @447 ; OMemu::~OMemu()
-    @OMemu@isOfType$xqv            @448 ; OMemu::isOfType() const
-    @OMemu@querySystem$qv          @449 ; OMemu::querySystem()
-    @OMemu@queryGeneralInfo$qv     @450 ; OMemu::queryGeneralInfo()
-    @OMemu@makeKByte$qul           @451 ; OMemu::makeKByte(unsigned long)
-    @OMenu@createOMenuObject$qv    @452 ; OMenu::createOMenuObject()
-    @OMenu@$bctr$qxulxt1xt1xp11ODynamicLib @453 ; OMenu::OMenu(const unsigned long,const ...
-    @OMenu@$bctr$qxulxt1xt1xt1     @454 ; OMenu::OMenu(const unsigned long,const ...
-    @OMenu@$bctr$qxulrx7OWindowt2xp11ODynamicLib @455 ; OMenu::OMenu(const unsigned long,const OWindow&,const OWindow&,const ODynamicLib*)
-    @OMenu@$bctr$qxulrx7OWindowt2xt1 @456 ; OMenu::OMenu(const unsigned long,const OWindow&,const OWindow&,const ...
-    @OMenu@$bctr$qxulxp7OWindowxt2xp11ODynamicLib @457 ; OMenu::OMenu(const unsigned long,const OWindow*,const ...
-    @OMenu@$bctr$qxulxp7OWindowxt2xt1 @458 ; OMenu::OMenu(const unsigned long,const OWindow*,const ...
-    @OMenu@$bdtr$qv                @459 ; OMenu::~OMenu()
-    @OMenu@isOfType$xqv            @460 ; OMenu::isOfType() const
-    @OMenu@isEnabled$qxul          @461 ; OMenu::isEnabled(const unsigned long)
-    @OMenu@isChecked$qxul          @462 ; OMenu::isChecked(const unsigned long)
-    @OMenu@insertItem$qxulxp9OMenuItem @463 ; OMenu::insertItem(const unsigned long,const OMenuItem*)
-    @OMenu@insertItemList$qxulxp19%OList$t9OMenuItem% @464 ; OMenu::insertItemList(const unsigned long,const OList<OMenuItem>*)
-    @OMenu@removeItem$qxul         @465 ; OMenu::removeItem(const unsigned long)
-    @OMenu@removeItemList$qr11%OList$tul% @466 ; OMenu::removeItemList(OList<unsigned long>&)
-    @OMenu@removeItemList$qxpxulxul @467 ; OMenu::removeItemList(const const unsigned long*,const unsigned long)
-    @OMenu@enableItem$qxulul       @468 ; OMenu::enableItem(const unsigned long,unsigned long)
-    @OMenu@enableItemList$qr11%OList$tul%ul @469 ; OMenu::enableItemList(OList<unsigned long>&,unsigned long)
-    @OMenu@enableItemList$qxpxulxulul @470 ; OMenu::enableItemList(const const unsigned long*,const unsigned long,unsigned long)
-    @OMenu@checkItem$qxulul        @471 ; OMenu::checkItem(const unsigned long,unsigned long)
-    @OMenu@checkItemList$qr11%OList$tul%ul @472 ; OMenu::checkItemList(OList<unsigned long>&,unsigned long)
-    @OMenu@checkItemList$qxpxulxulul @473 ; OMenu::checkItemList(const const unsigned long*,const unsigned long,unsigned long)
-    @OMenu@setItemText$qxulpxc     @474 ; OMenu::setItemText(const unsigned long,const char*)
-    @OMenu@setItemText$qxulp7OString @475 ; OMenu::setItemText(const unsigned long,OString*)
-    @OMenu@setItemText$qxulxt1     @476 ; OMenu::setItemText(const unsigned long,const ...
-    @OMenuItem@$bctr$qxsxusxt2xt2xulxt5 @477 ; OMenuItem::OMenuItem(const short,const unsigned short,const ...
-    @OMenuItem@$bctr$qxp9_MENUITEM @478 ; OMenuItem::OMenuItem(const _MENUITEM*)
-    @OMenuItem@$bctr$qrx9_MENUITEM @479 ; OMenuItem::OMenuItem(const _MENUITEM&)
-    @OMenuItem@$bdtr$qv            @480 ; OMenuItem::~OMenuItem()
-    @OMenuItem@isOfType$xqv        @481 ; OMenuItem::isOfType() const
-    @OMessage@retrieve$qulpct2t2t2t2t2t2t2t2t2 @482 ; OMessage::retrieve(unsigned long,char*,char*,char*,char*,char*,char*,char*,char*,char*,char*)
-    @OMessage@$bctr$qv             @483 ; OMessage::OMessage()
-    @OMessage@$bctr$qulpct2t2t2t2t2t2t2t2t2 @484 ; OMessage::OMessage(unsigned long,char*,char*,char*,char*,char*,char*,char*,char*,char*,char*)
-    @OMessage@$bdtr$qv             @485 ; OMessage::~OMessage()
-    @OMessage@isOfType$xqv         @486 ; OMessage::isOfType() const
-    @OMessage@getLen$qv            @487 ; OMessage::getLen()
-    @OMessage@getText$qv           @488 ; OMessage::getText()
-    @OMessage@getMessage$qulpct2t2t2t2t2t2t2t2t2 @489 ; OMessage::getMessage(unsigned long,char*,char*,char*,char*,char*,char*,char*,char*,char*,char*)
-    @OMLE@$bctr$qxulxt1xt1         @490 ; OMLE::OMLE(const unsigned long,const ...
-    @OMLE@$bctr$qxulrx6OFramext1   @491 ; OMLE::OMLE(const unsigned long,const OFrame&,const ...
-    @OMLE@$bctr$qxulxp6OFramext1   @492 ; OMLE::OMLE(const unsigned long,const OFrame*,const ...
-    @OMLE@$bdtr$qv                 @493 ; OMLE::~OMLE()
-    @OMLE@isOfType$xqv             @494 ; OMLE::isOfType() const
-    @OMLE@getText$qpvul            @495 ; OMLE::getText(void*,unsigned long)
-    @OMLE@getText$qr7OString       @496 ; OMLE::getText(OString&)
-    @OMLE@setText$qpvul            @497 ; OMLE::setText(void*,unsigned long)
-    @OMLE@setText$qpc              @498 ; OMLE::setText(char*)
-    @OMLE@insertText$qpc           @499 ; OMLE::insertText(char*)
-    @OMLE@createMLE$qxulxt1xt1xt1  @500 ; OMLE::createMLE(const unsigned long,const ...
-    @OMLE@copy$qv                  @501 ; OMLE::copy()
-    @OMLE@cut$qv                   @502 ; OMLE::cut()
-    @OMLE@paste$qv                 @503 ; OMLE::paste()
-    @OMLE@copy2Clip$qv             @504 ; OMLE::copy2Clip()
-    @OMLE@cut2Clip$qv              @505 ; OMLE::cut2Clip()
-    @OMLE@pasteFromClip$qv         @506 ; OMLE::pasteFromClip()
-    @OMLE@clear$qv                 @507 ; OMLE::clear()
-    @OMLE@undo$qv                  @508 ; OMLE::undo()
-    @OMLE@changed$qv               @509 ; OMLE::changed()
-    @OMLE@deleteText$qulul         @510 ; OMLE::deleteText(unsigned long,unsigned long)
-    @OMLE@deleteAll$qv             @511 ; OMLE::deleteAll()
-    @OMLE@insertFile$qpxc          @512 ; OMLE::insertFile(const char*)
-    @OMLE@length$qv                @513 ; OMLE::length()
-    @OMLE@lines$qv                 @514 ; OMLE::lines()
-    @OMLE@setFormat$qxul           @515 ; OMLE::setFormat(const unsigned long)
-    @OMLE@disableRefresh$qv        @516 ; OMLE::disableRefresh()
-    @OMLE@enableRefresh$qv         @517 ; OMLE::enableRefresh()
-    @OMLE@insertLarge$qv           @518 ; OMLE::insertLarge()
-    @OMsgs@$bctr$qxulxt1xt1        @519 ; OMsgs::OMsgs(const unsigned long,const ...
-    @OMsgs@$bdtr$qv                @520 ; OMsgs::~OMsgs()
-    @OMsgs@isOfType$xqv            @521 ; OMsgs::isOfType() const
-    @OMsgs@message$qv              @522 ; OMsgs::message()
-    @OMsgs@title$qv                @523 ; OMsgs::title()
-    @OMsgs@setResource$qxul        @524 ; OMsgs::setResource(const unsigned long)
-    @OMsgs@info$qxul               @525 ; OMsgs::info(const unsigned long)
-    @OMsgs@info$qxulxt1            @526 ; OMsgs::info(const unsigned long,const ...
-    @OMsgs@info$qpxc               @527 ; OMsgs::info(const char*)
-    @OMsgs@info$qpxct1             @528 ; OMsgs::info(const char*,const char*)
-    @OMsgs@error$qxul              @529 ; OMsgs::error(const unsigned long)
-    @OMsgs@error$qxulxt1           @530 ; OMsgs::error(const unsigned long,const ...
-    @OMsgs@error$qpxc              @531 ; OMsgs::error(const char*)
-    @OMsgs@error$qpxct1            @532 ; OMsgs::error(const char*,const char*)
-    @OMsgs@beeper$qv               @533 ; OMsgs::beeper()
-    @OMsgs@ask$qxulxt1             @534 ; OMsgs::ask(const unsigned long,const ...
-    @OMsgs@ask$qpxct1              @535 ; OMsgs::ask(const char*,const char*)
-    @OMsgs@loadString$qxulxt1pc    @536 ; OMsgs::loadString(const unsigned long,const ...
-    @OMuxSem@$bctr$qul             @537 ; OMuxSem::OMuxSem(unsigned long)
-    @OMuxSem@$bctr$qpxculul        @538 ; OMuxSem::OMuxSem(const char*,unsigned long,unsigned long)
-    @OMuxSem@$bdtr$qv              @539 ; OMuxSem::~OMuxSem()
-    @OMuxSem@isOfType$xqv          @540 ; OMuxSem::isOfType() const
-    @OMuxSem@openMuxSem$qul        @541 ; OMuxSem::openMuxSem(unsigned long)
-    @OMuxSem@openMuxSem$qpxc       @542 ; OMuxSem::openMuxSem(const char*)
-    @OMuxSem@closeMuxSem$qv        @543 ; OMuxSem::closeMuxSem()
-    @OMuxSem@requestMuxSem$qul     @544 ; OMuxSem::requestMuxSem(unsigned long)
-    @OMuxSem@releaseMuxSem$qv      @545 ; OMuxSem::releaseMuxSem()
-    @OMuxSem@setMuxSemHandle$qul   @546 ; OMuxSem::setMuxSemHandle(unsigned long)
-    @OMuxSem@getMuxSemHandle$qv    @547 ; OMuxSem::getMuxSemHandle()
-    @OMuxWaitSem@$bctr$qul         @548 ; OMuxWaitSem::OMuxWaitSem(unsigned long)
-    @OMuxWaitSem@$bctr$qpxculp11_PSEMRECORDulul @549 ; OMuxWaitSem::OMuxWaitSem(const char*,unsigned long,_PSEMRECORD*,unsigned long,unsigned long)
-    @OMuxWaitSem@$bdtr$qv          @550 ; OMuxWaitSem::~OMuxWaitSem()
-    @OMuxWaitSem@isOfType$xqv      @551 ; OMuxWaitSem::isOfType() const
-    @OMuxWaitSem@waitMuxWaitSem$qul @552 ; OMuxWaitSem::waitMuxWaitSem(unsigned long)
-    @OMuxWaitSem@openMuxWaitSem$qul @553 ; OMuxWaitSem::openMuxWaitSem(unsigned long)
-    @OMuxWaitSem@openMuxWaitSem$qpxc @554 ; OMuxWaitSem::openMuxWaitSem(const char*)
-    @OMuxWaitSem@closeMuxWaitSem$qv @555 ; OMuxWaitSem::closeMuxWaitSem()
-    @OMuxWaitSem@addSemaphore$qp11_PSEMRECORD @556 ; OMuxWaitSem::addSemaphore(_PSEMRECORD*)
-    @OMuxWaitSem@addSemaphore$qp5ONSem @557 ; OMuxWaitSem::addSemaphore(ONSem*)
-    @OMuxWaitSem@addSemaphore$qp7OMuxSem @558 ; OMuxWaitSem::addSemaphore(OMuxSem*)
-    @OMuxWaitSem@delSemaphore$qpv  @559 ; OMuxWaitSem::delSemaphore(void*)
-    @OMuxWaitSem@queryMuxWaitSem$qpulp11_PSEMRECORDt1 @560 ; OMuxWaitSem::queryMuxWaitSem(unsigned long*,_PSEMRECORD*,unsigned long*)
-    @OMuxWaitSem@setMuxWaitSemHandle$qul @561 ; OMuxWaitSem::setMuxWaitSemHandle(unsigned long)
-    @OMuxWaitSem@getMuxWaitSemHandle$qv @562 ; OMuxWaitSem::getMuxWaitSemHandle()
-    @ONPipe@$bctr$qv               @563 ; ONPipe::ONPipe()
-    @ONPipe@$bdtr$qv               @564 ; ONPipe::~ONPipe()
-    @ONPipe@isOfType$xqv           @565 ; ONPipe::isOfType() const
-    @ONPipe@setOpenMode$qxul       @566 ; ONPipe::setOpenMode(const unsigned long)
-    @ONPipe@setPipeMode$qxul       @567 ; ONPipe::setPipeMode(const unsigned long)
-    @ONPipe@setTimeOut$qxul        @568 ; ONPipe::setTimeOut(const unsigned long)
-    @ONSem@$bctr$qul               @569 ; ONSem::ONSem(unsigned long)
-    @ONSem@$bctr$qpxculul          @570 ; ONSem::ONSem(const char*,unsigned long,unsigned long)
-    @ONSem@$bdtr$qv                @571 ; ONSem::~ONSem()
-    @ONSem@isOfType$xqv            @572 ; ONSem::isOfType() const
-    @ONSem@waitSem$qxul            @573 ; ONSem::waitSem(const unsigned long)
-    @ONSem@postSem$qv              @574 ; ONSem::postSem()
-    @ONSem@closeSem$qv             @575 ; ONSem::closeSem()
-    @ONSem@openSem$qpxc            @576 ; ONSem::openSem(const char*)
-    @ONSem@openSem$qxul            @577 ; ONSem::openSem(const unsigned long)
-    @ONSem@resetSem$qv             @578 ; ONSem::resetSem()
-    @ONSem@querySem$qv             @579 ; ONSem::querySem()
-    @ONSem@setSemHandle$qul        @580 ; ONSem::setSemHandle(unsigned long)
-    @ONSem@getSemHandle$qv         @581 ; ONSem::getSemHandle()
-    @OOrderedCollection@addSortAscending$qpv @582 ; OOrderedCollection::addSortAscending(void*)
-    @OOrderedCollection@addSortDescending$qpv @583 ; OOrderedCollection::addSortDescending(void*)
-    @OOrderedCollection@addSorted$qpv @584 ; OOrderedCollection::addSorted(void*)
-    @OOrderedCollection@$bctr$qul  @585 ; OOrderedCollection::OOrderedCollection(unsigned long)
-    @OOrderedCollection@$bdtr$qv   @586 ; OOrderedCollection::~OOrderedCollection()
-    @OOrderedCollection@isOfType$xqv @587 ; OOrderedCollection::isOfType() const
-    @OOrderedCollection@setAscending$qul @588 ; OOrderedCollection::setAscending(unsigned long)
-    @OPicture@$bctr$qulul          @589 ; OPicture::OPicture(unsigned long,unsigned long)
-    @OPicture@$bdtr$qv             @590 ; OPicture::~OPicture()
-    @OPicture@isOfType$xqv         @591 ; OPicture::isOfType() const
-    @OPicture@setDimension$qulul   @592 ; OPicture::setDimension(unsigned long,unsigned long)
-    @OPipe_istream@$bctr$qul       @593 ; OPipe_istream::OPipe_istream(unsigned long)
-    @OPipe_istream@$bctr$qp16OPipe_streamable @594 ; OPipe_istream::OPipe_istream(OPipe_streamable*)
-    @OPipe_istream@$bctr$qr16OPipe_streamable @595 ; OPipe_istream::OPipe_istream(OPipe_streamable&)
-    @OPipe_istream@$bdtr$qv        @596 ; OPipe_istream::~OPipe_istream()
-    @OPipe_istream@isOfType$xqv    @597 ; OPipe_istream::isOfType() const
-    @OPipe_ostream@$bctr$qul       @598 ; OPipe_ostream::OPipe_ostream(unsigned long)
-    @OPipe_ostream@$bctr$qp16OPipe_streamable @599 ; OPipe_ostream::OPipe_ostream(OPipe_streamable*)
-    @OPipe_ostream@$bctr$qr16OPipe_streamable @600 ; OPipe_ostream::OPipe_ostream(OPipe_streamable&)
-    @OPipe_ostream@$bdtr$qv        @601 ; OPipe_ostream::~OPipe_ostream()
-    @OPipe_ostream@isOfType$xqv    @602 ; OPipe_ostream::isOfType() const
-    @OPipe_streamable@closePipe$qv @603 ; OPipe_streamable::closePipe()
-    @OPipe_streamable@$bctr$qv     @604 ; OPipe_streamable::OPipe_streamable()
-    @OPipe_streamable@$bctr$qul    @605 ; OPipe_streamable::OPipe_streamable(unsigned long)
-    @OPipe_streamable@$bctr$qp16OPipe_streamable @606 ; OPipe_streamable::OPipe_streamable(OPipe_streamable*)
-    @OPipe_streamable@$bctr$qr16OPipe_streamable @607 ; OPipe_streamable::OPipe_streamable(OPipe_streamable&)
-    @OPipe_streamable@$bctr$qulul  @608 ; OPipe_streamable::OPipe_streamable(unsigned long,unsigned long)
-    @OPipe_streamable@$bdtr$qv     @609 ; OPipe_streamable::~OPipe_streamable()
-    @OPipe_streamable@isOfType$xqv @610 ; OPipe_streamable::isOfType() const
-    @OPipeCli@connectPipe$qpxc     @611 ; OPipeCli::connectPipe(const char*)
-    @OPipeCli@disconnectPipe$qv    @612 ; OPipeCli::disconnectPipe()
-    @OPipeCli@$bctr$qxulxt1xt1xt1xt1 @613 ; OPipeCli::OPipeCli(const unsigned long,const ...
-    @OPipeCli@$bdtr$qv             @614 ; OPipeCli::~OPipeCli()
-    @OPipeCli@isOfType$xqv         @615 ; OPipeCli::isOfType() const
-    @OPipeCli@setSize$qxul         @616 ; OPipeCli::setSize(const unsigned long)
-    @OPipeCli@beginPiping$qpxc     @617 ; OPipeCli::beginPiping(const char*)
-    @OPipeCli@stopPiping$qv        @618 ; OPipeCli::stopPiping()
-    @OPipeCli@postPipe$qpvul       @619 ; OPipeCli::postPipe(void*,unsigned long)
-    @OPipeCli@Pipe_IO$qv           @620 ; OPipeCli::Pipe_IO()
-    @OPipeSvr@createPipe$qpxc      @621 ; OPipeSvr::createPipe(const char*)
-    @OPipeSvr@destroyPipe$qv       @622 ; OPipeSvr::destroyPipe()
-    @OPipeSvr@$bctr$qxulxt1xt1xt1xt1xt1xt1 @623 ; OPipeSvr::OPipeSvr(const unsigned long,const ...
-    @OPipeSvr@$bdtr$qv             @624 ; OPipeSvr::~OPipeSvr()
-    @OPipeSvr@isOfType$xqv         @625 ; OPipeSvr::isOfType() const
-    @OPipeSvr@setBufSizes$qxulxt1xt1 @626 ; OPipeSvr::setBufSizes(const unsigned long,const ...
-    @OPipeSvr@beginPiping$qpxc     @627 ; OPipeSvr::beginPiping(const char*)
-    @OPipeSvr@stopPiping$qv        @628 ; OPipeSvr::stopPiping()
-    @OPipeSvr@getPipeData$qv       @629 ; OPipeSvr::getPipeData()
-    @OPipeSvr@postPipe$qpvul       @630 ; OPipeSvr::postPipe(void*,unsigned long)
-    @OPipeSvr@Pipe_IO$qv           @631 ; OPipeSvr::Pipe_IO()
-    @OPipeTool@$bctr$qpxct1xulxt3  @632 ; OPipeTool::OPipeTool(const char*,const char*,const unsigned long,const ...
-    @OPipeTool@$bdtr$qv            @633 ; OPipeTool::~OPipeTool()
-    @OPipeTool@isOfType$xqv        @634 ; OPipeTool::isOfType() const
-    @OPipeTool@detachChild$qv      @635 ; OPipeTool::detachChild()
-    @OPipeTool@stopChild$qv        @636 ; OPipeTool::stopChild()
-    @OPipeTool@printout$qv         @637 ; OPipeTool::printout()
-    @OPMException@$bctr$qxpcxulxt2xt1xt2 @638 ; OPMException::OPMException(const char*,const unsigned long,const ...
-    @OPMException@$bctr$qxulxt1xt1xt1xpcxt1 @639 ; OPMException::OPMException(const unsigned long,const ...
-    @OPMException@$bctr$qrx12OPMException @640 ; OPMException::OPMException(const OPMException&)
-    @OPMException@$bdtr$qv         @641 ; OPMException::~OPMException()
-    @OPMException@isOfType$xqv     @642 ; OPMException::isOfType() const
-    @OPMException@viewError$qv     @643 ; OPMException::viewError()
-    @OPMinit@$bctr$qxul            @644 ; OPMinit::OPMinit(const unsigned long)
-    @OPMinit@$bdtr$qv              @645 ; OPMinit::~OPMinit()
-    @OPMinit@isOfType$xqv          @646 ; OPMinit::isOfType() const
-    @OPMinit@anchor$qv             @647 ; OPMinit::anchor()
-    @OPMinit@mqueue$qv             @648 ; OPMinit::mqueue()
-    @OPMPipeTool@$bctr$qpxct1ulxt3xt3 @649 ; OPMPipeTool::OPMPipeTool(const char*,const char*,unsigned long,const ...
-    @OPMPipeTool@$bdtr$qv          @650 ; OPMPipeTool::~OPMPipeTool()
-    @OPMPipeTool@isOfType$xqv      @651 ; OPMPipeTool::isOfType() const
-    @OPMPipeTool@setNotify$qul     @652 ; OPMPipeTool::setNotify(unsigned long)
-    @OPMPipeTool@setNotify$qr6OFrame @653 ; OPMPipeTool::setNotify(OFrame&)
-    @OPMPipeTool@setNotify$qp6OFrame @654 ; OPMPipeTool::setNotify(OFrame*)
-    @OPMPipeTool@detachChild$qv    @655 ; OPMPipeTool::detachChild()
-    @OPMPipeTool@stopChild$qv      @656 ; OPMPipeTool::stopChild()
-    @OPMPipeTool@printout$qv       @657 ; OPMPipeTool::printout()
-    @OProcStat@getNumInfo$qpcul    @658 ; OProcStat::getNumInfo(char*,unsigned long)
-    @OProcStat@$bctr$qv            @659 ; OProcStat::OProcStat()
-    @OProcStat@$bdtr$qv            @660 ; OProcStat::~OProcStat()
-    @OProcStat@isOfType$xqv        @661 ; OProcStat::isOfType() const
-    @OProcStat@getProcesses$qv     @662 ; OProcStat::getProcesses()
-    @OProcStat@getModule$qul       @663 ; OProcStat::getModule(unsigned long)
-    @OProcStat@getPid$qpc          @664 ; OProcStat::getPid(char*)
-    @OProcStat@getPPid$qpc         @665 ; OProcStat::getPPid(char*)
-    @OProcStat@getProcCount$qv     @666 ; OProcStat::getProcCount()
-    @OProcStat@getTaskCount$qv     @667 ; OProcStat::getTaskCount()
-    @OProfile@$bctr$qv             @668 ; OProfile::OProfile()
-    @OProfile@$bctr$qpc            @669 ; OProfile::OProfile(char*)
-    @OProfile@$bctr$qxul           @670 ; OProfile::OProfile(const unsigned long)
-    @OProfile@$bdtr$qv             @671 ; OProfile::~OProfile()
-    @OProfile@isOfType$xqv         @672 ; OProfile::isOfType() const
-    @OProfile@open$qpc             @673 ; OProfile::open(char*)
-    @OProfile@setupList$qpuc       @674 ; OProfile::setupList(unsigned char*)
-    @OProfile@write$qpct1pvul      @675 ; OProfile::write(char*,char*,void*,unsigned long)
-    @OProfile@deleteApp$qpc        @676 ; OProfile::deleteApp(char*)
-    @OProfile@deleteKey$qpct1      @677 ; OProfile::deleteKey(char*,char*)
-    @OProfile@getApps$qv           @678 ; OProfile::getApps()
-    @OProfile@getKeys$qpc          @679 ; OProfile::getKeys(char*)
-    @OProfile@getStr$qpct1         @680 ; OProfile::getStr(char*,char*)
-    @OProfile@getData$qpct1pvpul   @681 ; OProfile::getData(char*,char*,void*,unsigned long*)
-    @OProfile@insert$qxulxt1       @682 ; OProfile::insert(const unsigned long,const ...
-    @OProfile@close$qv             @683 ; OProfile::close()
-    @OPushButton@$bctr$qululululululul @684 ; OPushButton::OPushButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OPushButton@$bctr$qulr6OFrameululululul @685 ; OPushButton::OPushButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OPushButton@$bctr$qulp6OFrameululululul @686 ; OPushButton::OPushButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OPushButton@$bdtr$qv          @687 ; OPushButton::~OPushButton()
-    @OPushButton@isOfType$xqv      @688 ; OPushButton::isOfType() const
-    @ORadioButton@$bctr$qululululululul @689 ; ORadioButton::ORadioButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @ORadioButton@$bctr$qulr6OFrameululululul @690 ; ORadioButton::ORadioButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @ORadioButton@$bctr$qulp6OFrameululululul @691 ; ORadioButton::ORadioButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @ORadioButton@$bdtr$qv         @692 ; ORadioButton::~ORadioButton()
-    @ORadioButton@isOfType$xqv     @693 ; ORadioButton::isOfType() const
-    @OScanFcl@$bctr$qv             @694 ; OScanFcl::OScanFcl()
-    @OScanFcl@$bdtr$qv             @695 ; OScanFcl::~OScanFcl()
-    @OScanFcl@isOfType$xqv         @696 ; OScanFcl::isOfType() const
-    @OScanFcl@init$qpxct1          @697 ; OScanFcl::init(const char*,const char*)
-    @OScanFcl@init$qpxc            @698 ; OScanFcl::init(const char*)
-    @OScanFcl@release$qv           @699 ; OScanFcl::release()
-    @OScanFcl@check$qpxc           @700 ; OScanFcl::check(const char*)
-    @OScanFcl@checkFiles$qpxc      @701 ; OScanFcl::checkFiles(const char*)
-    @OSlider@$bctr$qxulxt1xt1xt1xt1xt1xt1 @702 ; OSlider::OSlider(const unsigned long,const ...
-    @OSlider@$bctr$qxulrx6OFramext1xt1xt1xt1xt1 @703 ; OSlider::OSlider(const unsigned long,const OFrame&,const ...
-    @OSlider@$bctr$qxulxp6OFramext1xt1xt1xt1xt1 @704 ; OSlider::OSlider(const unsigned long,const OFrame*,const ...
-    @OSlider@$bdtr$qv              @705 ; OSlider::~OSlider()
-    @OSlider@isOfType$xqv          @706 ; OSlider::isOfType() const
-    @OSlider@createSlider$qxsxt1xt1xt1 @707 ; OSlider::createSlider(const short,const ...
-    @OSlider@setSliderArmPos$qs    @708 ; OSlider::setSliderArmPos(short)
-    @OSlider@setSliderArmSize$qulul @709 ; OSlider::setSliderArmSize(unsigned long,unsigned long)
-    @OSlider@setSliderShaftPos$qss @710 ; OSlider::setSliderShaftPos(short,short)
-    @OSlider@setSliderShaftDim$qs  @711 ; OSlider::setSliderShaftDim(short)
-    @OSlider@incSliderArm$qs       @712 ; OSlider::incSliderArm(short)
-    @OSlider@decSliderArm$qs       @713 ; OSlider::decSliderArm(short)
-    @OSlider@setSliderScaleText$qpxcus @714 ; OSlider::setSliderScaleText(const char*,unsigned short)
-    @OSlider@setTickSize$qulul     @715 ; OSlider::setTickSize(unsigned long,unsigned long)
-    @OSlider@setSliderStyles$qxul  @716 ; OSlider::setSliderStyles(const unsigned long)
-    @OSlider@setSliderSize$qxulxt1xt1xt1 @717 ; OSlider::setSliderSize(const unsigned long,const ...
-    @OSlider@getSliderShaftDim$qpst1 @718 ; OSlider::getSliderShaftDim(short*,short*)
-    @OSlider@getSliderShaftPos$qpst1 @719 ; OSlider::getSliderShaftPos(short*,short*)
-    @OSlider@getSliderArmSize$qpst1 @720 ; OSlider::getSliderArmSize(short*,short*)
-    @OSlider@drawSliderElement$qp10_OWNERITEMl @721 ; OSlider::drawSliderElement(_OWNERITEM*,long)
-    @OSlider@inherit$qxul          @722 ; OSlider::inherit(const unsigned long)
-    @OSlider@addDetent$qs          @723 ; OSlider::addDetent(short)
-    @OSlider@getDetentPos$qul      @724 ; OSlider::getDetentPos(unsigned long)
-    @OSlider@getSliderArmPos$qv    @725 ; OSlider::getSliderArmPos()
-    @OSlider@getTickSize$qs        @726 ; OSlider::getTickSize(short)
-    @OSlider@getScaleText$qspcs    @727 ; OSlider::getScaleText(short,char*,short)
-    @OSpinBtn@$bctr$qxulxt1xt1     @728 ; OSpinBtn::OSpinBtn(const unsigned long,const ...
-    @OSpinBtn@$bctr$qxulrx6OFramext1 @729 ; OSpinBtn::OSpinBtn(const unsigned long,const OFrame&,const ...
-    @OSpinBtn@$bctr$qxulxp6OFramext1 @730 ; OSpinBtn::OSpinBtn(const unsigned long,const OFrame*,const ...
-    @OSpinBtn@$bdtr$qv             @731 ; OSpinBtn::~OSpinBtn()
-    @OSpinBtn@isOfType$xqv         @732 ; OSpinBtn::isOfType() const
-    @OSpinBtn@createSpinBtn$qxsxt1xt1xt1 @733 ; OSpinBtn::createSpinBtn(const short,const ...
-    @OSpinBtn@setArray$qpcul       @734 ; OSpinBtn::setArray(char*,unsigned long)
-    @OSpinBtn@setCurrent$ql        @735 ; OSpinBtn::setCurrent(long)
-    @OSpinBtn@setLimits$qll        @736 ; OSpinBtn::setLimits(long,long)
-    @OSpinBtn@setMaster$qul        @737 ; OSpinBtn::setMaster(unsigned long)
-    @OSpinBtn@setTextLimit$qus     @738 ; OSpinBtn::setTextLimit(unsigned short)
-    @OSpinBtn@overrideLimits$qll   @739 ; OSpinBtn::overrideLimits(long,long)
-    @OSpinBtn@incSpin$qul          @740 ; OSpinBtn::incSpin(unsigned long)
-    @OSpinBtn@decSpin$qul          @741 ; OSpinBtn::decSpin(unsigned long)
-    @OSpinBtn@getLimits$qplt1      @742 ; OSpinBtn::getLimits(long*,long*)
-    @OSpinBtn@getCurrent$qpvusus   @743 ; OSpinBtn::getCurrent(void*,unsigned short,unsigned short)
-    @OSpinBtn@jumptoEnd$qv         @744 ; OSpinBtn::jumptoEnd()
-    @OSpinBtn@jumptoStart$qv       @745 ; OSpinBtn::jumptoStart()
-    @OStatusLine@initStatlineDefaults$qv @746 ; OStatusLine::initStatlineDefaults()
-    @OStatusLine@$bctr$qxulxt1xt1  @747 ; OStatusLine::OStatusLine(const unsigned long,const ...
-    @OStatusLine@$bctr$qxulrx6OFramext1 @748 ; OStatusLine::OStatusLine(const unsigned long,const OFrame&,const ...
-    @OStatusLine@$bctr$qxulxp6OFramext1 @749 ; OStatusLine::OStatusLine(const unsigned long,const OFrame*,const ...
-    @OStatusLine@$bdtr$qv          @750 ; OStatusLine::~OStatusLine()
-    @OStatusLine@isOfType$xqv      @751 ; OStatusLine::isOfType() const
-    @OStatusLine@createStatusLine$qv @752 ; OStatusLine::createStatusLine()
-    @OStatusLine@getHeight$qv      @753 ; OStatusLine::getHeight()
-    @OStatusLine@getWidth$qv       @754 ; OStatusLine::getWidth()
-    @OStatusLine@refreshText$qv    @755 ; OStatusLine::refreshText()
-    @OStatusLine@setText$qpxc      @756 ; OStatusLine::setText(const char*)
-    @OStatusLine@setOrientation$qxul @757 ; OStatusLine::setOrientation(const unsigned long)
-    @OStatusLine@setRDOnly$qul     @758 ; OStatusLine::setRDOnly(unsigned long)
-    @OStatusLine@OCommand$qulpvt2  @759 ; OStatusLine::OCommand(unsigned long,void*,void*)
-    @OString@$bctr$qv              @760 ; OString::OString()
-    @OString@$bctr$qpxc            @761 ; OString::OString(const char*)
-    @OString@$bctr$qrx7OString     @762 ; OString::OString(const OString&)
-    @OString@$bctr$qxp7OString     @763 ; OString::OString(const OString*)
-    @OString@$bctr$qi              @764 ; OString::OString(int)
-    @OString@$bdtr$qv              @765 ; OString::~OString()
-    @OString@isOfType$xqv          @766 ; OString::isOfType() const
-    @OString@getText$xqv           @767 ; OString::getText() const
-    @OString@length$xqv            @768 ; OString::length() const
-    @OString@compare$xqrx7OStringt1 @769 ; OString::compare(const OString&,const OString&) const
-    @OString@leftCut$qi            @770 ; OString::leftCut(int)
-    @OString@rightCut$qi           @771 ; OString::rightCut(int)
-    @OString@stripLeading$qi       @772 ; OString::stripLeading(int)
-    @OString@stripTrailing$qi      @773 ; OString::stripTrailing(int)
-    @OString@replace$qpxct1        @774 ; OString::replace(const char*,const char*)
-    @OString@$blsh$qpxc            @775 ; OString::operator <<(const char*)
-    @OString@$blsh$qxp7OString     @776 ; OString::operator <<(const OString*)
-    @OString@$blsh$qi              @777 ; OString::operator <<(int)
-    @OString@$blsh$qui             @778 ; OString::operator <<(unsigned int)
-    @OString@$blsh$ql              @779 ; OString::operator <<(long)
-    @OString@$blsh$qul             @780 ; OString::operator <<(unsigned long)
-    @OString@$blsh$qd              @781 ; OString::operator <<(double)
-    @OString@$badd$qpxc            @782 ; OString::operator +(const char*)
-    @OString@$badd$qxp7OString     @783 ; OString::operator +(const OString*)
-    @OString@$badd$qi              @784 ; OString::operator +(int)
-    @OString@$badd$qui             @785 ; OString::operator +(unsigned int)
-    @OString@$badd$ql              @786 ; OString::operator +(long)
-    @OString@$badd$qul             @787 ; OString::operator +(unsigned long)
-    @OString@$badd$qd              @788 ; OString::operator +(double)
-    @OString@$basg$qpxc            @789 ; OString::operator =(const char*)
-    @OString@$beql$xqpxc           @790 ; OString::operator ==(const char*) const
-    @OString@$bneq$xqpxc           @791 ; OString::operator !=(const char*) const
-    @OString@$blss$xqpxc           @792 ; OString::operator <(const char*) const
-    @OString@$bgtr$xqpxc           @793 ; OString::operator >(const char*) const
-    @OString@$bleq$xqpxc           @794 ; OString::operator <=(const char*) const
-    @OString@$bgeq$xqpxc           @795 ; OString::operator >=(const char*) const
-    @OSysInfo@$bctr$qv             @796 ; OSysInfo::OSysInfo()
-    @OSysInfo@$bdtr$qv             @797 ; OSysInfo::~OSysInfo()
-    @OSysInfo@isOfType$xqv         @798 ; OSysInfo::isOfType() const
-    @OSysInfo@getDesktop$qv        @799 ; OSysInfo::getDesktop()
-    @OSysInfoVIO@$bctr$qv          @800 ; OSysInfoVIO::OSysInfoVIO()
-    @OSysInfoVIO@$bdtr$qv          @801 ; OSysInfoVIO::~OSysInfoVIO()
-    @OSysInfoVIO@isOfType$xqv      @802 ; OSysInfoVIO::isOfType() const
-    @OSysInfoVIO@getDrives$qv      @803 ; OSysInfoVIO::getDrives()
-    @OSysInfoVIO@getAllDrives$qv   @804 ; OSysInfoVIO::getAllDrives()
-    @OSysInfoVIO@getEnv$qpxc       @805 ; OSysInfoVIO::getEnv(const char*)
-    @OSysInfoVIO@getBootDrive$qv   @806 ; OSysInfoVIO::getBootDrive()
-    @OSysInfoVIO@getCfgEnv$qpc     @807 ; OSysInfoVIO::getCfgEnv(char*)
-    @OSysInfoVIO@getOSVer$qv       @808 ; OSysInfoVIO::getOSVer()
-    @OSysInfoVIO@getOSVer$qrd      @809 ; OSysInfoVIO::getOSVer(double&)
-    @OSysInfoVIO@findPathFile$qpxc @810 ; OSysInfoVIO::findPathFile(const char*)
-    @OSysInfoVIO@checkRemovable$qpxc @811 ; OSysInfoVIO::checkRemovable(const char*)
-    @OSysInfoVIO@clearRDOnly$qpxc  @812 ; OSysInfoVIO::clearRDOnly(const char*)
-    @OSysLevel@JulianToDT$xqlr9_DATETIME @813 ; OSysLevel::JulianToDT(long,_DATETIME&) const
-    @OSysLevel@DTToJulian$xqr9_DATETIME @814 ; OSysLevel::DTToJulian(_DATETIME&) const
-    @OSysLevel@readFromFile$qpxc   @815 ; OSysLevel::readFromFile(const char*)
-    @OSysLevel@writeToFile$qpxc    @816 ; OSysLevel::writeToFile(const char*)
-    @OSysLevel@$bctr$qv            @817 ; OSysLevel::OSysLevel()
-    @OSysLevel@$bctr$qrx9OSysLevel @818 ; OSysLevel::OSysLevel(const OSysLevel&)
-    @OSysLevel@$bctr$qr10_SLFHEADERr9_SYSTABLE @819 ; OSysLevel::OSysLevel(_SLFHEADER&,_SYSTABLE&)
-    @OSysLevel@$bctr$qpxc          @820 ; OSysLevel::OSysLevel(const char*)
-    @OSysLevel@$bdtr$qv            @821 ; OSysLevel::~OSysLevel()
-    @OSysLevel@isOfType$xqv        @822 ; OSysLevel::isOfType() const
-    @OSysLevel@read$qv             @823 ; OSysLevel::read()
-    @OSysLevel@write$qv            @824 ; OSysLevel::write()
-    @OSysLevel@setSysTable$qrx9_SYSTABLE @825 ; OSysLevel::setSysTable(const _SYSTABLE&)
-    @OSysLevel@setHeader$qrx10_SLFHEADER @826 ; OSysLevel::setHeader(const _SLFHEADER&)
-    @OSysLevel@setFileName$qpxc    @827 ; OSysLevel::setFileName(const char*)
-    @OSysLevel@setDate$qv          @828 ; OSysLevel::setDate()
-    @OSysLevel@setDate$qr9_DATETIME @829 ; OSysLevel::setDate(_DATETIME&)
-    @OSysLevel@setDate$qpc         @830 ; OSysLevel::setDate(char*)
-    @OSysLevel@setTableOffset$qul  @831 ; OSysLevel::setTableOffset(unsigned long)
-    @OSysLevel@setSysId$qus        @832 ; OSysLevel::setSysId(unsigned short)
-    @OSysLevel@setSysEdition$quc   @833 ; OSysLevel::setSysEdition(unsigned char)
-    @OSysLevel@setSysVersion$quc   @834 ; OSysLevel::setSysVersion(unsigned char)
-    @OSysLevel@setSysModify$quc    @835 ; OSysLevel::setSysModify(unsigned char)
-    @OSysLevel@setSysDate$qus      @836 ; OSysLevel::setSysDate(unsigned short)
-    @OSysLevel@setCsdLevel$qpc     @837 ; OSysLevel::setCsdLevel(char*)
-    @OSysLevel@setCsdPrev$qpc      @838 ; OSysLevel::setCsdPrev(char*)
-    @OSysLevel@setSysName$qpc      @839 ; OSysLevel::setSysName(char*)
-    @OSysLevel@setCompId$qpc       @840 ; OSysLevel::setCompId(char*)
-    @OSysLevel@setRefreshLevel$quc @841 ; OSysLevel::setRefreshLevel(unsigned char)
-    @OSysLevel@setType$qpc         @842 ; OSysLevel::setType(char*)
-    @OSysLevel@getDate$xqr9_DATETIME @843 ; OSysLevel::getDate(_DATETIME&) const
-    @OSysLevel@getTableOffset$xqv  @844 ; OSysLevel::getTableOffset() const
-    @OSysLevel@getSysId$xqv        @845 ; OSysLevel::getSysId() const
-    @OSysLevel@getSysDate$xqv      @846 ; OSysLevel::getSysDate() const
-    @OSysLevel@getFileName$xqv     @847 ; OSysLevel::getFileName() const
-    @OSysLevel@getDateAsStr$xqr7OString @848 ; OSysLevel::getDateAsStr(OString&) const
-    @OSysLevel@getCsdLevel$xqv     @849 ; OSysLevel::getCsdLevel() const
-    @OSysLevel@getCsdPrev$xqv      @850 ; OSysLevel::getCsdPrev() const
-    @OSysLevel@getSysName$xqv      @851 ; OSysLevel::getSysName() const
-    @OSysLevel@getCompId$xqv       @852 ; OSysLevel::getCompId() const
-    @OSysLevel@getType$xqv         @853 ; OSysLevel::getType() const
-    @OSysLevel@getSysEdition$xqv   @854 ; OSysLevel::getSysEdition() const
-    @OSysLevel@getSysVersion$xqv   @855 ; OSysLevel::getSysVersion() const
-    @OSysLevel@getSysModify$xqv    @856 ; OSysLevel::getSysModify() const
-    @OSysLevel@getRefreshLevel$xqv @857 ; OSysLevel::getRefreshLevel() const
-    @OSysLevel@getHeader$xqv       @858 ; OSysLevel::getHeader() const
-    @OSysLevel@getSysTable$xqv     @859 ; OSysLevel::getSysTable() const
-    @OThreadBase@$bctr$qulul       @860 ; OThreadBase::OThreadBase(unsigned long,unsigned long)
-    @OThreadBase@$bdtr$qv          @861 ; OThreadBase::~OThreadBase()
-    @OThreadBase@isOfType$xqv      @862 ; OThreadBase::isOfType() const
-    @OThreadBase@run$qv            @863 ; OThreadBase::run()
-    @OThreadBase@isRunning$qv      @864 ; OThreadBase::isRunning()
-    @OThreadBase@stop$qv           @865 ; OThreadBase::stop()
-    @OThreadBase@suspend$qv        @866 ; OThreadBase::suspend()
-    @OThreadBase@resume$qv         @867 ; OThreadBase::resume()
-    @OThreadBase@waitFor$qv        @868 ; OThreadBase::waitFor()
-    @OThreadBase@setPrty$qulul     @869 ; OThreadBase::setPrty(unsigned long,unsigned long)
-    @OThreadBase@OTHREADBASE_dispatch$qpv @870 ; OThreadBase::OTHREADBASE_dispatch(void*)
-    @OTimer@$bctr$qululul          @871 ; OTimer::OTimer(unsigned long,unsigned long,unsigned long)
-    @OTimer@$bctr$qr6OFrameulul    @872 ; OTimer::OTimer(OFrame&,unsigned long,unsigned long)
-    @OTimer@$bctr$qp6OFrameulul    @873 ; OTimer::OTimer(OFrame*,unsigned long,unsigned long)
-    @OTimer@$bdtr$qv               @874 ; OTimer::~OTimer()
-    @OTimer@isOfType$xqv           @875 ; OTimer::isOfType() const
-    @OTimer@start$qv               @876 ; OTimer::start()
-    @OTimer@start$qul              @877 ; OTimer::start(unsigned long)
-    @OTimer@stop$qv                @878 ; OTimer::stop()
-    @OTimer@setId$qul              @879 ; OTimer::setId(unsigned long)
-    @OTimer@setTimeout$qul         @880 ; OTimer::setTimeout(unsigned long)
-    @OTimer@setNotify$qul          @881 ; OTimer::setNotify(unsigned long)
-    @OTimer@setNotify$qr6OFrame    @882 ; OTimer::setNotify(OFrame&)
-    @OTimer@setNotify$qp6OFrame    @883 ; OTimer::setNotify(OFrame*)
-    @OUserButton@$bctr$qululululululul @884 ; OUserButton::OUserButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OUserButton@$bctr$qulr6OFrameululululul @885 ; OUserButton::OUserButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OUserButton@$bctr$qulp6OFrameululululul @886 ; OUserButton::OUserButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
-    @OUserButton@$bdtr$qv          @887 ; OUserButton::~OUserButton()
-    @OUserButton@isOfType$xqv      @888 ; OUserButton::isOfType() const
-    @OValueSet@$bctr$qxulxt1xt1xt1xt1xt1 @889 ; OValueSet::OValueSet(const unsigned long,const ...
-    @OValueSet@$bctr$qxulrx6OFramext1xt1xt1xt1 @890 ; OValueSet::OValueSet(const unsigned long,const OFrame&,const ...
-    @OValueSet@$bctr$qxulxp6OFramext1xt1xt1xt1 @891 ; OValueSet::OValueSet(const unsigned long,const OFrame*,const ...
-    @OValueSet@$bdtr$qv            @892 ; OValueSet::~OValueSet()
-    @OValueSet@isOfType$xqv        @893 ; OValueSet::isOfType() const
-    @OValueSet@createValueSet$qxsxt1xt1xt1 @894 ; OValueSet::createValueSet(const short,const ...
-    @OValueSet@querySelected$qv    @895 ; OValueSet::querySelected()
-    @OValueSet@queryItem$qulul     @896 ; OValueSet::queryItem(unsigned long,unsigned long)
-    @OValueSet@selectItem$qulul    @897 ; OValueSet::selectItem(unsigned long,unsigned long)
-    @OValueSet@setItem$qululul     @898 ; OValueSet::setItem(unsigned long,unsigned long,unsigned long)
-    @OValueSet@setItemAttr$qulululul @899 ; OValueSet::setItemAttr(unsigned long,unsigned long,unsigned long,unsigned long)
-    @OValueSet@setMetrics$qulul    @900 ; OValueSet::setMetrics(unsigned long,unsigned long)
-    @OValueSet@queryItemAttr$qulul @901 ; OValueSet::queryItemAttr(unsigned long,unsigned long)
-    @OValueSet@queryMetrics$qul    @902 ; OValueSet::queryMetrics(unsigned long)
-    @OVioApp@$bctr$qv              @903 ; OVioApp::OVioApp()
-    @OVioApp@$bctr$qxulppc         @904 ; OVioApp::OVioApp(const unsigned long,char**)
-    @OVioApp@$bdtr$qv              @905 ; OVioApp::~OVioApp()
-    @OVioApp@isOfType$xqv          @906 ; OVioApp::isOfType() const
-    @OVioApp@forceQuit$qv          @907 ; OVioApp::forceQuit()
-    @OVioApp@Shutdown$qv           @908 ; OVioApp::Shutdown()
-    @OVioApp@Reboot$qv             @909 ; OVioApp::Reboot()
-    @OVioException@$bctr$qxpcxulxt2xt1xt2 @910 ; OVioException::OVioException(const char*,const unsigned long,const ...
-    @OVioException@$bctr$qrx13OVioException @911 ; OVioException::OVioException(const OVioException&)
-    @OVioException@$bdtr$qv        @912 ; OVioException::~OVioException()
-    @OVioException@isOfType$xqv    @913 ; OVioException::isOfType() const
-    @OVioException@viewError$qv    @914 ; OVioException::viewError()
-    OWinDefDlgProc                 @915 
-    OWinDefWindowProc              @916 
-    @OWindow@$bctr$qxulxt1xt1      @917 ; OWindow::OWindow(const unsigned long,const ...
-    @OWindow@$bdtr$qv              @918 ; OWindow::~OWindow()
-    @OWindow@isOfType$xqv          @919 ; OWindow::isOfType() const
-    @OWindow@inherit$qxul          @920 ; OWindow::inherit(const unsigned long)
-    @OWindow@initReplace$qxulr4_SWP @921 ; OWindow::initReplace(const unsigned long,_SWP&)
-    @OWindow@show$qv               @922 ; OWindow::show()
-    @OWindow@hide$qv               @923 ; OWindow::hide()
-    @OWindow@enable$qv             @924 ; OWindow::enable()
-    @OWindow@disable$qv            @925 ; OWindow::disable()
-    @OWindow@activate$qv           @926 ; OWindow::activate()
-    @OWindow@destroy$qv            @927 ; OWindow::destroy()
-    @OWindow@setFocus$qv           @928 ; OWindow::setFocus()
-    @OWindow@setParent$qxul        @929 ; OWindow::setParent(const unsigned long)
-    @OWindow@setOwner$qxul         @930 ; OWindow::setOwner(const unsigned long)
-    @OWindow@cancelClose$qv        @931 ; OWindow::cancelClose()
-    @OWindow@setForeColor$ql       @932 ; OWindow::setForeColor(long)
-    @OWindow@setBackColor$ql       @933 ; OWindow::setBackColor(long)
-    @OWindow@setFont$qpc           @934 ; OWindow::setFont(char*)
-    @OWindow@setPresentation$qp10_PresParms @935 ; OWindow::setPresentation(_PresParms*)
-    @OWindow@getPresentation$qp10_PresParms @936 ; OWindow::getPresentation(_PresParms*)
-    @OWindow@getForeColor$qv       @937 ; OWindow::getForeColor()
-    @OWindow@getBackColor$qv       @938 ; OWindow::getBackColor()
-    @OWindow@getFont$qv            @939 ; OWindow::getFont()
-    @OXApp@$bctr$qul               @940 ; OXApp::OXApp(unsigned long)
-    @OXApp@$bctr$qxulppcul         @941 ; OXApp::OXApp(const unsigned long,char**,unsigned long)
-    @OXApp@$bdtr$qv                @942 ; OXApp::~OXApp()
-    @OXApp@isOfType$xqv            @943 ; OXApp::isOfType() const
-    @OXApp@run$qv                  @944 ; OXApp::run()
-    @OXcptBase@$bctr$qul           @945 ; OXcptBase::OXcptBase(unsigned long)
-    @OXcptBase@$bdtr$qv            @946 ; OXcptBase::~OXcptBase()
-    @OXcptBase@isOfType$xqv        @947 ; OXcptBase::isOfType() const
-    @OXcptBase@handler$qp22_EXCEPTIONREPORTRECORDp28_EXCEPTIONREGISTRATIONRECORDp8_CONTEXTpv @948 ; OXcptBase::handler(_EXCEPTIONREPORTRECORD*,_EXCEPTIONREGISTRATIONRECORD*,_CONTEXT*,void*)
-    @OXcptBase@setHandler$qr28_EXCEPTIONREGISTRATIONRECORD @949 ; OXcptBase::setHandler(_EXCEPTIONREGISTRATIONRECORD&)
-    @OXcptBase@unsetHandler$qv     @950 ; OXcptBase::unsetHandler()
-    @OXcptBase@OXCPT_CATCH$qp22_EXCEPTIONREPORTRECORDp28_EXCEPTIONREGISTRATIONRECORDp8_CONTEXTpv @951 ; OXcptBase::OXCPT_CATCH(_EXCEPTIONREPORTRECORD*,_EXCEPTIONREGISTRATIONRECORD*,_CONTEXT*,void*)
-    @OXcptBase@currentHandler      @952 ; OXcptBase::currentHandler
-    _except_printf                 @953 
-    _except_print_context          @954 
-    @OXcptPM@$bctr$qul             @955 ; OXcptPM::OXcptPM(unsigned long)
-    @OXcptPM@$bdtr$qv              @956 ; OXcptPM::~OXcptPM()
-    @OXcptPM@isOfType$xqv          @957 ; OXcptPM::isOfType() const
-    @OXcptPM@trapTrace$qv          @958 ; OXcptPM::trapTrace()
-    @OXcptPM@killTrace$qv          @959 ; OXcptPM::killTrace()
-    @OXcptPM@exceptionMessage$qpxc @960 ; OXcptPM::exceptionMessage(const char*)
-    @OXcptVio@$bctr$qul            @961 ; OXcptVio::OXcptVio(unsigned long)
-    @OXcptVio@$bdtr$qv             @962 ; OXcptVio::~OXcptVio()
-    @OXcptVio@isOfType$xqv         @963 ; OXcptVio::isOfType() const
-    @OXcptVio@trapTrace$qv         @964 ; OXcptVio::trapTrace()
-    @OXcptVio@killTrace$qv         @965 ; OXcptVio::killTrace()
-    @OXcptVio@exceptionMessage$qpxc @966 ; OXcptVio::exceptionMessage(const char*)
-    @OProcRecord@$bctr$qv          @967 ; OProcRecord::OProcRecord()
-    @OProcRecord@$bctr$qrx11OProcRecord @968 ; OProcRecord::OProcRecord(const OProcRecord&)
-    @OProcRecord@$bctr$qxp11OProcRecord @969 ; OProcRecord::OProcRecord(const OProcRecord*)
-    @OProcRecord@$bdtr$qv          @970 ; OProcRecord::~OProcRecord()
-    @OProcRecord@isOfType$xqv      @971 ; OProcRecord::isOfType() const
-    @slOProcRecord@$bctr$qv        @972 ; slOProcRecord::slOProcRecord()
-    @slOProcRecord@$bdtr$qv        @973 ; slOProcRecord::~slOProcRecord()
-    @slOProcRecord@isOfType$xqv    @974 ; slOProcRecord::isOfType() const
-    @slOProcRecord@$blsh$qp11OProcRecord @975 ; slOProcRecord::operator <<(OProcRecord*)
-    @slOProcRecord@$blsh$qr11OProcRecord @976 ; slOProcRecord::operator <<(OProcRecord&)
-    @slOProcRecord@isLess$qpx11OProcRecordt1 @977 ; slOProcRecord::isLess(const OProcRecord*,const OProcRecord*)
-    @slOString@$bctr$qv            @978 ; slOString::slOString()
-    @slOString@$bdtr$qv            @979 ; slOString::~slOString()
-    @slOString@isOfType$xqv        @980 ; slOString::isOfType() const
-    @slOString@$blsh$qpxc          @981 ; slOString::operator <<(const char*)
-    @slOString@$blsh$qr7OString    @982 ; slOString::operator <<(OString&)
-    @slOString@$blsh$qp7OString    @983 ; slOString::operator <<(OString*)
-    @slOString@isLess$qpx7OStringt1 @984 ; slOString::isLess(const OString*,const OString*)
-    __DebuggerHookData             @985 
-    __GetExceptDLLinfo             @986 
+    @OCL@MSGFILE                   @2   ; ocl::msgfile
+    @OCL@Version$qv                @3   ; OCL::Version()
+    @OCL@Version$qr7OString        @4   ; OCL::Version(OString&)
+    @OCL@error$qul                 @5   ; OCL::error(unsigned long)
+    @OCL@apierror$qulul            @6   ; OCL::apierror(unsigned long,unsigned long)
+    @OCL@saveID$qpc                @7   ; OCL::saveID(char*)
+    @OCL@showDialogItem$qulpulul   @8   ; OCL::showDialogItem(unsigned long,unsigned long*,unsigned long)
+    @OCL@hideDialogItem$qulpulul   @9   ; OCL::hideDialogItem(unsigned long,unsigned long*,unsigned long)
+    @OCL@disableDialogItem$qulpululul @10  ; OCL::disableDialogItem(unsigned long,unsigned long*,unsigned long,unsigned long)
+    @OCL@disableControls$qulpulul  @11  ; OCL::disableControls(unsigned long,unsigned long*,unsigned long)
+    @OCL@enableControls$qulpulul   @12  ; OCL::enableControls(unsigned long,unsigned long*,unsigned long)
+    @OCL@hideControls$qulpulul     @13  ; OCL::hideControls(unsigned long,unsigned long*,unsigned long)
+    @OCL@showControls$qulpulul     @14  ; OCL::showControls(unsigned long,unsigned long*,unsigned long)
+    @OCL@startSession$qp10_STARTDATA @15  ; OCL::startSession(_STARTDATA*)
+    @OCLObject@vtctdt$qv           @16  ; OCLObject::vtctdt()
+    @lOString@lOStringPrint@applyToElement$xqpx7OString @17  ; lOString::lOStringPrint::applyToElement(const OString*) const
+    @lOString@$bctr$qv             @18  ; lOString::lOString()
+    @lOString@$bdtr$qv             @19  ; lOString::~lOString()
+    @lOString@isOfType$xqv         @20  ; lOString::isOfType() const
+    @lOString@$blsh$qpc            @21  ; lOString::operator <<(char*)
+    @lOString@$blsh$qr7OString     @22  ; lOString::operator <<(OString&)
+    @lOString@$blsh$qp7OString     @23  ; lOString::operator <<(OString*)
+    @lOString@print$qv             @24  ; lOString::print()
+    @O3State@$bctr$qululululululul @25  ; O3State::O3State(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @O3State@$bctr$qulr6OFrameululululul @26  ; O3State::O3State(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @O3State@$bctr$qulp6OFrameululululul @27  ; O3State::O3State(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @O3State@$bdtr$qv              @28  ; O3State::~O3State()
+    @O3State@isOfType$xqv          @29  ; O3State::isOfType() const
+    @OAuto3State@$bctr$qululululululul @30  ; OAuto3State::OAuto3State(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OAuto3State@$bctr$qulr6OFrameululululul @31  ; OAuto3State::OAuto3State(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OAuto3State@$bctr$qulp6OFrameululululul @32  ; OAuto3State::OAuto3State(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OAuto3State@$bdtr$qv          @33  ; OAuto3State::~OAuto3State()
+    @OAuto3State@isOfType$xqv      @34  ; OAuto3State::isOfType() const
+    @OAutoCheckBox@$bctr$qululululululul @35  ; OAutoCheckBox::OAutoCheckBox(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OAutoCheckBox@$bctr$qulr6OFrameululululul @36  ; OAutoCheckBox::OAutoCheckBox(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OAutoCheckBox@$bctr$qulp6OFrameululululul @37  ; OAutoCheckBox::OAutoCheckBox(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OAutoCheckBox@$bdtr$qv        @38  ; OAutoCheckBox::~OAutoCheckBox()
+    @OAutoCheckBox@isOfType$xqv    @39  ; OAutoCheckBox::isOfType() const
+    @OAutoRadioButton@$bctr$qululululululul @40  ; OAutoRadioButton::OAutoRadioButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OAutoRadioButton@$bctr$qulr6OFrameululululul @41  ; OAutoRadioButton::OAutoRadioButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OAutoRadioButton@$bctr$qulp6OFrameululululul @42  ; OAutoRadioButton::OAutoRadioButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OAutoRadioButton@$bdtr$qv     @43  ; OAutoRadioButton::~OAutoRadioButton()
+    @OAutoRadioButton@isOfType$xqv @44  ; OAutoRadioButton::isOfType() const
+    @OApp@currentOApp              @45  ; OApp::currentOApp
+    @OApp@$bctr$qul                @46  ; OApp::OApp(unsigned long)
+    @OApp@$bctr$qxulppcul          @47  ; OApp::OApp(const unsigned long,char**,unsigned long)
+    @OApp@$bdtr$qv                 @48  ; OApp::~OApp()
+    @OApp@isOfType$xqv             @49  ; OApp::isOfType() const
+    @OApp@run$qv                   @50  ; OApp::run()
+    @OApp@anchor$qv                @51  ; OApp::anchor()
+    @OApp@mqueue$qv                @52  ; OApp::mqueue()
+    @OApp@QuitPosted$qv            @53  ; OApp::QuitPosted()
+    @OApp@TasklistKill$qv          @54  ; OApp::TasklistKill()
+    @OApp@ShutdownPosted$qv        @55  ; OApp::ShutdownPosted()
+    @OApp@NullHandler$qv           @56  ; OApp::NullHandler()
+    @OApp@current$qv               @57  ; OApp::current()
+    @OApp@OCMDTrace$qxulxt1xpvxt3  @58  ; OApp::OCMDTrace(const unsigned long,const ...
+    @OApp@forceQuit$qv             @59  ; OApp::forceQuit()
+    @OApp@Shutdown$qv              @60  ; OApp::Shutdown()
+    @OApp@Reboot$qv                @61  ; OApp::Reboot()
+    @OAppBase@$bctr$qv             @62  ; OAppBase::OAppBase()
+    @OAppBase@$bctr$qxulppc        @63  ; OAppBase::OAppBase(const unsigned long,char**)
+    @OAppBase@$bdtr$qv             @64  ; OAppBase::~OAppBase()
+    @OAppBase@isOfType$xqv         @65  ; OAppBase::isOfType() const
+    @OAppBase@saveArgs$qxulppc     @66  ; OAppBase::saveArgs(const unsigned long,char**)
+    @OAppBase@initArgs$qpxc        @67  ; OAppBase::initArgs(const char*)
+    @OAppBase@SyncDisks$qv         @68  ; OAppBase::SyncDisks()
+    @OBitmap@$bctr$qv              @69  ; OBitmap::OBitmap()
+    @OBitmap@$bctr$qxulxt1xt1xt1xt1 @70  ; OBitmap::OBitmap(const unsigned long,const ...
+    @OBitmap@$bctr$qxul            @71  ; OBitmap::OBitmap(const unsigned long)
+    @OBitmap@$bctr$qxulpxc         @72  ; OBitmap::OBitmap(const unsigned long,const char*)
+    @OBitmap@$bdtr$qv              @73  ; OBitmap::~OBitmap()
+    @OBitmap@isOfType$xqv          @74  ; OBitmap::isOfType() const
+    @OBook@Assoc$qp9OBookPagep17_PAGESELECTNOTIFY @75  ; OBook::Assoc(OBookPage*,_PAGESELECTNOTIFY*)
+    @OBook@gSS$qpxc                @76  ; OBook::gSS(const char*)
+    @OBook@NBError$qpc             @77  ; OBook::NBError(char*)
+    @OBook@sNBP$qp17_PAGESELECTNOTIFY @78  ; OBook::sNBP(_PAGESELECTNOTIFY*)
+    @OBook@cNbk$qv                 @79  ; OBook::cNbk()
+    @OBook@sP$qp9OBookPage         @80  ; OBook::sP(OBookPage*)
+    @OBook@$bctr$qxulxt1xt1        @81  ; OBook::OBook(const unsigned long,const ...
+    @OBook@$bctr$qxulrx6OFramext1  @82  ; OBook::OBook(const unsigned long,const OFrame&,const ...
+    @OBook@$bctr$qxulxp6OFramext1  @83  ; OBook::OBook(const unsigned long,const OFrame*,const ...
+    @OBook@$bdtr$qv                @84  ; OBook::~OBook()
+    @OBook@isOfType$xqv            @85  ; OBook::isOfType() const
+    @OBook@createBook$qpcxulxt2xt2 @86  ; OBook::createBook(char*,const unsigned long,const ...
+    @OBook@setFramePos$qv          @87  ; OBook::setFramePos()
+    @OBook@setSizePosFrame$qxul4_SWPxt1 @88  ; OBook::setSizePosFrame(const unsigned long,_SWP,const ...
+    @OBook@addPages$qp19%OList$t9OBookPage% @89  ; OBook::addPages(OList<OBookPage>*)
+    @OBook@setTabDimensions$qv     @90  ; OBook::setTabDimensions()
+    @OBook@OCommand$qulpvt2        @91  ; OBook::OCommand(unsigned long,void*,void*)
+    @OBookPage@$bctr$qpct1ulululus @92  ; OBookPage::OBookPage(char*,char*,unsigned long,unsigned long,unsigned long,unsigned short)
+    @OBookPage@$bdtr$qv            @93  ; OBookPage::~OBookPage()
+    @OBookPage@isOfType$xqv        @94  ; OBookPage::isOfType() const
+    @OBookPage@OCommand$qulpvt2    @95  ; OBookPage::OCommand(unsigned long,void*,void*)
+    @OBuffer@$bctr$qxulxt1         @96  ; OBuffer::OBuffer(const unsigned long,const ...
+    @OBuffer@$bdtr$qv              @97  ; OBuffer::~OBuffer()
+    @OBuffer@isOfType$xqv          @98  ; OBuffer::isOfType() const
+    @OBuffer@commit$qxul           @99  ; OBuffer::commit(const unsigned long)
+    @OBuffer@decommit$qxul         @100 ; OBuffer::decommit(const unsigned long)
+    @OBuffer@freeBuffer$qv         @101 ; OBuffer::freeBuffer()
+    @OBuffer@allocated$qv          @102 ; OBuffer::allocated()
+    @OBuffer@committed$qv          @103 ; OBuffer::committed()
+    @OBuffer@getPtr$qv             @104 ; OBuffer::getPtr()
+    @OButton@$bctr$qululululululul @105 ; OButton::OButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OButton@$bctr$qulr6OFrameululululul @106 ; OButton::OButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OButton@$bctr$qulp6OFrameululululul @107 ; OButton::OButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OButton@$bdtr$qv              @108 ; OButton::~OButton()
+    @OButton@isOfType$xqv          @109 ; OButton::isOfType() const
+    @OButton@createButton$qv       @110 ; OButton::createButton()
+    @OButton@queryState$qv         @111 ; OButton::queryState()
+    @OButton@isChecked$qv          @112 ; OButton::isChecked()
+    @OButton@isHilited$qv          @113 ; OButton::isHilited()
+    @OButton@check$qv              @114 ; OButton::check()
+    @OButton@uncheck$qv            @115 ; OButton::uncheck()
+    @OButton@setState$qul          @116 ; OButton::setState(unsigned long)
+    @OButton@setDefault$qul        @117 ; OButton::setDefault(unsigned long)
+    @OButton@setHilite$qul         @118 ; OButton::setHilite(unsigned long)
+    @OButton@click$qul             @119 ; OButton::click(unsigned long)
+    @OButtonBar@initButtonBarDefaults$qv @120 ; OButtonBar::initButtonBarDefaults()
+    @OButtonBar@$bctr$qxulxt1xt1   @121 ; OButtonBar::OButtonBar(const unsigned long,const ...
+    @OButtonBar@$bctr$qxulrx6OFramext1 @122 ; OButtonBar::OButtonBar(const unsigned long,const OFrame&,const ...
+    @OButtonBar@$bctr$qxulxp6OFramext1 @123 ; OButtonBar::OButtonBar(const unsigned long,const OFrame*,const ...
+    @OButtonBar@$bdtr$qv           @124 ; OButtonBar::~OButtonBar()
+    @OButtonBar@isOfType$xqv       @125 ; OButtonBar::isOfType() const
+    @OButtonBar@createButtonBar$qv @126 ; OButtonBar::createButtonBar()
+    @OButtonBar@setButtonDimensions$qxulxt1 @127 ; OButtonBar::setButtonDimensions(const unsigned long,const ...
+    @OButtonBar@setOrientation$qxul @128 ; OButtonBar::setOrientation(const unsigned long)
+    @OButtonBar@setPicSize$qxul    @129 ; OButtonBar::setPicSize(const unsigned long)
+    @OButtonBar@setDrawStyle$qxul  @130 ; OButtonBar::setDrawStyle(const unsigned long)
+    @OButtonBar@setupButtons$qv    @131 ; OButtonBar::setupButtons()
+    @OButtonBar@destroyButtons$qv  @132 ; OButtonBar::destroyButtons()
+    @OButtonBar@enableButtons$qv   @133 ; OButtonBar::enableButtons()
+    @OButtonBar@disableButtons$qv  @134 ; OButtonBar::disableButtons()
+    @OButtonBar@requestHelpText$qxulxt1 @135 ; OButtonBar::requestHelpText(const unsigned long,const ...
+    @OButtonBar@requestHelpText$qv @136 ; OButtonBar::requestHelpText()
+    @OButtonBar@OCommand$qulpvt2   @137 ; OButtonBar::OCommand(unsigned long,void*,void*)
+    @OCheckBox@$bctr$qululululululul @138 ; OCheckBox::OCheckBox(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OCheckBox@$bctr$qulr6OFrameululululul @139 ; OCheckBox::OCheckBox(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OCheckBox@$bctr$qulp6OFrameululululul @140 ; OCheckBox::OCheckBox(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OCheckBox@$bdtr$qv            @141 ; OCheckBox::~OCheckBox()
+    @OCheckBox@isOfType$xqv        @142 ; OCheckBox::isOfType() const
+    @OCircSlider@$bctr$qxulxt1xt1xt1xt1 @143 ; OCircSlider::OCircSlider(const unsigned long,const ...
+    @OCircSlider@$bctr$qxulrx6OFramext1xt1xt1 @144 ; OCircSlider::OCircSlider(const unsigned long,const OFrame&,const ...
+    @OCircSlider@$bctr$qxulxp6OFramext1xt1xt1 @145 ; OCircSlider::OCircSlider(const unsigned long,const OFrame*,const ...
+    @OCircSlider@$bdtr$qv          @146 ; OCircSlider::~OCircSlider()
+    @OCircSlider@isOfType$xqv      @147 ; OCircSlider::isOfType() const
+    @OCircSlider@createCircSlider$qxsxt1xt1xt1 @148 ; OCircSlider::createCircSlider(const short,const ...
+    @OCollection@_getFirst$qv      @149 ; OCollection::_getFirst()
+    @OCollection@_getLast$qv       @150 ; OCollection::_getLast()
+    @OCollection@_getNext$qv       @151 ; OCollection::_getNext()
+    @OCollection@_getNext$qpv      @152 ; OCollection::_getNext(void*)
+    @OCollection@_getPrev$qv       @153 ; OCollection::_getPrev()
+    @OCollection@_getPrev$qpv      @154 ; OCollection::_getPrev(void*)
+    @OCollection@_getItem$qul      @155 ; OCollection::_getItem(unsigned long)
+    @OCollection@_getNextListItem$qpv @156 ; OCollection::_getNextListItem(void*)
+    @OCollection@_getPrevListItem$qpv @157 ; OCollection::_getPrevListItem(void*)
+    @OCollection@$bctr$qul         @158 ; OCollection::OCollection(unsigned long)
+    @OCollection@$bdtr$qv          @159 ; OCollection::~OCollection()
+    @OCollection@isOfType$xqv      @160 ; OCollection::isOfType() const
+    @OCollection@isCopyCollection$xqv @161 ; OCollection::isCopyCollection() const
+    @OCollection@isEmpty$xqv       @162 ; OCollection::isEmpty() const
+    @OCollection@numberOfElements$xqv @163 ; OCollection::numberOfElements() const
+    @OCollection@rewind$qv         @164 ; OCollection::rewind()
+    @OCollection@init$qv           @165 ; OCollection::init()
+    @OCollection@reset$qv          @166 ; OCollection::reset()
+    @OCollection@addFirst$qpv      @167 ; OCollection::addFirst(void*)
+    @OCollection@addLast$qpv       @168 ; OCollection::addLast(void*)
+    @OCollection@addAfter$qpvt1    @169 ; OCollection::addAfter(void*,void*)
+    @OCollection@addAfter$qp14%OListItem$tv%pv @170 ; OCollection::addAfter(OListItem<void>*,void*)
+    @OCollection@remove$qpv        @171 ; OCollection::remove(void*)
+    @OCollection@del$qpv           @172 ; OCollection::del(void*)
+    @OCommandHandler@$bctr$qv      @173 ; OCommandHandler::OCommandHandler()
+    @OCommandHandler@$bdtr$qv      @174 ; OCommandHandler::~OCommandHandler()
+    @OCommandHandler@isOfType$xqv  @175 ; OCommandHandler::isOfType() const
+    @OCommandHandler@OCommand$qulpvt2 @176 ; OCommandHandler::OCommand(unsigned long,void*,void*)
+    @OContainerBase@$bctr$qxulxt1xt1xt1 @177 ; OContainerBase::OContainerBase(const unsigned long,const ...
+    @OContainerBase@$bctr$qxulrx6OFramext1xt1 @178 ; OContainerBase::OContainerBase(const unsigned long,const OFrame&,const ...
+    @OContainerBase@$bctr$qxulxp6OFramext1xt1 @179 ; OContainerBase::OContainerBase(const unsigned long,const OFrame*,const ...
+    @OContainerBase@$bdtr$qv       @180 ; OContainerBase::~OContainerBase()
+    @OContainerBase@isOfType$xqv   @181 ; OContainerBase::isOfType() const
+    @OContainerBase@createContainer$qv @182 ; OContainerBase::createContainer()
+    @OContainerBase@inherit$qxul   @183 ; OContainerBase::inherit(const unsigned long)
+    @OContainerBase@insertDetailInfo$xqp10_FIELDINFOp16_FIELDINFOINSERT @184 ; OContainerBase::insertDetailInfo(_FIELDINFO*,_FIELDINFOINSERT*) const
+    @OContainerBase@insertRecord$xqpvp13_RECORDINSERT @185 ; OContainerBase::insertRecord(void*,_RECORDINSERT*) const
+    @OContainerBase@freeDetails$qv @186 ; OContainerBase::freeDetails()
+    @OContainerBase@freeItems$qv   @187 ; OContainerBase::freeItems()
+    @OContainerBase@freeContainer$qv @188 ; OContainerBase::freeContainer()
+    @OContainerBase@freeDetailInfo$xqp10_FIELDINFOul @189 ; OContainerBase::freeDetailInfo(_FIELDINFO*,unsigned long) const
+    @OContainerBase@freeRecord$xqpvul @190 ; OContainerBase::freeRecord(void*,unsigned long) const
+    @OContainerBase@eraseRecord$xqpv @191 ; OContainerBase::eraseRecord(void*) const
+    @OContainerBase@removeDetailInfo$xqp10_FIELDINFOulul @192 ; OContainerBase::removeDetailInfo(_FIELDINFO*,unsigned long,unsigned long) const
+    @OContainerBase@removeRecord$xqpvulul @193 ; OContainerBase::removeRecord(void*,unsigned long,unsigned long) const
+    @OContainerBase@queryCnrInfo$xqv @194 ; OContainerBase::queryCnrInfo() const
+    @OContainerBase@setView$qul    @195 ; OContainerBase::setView(unsigned long)
+    @OContainerBase@setTitle$qpc   @196 ; OContainerBase::setTitle(char*)
+    @OContainerBase@setCnrInfo$xqul @197 ; OContainerBase::setCnrInfo(unsigned long) const
+    @OContainerBase@setEmphasis$xqpvulul @198 ; OContainerBase::setEmphasis(void*,unsigned long,unsigned long) const
+    @OContainerBase@arrangeRecords$xqv @199 ; OContainerBase::arrangeRecords() const
+    @OContainerBase@collapseTree$xqpv @200 ; OContainerBase::collapseTree(void*) const
+    @OContainerBase@expandTree$xqpv @201 ; OContainerBase::expandTree(void*) const
+    @OContainerBase@openEdit$xqp12_CNREDITDATA @202 ; OContainerBase::openEdit(_CNREDITDATA*) const
+    @OContainerBase@closeEdit$xqv  @203 ; OContainerBase::closeEdit() const
+    @OContainerBase@invalidateDetails$xqv @204 ; OContainerBase::invalidateDetails() const
+    @OContainerBase@invalidateRecord$xqpvulul @205 ; OContainerBase::invalidateRecord(void*,unsigned long,unsigned long) const
+    @OContainerBase@filter$xqpqv$ipv @206 ; OContainerBase::filter(int(*)(),void*) const
+    @OContainerBase@_allocRecords$xqulul @207 ; OContainerBase::_allocRecords(unsigned long,unsigned long) const
+    @OContainerBase@_queryRecord$xqpvulul @208 ; OContainerBase::_queryRecord(void*,unsigned long,unsigned long) const
+    @OContainerBase@_queryEmphasis$xqpvul @209 ; OContainerBase::_queryEmphasis(void*,unsigned long) const
+    @OContainerBase@allocDetailFields$xqul @210 ; OContainerBase::allocDetailFields(unsigned long) const
+    @OContainerBase@queryDetailInfo$xqp10_FIELDINFOul @211 ; OContainerBase::queryDetailInfo(_FIELDINFO*,unsigned long) const
+    @OCreate@CreateBook$qv         @212 ; OCreate::CreateBook()
+    @OCreate@CreateExe$qv          @213 ; OCreate::CreateExe()
+    @OCreate@CreateDoc$qv          @214 ; OCreate::CreateDoc()
+    @OCreate@is$qpxc               @215 ; OCreate::is(const char*)
+    @OCreate@$bctr$qv              @216 ; OCreate::OCreate()
+    @OCreate@$bdtr$qv              @217 ; OCreate::~OCreate()
+    @OCreate@isOfType$xqv          @218 ; OCreate::isOfType() const
+    @OCreate@Create$qv             @219 ; OCreate::Create()
+    @OCriticalSec@$bctr$qul        @220 ; OCriticalSec::OCriticalSec(unsigned long)
+    @OCriticalSec@$bdtr$qv         @221 ; OCriticalSec::~OCriticalSec()
+    @OCriticalSec@isOfType$xqv     @222 ; OCriticalSec::isOfType() const
+    @OCriticalSec@enter$qv         @223 ; OCriticalSec::enter()
+    @OCriticalSec@exit$qv          @224 ; OCriticalSec::exit()
+    @ODate@init$q11ODate@Monthii   @225 ; ODate::init(ODate::Month,int)
+    @ODate@calculate$qv            @226 ; ODate::calculate()
+    @ODate@$bctr$qv                @227 ; ODate::ODate()
+    @ODate@$bctr$q11ODate@Monthii  @228 ; ODate::ODate(ODate::Month,int)
+    @ODate@$bctr$qi11ODate@Monthi  @229 ; ODate::ODate(int,ODate::Month)
+    @ODate@$bctr$qii               @230 ; ODate::ODate(int,int)
+    @ODate@$bctr$qrx5ODate         @231 ; ODate::ODate(const ODate&)
+    @ODate@$bctr$qul               @232 ; ODate::ODate(unsigned long)
+    @ODate@$bctr$qrx6_CDATE        @233 ; ODate::ODate(const _CDATE&)
+    @ODate@$bdtr$qv                @234 ; ODate::~ODate()
+    @ODate@isOfType$xqv            @235 ; ODate::isOfType() const
+    @ODate@today$qv                @236 ; ODate::today()
+    @ODate@now$qv                  @237 ; ODate::now()
+    @ODate@asString$xq16ODate@DateFormat @238 ; ODate::asString(ODate::DateFormat) const
+    @ODate@asString$xqpxc          @239 ; ODate::asString(const char*) const
+    @ODate@dayOfWeek$xqv           @240 ; ODate::dayOfWeek() const
+    @ODate@dayName$xqv             @241 ; ODate::dayName() const
+    @ODate@dayOfMonth$xqv          @242 ; ODate::dayOfMonth() const
+    @ODate@dayOfYear$xqv           @243 ; ODate::dayOfYear() const
+    @ODate@monthOfYear$xqv         @244 ; ODate::monthOfYear() const
+    @ODate@monthName$xqv           @245 ; ODate::monthName() const
+    @ODate@year$xqv                @246 ; ODate::year() const
+    @ODate@julianDate$xqv          @247 ; ODate::julianDate() const
+    @ODate@asCDATE$xqv             @248 ; ODate::asCDATE() const
+    @ODate@$beql$xqrx5ODate        @249 ; ODate::operator ==(const ODate&) const
+    @ODate@$bneq$xqrx5ODate        @250 ; ODate::operator !=(const ODate&) const
+    @ODate@$blss$xqrx5ODate        @251 ; ODate::operator <(const ODate&) const
+    @ODate@$bleq$xqrx5ODate        @252 ; ODate::operator <=(const ODate&) const
+    @ODate@$bgtr$xqrx5ODate        @253 ; ODate::operator >(const ODate&) const
+    @ODate@$bgeq$xqrx5ODate        @254 ; ODate::operator >=(const ODate&) const
+    @ODate@$badd$xqi               @255 ; ODate::operator +(int) const
+    @ODate@$bsub$xqi               @256 ; ODate::operator -(int) const
+    @ODate@$brplu$qi               @257 ; ODate::operator +=(int)
+    @ODate@$brmin$qi               @258 ; ODate::operator -=(int)
+    @ODate@$bsub$xqrx5ODate        @259 ; ODate::operator -(const ODate&) const
+    @ODate@dayName$q15ODate@DayOfWeek @260 ; ODate::dayName(ODate::DayOfWeek)
+    @ODate@monthName$q11ODate@Month @261 ; ODate::monthName(ODate::Month)
+    @ODate@daysInMonth$q11ODate@Monthi @262 ; ODate::daysInMonth(ODate::Month)
+    @ODate@daysInYear$qi           @263 ; ODate::daysInYear(int)
+    @ODate@isLeapYear$qi           @264 ; ODate::isLeapYear(int)
+    @ODate@isValid$q11ODate@Monthii @265 ; ODate::isValid(ODate::Month,int)
+    @ODate@isValid$qi11ODate@Monthi @266 ; ODate::isValid(int,ODate::Month)
+    @ODate@isValid$qii             @267 ; ODate::isValid(int,int)
+    @ODate@julianToMDY$qul         @268 ; ODate::julianToMDY(unsigned long)
+    @ODate@DYToMDY$qii             @269 ; ODate::DYToMDY(int,int)
+    @ODate@MDYToJulian$q9ODate@MDY @270 ; ODate::MDYToJulian(ODate::MDY)
+    @ODialog@$bctr$qxul            @271 ; ODialog::ODialog(const unsigned long)
+    @ODialog@$bctr$qxulxt1xt1      @272 ; ODialog::ODialog(const unsigned long,const ...
+    @ODialog@$bctr$qxulxt1xt1xt1   @273 ; ODialog::ODialog(const unsigned long,const ...
+    @ODialog@$bdtr$qv              @274 ; ODialog::~ODialog()
+    @ODialog@isOfType$xqv          @275 ; ODialog::isOfType() const
+    @ODialog@createDlg$qv          @276 ; ODialog::createDlg()
+    @ODialog@showDlg$qv            @277 ; ODialog::showDlg()
+    @ODialog@dismissDlg$qul        @278 ; ODialog::dismissDlg(unsigned long)
+    @ODialog@hideDlg$qv            @279 ; ODialog::hideDlg()
+    @ODialog@destroyDlg$qv         @280 ; ODialog::destroyDlg()
+    @ODialog@centerDlg$qxul        @281 ; ODialog::centerDlg(const unsigned long)
+    @ODialog@showDlgModal$qv       @282 ; ODialog::showDlgModal()
+    @OStdDialog@$bctr$qulul        @283 ; OStdDialog::OStdDialog(unsigned long,unsigned long)
+    @OStdDialog@$bdtr$qv           @284 ; OStdDialog::~OStdDialog()
+    @OStdDialog@isOfType$xqv       @285 ; OStdDialog::isOfType() const
+    @OFontDialog@$bctr$qulul       @286 ; OFontDialog::OFontDialog(unsigned long,unsigned long)
+    @OFontDialog@$bdtr$qv          @287 ; OFontDialog::~OFontDialog()
+    @OFontDialog@isOfType$xqv      @288 ; OFontDialog::isOfType() const
+    @OFontDialog@getFont$qpct1     @289 ; OFontDialog::getFont(char*,char*)
+    @OFileDialog@$bctr$qulul       @290 ; OFileDialog::OFileDialog(unsigned long,unsigned long)
+    @OFileDialog@$bdtr$qv          @291 ; OFileDialog::~OFileDialog()
+    @OFileDialog@isOfType$xqv      @292 ; OFileDialog::isOfType() const
+    @OFileDialog@open$qpct1t118OFileDialog@styles @293 ; OFileDialog::open(char*,char*,char*,OFileDialog::styles)
+    @OFileDialog@saveAs$qpct1t118OFileDialog@styles @294 ; OFileDialog::saveAs(char*,char*,char*,OFileDialog::styles)
+    @OColorDialog@$bctr$qulul      @295 ; OColorDialog::OColorDialog(unsigned long,unsigned long)
+    @OColorDialog@$bdtr$qv         @296 ; OColorDialog::~OColorDialog()
+    @OColorDialog@isOfType$xqv     @297 ; OColorDialog::isOfType() const
+    @ODragEntryField@$bctr$qxulxt1xt1xt1 @298 ; ODragEntryField::ODragEntryField(const unsigned long,const ...
+    @ODragEntryField@$bctr$qxulrx6OFramext1xt1 @299 ; ODragEntryField::ODragEntryField(const unsigned long,const OFrame&,const ...
+    @ODragEntryField@$bctr$qxulxp6OFramext1xt1 @300 ; ODragEntryField::ODragEntryField(const unsigned long,const OFrame*,const ...
+    @ODragEntryField@$bdtr$qv      @301 ; ODragEntryField::~ODragEntryField()
+    @ODragEntryField@createEntryField$qxulxt1xt1xt1 @302 ; ODragEntryField::createEntryField(const unsigned long,const ...
+    @ODragEntryField@inherit$qxul  @303 ; ODragEntryField::inherit(const unsigned long)
+    @ODragEntryField@EFDefaultCall$qulpvt2 @304 ; ODragEntryField::EFDefaultCall(unsigned long,void*,void*)
+    @ODragEntryField@isOfType$xqv  @305 ; ODragEntryField::isOfType() const
+    @ODragEntryField@OCommand$qulpvt2 @306 ; ODragEntryField::OCommand(unsigned long,void*,void*)
+    @ODynamicLib@$bctr$qul         @307 ; ODynamicLib::ODynamicLib(unsigned long)
+    @ODynamicLib@$bctr$qpxc        @308 ; ODynamicLib::ODynamicLib(const char*)
+    @ODynamicLib@$bdtr$qv          @309 ; ODynamicLib::~ODynamicLib()
+    @ODynamicLib@isOfType$xqv      @310 ; ODynamicLib::isOfType() const
+    @ODynamicLib@getLibHandle$qv   @311 ; ODynamicLib::getLibHandle()
+    @ODynamicLib@queryModuleName$qv @312 ; ODynamicLib::queryModuleName()
+    @ODynamicLib@setLibHandle$qul  @313 ; ODynamicLib::setLibHandle(unsigned long)
+    @ODynamicLib@freeModule$qv     @314 ; ODynamicLib::freeModule()
+    @ODynamicLib@freeResource$qpv  @315 ; ODynamicLib::freeResource(void*)
+    @ODynamicLib@queryFn$qul       @316 ; ODynamicLib::queryFn(unsigned long)
+    @ODynamicLib@queryFn$qpxc      @317 ; ODynamicLib::queryFn(const char*)
+    @ODynamicLib@queryFnType$qul   @318 ; ODynamicLib::queryFnType(unsigned long)
+    @ODynamicLib@queryFnType$qpxc  @319 ; ODynamicLib::queryFnType(const char*)
+    @ODynamicLib@queryAppType$qv   @320 ; ODynamicLib::queryAppType()
+    @ODynamicLib@queryResourceSize$qulul @321 ; ODynamicLib::queryResourceSize(unsigned long,unsigned long)
+    @ODynamicLib@getResource$qulul @322 ; ODynamicLib::getResource(unsigned long,unsigned long)
+    @OEditor@$bctr$qxulxt1xt1      @323 ; OEditor::OEditor(const unsigned long,const ...
+    @OEditor@$bctr$qxulxp6OFramext1 @324 ; OEditor::OEditor(const unsigned long,const OFrame*,const ...
+    @OEditor@$bctr$qxulrx6OFramext1 @325 ; OEditor::OEditor(const unsigned long,const OFrame&,const ...
+    @OEditor@$bdtr$qv              @326 ; OEditor::~OEditor()
+    @OEditor@isOfType$xqv          @327 ; OEditor::isOfType() const
+    @OEditor@loadFile$qv           @328 ; OEditor::loadFile()
+    @OEditor@saveFile$qv           @329 ; OEditor::saveFile()
+    @OEditor@saveFileAs$qv         @330 ; OEditor::saveFileAs()
+    @OEntryField@$bctr$qxulxt1xt1xt1 @331 ; OEntryField::OEntryField(const unsigned long,const ...
+    @OEntryField@$bctr$qxulrx6OFramext1xt1 @332 ; OEntryField::OEntryField(const unsigned long,const OFrame&,const ...
+    @OEntryField@$bctr$qxulxp6OFramext1xt1 @333 ; OEntryField::OEntryField(const unsigned long,const OFrame*,const ...
+    @OEntryField@$bdtr$qv          @334 ; OEntryField::~OEntryField()
+    @OEntryField@isOfType$xqv      @335 ; OEntryField::isOfType() const
+    @OEntryField@createEntryField$qxulxt1xt1xt1 @336 ; OEntryField::createEntryField(const unsigned long,const ...
+    @OEntryField@inherit$qxul      @337 ; OEntryField::inherit(const unsigned long)
+    @OEntryField@getText$qr7OString @338 ; OEntryField::getText(OString&)
+    @OEntryField@setText$qpxc      @339 ; OEntryField::setText(const char*)
+    @OEntryField@cutText$qv        @340 ; OEntryField::cutText()
+    @OEntryField@copyText$qv       @341 ; OEntryField::copyText()
+    @OEntryField@pasteText$qv      @342 ; OEntryField::pasteText()
+    @OEntryField@clearText$qv      @343 ; OEntryField::clearText()
+    @OEntryField@queryChanged$qv   @344 ; OEntryField::queryChanged()
+    @OEntryField@queryRDOnly$qv    @345 ; OEntryField::queryRDOnly()
+    @OEntryField@querySelection$qrust1 @346 ; OEntryField::querySelection(unsigned short&,unsigned short&)
+    @OEntryField@setFirstChar$qxus @347 ; OEntryField::setFirstChar(const unsigned short)
+    @OEntryField@setInsertMode$qxul @348 ; OEntryField::setInsertMode(const unsigned long)
+    @OEntryField@setRDOnly$qxul    @349 ; OEntryField::setRDOnly(const unsigned long)
+    @OEntryField@setSelection$qxusxt1 @350 ; OEntryField::setSelection(const unsigned short,const ...
+    @OEntryField@setTextLimit$qxus @351 ; OEntryField::setTextLimit(const unsigned short)
+    @OEntryField@queryFirstChar$qv @352 ; OEntryField::queryFirstChar()
+    @OException@$bctr$qxpcxulxt2xt1xt2 @353 ; OException::OException(const char*,const unsigned long,const ...
+    @OException@$bctr$qrx7OStringxulxt2xpcxt2 @354 ; OException::OException(const OString&,const unsigned long,const ...
+    @OException@$bctr$qrx10OException @355 ; OException::OException(const OException&)
+    @OException@$bdtr$qv           @356 ; OException::~OException()
+    @OException@isOfType$xqv       @357 ; OException::isOfType() const
+    @OFcl@setupFilebuf$qv          @358 ; OFcl::setupFilebuf()
+    @OFcl@finddirs$qpc             @359 ; OFcl::finddirs(char*)
+    @OFcl@finddrives$qpxc          @360 ; OFcl::finddrives(const char*)
+    @OFcl@findfiles$qp21%OListItem$t7OString% @361 ; OFcl::findfiles(OListItem<OString>*)
+    @OFcl@addfiles$qv              @362 ; OFcl::addfiles()
+    @OFcl@adddirs$qpxc             @363 ; OFcl::adddirs(const char*)
+    @OFcl@hasDate$qp13_FILEFINDBUF3 @364 ; OFcl::hasDate(_FILEFINDBUF3*)
+    @OFcl@hasTime$qp13_FILEFINDBUF3 @365 ; OFcl::hasTime(_FILEFINDBUF3*)
+    @OFcl@$bctr$qv                 @366 ; OFcl::OFcl()
+    @OFcl@$bdtr$qv                 @367 ; OFcl::~OFcl()
+    @OFcl@isOfType$xqv             @368 ; OFcl::isOfType() const
+    @OFcl@fclinit$qv               @369 ; OFcl::fclinit()
+    @OFcl@setCheck$qulul           @370 ; OFcl::setCheck(unsigned long,unsigned long)
+    @OFcl@collect$qpxculul         @371 ; OFcl::collect(const char*,unsigned long,unsigned long)
+    @OFcl@fclstop$qv               @372 ; OFcl::fclstop()
+    @OFillButton@$bctr$qv          @373 ; OFillButton::OFillButton()
+    @OFillButton@drawButton$qululululul @374 ; OFillButton::drawButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OFillButton@$bdtr$qv          @375 ; OFillButton::~OFillButton()
+    @OFillButton@isOfType$xqv      @376 ; OFillButton::isOfType() const
+    @OFrame@$bctr$qxulxt1xt1       @377 ; OFrame::OFrame(const unsigned long,const ...
+    @OFrame@$bdtr$qv               @378 ; OFrame::~OFrame()
+    @OFrame@isOfType$xqv           @379 ; OFrame::isOfType() const
+    @OFrame@createFrame$qpc        @380 ; OFrame::createFrame(char*)
+    @OFrame@setSizePosFrame$qxul4_SWPxt1 @381 ; OFrame::setSizePosFrame(const unsigned long,_SWP,const ...
+    @OFrame@trackFrame$qv          @382 ; OFrame::trackFrame()
+    @OFrame@showFrame$qv           @383 ; OFrame::showFrame()
+    @OFrame@hideFrame$qv           @384 ; OFrame::hideFrame()
+    @OFrame@centerFrame$qv         @385 ; OFrame::centerFrame()
+    @OFrame@postQuit$qv            @386 ; OFrame::postQuit()
+    @OFrame@destroyFrame$qv        @387 ; OFrame::destroyFrame()
+    @OFrame@setWindowText$qpxc     @388 ; OFrame::setWindowText(const char*)
+    @OFrame@OCommand$qulpvt2       @389 ; OFrame::OCommand(unsigned long,void*,void*)
+    @OFuzzSearch@OFuzzMatchPrint@applyToElement$xqpx10OFuzzMatch @390 ; OFuzzSearch::OFuzzMatchPrint::applyToElement(const OFuzzMatch*) const
+    @OFuzzSearch@fuzzyMatching$qv  @391 ; OFuzzSearch::fuzzyMatching()
+    @OFuzzSearch@prepareString$qpct1 @392 ; OFuzzSearch::prepareString(char*,char*)
+    @OFuzzSearch@NGramMatch$qpct1iipi @393 ; OFuzzSearch::NGramMatch(char*,char*,int,int,int*)
+    @OFuzzSearch@$bctr$qpxct1ful   @394 ; OFuzzSearch::OFuzzSearch(const char*,const char*,float,unsigned long)
+    @OFuzzSearch@$bdtr$qv          @395 ; OFuzzSearch::~OFuzzSearch()
+    @OFuzzSearch@isOfType$xqv      @396 ; OFuzzSearch::isOfType() const
+    @OFuzzSearch@startSearch$qv    @397 ; OFuzzSearch::startSearch()
+    @OFuzzSearch@printMatches$qv   @398 ; OFuzzSearch::printMatches()
+    @OGraphicsButton@$bctr$qululp5OIconpculululul @399 ; OGraphicsButton::OGraphicsButton(unsigned long,unsigned long,OIcon*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OGraphicsButton@$bctr$qululp7OBitmappculululul @400 ; OGraphicsButton::OGraphicsButton(unsigned long,unsigned long,OBitmap*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OGraphicsButton@$bctr$qulr6OFramep5OIconpculululul @401 ; OGraphicsButton::OGraphicsButton(unsigned long,OFrame&,OIcon*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OGraphicsButton@$bctr$qulr6OFramep7OBitmappculululul @402 ; OGraphicsButton::OGraphicsButton(unsigned long,OFrame&,OBitmap*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OGraphicsButton@$bctr$qulp6OFramep5OIconpculululul @403 ; OGraphicsButton::OGraphicsButton(unsigned long,OFrame*,OIcon*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OGraphicsButton@$bctr$qulp6OFramep7OBitmappculululul @404 ; OGraphicsButton::OGraphicsButton(unsigned long,OFrame*,OBitmap*,char*,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OGraphicsButton@$bdtr$qv      @405 ; OGraphicsButton::~OGraphicsButton()
+    @OGraphicsButton@isOfType$xqv  @406 ; OGraphicsButton::isOfType() const
+    @OGraphicsButton@UBDefaultCall$qulpvt2 @407 ; OGraphicsButton::UBDefaultCall(unsigned long,void*,void*)
+    @OGraphicsButton@createButton$qv @408 ; OGraphicsButton::createButton()
+    @OGraphicsButton@drawButton$qul @409 ; OGraphicsButton::drawButton(unsigned long)
+    @OGraphicsButton@OCommand$qulpvt2 @410 ; OGraphicsButton::OCommand(unsigned long,void*,void*)
+    @OHelp@$bctr$qxulxt1           @411 ; OHelp::OHelp(const unsigned long,const ...
+    @OHelp@$bdtr$qv                @412 ; OHelp::~OHelp()
+    @OHelp@isOfType$xqv            @413 ; OHelp::isOfType() const
+    @OHelp@initializeHelp$qpct1xul @414 ; OHelp::initializeHelp(char*,char*,const unsigned long)
+    @OHelp@terminateHelp$qv        @415 ; OHelp::terminateHelp()
+    @OHelp@helpRequest$qxul        @416 ; OHelp::helpRequest(const unsigned long)
+    @OHelpPopup@$bctr$qv           @417 ; OHelpPopup::OHelpPopup()
+    @OHelpPopup@$bdtr$qv           @418 ; OHelpPopup::~OHelpPopup()
+    @OHelpPopup@isOfType$xqv       @419 ; OHelpPopup::isOfType() const
+    @OHelpPopup@createStatusLine$qv @420 ; OHelpPopup::createStatusLine()
+    @OHelpPopup@showTimeout$xqv    @421 ; OHelpPopup::showTimeout() const
+    @OHelpPopup@setPopupTimeout$qul @422 ; OHelpPopup::setPopupTimeout(unsigned long)
+    @OHelpPopup@startPopupTimer$qv @423 ; OHelpPopup::startPopupTimer()
+    @OHelpPopup@stopPopupTimer$qv  @424 ; OHelpPopup::stopPopupTimer()
+    @OHelpPopup@timePopup$qpxc     @425 ; OHelpPopup::timePopup(const char*)
+    @OHelpPopup@showPopup$qpxc     @426 ; OHelpPopup::showPopup(const char*)
+    @OHelpPopup@hidePopup$qv       @427 ; OHelpPopup::hidePopup()
+    @OHelpPopup@OCommand$qulpvt2   @428 ; OHelpPopup::OCommand(unsigned long,void*,void*)
+    @OIcon@$bctr$qv                @429 ; OIcon::OIcon()
+    @OIcon@$bctr$qxulxt1           @430 ; OIcon::OIcon(const unsigned long,const ...
+    @OIcon@$bctr$qxul              @431 ; OIcon::OIcon(const unsigned long)
+    @OIcon@$bctr$qpxc              @432 ; OIcon::OIcon(const char*)
+    @OIcon@$bdtr$qv                @433 ; OIcon::~OIcon()
+    @OIcon@isOfType$xqv            @434 ; OIcon::isOfType() const
+    @OIcon@load$qxulxt1            @435 ; OIcon::load(const unsigned long,const ...
+    @OIcon@loadFromFile$qpc        @436 ; OIcon::loadFromFile(char*)
+    @OIcon@destroy$qv              @437 ; OIcon::destroy()
+    @OIndicator@$bctr$qxulxt1xt1   @438 ; OIndicator::OIndicator(const unsigned long,const ...
+    @OIndicator@$bctr$qxulrx6OFramext1 @439 ; OIndicator::OIndicator(const unsigned long,const OFrame&,const ...
+    @OIndicator@$bctr$qxulxp6OFramext1 @440 ; OIndicator::OIndicator(const unsigned long,const OFrame*,const ...
+    @OIndicator@$bdtr$qv           @441 ; OIndicator::~OIndicator()
+    @OIndicator@isOfType$xqv       @442 ; OIndicator::isOfType() const
+    @OIndicator@createIndicator$qxsxt1xt1xt1 @443 ; OIndicator::createIndicator(const short,const ...
+    @OIndicator@inherit$qxul       @444 ; OIndicator::inherit(const unsigned long)
+    @OListBox@auto_scroll$qv       @445 ; OListBox::auto_scroll()
+    @OListBox@$bctr$qxulxt1xt1ul   @446 ; OListBox::OListBox(const unsigned long,const ...
+    @OListBox@$bctr$qxulrx6OFramext1ul @447 ; OListBox::OListBox(const unsigned long,const OFrame&,const ...
+    @OListBox@$bctr$qxulxp6OFramext1ul @448 ; OListBox::OListBox(const unsigned long,const OFrame*,const ...
+    @OListBox@$bdtr$qv             @449 ; OListBox::~OListBox()
+    @OListBox@isOfType$xqv         @450 ; OListBox::isOfType() const
+    @OListBox@createListBox$qxulxt1xt1xt1 @451 ; OListBox::createListBox(const unsigned long,const ...
+    @OListBox@setAutoScroll$qul    @452 ; OListBox::setAutoScroll(unsigned long)
+    @OListBox@deleteAll$qv         @453 ; OListBox::deleteAll()
+    @OListBox@selectItem$qxulxt1   @454 ; OListBox::selectItem(const unsigned long,const ...
+    @OListBox@setItemHandle$qxulxt1 @455 ; OListBox::setItemHandle(const unsigned long,const ...
+    @OListBox@setItemHeight$qxul   @456 ; OListBox::setItemHeight(const unsigned long)
+    @OListBox@setItemText$qxulpxc  @457 ; OListBox::setItemText(const unsigned long,const char*)
+    @OListBox@setToTop$qxul        @458 ; OListBox::setToTop(const unsigned long)
+    @OListBox@deleteItem$qxul      @459 ; OListBox::deleteItem(const unsigned long)
+    @OListBox@insertItem$qpxcxul   @460 ; OListBox::insertItem(const char*,const unsigned long)
+    @OListBox@queryItemCount$qv    @461 ; OListBox::queryItemCount()
+    @OListBox@queryItemHandle$qxul @462 ; OListBox::queryItemHandle(const unsigned long)
+    @OListBox@queryItemText$qr7OStringxul @463 ; OListBox::queryItemText(OString&,const unsigned long)
+    @OListBox@queryItemTextLength$qxul @464 ; OListBox::queryItemTextLength(const unsigned long)
+    @OListBox@querySelection$qxul  @465 ; OListBox::querySelection(const unsigned long)
+    @OListBox@queryTopItem$qv      @466 ; OListBox::queryTopItem()
+    @OListBox@searchString$qpxcxulxt2 @467 ; OListBox::searchString(const char*,const unsigned long,const ...
+    @OLogo@$bctr$qxulxt1xt1xt1     @468 ; OLogo::OLogo(const unsigned long,const ...
+    @OLogo@$bctr$qxpcxulxt2xt2     @469 ; OLogo::OLogo(const char*,const unsigned long,const ...
+    @OLogo@$bdtr$qv                @470 ; OLogo::~OLogo()
+    @OLogo@isOfType$xqv            @471 ; OLogo::isOfType() const
+    @OLogo@showLogo$qxul           @472 ; OLogo::showLogo(const unsigned long)
+    @OLogo@OCommand$qulpvt2        @473 ; OLogo::OCommand(unsigned long,void*,void*)
+    @OMemu@$bctr$qv                @474 ; OMemu::OMemu()
+    @OMemu@$bdtr$qv                @475 ; OMemu::~OMemu()
+    @OMemu@isOfType$xqv            @476 ; OMemu::isOfType() const
+    @OMemu@querySystem$qv          @477 ; OMemu::querySystem()
+    @OMemu@queryGeneralInfo$qv     @478 ; OMemu::queryGeneralInfo()
+    @OMemu@makeKByte$qul           @479 ; OMemu::makeKByte(unsigned long)
+    @OMenu@createOMenuObject$qv    @480 ; OMenu::createOMenuObject()
+    @OMenu@$bctr$qxulxt1xt1xp11ODynamicLib @481 ; OMenu::OMenu(const unsigned long,const ...
+    @OMenu@$bctr$qxulxt1xt1xt1     @482 ; OMenu::OMenu(const unsigned long,const ...
+    @OMenu@$bctr$qxulrx7OWindowt2xp11ODynamicLib @483 ; OMenu::OMenu(const unsigned long,const OWindow&,const OWindow&,const ODynamicLib*)
+    @OMenu@$bctr$qxulrx7OWindowt2xt1 @484 ; OMenu::OMenu(const unsigned long,const OWindow&,const OWindow&,const ...
+    @OMenu@$bctr$qxulxp7OWindowxt2xp11ODynamicLib @485 ; OMenu::OMenu(const unsigned long,const OWindow*,const ...
+    @OMenu@$bctr$qxulxp7OWindowxt2xt1 @486 ; OMenu::OMenu(const unsigned long,const OWindow*,const ...
+    @OMenu@$bdtr$qv                @487 ; OMenu::~OMenu()
+    @OMenu@isOfType$xqv            @488 ; OMenu::isOfType() const
+    @OMenu@isEnabled$qxul          @489 ; OMenu::isEnabled(const unsigned long)
+    @OMenu@isChecked$qxul          @490 ; OMenu::isChecked(const unsigned long)
+    @OMenu@insertItem$qxulxp9OMenuItem @491 ; OMenu::insertItem(const unsigned long,const OMenuItem*)
+    @OMenu@insertItemList$qxulxp19%OList$t9OMenuItem% @492 ; OMenu::insertItemList(const unsigned long,const OList<OMenuItem>*)
+    @OMenu@removeItem$qxul         @493 ; OMenu::removeItem(const unsigned long)
+    @OMenu@removeItemList$qr11%OList$tul% @494 ; OMenu::removeItemList(OList<unsigned long>&)
+    @OMenu@removeItemList$qxpxulxul @495 ; OMenu::removeItemList(const const unsigned long*,const unsigned long)
+    @OMenu@enableItem$qxulul       @496 ; OMenu::enableItem(const unsigned long,unsigned long)
+    @OMenu@enableItemList$qr11%OList$tul%ul @497 ; OMenu::enableItemList(OList<unsigned long>&,unsigned long)
+    @OMenu@enableItemList$qxpxulxulul @498 ; OMenu::enableItemList(const const unsigned long*,const unsigned long,unsigned long)
+    @OMenu@checkItem$qxulul        @499 ; OMenu::checkItem(const unsigned long,unsigned long)
+    @OMenu@checkItemList$qr11%OList$tul%ul @500 ; OMenu::checkItemList(OList<unsigned long>&,unsigned long)
+    @OMenu@checkItemList$qxpxulxulul @501 ; OMenu::checkItemList(const const unsigned long*,const unsigned long,unsigned long)
+    @OMenu@setItemText$qxulpxc     @502 ; OMenu::setItemText(const unsigned long,const char*)
+    @OMenu@setItemText$qxulp7OString @503 ; OMenu::setItemText(const unsigned long,OString*)
+    @OMenu@setItemText$qxulxt1     @504 ; OMenu::setItemText(const unsigned long,const ...
+    @OMenuItem@$bctr$qxsxusxt2xt2xulxt5 @505 ; OMenuItem::OMenuItem(const short,const unsigned short,const ...
+    @OMenuItem@$bctr$qxp9_MENUITEM @506 ; OMenuItem::OMenuItem(const _MENUITEM*)
+    @OMenuItem@$bctr$qrx9_MENUITEM @507 ; OMenuItem::OMenuItem(const _MENUITEM&)
+    @OMenuItem@$bdtr$qv            @508 ; OMenuItem::~OMenuItem()
+    @OMenuItem@isOfType$xqv        @509 ; OMenuItem::isOfType() const
+    @OMessage@retrieve$qulpct2t2t2t2t2t2t2t2t2 @510 ; OMessage::retrieve(unsigned long,char*,char*,char*,char*,char*,char*,char*,char*,char*,char*)
+    @OMessage@$bctr$qv             @511 ; OMessage::OMessage()
+    @OMessage@$bctr$qulpct2t2t2t2t2t2t2t2t2 @512 ; OMessage::OMessage(unsigned long,char*,char*,char*,char*,char*,char*,char*,char*,char*,char*)
+    @OMessage@$bdtr$qv             @513 ; OMessage::~OMessage()
+    @OMessage@isOfType$xqv         @514 ; OMessage::isOfType() const
+    @OMessage@getLen$qv            @515 ; OMessage::getLen()
+    @OMessage@getText$qv           @516 ; OMessage::getText()
+    @OMessage@getMessage$qulpct2t2t2t2t2t2t2t2t2 @517 ; OMessage::getMessage(unsigned long,char*,char*,char*,char*,char*,char*,char*,char*,char*,char*)
+    @OMLE@$bctr$qxulxt1xt1         @518 ; OMLE::OMLE(const unsigned long,const ...
+    @OMLE@$bctr$qxulrx6OFramext1   @519 ; OMLE::OMLE(const unsigned long,const OFrame&,const ...
+    @OMLE@$bctr$qxulxp6OFramext1   @520 ; OMLE::OMLE(const unsigned long,const OFrame*,const ...
+    @OMLE@$bdtr$qv                 @521 ; OMLE::~OMLE()
+    @OMLE@isOfType$xqv             @522 ; OMLE::isOfType() const
+    @OMLE@getText$qpvul            @523 ; OMLE::getText(void*,unsigned long)
+    @OMLE@getText$qr7OString       @524 ; OMLE::getText(OString&)
+    @OMLE@setText$qpvul            @525 ; OMLE::setText(void*,unsigned long)
+    @OMLE@setText$qpc              @526 ; OMLE::setText(char*)
+    @OMLE@insertText$qpc           @527 ; OMLE::insertText(char*)
+    @OMLE@createMLE$qxulxt1xt1xt1  @528 ; OMLE::createMLE(const unsigned long,const ...
+    @OMLE@copy$qv                  @529 ; OMLE::copy()
+    @OMLE@cut$qv                   @530 ; OMLE::cut()
+    @OMLE@paste$qv                 @531 ; OMLE::paste()
+    @OMLE@copy2Clip$qv             @532 ; OMLE::copy2Clip()
+    @OMLE@cut2Clip$qv              @533 ; OMLE::cut2Clip()
+    @OMLE@pasteFromClip$qv         @534 ; OMLE::pasteFromClip()
+    @OMLE@clear$qv                 @535 ; OMLE::clear()
+    @OMLE@undo$qv                  @536 ; OMLE::undo()
+    @OMLE@changed$qv               @537 ; OMLE::changed()
+    @OMLE@deleteText$qulul         @538 ; OMLE::deleteText(unsigned long,unsigned long)
+    @OMLE@deleteAll$qv             @539 ; OMLE::deleteAll()
+    @OMLE@insertFile$qpxc          @540 ; OMLE::insertFile(const char*)
+    @OMLE@length$qv                @541 ; OMLE::length()
+    @OMLE@lines$qv                 @542 ; OMLE::lines()
+    @OMLE@setFormat$qxul           @543 ; OMLE::setFormat(const unsigned long)
+    @OMLE@disableRefresh$qv        @544 ; OMLE::disableRefresh()
+    @OMLE@enableRefresh$qv         @545 ; OMLE::enableRefresh()
+    @OMLE@insertLarge$qv           @546 ; OMLE::insertLarge()
+    @OMsgs@$bctr$qxulxt1xt1        @547 ; OMsgs::OMsgs(const unsigned long,const ...
+    @OMsgs@$bdtr$qv                @548 ; OMsgs::~OMsgs()
+    @OMsgs@isOfType$xqv            @549 ; OMsgs::isOfType() const
+    @OMsgs@message$qv              @550 ; OMsgs::message()
+    @OMsgs@title$qv                @551 ; OMsgs::title()
+    @OMsgs@setResource$qxul        @552 ; OMsgs::setResource(const unsigned long)
+    @OMsgs@info$qxul               @553 ; OMsgs::info(const unsigned long)
+    @OMsgs@info$qxulxt1            @554 ; OMsgs::info(const unsigned long,const ...
+    @OMsgs@info$qpxc               @555 ; OMsgs::info(const char*)
+    @OMsgs@info$qpxct1             @556 ; OMsgs::info(const char*,const char*)
+    @OMsgs@error$qxul              @557 ; OMsgs::error(const unsigned long)
+    @OMsgs@error$qxulxt1           @558 ; OMsgs::error(const unsigned long,const ...
+    @OMsgs@error$qpxc              @559 ; OMsgs::error(const char*)
+    @OMsgs@error$qpxct1            @560 ; OMsgs::error(const char*,const char*)
+    @OMsgs@beeper$qv               @561 ; OMsgs::beeper()
+    @OMsgs@ask$qxulxt1             @562 ; OMsgs::ask(const unsigned long,const ...
+    @OMsgs@ask$qpxct1              @563 ; OMsgs::ask(const char*,const char*)
+    @OMsgs@loadString$qxulxt1pc    @564 ; OMsgs::loadString(const unsigned long,const ...
+    @OMuxSem@$bctr$qul             @565 ; OMuxSem::OMuxSem(unsigned long)
+    @OMuxSem@$bctr$qpxculul        @566 ; OMuxSem::OMuxSem(const char*,unsigned long,unsigned long)
+    @OMuxSem@$bdtr$qv              @567 ; OMuxSem::~OMuxSem()
+    @OMuxSem@isOfType$xqv          @568 ; OMuxSem::isOfType() const
+    @OMuxSem@openMuxSem$qul        @569 ; OMuxSem::openMuxSem(unsigned long)
+    @OMuxSem@openMuxSem$qpxc       @570 ; OMuxSem::openMuxSem(const char*)
+    @OMuxSem@closeMuxSem$qv        @571 ; OMuxSem::closeMuxSem()
+    @OMuxSem@requestMuxSem$qul     @572 ; OMuxSem::requestMuxSem(unsigned long)
+    @OMuxSem@releaseMuxSem$qv      @573 ; OMuxSem::releaseMuxSem()
+    @OMuxSem@setMuxSemHandle$qul   @574 ; OMuxSem::setMuxSemHandle(unsigned long)
+    @OMuxSem@getMuxSemHandle$qv    @575 ; OMuxSem::getMuxSemHandle()
+    @OMuxWaitSem@$bctr$qul         @576 ; OMuxWaitSem::OMuxWaitSem(unsigned long)
+    @OMuxWaitSem@$bctr$qpxculp11_PSEMRECORDulul @577 ; OMuxWaitSem::OMuxWaitSem(const char*,unsigned long,_PSEMRECORD*,unsigned long,unsigned long)
+    @OMuxWaitSem@$bdtr$qv          @578 ; OMuxWaitSem::~OMuxWaitSem()
+    @OMuxWaitSem@isOfType$xqv      @579 ; OMuxWaitSem::isOfType() const
+    @OMuxWaitSem@waitMuxWaitSem$qul @580 ; OMuxWaitSem::waitMuxWaitSem(unsigned long)
+    @OMuxWaitSem@openMuxWaitSem$qul @581 ; OMuxWaitSem::openMuxWaitSem(unsigned long)
+    @OMuxWaitSem@openMuxWaitSem$qpxc @582 ; OMuxWaitSem::openMuxWaitSem(const char*)
+    @OMuxWaitSem@closeMuxWaitSem$qv @583 ; OMuxWaitSem::closeMuxWaitSem()
+    @OMuxWaitSem@addSemaphore$qp11_PSEMRECORD @584 ; OMuxWaitSem::addSemaphore(_PSEMRECORD*)
+    @OMuxWaitSem@addSemaphore$qp5ONSem @585 ; OMuxWaitSem::addSemaphore(ONSem*)
+    @OMuxWaitSem@addSemaphore$qp7OMuxSem @586 ; OMuxWaitSem::addSemaphore(OMuxSem*)
+    @OMuxWaitSem@delSemaphore$qpv  @587 ; OMuxWaitSem::delSemaphore(void*)
+    @OMuxWaitSem@queryMuxWaitSem$qpulp11_PSEMRECORDt1 @588 ; OMuxWaitSem::queryMuxWaitSem(unsigned long*,_PSEMRECORD*,unsigned long*)
+    @OMuxWaitSem@setMuxWaitSemHandle$qul @589 ; OMuxWaitSem::setMuxWaitSemHandle(unsigned long)
+    @OMuxWaitSem@getMuxWaitSemHandle$qv @590 ; OMuxWaitSem::getMuxWaitSemHandle()
+    @ONPipe@$bctr$qv               @591 ; ONPipe::ONPipe()
+    @ONPipe@$bdtr$qv               @592 ; ONPipe::~ONPipe()
+    @ONPipe@isOfType$xqv           @593 ; ONPipe::isOfType() const
+    @ONPipe@setOpenMode$qxul       @594 ; ONPipe::setOpenMode(const unsigned long)
+    @ONPipe@setPipeMode$qxul       @595 ; ONPipe::setPipeMode(const unsigned long)
+    @ONPipe@setTimeOut$qxul        @596 ; ONPipe::setTimeOut(const unsigned long)
+    @ONSem@$bctr$qul               @597 ; ONSem::ONSem(unsigned long)
+    @ONSem@$bctr$qpxculul          @598 ; ONSem::ONSem(const char*,unsigned long,unsigned long)
+    @ONSem@$bdtr$qv                @599 ; ONSem::~ONSem()
+    @ONSem@isOfType$xqv            @600 ; ONSem::isOfType() const
+    @ONSem@waitSem$qxul            @601 ; ONSem::waitSem(const unsigned long)
+    @ONSem@postSem$qv              @602 ; ONSem::postSem()
+    @ONSem@closeSem$qv             @603 ; ONSem::closeSem()
+    @ONSem@openSem$qpxc            @604 ; ONSem::openSem(const char*)
+    @ONSem@openSem$qxul            @605 ; ONSem::openSem(const unsigned long)
+    @ONSem@resetSem$qv             @606 ; ONSem::resetSem()
+    @ONSem@querySem$qv             @607 ; ONSem::querySem()
+    @ONSem@setSemHandle$qul        @608 ; ONSem::setSemHandle(unsigned long)
+    @ONSem@getSemHandle$qv         @609 ; ONSem::getSemHandle()
+    @OOrderedCollection@addSortAscending$qpv @610 ; OOrderedCollection::addSortAscending(void*)
+    @OOrderedCollection@addSortDescending$qpv @611 ; OOrderedCollection::addSortDescending(void*)
+    @OOrderedCollection@addSorted$qpv @612 ; OOrderedCollection::addSorted(void*)
+    @OOrderedCollection@$bctr$qul  @613 ; OOrderedCollection::OOrderedCollection(unsigned long)
+    @OOrderedCollection@$bdtr$qv   @614 ; OOrderedCollection::~OOrderedCollection()
+    @OOrderedCollection@isOfType$xqv @615 ; OOrderedCollection::isOfType() const
+    @OOrderedCollection@setAscending$qul @616 ; OOrderedCollection::setAscending(unsigned long)
+    @OPicture@$bctr$qulul          @617 ; OPicture::OPicture(unsigned long,unsigned long)
+    @OPicture@$bdtr$qv             @618 ; OPicture::~OPicture()
+    @OPicture@isOfType$xqv         @619 ; OPicture::isOfType() const
+    @OPicture@setDimension$qulul   @620 ; OPicture::setDimension(unsigned long,unsigned long)
+    @OPipe_istream@$bctr$qul       @621 ; OPipe_istream::OPipe_istream(unsigned long)
+    @OPipe_istream@$bctr$qp16OPipe_streamable @622 ; OPipe_istream::OPipe_istream(OPipe_streamable*)
+    @OPipe_istream@$bctr$qr16OPipe_streamable @623 ; OPipe_istream::OPipe_istream(OPipe_streamable&)
+    @OPipe_istream@$bdtr$qv        @624 ; OPipe_istream::~OPipe_istream()
+    @OPipe_istream@isOfType$xqv    @625 ; OPipe_istream::isOfType() const
+    @OPipe_ostream@$bctr$qul       @626 ; OPipe_ostream::OPipe_ostream(unsigned long)
+    @OPipe_ostream@$bctr$qp16OPipe_streamable @627 ; OPipe_ostream::OPipe_ostream(OPipe_streamable*)
+    @OPipe_ostream@$bctr$qr16OPipe_streamable @628 ; OPipe_ostream::OPipe_ostream(OPipe_streamable&)
+    @OPipe_ostream@$bdtr$qv        @629 ; OPipe_ostream::~OPipe_ostream()
+    @OPipe_ostream@isOfType$xqv    @630 ; OPipe_ostream::isOfType() const
+    @OPipe_streamable@closePipe$qv @631 ; OPipe_streamable::closePipe()
+    @OPipe_streamable@$bctr$qv     @632 ; OPipe_streamable::OPipe_streamable()
+    @OPipe_streamable@$bctr$qul    @633 ; OPipe_streamable::OPipe_streamable(unsigned long)
+    @OPipe_streamable@$bctr$qp16OPipe_streamable @634 ; OPipe_streamable::OPipe_streamable(OPipe_streamable*)
+    @OPipe_streamable@$bctr$qr16OPipe_streamable @635 ; OPipe_streamable::OPipe_streamable(OPipe_streamable&)
+    @OPipe_streamable@$bctr$qulul  @636 ; OPipe_streamable::OPipe_streamable(unsigned long,unsigned long)
+    @OPipe_streamable@$bdtr$qv     @637 ; OPipe_streamable::~OPipe_streamable()
+    @OPipe_streamable@isOfType$xqv @638 ; OPipe_streamable::isOfType() const
+    @OPipeCli@connectPipe$qpxc     @639 ; OPipeCli::connectPipe(const char*)
+    @OPipeCli@disconnectPipe$qv    @640 ; OPipeCli::disconnectPipe()
+    @OPipeCli@$bctr$qxulxt1xt1xt1xt1 @641 ; OPipeCli::OPipeCli(const unsigned long,const ...
+    @OPipeCli@$bdtr$qv             @642 ; OPipeCli::~OPipeCli()
+    @OPipeCli@isOfType$xqv         @643 ; OPipeCli::isOfType() const
+    @OPipeCli@setSize$qxul         @644 ; OPipeCli::setSize(const unsigned long)
+    @OPipeCli@beginPiping$qpxc     @645 ; OPipeCli::beginPiping(const char*)
+    @OPipeCli@stopPiping$qv        @646 ; OPipeCli::stopPiping()
+    @OPipeCli@postPipe$qpvul       @647 ; OPipeCli::postPipe(void*,unsigned long)
+    @OPipeCli@Pipe_IO$qv           @648 ; OPipeCli::Pipe_IO()
+    @OPipeSvr@createPipe$qpxc      @649 ; OPipeSvr::createPipe(const char*)
+    @OPipeSvr@destroyPipe$qv       @650 ; OPipeSvr::destroyPipe()
+    @OPipeSvr@$bctr$qxulxt1xt1xt1xt1xt1xt1 @651 ; OPipeSvr::OPipeSvr(const unsigned long,const ...
+    @OPipeSvr@$bdtr$qv             @652 ; OPipeSvr::~OPipeSvr()
+    @OPipeSvr@isOfType$xqv         @653 ; OPipeSvr::isOfType() const
+    @OPipeSvr@setBufSizes$qxulxt1xt1 @654 ; OPipeSvr::setBufSizes(const unsigned long,const ...
+    @OPipeSvr@beginPiping$qpxc     @655 ; OPipeSvr::beginPiping(const char*)
+    @OPipeSvr@stopPiping$qv        @656 ; OPipeSvr::stopPiping()
+    @OPipeSvr@getPipeData$qv       @657 ; OPipeSvr::getPipeData()
+    @OPipeSvr@postPipe$qpvul       @658 ; OPipeSvr::postPipe(void*,unsigned long)
+    @OPipeSvr@Pipe_IO$qv           @659 ; OPipeSvr::Pipe_IO()
+    @OPipeTool@$bctr$qpxct1xulxt3  @660 ; OPipeTool::OPipeTool(const char*,const char*,const unsigned long,const ...
+    @OPipeTool@$bdtr$qv            @661 ; OPipeTool::~OPipeTool()
+    @OPipeTool@isOfType$xqv        @662 ; OPipeTool::isOfType() const
+    @OPipeTool@detachChild$qv      @663 ; OPipeTool::detachChild()
+    @OPipeTool@stopChild$qv        @664 ; OPipeTool::stopChild()
+    @OPipeTool@printout$qv         @665 ; OPipeTool::printout()
+    @OPMException@$bctr$qxpcxulxt2xt1xt2 @666 ; OPMException::OPMException(const char*,const unsigned long,const ...
+    @OPMException@$bctr$qxulxt1xt1xt1xpcxt1 @667 ; OPMException::OPMException(const unsigned long,const ...
+    @OPMException@$bctr$qrx12OPMException @668 ; OPMException::OPMException(const OPMException&)
+    @OPMException@$bdtr$qv         @669 ; OPMException::~OPMException()
+    @OPMException@isOfType$xqv     @670 ; OPMException::isOfType() const
+    @OPMException@viewError$qv     @671 ; OPMException::viewError()
+    @OPMinit@$bctr$qxul            @672 ; OPMinit::OPMinit(const unsigned long)
+    @OPMinit@$bdtr$qv              @673 ; OPMinit::~OPMinit()
+    @OPMinit@isOfType$xqv          @674 ; OPMinit::isOfType() const
+    @OPMinit@anchor$qv             @675 ; OPMinit::anchor()
+    @OPMinit@mqueue$qv             @676 ; OPMinit::mqueue()
+    @OPMPipeTool@$bctr$qpxct1ulxt3xt3 @677 ; OPMPipeTool::OPMPipeTool(const char*,const char*,unsigned long,const ...
+    @OPMPipeTool@$bdtr$qv          @678 ; OPMPipeTool::~OPMPipeTool()
+    @OPMPipeTool@isOfType$xqv      @679 ; OPMPipeTool::isOfType() const
+    @OPMPipeTool@setNotify$qul     @680 ; OPMPipeTool::setNotify(unsigned long)
+    @OPMPipeTool@setNotify$qr6OFrame @681 ; OPMPipeTool::setNotify(OFrame&)
+    @OPMPipeTool@setNotify$qp6OFrame @682 ; OPMPipeTool::setNotify(OFrame*)
+    @OPMPipeTool@detachChild$qv    @683 ; OPMPipeTool::detachChild()
+    @OPMPipeTool@stopChild$qv      @684 ; OPMPipeTool::stopChild()
+    @OPMPipeTool@printout$qv       @685 ; OPMPipeTool::printout()
+    @OProcStat@getNumInfo$qpcul    @686 ; OProcStat::getNumInfo(char*,unsigned long)
+    @OProcStat@$bctr$qv            @687 ; OProcStat::OProcStat()
+    @OProcStat@$bdtr$qv            @688 ; OProcStat::~OProcStat()
+    @OProcStat@isOfType$xqv        @689 ; OProcStat::isOfType() const
+    @OProcStat@getProcesses$qv     @690 ; OProcStat::getProcesses()
+    @OProcStat@getModule$qul       @691 ; OProcStat::getModule(unsigned long)
+    @OProcStat@getPid$qpc          @692 ; OProcStat::getPid(char*)
+    @OProcStat@getPPid$qpc         @693 ; OProcStat::getPPid(char*)
+    @OProcStat@getProcCount$qv     @694 ; OProcStat::getProcCount()
+    @OProcStat@getTaskCount$qv     @695 ; OProcStat::getTaskCount()
+    @OProfile@$bctr$qv             @696 ; OProfile::OProfile()
+    @OProfile@$bctr$qpc            @697 ; OProfile::OProfile(char*)
+    @OProfile@$bctr$qxul           @698 ; OProfile::OProfile(const unsigned long)
+    @OProfile@$bdtr$qv             @699 ; OProfile::~OProfile()
+    @OProfile@isOfType$xqv         @700 ; OProfile::isOfType() const
+    @OProfile@open$qpc             @701 ; OProfile::open(char*)
+    @OProfile@setupList$qpuc       @702 ; OProfile::setupList(unsigned char*)
+    @OProfile@write$qpct1pvul      @703 ; OProfile::write(char*,char*,void*,unsigned long)
+    @OProfile@deleteApp$qpc        @704 ; OProfile::deleteApp(char*)
+    @OProfile@deleteKey$qpct1      @705 ; OProfile::deleteKey(char*,char*)
+    @OProfile@getApps$qv           @706 ; OProfile::getApps()
+    @OProfile@getKeys$qpc          @707 ; OProfile::getKeys(char*)
+    @OProfile@getStr$qpct1         @708 ; OProfile::getStr(char*,char*)
+    @OProfile@getData$qpct1pvpul   @709 ; OProfile::getData(char*,char*,void*,unsigned long*)
+    @OProfile@insert$qxulxt1       @710 ; OProfile::insert(const unsigned long,const ...
+    @OProfile@close$qv             @711 ; OProfile::close()
+    @OPushButton@$bctr$qululululululul @712 ; OPushButton::OPushButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OPushButton@$bctr$qulr6OFrameululululul @713 ; OPushButton::OPushButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OPushButton@$bctr$qulp6OFrameululululul @714 ; OPushButton::OPushButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OPushButton@$bdtr$qv          @715 ; OPushButton::~OPushButton()
+    @OPushButton@isOfType$xqv      @716 ; OPushButton::isOfType() const
+    @ORadioButton@$bctr$qululululululul @717 ; ORadioButton::ORadioButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @ORadioButton@$bctr$qulr6OFrameululululul @718 ; ORadioButton::ORadioButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @ORadioButton@$bctr$qulp6OFrameululululul @719 ; ORadioButton::ORadioButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @ORadioButton@$bdtr$qv         @720 ; ORadioButton::~ORadioButton()
+    @ORadioButton@isOfType$xqv     @721 ; ORadioButton::isOfType() const
+    @ORiffPlay@$bctr$qv            @722 ; ORiffPlay::ORiffPlay()
+    @ORiffPlay@$bctr$qpc           @723 ; ORiffPlay::ORiffPlay(char*)
+    @ORiffPlay@$bctr$qr11ODynamicLib @724 ; ORiffPlay::ORiffPlay(ODynamicLib&)
+    @ORiffPlay@$bdtr$qv            @725 ; ORiffPlay::~ORiffPlay()
+    @ORiffPlay@isOfType$xqv        @726 ; ORiffPlay::isOfType() const
+    @ORiffPlay@play$qpc18ORiffPlay@PlayType @727 ; ORiffPlay::play(char*,ORiffPlay::PlayType)
+    @ORiffPlay@play$qul18ORiffPlay@RiffType18ORiffPlay@PlayType @728 ; ORiffPlay::play(unsigned long,ORiffPlay::RiffType,ORiffPla,...
+    @ORiffPlay@stop$qv             @729 ; ORiffPlay::stop()
+    @ORiffPlay@mci_pf              @730 ; ORiffPlay::mci_pf
+    @ORiffPlay@mci_pr              @731 ; ORiffPlay::mci_pr
+    @ORiffPlay@mci_err             @732 ; ORiffPlay::mci_err
+    @ORiffPlay@mciapi              @733 ; ORiffPlay::mciapi
+    @ORiffPlay@mdmapi              @734 ; ORiffPlay::mdmapi
+    @ORiffPlay@resolve$qv          @735 ; ORiffPlay::resolve()
+    @ORiffPlay@playWave$q18ORiffPlay@PlayType @736 ; ORiffPlay::playWave(ORiffPlay::PlayType)
+    @OScanFcl@$bctr$qv             @737 ; OScanFcl::OScanFcl()
+    @OScanFcl@$bdtr$qv             @738 ; OScanFcl::~OScanFcl()
+    @OScanFcl@isOfType$xqv         @739 ; OScanFcl::isOfType() const
+    @OScanFcl@init$qpxct1          @740 ; OScanFcl::init(const char*,const char*)
+    @OScanFcl@init$qpxc            @741 ; OScanFcl::init(const char*)
+    @OScanFcl@check$qpxc           @742 ; OScanFcl::check(const char*)
+    @OScanFcl@checkFiles$qpxc      @743 ; OScanFcl::checkFiles(const char*)
+    @OSlider@$bctr$qxulxt1xt1xt1xt1xt1xt1 @744 ; OSlider::OSlider(const unsigned long,const ...
+    @OSlider@$bctr$qxulrx6OFramext1xt1xt1xt1xt1 @745 ; OSlider::OSlider(const unsigned long,const OFrame&,const ...
+    @OSlider@$bctr$qxulxp6OFramext1xt1xt1xt1xt1 @746 ; OSlider::OSlider(const unsigned long,const OFrame*,const ...
+    @OSlider@$bdtr$qv              @747 ; OSlider::~OSlider()
+    @OSlider@isOfType$xqv          @748 ; OSlider::isOfType() const
+    @OSlider@createSlider$qxsxt1xt1xt1 @749 ; OSlider::createSlider(const short,const ...
+    @OSlider@setSliderArmPos$qs    @750 ; OSlider::setSliderArmPos(short)
+    @OSlider@setSliderArmSize$qulul @751 ; OSlider::setSliderArmSize(unsigned long,unsigned long)
+    @OSlider@setSliderShaftPos$qss @752 ; OSlider::setSliderShaftPos(short,short)
+    @OSlider@setSliderShaftDim$qs  @753 ; OSlider::setSliderShaftDim(short)
+    @OSlider@incSliderArm$qs       @754 ; OSlider::incSliderArm(short)
+    @OSlider@decSliderArm$qs       @755 ; OSlider::decSliderArm(short)
+    @OSlider@setSliderScaleText$qpxcus @756 ; OSlider::setSliderScaleText(const char*,unsigned short)
+    @OSlider@setTickSize$qulul     @757 ; OSlider::setTickSize(unsigned long,unsigned long)
+    @OSlider@setSliderStyles$qxul  @758 ; OSlider::setSliderStyles(const unsigned long)
+    @OSlider@setSliderSize$qxulxt1xt1xt1 @759 ; OSlider::setSliderSize(const unsigned long,const ...
+    @OSlider@getSliderShaftDim$qpst1 @760 ; OSlider::getSliderShaftDim(short*,short*)
+    @OSlider@getSliderShaftPos$qpst1 @761 ; OSlider::getSliderShaftPos(short*,short*)
+    @OSlider@getSliderArmSize$qpst1 @762 ; OSlider::getSliderArmSize(short*,short*)
+    @OSlider@drawSliderElement$qp10_OWNERITEMl @763 ; OSlider::drawSliderElement(_OWNERITEM*,long)
+    @OSlider@inherit$qxul          @764 ; OSlider::inherit(const unsigned long)
+    @OSlider@addDetent$qs          @765 ; OSlider::addDetent(short)
+    @OSlider@getDetentPos$qul      @766 ; OSlider::getDetentPos(unsigned long)
+    @OSlider@getSliderArmPos$qv    @767 ; OSlider::getSliderArmPos()
+    @OSlider@getTickSize$qs        @768 ; OSlider::getTickSize(short)
+    @OSlider@getScaleText$qspcs    @769 ; OSlider::getScaleText(short,char*,short)
+    @OSpinBtn@$bctr$qxulxt1xt1     @770 ; OSpinBtn::OSpinBtn(const unsigned long,const ...
+    @OSpinBtn@$bctr$qxulrx6OFramext1 @771 ; OSpinBtn::OSpinBtn(const unsigned long,const OFrame&,const ...
+    @OSpinBtn@$bctr$qxulxp6OFramext1 @772 ; OSpinBtn::OSpinBtn(const unsigned long,const OFrame*,const ...
+    @OSpinBtn@$bdtr$qv             @773 ; OSpinBtn::~OSpinBtn()
+    @OSpinBtn@isOfType$xqv         @774 ; OSpinBtn::isOfType() const
+    @OSpinBtn@createSpinBtn$qxsxt1xt1xt1 @775 ; OSpinBtn::createSpinBtn(const short,const ...
+    @OSpinBtn@setArray$qpcul       @776 ; OSpinBtn::setArray(char*,unsigned long)
+    @OSpinBtn@setCurrent$ql        @777 ; OSpinBtn::setCurrent(long)
+    @OSpinBtn@setLimits$qll        @778 ; OSpinBtn::setLimits(long,long)
+    @OSpinBtn@setMaster$qul        @779 ; OSpinBtn::setMaster(unsigned long)
+    @OSpinBtn@setTextLimit$qus     @780 ; OSpinBtn::setTextLimit(unsigned short)
+    @OSpinBtn@overrideLimits$qll   @781 ; OSpinBtn::overrideLimits(long,long)
+    @OSpinBtn@incSpin$qul          @782 ; OSpinBtn::incSpin(unsigned long)
+    @OSpinBtn@decSpin$qul          @783 ; OSpinBtn::decSpin(unsigned long)
+    @OSpinBtn@getLimits$qplt1      @784 ; OSpinBtn::getLimits(long*,long*)
+    @OSpinBtn@getCurrent$qpvusus   @785 ; OSpinBtn::getCurrent(void*,unsigned short,unsigned short)
+    @OSpinBtn@jumptoEnd$qv         @786 ; OSpinBtn::jumptoEnd()
+    @OSpinBtn@jumptoStart$qv       @787 ; OSpinBtn::jumptoStart()
+    @OStatusLine@initStatlineDefaults$qv @788 ; OStatusLine::initStatlineDefaults()
+    @OStatusLine@$bctr$qxulxt1xt1  @789 ; OStatusLine::OStatusLine(const unsigned long,const ...
+    @OStatusLine@$bctr$qxulrx6OFramext1 @790 ; OStatusLine::OStatusLine(const unsigned long,const OFrame&,const ...
+    @OStatusLine@$bctr$qxulxp6OFramext1 @791 ; OStatusLine::OStatusLine(const unsigned long,const OFrame*,const ...
+    @OStatusLine@$bdtr$qv          @792 ; OStatusLine::~OStatusLine()
+    @OStatusLine@isOfType$xqv      @793 ; OStatusLine::isOfType() const
+    @OStatusLine@createStatusLine$qv @794 ; OStatusLine::createStatusLine()
+    @OStatusLine@getHeight$qv      @795 ; OStatusLine::getHeight()
+    @OStatusLine@getWidth$qv       @796 ; OStatusLine::getWidth()
+    @OStatusLine@refreshText$qv    @797 ; OStatusLine::refreshText()
+    @OStatusLine@setText$qpxc      @798 ; OStatusLine::setText(const char*)
+    @OStatusLine@setOrientation$qxul @799 ; OStatusLine::setOrientation(const unsigned long)
+    @OStatusLine@setRDOnly$qul     @800 ; OStatusLine::setRDOnly(unsigned long)
+    @OStatusLine@OCommand$qulpvt2  @801 ; OStatusLine::OCommand(unsigned long,void*,void*)
+    @OString@$bctr$qv              @802 ; OString::OString()
+    @OString@$bctr$qpxc            @803 ; OString::OString(const char*)
+    @OString@$bctr$qrx7OString     @804 ; OString::OString(const OString&)
+    @OString@$bctr$qxp7OString     @805 ; OString::OString(const OString*)
+    @OString@$bctr$qi              @806 ; OString::OString(int)
+    @OString@$bctr$qulul           @807 ; OString::OString(unsigned long,unsigned long)
+    @OString@$bdtr$qv              @808 ; OString::~OString()
+    @OString@isOfType$xqv          @809 ; OString::isOfType() const
+    @OString@getText$xqv           @810 ; OString::getText() const
+    @OString@length$xqv            @811 ; OString::length() const
+    @OString@compare$xqrx7OStringt1 @812 ; OString::compare(const OString&,const OString&) const
+    @OString@leftCut$qi            @813 ; OString::leftCut(int)
+    @OString@rightCut$qi           @814 ; OString::rightCut(int)
+    @OString@stripLeading$qi       @815 ; OString::stripLeading(int)
+    @OString@stripTrailing$qi      @816 ; OString::stripTrailing(int)
+    @OString@replace$qpxct1        @817 ; OString::replace(const char*,const char*)
+    @OString@$blsh$qpxc            @818 ; OString::operator <<(const char*)
+    @OString@$blsh$qxp7OString     @819 ; OString::operator <<(const OString*)
+    @OString@$blsh$qi              @820 ; OString::operator <<(int)
+    @OString@$blsh$qui             @821 ; OString::operator <<(unsigned int)
+    @OString@$blsh$ql              @822 ; OString::operator <<(long)
+    @OString@$blsh$qul             @823 ; OString::operator <<(unsigned long)
+    @OString@$blsh$qd              @824 ; OString::operator <<(double)
+    @OString@$badd$qpxc            @825 ; OString::operator +(const char*)
+    @OString@$badd$qxp7OString     @826 ; OString::operator +(const OString*)
+    @OString@$badd$qi              @827 ; OString::operator +(int)
+    @OString@$badd$qui             @828 ; OString::operator +(unsigned int)
+    @OString@$badd$ql              @829 ; OString::operator +(long)
+    @OString@$badd$qul             @830 ; OString::operator +(unsigned long)
+    @OString@$badd$qd              @831 ; OString::operator +(double)
+    @OString@$basg$qpxc            @832 ; OString::operator =(const char*)
+    @OString@$beql$xqpxc           @833 ; OString::operator ==(const char*) const
+    @OString@$bneq$xqpxc           @834 ; OString::operator !=(const char*) const
+    @OString@$blss$xqpxc           @835 ; OString::operator <(const char*) const
+    @OString@$bgtr$xqpxc           @836 ; OString::operator >(const char*) const
+    @OString@$bleq$xqpxc           @837 ; OString::operator <=(const char*) const
+    @OString@$bgeq$xqpxc           @838 ; OString::operator >=(const char*) const
+    @OSysInfo@$bctr$qv             @839 ; OSysInfo::OSysInfo()
+    @OSysInfo@$bdtr$qv             @840 ; OSysInfo::~OSysInfo()
+    @OSysInfo@isOfType$xqv         @841 ; OSysInfo::isOfType() const
+    @OSysInfo@getDesktop$qv        @842 ; OSysInfo::getDesktop()
+    @OSysInfoVIO@$bctr$qv          @843 ; OSysInfoVIO::OSysInfoVIO()
+    @OSysInfoVIO@$bdtr$qv          @844 ; OSysInfoVIO::~OSysInfoVIO()
+    @OSysInfoVIO@isOfType$xqv      @845 ; OSysInfoVIO::isOfType() const
+    @OSysInfoVIO@getDrives$qv      @846 ; OSysInfoVIO::getDrives()
+    @OSysInfoVIO@getAllDrives$qv   @847 ; OSysInfoVIO::getAllDrives()
+    @OSysInfoVIO@getEnv$qpxc       @848 ; OSysInfoVIO::getEnv(const char*)
+    @OSysInfoVIO@getBootDrive$qv   @849 ; OSysInfoVIO::getBootDrive()
+    @OSysInfoVIO@getCfgEnv$qpc     @850 ; OSysInfoVIO::getCfgEnv(char*)
+    @OSysInfoVIO@getOSVer$qv       @851 ; OSysInfoVIO::getOSVer()
+    @OSysInfoVIO@getOSVer$qrd      @852 ; OSysInfoVIO::getOSVer(double&)
+    @OSysInfoVIO@findPathFile$qpxc @853 ; OSysInfoVIO::findPathFile(const char*)
+    @OSysInfoVIO@checkRemovable$qpxc @854 ; OSysInfoVIO::checkRemovable(const char*)
+    @OSysInfoVIO@clearRDOnly$qpxc  @855 ; OSysInfoVIO::clearRDOnly(const char*)
+    @OSysLevel@JulianToDT$xqlr9_DATETIME @856 ; OSysLevel::JulianToDT(long,_DATETIME&) const
+    @OSysLevel@DTToJulian$xqr9_DATETIME @857 ; OSysLevel::DTToJulian(_DATETIME&) const
+    @OSysLevel@readFromFile$qpxc   @858 ; OSysLevel::readFromFile(const char*)
+    @OSysLevel@writeToFile$qpxc    @859 ; OSysLevel::writeToFile(const char*)
+    @OSysLevel@$bctr$qv            @860 ; OSysLevel::OSysLevel()
+    @OSysLevel@$bctr$qrx9OSysLevel @861 ; OSysLevel::OSysLevel(const OSysLevel&)
+    @OSysLevel@$bctr$qr10_SLFHEADERr9_SYSTABLE @862 ; OSysLevel::OSysLevel(_SLFHEADER&,_SYSTABLE&)
+    @OSysLevel@$bctr$qpxc          @863 ; OSysLevel::OSysLevel(const char*)
+    @OSysLevel@$bdtr$qv            @864 ; OSysLevel::~OSysLevel()
+    @OSysLevel@isOfType$xqv        @865 ; OSysLevel::isOfType() const
+    @OSysLevel@read$qv             @866 ; OSysLevel::read()
+    @OSysLevel@write$qv            @867 ; OSysLevel::write()
+    @OSysLevel@setSysTable$qrx9_SYSTABLE @868 ; OSysLevel::setSysTable(const _SYSTABLE&)
+    @OSysLevel@setHeader$qrx10_SLFHEADER @869 ; OSysLevel::setHeader(const _SLFHEADER&)
+    @OSysLevel@setFileName$qpxc    @870 ; OSysLevel::setFileName(const char*)
+    @OSysLevel@setDate$qv          @871 ; OSysLevel::setDate()
+    @OSysLevel@setDate$qr9_DATETIME @872 ; OSysLevel::setDate(_DATETIME&)
+    @OSysLevel@setDate$qpc         @873 ; OSysLevel::setDate(char*)
+    @OSysLevel@setTableOffset$qul  @874 ; OSysLevel::setTableOffset(unsigned long)
+    @OSysLevel@setSysId$qus        @875 ; OSysLevel::setSysId(unsigned short)
+    @OSysLevel@setSysEdition$quc   @876 ; OSysLevel::setSysEdition(unsigned char)
+    @OSysLevel@setSysVersion$quc   @877 ; OSysLevel::setSysVersion(unsigned char)
+    @OSysLevel@setSysModify$quc    @878 ; OSysLevel::setSysModify(unsigned char)
+    @OSysLevel@setSysDate$qus      @879 ; OSysLevel::setSysDate(unsigned short)
+    @OSysLevel@setCsdLevel$qpc     @880 ; OSysLevel::setCsdLevel(char*)
+    @OSysLevel@setCsdPrev$qpc      @881 ; OSysLevel::setCsdPrev(char*)
+    @OSysLevel@setSysName$qpc      @882 ; OSysLevel::setSysName(char*)
+    @OSysLevel@setCompId$qpc       @883 ; OSysLevel::setCompId(char*)
+    @OSysLevel@setRefreshLevel$quc @884 ; OSysLevel::setRefreshLevel(unsigned char)
+    @OSysLevel@setType$qpc         @885 ; OSysLevel::setType(char*)
+    @OSysLevel@getDate$xqr9_DATETIME @886 ; OSysLevel::getDate(_DATETIME&) const
+    @OSysLevel@getTableOffset$xqv  @887 ; OSysLevel::getTableOffset() const
+    @OSysLevel@getSysId$xqv        @888 ; OSysLevel::getSysId() const
+    @OSysLevel@getSysDate$xqv      @889 ; OSysLevel::getSysDate() const
+    @OSysLevel@getFileName$xqv     @890 ; OSysLevel::getFileName() const
+    @OSysLevel@getDateAsStr$xqr7OString @891 ; OSysLevel::getDateAsStr(OString&) const
+    @OSysLevel@getCsdLevel$xqv     @892 ; OSysLevel::getCsdLevel() const
+    @OSysLevel@getCsdPrev$xqv      @893 ; OSysLevel::getCsdPrev() const
+    @OSysLevel@getSysName$xqv      @894 ; OSysLevel::getSysName() const
+    @OSysLevel@getCompId$xqv       @895 ; OSysLevel::getCompId() const
+    @OSysLevel@getType$xqv         @896 ; OSysLevel::getType() const
+    @OSysLevel@getSysEdition$xqv   @897 ; OSysLevel::getSysEdition() const
+    @OSysLevel@getSysVersion$xqv   @898 ; OSysLevel::getSysVersion() const
+    @OSysLevel@getSysModify$xqv    @899 ; OSysLevel::getSysModify() const
+    @OSysLevel@getRefreshLevel$xqv @900 ; OSysLevel::getRefreshLevel() const
+    @OSysLevel@getHeader$xqv       @901 ; OSysLevel::getHeader() const
+    @OSysLevel@getSysTable$xqv     @902 ; OSysLevel::getSysTable() const
+    @OThreadBase@$bctr$qulul       @903 ; OThreadBase::OThreadBase(unsigned long,unsigned long)
+    @OThreadBase@$bdtr$qv          @904 ; OThreadBase::~OThreadBase()
+    @OThreadBase@isOfType$xqv      @905 ; OThreadBase::isOfType() const
+    @OThreadBase@run$qv            @906 ; OThreadBase::run()
+    @OThreadBase@isRunning$qv      @907 ; OThreadBase::isRunning()
+    @OThreadBase@stop$qv           @908 ; OThreadBase::stop()
+    @OThreadBase@suspend$qv        @909 ; OThreadBase::suspend()
+    @OThreadBase@resume$qv         @910 ; OThreadBase::resume()
+    @OThreadBase@waitFor$qv        @911 ; OThreadBase::waitFor()
+    @OThreadBase@setPrty$qulul     @912 ; OThreadBase::setPrty(unsigned long,unsigned long)
+    @OThreadBase@OTHREADBASE_dispatch$qpv @913 ; OThreadBase::OTHREADBASE_dispatch(void*)
+    @OTimer@$bctr$qululul          @914 ; OTimer::OTimer(unsigned long,unsigned long,unsigned long)
+    @OTimer@$bctr$qr6OFrameulul    @915 ; OTimer::OTimer(OFrame&,unsigned long,unsigned long)
+    @OTimer@$bctr$qp6OFrameulul    @916 ; OTimer::OTimer(OFrame*,unsigned long,unsigned long)
+    @OTimer@$bdtr$qv               @917 ; OTimer::~OTimer()
+    @OTimer@isOfType$xqv           @918 ; OTimer::isOfType() const
+    @OTimer@start$qv               @919 ; OTimer::start()
+    @OTimer@start$qul              @920 ; OTimer::start(unsigned long)
+    @OTimer@stop$qv                @921 ; OTimer::stop()
+    @OTimer@setId$qul              @922 ; OTimer::setId(unsigned long)
+    @OTimer@setTimeout$qul         @923 ; OTimer::setTimeout(unsigned long)
+    @OTimer@setNotify$qul          @924 ; OTimer::setNotify(unsigned long)
+    @OTimer@setNotify$qr6OFrame    @925 ; OTimer::setNotify(OFrame&)
+    @OTimer@setNotify$qp6OFrame    @926 ; OTimer::setNotify(OFrame*)
+    @OUserButton@$bctr$qululululululul @927 ; OUserButton::OUserButton(unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OUserButton@$bctr$qulr6OFrameululululul @928 ; OUserButton::OUserButton(unsigned long,OFrame&,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OUserButton@$bctr$qulp6OFrameululululul @929 ; OUserButton::OUserButton(unsigned long,OFrame*,unsigned long,unsigned long,unsigned long,unsigned long,unsigned long)
+    @OUserButton@$bdtr$qv          @930 ; OUserButton::~OUserButton()
+    @OUserButton@isOfType$xqv      @931 ; OUserButton::isOfType() const
+    @OValueSet@$bctr$qxulxt1xt1xt1xt1xt1 @932 ; OValueSet::OValueSet(const unsigned long,const ...
+    @OValueSet@$bctr$qxulrx6OFramext1xt1xt1xt1 @933 ; OValueSet::OValueSet(const unsigned long,const OFrame&,const ...
+    @OValueSet@$bctr$qxulxp6OFramext1xt1xt1xt1 @934 ; OValueSet::OValueSet(const unsigned long,const OFrame*,const ...
+    @OValueSet@$bdtr$qv            @935 ; OValueSet::~OValueSet()
+    @OValueSet@isOfType$xqv        @936 ; OValueSet::isOfType() const
+    @OValueSet@createValueSet$qxsxt1xt1xt1 @937 ; OValueSet::createValueSet(const short,const ...
+    @OValueSet@querySelected$qv    @938 ; OValueSet::querySelected()
+    @OValueSet@queryItem$qulul     @939 ; OValueSet::queryItem(unsigned long,unsigned long)
+    @OValueSet@selectItem$qulul    @940 ; OValueSet::selectItem(unsigned long,unsigned long)
+    @OValueSet@setItem$qululul     @941 ; OValueSet::setItem(unsigned long,unsigned long,unsigned long)
+    @OValueSet@setItemAttr$qulululul @942 ; OValueSet::setItemAttr(unsigned long,unsigned long,unsigned long,unsigned long)
+    @OValueSet@setMetrics$qulul    @943 ; OValueSet::setMetrics(unsigned long,unsigned long)
+    @OValueSet@queryItemAttr$qulul @944 ; OValueSet::queryItemAttr(unsigned long,unsigned long)
+    @OValueSet@queryMetrics$qul    @945 ; OValueSet::queryMetrics(unsigned long)
+    @OVioApp@$bctr$qv              @946 ; OVioApp::OVioApp()
+    @OVioApp@$bctr$qxulppc         @947 ; OVioApp::OVioApp(const unsigned long,char**)
+    @OVioApp@$bdtr$qv              @948 ; OVioApp::~OVioApp()
+    @OVioApp@isOfType$xqv          @949 ; OVioApp::isOfType() const
+    @OVioApp@forceQuit$qv          @950 ; OVioApp::forceQuit()
+    @OVioApp@Shutdown$qv           @951 ; OVioApp::Shutdown()
+    @OVioApp@Reboot$qv             @952 ; OVioApp::Reboot()
+    @OVioException@$bctr$qxpcxulxt2xt1xt2 @953 ; OVioException::OVioException(const char*,const unsigned long,const ...
+    @OVioException@$bctr$qrx13OVioException @954 ; OVioException::OVioException(const OVioException&)
+    @OVioException@$bdtr$qv        @955 ; OVioException::~OVioException()
+    @OVioException@isOfType$xqv    @956 ; OVioException::isOfType() const
+    @OVioException@viewError$qv    @957 ; OVioException::viewError()
+    OWinDefDlgProc                 @958 
+    OWinDefWindowProc              @959 
+    @OWindow@$bctr$qxulxt1xt1      @960 ; OWindow::OWindow(const unsigned long,const ...
+    @OWindow@$bdtr$qv              @961 ; OWindow::~OWindow()
+    @OWindow@isOfType$xqv          @962 ; OWindow::isOfType() const
+    @OWindow@inherit$qxul          @963 ; OWindow::inherit(const unsigned long)
+    @OWindow@initReplace$qxulr4_SWP @964 ; OWindow::initReplace(const unsigned long,_SWP&)
+    @OWindow@show$qv               @965 ; OWindow::show()
+    @OWindow@hide$qv               @966 ; OWindow::hide()
+    @OWindow@enable$qv             @967 ; OWindow::enable()
+    @OWindow@disable$qv            @968 ; OWindow::disable()
+    @OWindow@activate$qv           @969 ; OWindow::activate()
+    @OWindow@destroy$qv            @970 ; OWindow::destroy()
+    @OWindow@setFocus$qv           @971 ; OWindow::setFocus()
+    @OWindow@setParent$qxul        @972 ; OWindow::setParent(const unsigned long)
+    @OWindow@setOwner$qxul         @973 ; OWindow::setOwner(const unsigned long)
+    @OWindow@cancelClose$qv        @974 ; OWindow::cancelClose()
+    @OWindow@setForeColor$ql       @975 ; OWindow::setForeColor(long)
+    @OWindow@setBackColor$ql       @976 ; OWindow::setBackColor(long)
+    @OWindow@setFont$qpc           @977 ; OWindow::setFont(char*)
+    @OWindow@setPresentation$qp10_PresParms @978 ; OWindow::setPresentation(_PresParms*)
+    @OWindow@getPresentation$qp10_PresParms @979 ; OWindow::getPresentation(_PresParms*)
+    @OWindow@getForeColor$qv       @980 ; OWindow::getForeColor()
+    @OWindow@getBackColor$qv       @981 ; OWindow::getBackColor()
+    @OWindow@getFont$qv            @982 ; OWindow::getFont()
+    @OXApp@$bctr$qul               @983 ; OXApp::OXApp(unsigned long)
+    @OXApp@$bctr$qxulppcul         @984 ; OXApp::OXApp(const unsigned long,char**,unsigned long)
+    @OXApp@$bdtr$qv                @985 ; OXApp::~OXApp()
+    @OXApp@isOfType$xqv            @986 ; OXApp::isOfType() const
+    @OXApp@run$qv                  @987 ; OXApp::run()
+    @OXcptBase@$bctr$qul           @988 ; OXcptBase::OXcptBase(unsigned long)
+    @OXcptBase@$bdtr$qv            @989 ; OXcptBase::~OXcptBase()
+    @OXcptBase@isOfType$xqv        @990 ; OXcptBase::isOfType() const
+    @OXcptBase@handler$qp22_EXCEPTIONREPORTRECORDp28_EXCEPTIONREGISTRATIONRECORDp8_CONTEXTpv @991 ; OXcptBase::handler(_EXCEPTIONREPORTRECORD*,_EXCEPTIONREGISTRATIONRECORD*,_CONTEXT*,void*)
+    @OXcptBase@setHandler$qr28_EXCEPTIONREGISTRATIONRECORD @992 ; OXcptBase::setHandler(_EXCEPTIONREGISTRATIONRECORD&)
+    @OXcptBase@unsetHandler$qv     @993 ; OXcptBase::unsetHandler()
+    @OXcptBase@OXCPT_CATCH$qp22_EXCEPTIONREPORTRECORDp28_EXCEPTIONREGISTRATIONRECORDp8_CONTEXTpv @994 ; OXcptBase::OXCPT_CATCH(_EXCEPTIONREPORTRECORD*,_EXCEPTIONREGISTRATIONRECORD*,_CONTEXT*,void*)
+    @OXcptBase@currentHandler      @995 ; OXcptBase::currentHandler
+    _except_printf                 @996 
+    _except_print_context          @997 
+    @OXcptPM@$bctr$qul             @998 ; OXcptPM::OXcptPM(unsigned long)
+    @OXcptPM@$bdtr$qv              @999 ; OXcptPM::~OXcptPM()
+    @OXcptPM@isOfType$xqv          @1000; OXcptPM::isOfType() const
+    @OXcptPM@trapTrace$qv          @1001; OXcptPM::trapTrace()
+    @OXcptPM@killTrace$qv          @1002; OXcptPM::killTrace()
+    @OXcptPM@exceptionMessage$qpxc @1003; OXcptPM::exceptionMessage(const char*)
+    @OXcptVio@$bctr$qul            @1004; OXcptVio::OXcptVio(unsigned long)
+    @OXcptVio@$bdtr$qv             @1005; OXcptVio::~OXcptVio()
+    @OXcptVio@isOfType$xqv         @1006; OXcptVio::isOfType() const
+    @OXcptVio@trapTrace$qv         @1007; OXcptVio::trapTrace()
+    @OXcptVio@killTrace$qv         @1008; OXcptVio::killTrace()
+    @OXcptVio@exceptionMessage$qpxc @1009; OXcptVio::exceptionMessage(const char*)
+    @OProcRecord@$bctr$qv          @1010; OProcRecord::OProcRecord()
+    @OProcRecord@$bctr$qrx11OProcRecord @1011; OProcRecord::OProcRecord(const OProcRecord&)
+    @OProcRecord@$bctr$qxp11OProcRecord @1012; OProcRecord::OProcRecord(const OProcRecord*)
+    @OProcRecord@$bdtr$qv          @1013; OProcRecord::~OProcRecord()
+    @OProcRecord@isOfType$xqv      @1014; OProcRecord::isOfType() const
+    @slOProcRecord@$bctr$qv        @1015; slOProcRecord::slOProcRecord()
+    @slOProcRecord@$bdtr$qv        @1016; slOProcRecord::~slOProcRecord()
+    @slOProcRecord@isOfType$xqv    @1017; slOProcRecord::isOfType() const
+    @slOProcRecord@$blsh$qp11OProcRecord @1018; slOProcRecord::operator <<(OProcRecord*)
+    @slOProcRecord@$blsh$qr11OProcRecord @1019; slOProcRecord::operator <<(OProcRecord&)
+    @slOProcRecord@isLess$qpx11OProcRecordt1 @1020; slOProcRecord::isLess(const OProcRecord*,const OProcRecord*)
+    @slOString@$bctr$qv            @1021; slOString::slOString()
+    @slOString@$bdtr$qv            @1022; slOString::~slOString()
+    @slOString@isOfType$xqv        @1023; slOString::isOfType() const
+    @slOString@$blsh$qpxc          @1024; slOString::operator <<(const char*)
+    @slOString@$blsh$qr7OString    @1025; slOString::operator <<(OString&)
+    @slOString@$blsh$qp7OString    @1026; slOString::operator <<(OString*)
+    @slOString@isLess$qpx7OStringt1 @1027; slOString::isLess(const OString*,const OString*)
+    __DebuggerHookData             @1028
+    __GetExceptDLLinfo             @1029

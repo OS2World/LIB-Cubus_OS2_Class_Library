@@ -1,9 +1,7 @@
 // OCL - OS/2 Class Library
 // (c) Cubus 1995
 // All Rights Reserved
-// scanfcl.cpp
-// scanner classes
-
+// OFontDialog.cpp
 
 /*
  * Redistribution and use in source and binary forms, with or without
@@ -29,7 +27,8 @@
  * SUCH DAMAGE.
  */
 
-// $Header: W:/Projects/OCL/Source/rcs/OScan.cpp 1.50 1996/08/11 23:49:30 B.STEIN Release $
+
+// $Header: W:/Projects/OCL/Source/rcs/ODialog.cpp 1.50 1996/08/11 23:49:13 B.STEIN Release $
 
 #define __OCL_SOURCE__
 
@@ -37,71 +36,64 @@
 #define OINCL_BASE
 
 #include <ocl.hpp>
-#include <OFcl.hpp>
+#include <OApp.hpp>
+#include <OFontDialog.hpp>
 
-// members of scan
 
-
-OScanFcl::OScanFcl()
+OFontDialog::OFontDialog(HWND hParent, HWND hOwner)
+  : OStdDialog(hParent, hOwner)
 {
- setCheck(FALSE, FALSE); 
+ if (!OApp::currentOApp)
+   throw OPMException(OCL::error(OCL_OAPP_NO_OAPP), 0);
 }
 
-OScanFcl::~OScanFcl() 
+OFontDialog::~OFontDialog()
 {
- good.reset(); 
 }
 
-
-PSZ OScanFcl::isOfType() const
-{ 
- return("OScanFcl"); 
-}
-
-
-BOOL OScanFcl::init(PCSZ FileName, PCSZ toScan)
+PSZ OFontDialog::isOfType() const
 {
- Filename << FileName;
- return(check(toScan));
+ return("OFontDialog");
 }
 
 
-void OScanFcl::init(PCSZ FileName)
+PSZ OFontDialog::getFont(PSZ title, PSZ previewText)
 {
- Filename << FileName;
-}
+ FONTDLG      fontDlg;
+ FONTMETRICS  fontMetrics;
+ OString      Buffer(100);
+ OString      szFamily(FACESIZE);
 
+ memset(&fontDlg, 0, sizeof(fontDlg));
+ fontDlg.cbSize         = sizeof(FONTDLG);
+ fontDlg.hpsScreen      = WinGetScreenPS(HWND_DESKTOP);
+ fontDlg.pszTitle       = title;
+ fontDlg.pszPreview     = previewText;
+ fontDlg.pszFamilyname  = szFamily.getText();
+ fontDlg.fl             = FNTS_BITMAPONLY | FNTS_CENTER;
+ fontDlg.flFlags        = FNTF_NOVIEWPRINTERFONTS;
+ fontDlg.clrFore        = CLR_BLACK;
+ fontDlg.clrBack        = CLR_WHITE;
+ fontDlg.usFamilyBufLen = FACESIZE;
 
-BOOL OScanFcl::check(PCSZ string)
-{
- OFuzzSearch  *searcher = NULL;
- BOOL         retValue;
+ WinFontDlg(parent, owner, &fontDlg);
+ WinReleasePS(fontDlg.hpsScreen);
 
- ToScan << string;;
-
- searcher = new OFuzzSearch(Filename.getText(), ToScan.getText()); 
- searcher->startSearch();
-
- retValue = (searcher->matches.numberOfElements() != 0) ? TRUE : FALSE;
-
- ToScan << (PSZ) NULL; 
- delete searcher;
-
- return(retValue);  
-}
-
-
-void OScanFcl::checkFiles(PCSZ text)
-{
- pOString temp = files.getFirst();
-
- while((temp) && (!stopASAP))
+ switch(fontDlg.lReturn)
   {
-   init(temp->getText());
-   if (check(text))
-     good << temp->getText();
-   temp = files.getNext(); 
+   case DID_CANCEL:
+     WinReleasePS(fontDlg.hpsScreen);
+     return(NULL); 
+
+   case DID_OK:
+     sprintf(Buffer.getText(), "%ld.%s",
+             fontDlg.fxPointSize/65536,
+             fontDlg.pszFamilyname);
+     font << Buffer;
+     return(font.getText());
   }
+ 
+ return(NULL);  // we should never get here
 }
 
 // end of source

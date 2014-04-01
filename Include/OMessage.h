@@ -81,6 +81,7 @@
 #define             OCL_OHLPPOP_CREAT             65
 
 
+#define             OCL_OAPP_NO_OAPP              131
 
 #define             OCL_ODATE_MON                 225
 #define             OCL_ODATE_TUE                 226
@@ -102,7 +103,11 @@
 #define             OCL_ODATE_NOV                 242
 #define             OCL_ODATE_DEC                 243
 
+#define             OCL_OFILEDLG_SHOW             260
 
+#define             OCL_OFUZZ_OFILE               265
+#define             OCL_OFUZZ_PARLEN              266
+   
 // OIP
 
 #define             OIP_VER_MSG                   1         // %MSG%, Compiler, Copyright 

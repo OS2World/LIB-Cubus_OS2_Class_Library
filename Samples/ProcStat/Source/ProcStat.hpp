@@ -1,14 +1,14 @@
 // OCL Sample 
 // Procstat.hpp
 
-#define OINCL_OSTRING
-#define OINCL_OXAPP
-#define OINCL_OFRAME
-#define OINCL_OCONTAINER
-#define OINCL_OPMEXCEPTION
-#define OINCL_OPROCSTAT
-
 #include <ocl.hpp>
+
+#include <OXapp.hpp>
+#include <OFrame.hpp>
+#include <OContainer.hpp>
+#include <OPMException.hpp>
+#include <OProcStat.hpp>
+#include <OFontDialog.hpp>
 
 
 #include "..\Source\procstat.h"
